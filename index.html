@@ -356,6 +356,25 @@ nav a.active{background:var(--blue-light);color:var(--blue);font-weight:700}
 .gi-en{font-size:11px;font-weight:600;color:var(--muted);margin-left:6px}
 .gi-def{font-size:13px;color:#334155;line-height:1.6}
 
+/* MP3 SECTION */
+.ec-mp3{background:linear-gradient(135deg,#0f2a3f,#12405e);border:2px solid rgba(45,212,191,.25);color:#fff}
+.ec-mp3 h3,.ec-mp3 p{color:#ffffffcc}
+.ec-mp3 .ec-tag{background:rgba(255,255,255,.08);color:#7de3d6}
+.ec-mp3 .ec-arrow{color:#7de3d6}
+.mp3-search input{width:100%;padding:10px 14px;border:2px solid var(--border);border-radius:10px;font-size:13px;outline:none;transition:.2s;margin-bottom:14px;font-family:inherit}
+.mp3-search input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,105,92,.1)}
+.mp3-item{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin-bottom:12px}
+.mp3-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.mp3-num{flex-shrink:0;width:38px;height:38px;border-radius:10px;background:var(--teal);color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center}
+.mp3-titles{flex:1;min-width:0}
+.mp3-title{font-size:15px;font-weight:800;color:var(--navy);line-height:1.3}
+.mp3-cat{font-size:11px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+.mp3-yt{flex-shrink:0;display:inline-flex;align-items:center;gap:5px;text-decoration:none;font-size:12px;font-weight:700;padding:7px 14px;border-radius:30px;background:#fee2e2;color:#b91c1c;transition:.2s}
+.mp3-yt:hover{background:#fecaca}
+.mp3-text{font-size:13.5px;color:#334155;line-height:1.7;margin-bottom:12px}
+.mp3-audio{width:100%;height:40px;border-radius:8px}
+@media(max-width:640px){.mp3-head{flex-wrap:wrap}.mp3-yt{margin-left:auto}}
+
 /* LINKS */
 .links-section{background:linear-gradient(160deg,#1e3a5f,#1a3a5a);color:#fff;padding:52px 24px}
 .links-inner{max-width:1320px;margin:0 auto}
@@ -549,7 +568,7 @@ footer a:hover{color:#fff}
         <div class="stat-item"><div class="num">80</div><div class="lbl">Test savol</div></div>
         <div class="stat-item"><div class="num">18</div><div class="lbl">WADA kategoriya</div></div>
         <div class="stat-item"><div class="num">45+</div><div class="lbl">Dorilar bazasi</div></div>
-        <div class="stat-item"><div class="num">35+</div><div class="lbl">Lug'at atama</div></div>
+        <div class="stat-item"><div class="num">20</div><div class="lbl">Audio dars</div></div>
       </div>
       <h2 style="margin-top:14px">Antidoping <em>Ta'lim</em> Platformasi</h2>
     </div>
@@ -613,11 +632,11 @@ footer a:hover{color:#fff}
         <div class="ec-tags"><span class="ec-tag">📋 6 holat</span><span class="ec-tag">❌→✅ Tahlil</span><span class="ec-tag">📜 WADA qoida</span></div>
         <span class="ec-arrow">→</span>
       </div>
-      <div class="extra-card ec-gloss" onclick="openModal('glossary')">
-        <span class="ec-icon">📖</span>
-        <h3>Antidoping Lug'at</h3>
-        <p>WADA atamalarining o'zbekcha izohli lug'ati — 35+ atama, qidiruv va alifbo filtri.</p>
-        <div class="ec-tags"><span class="ec-tag">🔤 35+ atama</span><span class="ec-tag">🔍 Qidiruv</span><span class="ec-tag">📌 Harflar</span></div>
+      <div class="extra-card ec-mp3" onclick="openModal('mp3')">
+        <span class="ec-icon">🎧</span>
+        <h3>Antidoping MP3</h3>
+        <p>20 ta tayyor mavzu — matnini o'qing yoki "Madina" ovozida audio (MP3) eshiting.</p>
+        <div class="ec-tags"><span class="ec-tag">🎵 20 audio</span><span class="ec-tag">📖 Matn</span><span class="ec-tag">▶️ YouTube</span></div>
         <span class="ec-arrow">→</span>
       </div>
     </div>
@@ -1442,20 +1461,19 @@ footer a:hover{color:#fff}
 </div>
 </div>
 
-<!-- GLOSSARY MODAL -->
-<div class="modal-overlay" id="modal-glossary">
+<!-- MP3 MODAL -->
+<div class="modal-overlay" id="modal-mp3">
 <div class="modal-box">
   <div class="modal-header">
     <div class="modal-header-left">
-      <div class="modal-header-icon">📖</div>
-      <div><h2>Antidoping Lug'ati</h2><p>WADA atamalarining o'zbekcha izohli lug'ati — 35+ atama</p></div>
+      <div class="modal-header-icon">🎧</div>
+      <div><h2>Antidoping MP3</h2><p>20 ta tayyor mavzu — matn va "Madina" ovozidagi audio</p></div>
     </div>
-    <button class="modal-close" onclick="closeModal('glossary')">✕</button>
+    <button class="modal-close" onclick="closeModal('mp3')">✕</button>
   </div>
   <div class="modal-body">
-    <div class="gloss-search"><input type="text" id="gloss-search" placeholder="Atamani qidiring..." oninput="filterGloss()"></div>
-    <div class="gloss-alpha" id="gloss-alpha"></div>
-    <div id="gloss-list"></div>
+    <div class="mp3-search"><input type="text" id="mp3-search" placeholder="Mavzuni qidiring..." oninput="filterMp3()"></div>
+    <div id="mp3-list"></div>
   </div>
 </div>
 </div>
@@ -1597,45 +1615,48 @@ quickList.forEach(n=>{const s=document.createElement('span');s.className='quick-
 document.getElementById('drug-input').addEventListener('input',checkDrug);
 function checkDrug(){const q=document.getElementById('drug-input').value.trim().toLowerCase();const rc=document.getElementById('drug-results');const nf=document.getElementById('drug-nf');rc.innerHTML='';nf.classList.remove('show');if(q.length<2)return;const found=drugDB.filter(d=>d.name.toLowerCase().includes(q)||d.alias.some(a=>a.toLowerCase().includes(q)));if(!found.length){nf.classList.add('show');return;}found.forEach(d=>{rc.innerHTML+=`<div class="dr-result show"><div class="dr-head"><span class="dr-name">${d.name}</span><span class="dr-status ${d.cls}">${d.status}</span></div><div class="dr-body"><div class="dr-field"><strong>Kategoriya</strong>${d.cat}</div><div class="dr-field"><strong>TUE kerakmi?</strong>${d.tue}</div></div><div class="info-badge ${d.cls==='dr-allowed'?'green':d.cls==='dr-prohibited'?'red':''}" style="margin:10px 0 0;font-size:11px;display:flex;">💡 ${d.note}</div></div>`})}
 
-// ═══ GLOSSARY ═══
-const glossData=[
-{term:"AAF",en:"Adverse Analytical Finding",def:"Doping-kontrol namunasida taqiqlangan modda yoki uning metaboliti aniqlanishi. ADRV boshlash uchun asos. Sportchi 10 kun ichida B-namuna so'rash huquqiga ega."},
-{term:"ABP",en:"Athlete Biological Passport",def:"Sportchi qon ko'rsatkichlarini vaqt o'tishi bilan kuzatish orqali EPO va qon dopingini bilvosita aniqlash tizimi. Moddaning o'zi izlanmaydi — biologik o'zgarishlar kuzatiladi."},
-{term:"ADAMS",en:"Anti-Doping Admin & Management System",def:"WADA tomonidan yaratilgan global onlayn boshqaruv tizimi. Whereabouts kiritish, test natijalari, TUE arizalari, sportchi profili va sertifikatlar boshqariladi."},
-{term:"ADEL",en:"Anti-Doping Education & Learning",def:"WADA ning bepul onlayn ta'lim platformasi. 20+ til, 50+ kurs. RTP sportchilari uchun asosiy kurs majburiy. adel.wada-ama.org"},
-{term:"ADRV",en:"Anti-Doping Rule Violation",def:"Antidoping qoidasini buzish. 10 turi: taqiqlangan modda (2.1), usul (2.2), bosh tortish (2.3), Whereabouts failure (2.4), to'sqinlik (2.5), TUE firib (2.6), savdo (2.7), berish (2.8), diskvalifitsiya (2.9), hujjat soxtalashtirish (2.10)."},
-{term:"ATF",en:"Atypical Finding",def:"Shubhali modda — laboratoriya tomonidan to'liq tasdiqlanmagan, lekin tekshiruv davom etadigan natija. 10 kun ichida yakuniy qaror. AAF ga aylanishi yoki yo'q qilinishi mumkin."},
-{term:"CAS",en:"Court of Arbitration for Sport",def:"Sport nizomlarini ko'rib chiqadigan xalqaro arbitraj sudi. Lausanneda (Shveysariya). TUE rad, jazo muddati, oqlanish bo'yicha apellyatsiya instansiyasi."},
-{term:"DCO",en:"Doping Control Officer",def:"Doping-kontrolni o'tkazadigan rasmiy shaxs. Vakolatnoma va ID ko'rsatadi, sportchini tushuntiradi, namuna oladi, hujjatlashtiradi. DCO ga qarshi turish = ADRV 2.3."},
-{term:"EPO",en:"Erythropoietin",def:"Qon qizil jismchalarini ishlab chiqarishni oshiradigan gormon. Doping sifatida ishlatilsa — kislorod tashishni oshiradi. Tromboz, insult, to'satdan o'lim xavfi. S2 kategoriya."},
-{term:"Filing Failure",en:"Filing Failure",def:"Whereabouts ma'lumotlarini chorak oxirigacha to'liq kiritmaslik. 12 oyda 3 ta (missed test bilan birgalikda) = 2 yilgacha diskvalifikatsiya."},
-{term:"hGH",en:"Human Growth Hormone",def:"Inson o'sish gormoni. Mushak o'sishi, tiklanish tezlashtirish, yog' kuyishda ishlatiladi. S2 kategoriya — butunlay taqiqlangan."},
-{term:"ISE",en:"International Standard for Education",def:"Antidoping ta'lim uchun WADA xalqaro standarti (2021 yangilanma — ISE 3.0). 5 komponent: maqsad guruhlar, mazmun, format, baholash, sertifikatlash."},
-{term:"ISTI",en:"International Standard for Testing",def:"Doping-nazorat rejalashtirish va amalga oshirish uchun xalqaro standart. Kim, qachon, qayerda va qanday test o'tkazishni belgilaydi."},
-{term:"ISL",en:"International Standard for Laboratories",def:"WADA akkreditatsiya laboratoriyalari uchun standart. Sifat boshqaruvi, metodologiya, konfidensialllik. Hozirda ~34 akkreditatsiyalangan laboratoriya."},
-{term:"Missed Test",en:"Missed Test",def:"DCO ko'rsatilgan joyda sportchi bo'lmasligi. 14 kun ichida dalil bilan javob berish kerak. 12 oyda 3 ta = 2 yil."},
-{term:"No Fault",en:"No Fault or Negligence",def:"Sportchi uchun to'liq oqlanish — faqat sabotaj yoki uchinchi shaxs hiylasi isbotlanganda. Juda kamdan-kam qo'llaniladi."},
-{term:"No Significant Fault",en:"No Significant Fault",def:"ADRVda jazo kamaytirish uchun dalil. Sportchi o'zini to'g'ri tutgan, lekin tashqi omil sababli qoidabuzarlik yuzaga kelgan — masalan, sertifikatlangan mahsulot kontaminatsiyasi."},
-{term:"Play True",en:"Play True",def:"WADA toza sport kampaniyasi. Har yil 13-aprel — Play True Day. #PlayTrue hashtag. Doping oldini olish, halollik va hurmatni targ'ib qiluvchi global harakat."},
-{term:"Prohibited List",en:"Prohibited List",def:"WADA tomonidan har yil 1-yanvar yangilanadigan taqiqlangan moddalar va usullar ro'yxati. S1-S9 (moddalar), M1-M3 (usullar), P (maxsus sport) kategoriyalarga bo'linadi."},
-{term:"RTP",en:"Registered Testing Pool",def:"Whereabouts kiritishi majburiy bo'lgan sportchilar ro'yxati. WADA, xalqaro federatsiyalar va milliy antidoping agentliklari tomonidan tuziladi. O'zbekistonda ~200+ sportchi."},
-{term:"Safe Harbor",en:"Safe Harbor (Whistleblower)",def:"WADA whistleblower himoya siyosati — ma'lumot beruvchiga noma'lumlik, huquqiy va moliyaviy himoya. Anonim murojaat: intel@wada-ama.org"},
-{term:"SARM",en:"Selective Androgen Receptor Modulator",def:"Anabolik ta'sir ko'rsatuvchi, lekin klassik steroid emas bo'lgan modda guruhi. BAD tarkibida yashirin holda topiladi. S1 — butunlay taqiqlangan."},
-{term:"Strict Liability",en:"Strict Liability",def:"WADA Kodeksining asosiy prinsipi: sportchi organizmidagi har qanday taqiqlangan modda uchun shaxsan javobgar. 'Bilmadim', 'shifokor berdi', 'sabotaj bo'ldi' — oqlanish uchun yetarli emas."},
-{term:"TDP",en:"Test Distribution Plan",def:"Doping nazorat rejasi — kim, qachon, qayerda test o'tkazilishi belgilanadi. WADA, IF va milliy agentliklar tomonidan yillik tasdiqlanadi."},
-{term:"TUE",en:"Therapeutic Use Exemption",def:"Taqiqlangan moddani tibbiy ko'rsatma bo'yicha qonuniy qabul qilish ruxsatnomasi. Astma (salbutamol), diabet (insulin) uchun. Musobaqadan 30 kun oldin ariza, 21 kun ichida qaror."},
-{term:"TUEC",en:"TUE Committee",def:"TUE arizalarini ko'rib chiqadigan, 3 nafar mustaqil shifokordan iborat qo'mita. Tasdiqlash, rad etish yoki qo'shimcha ma'lumot so'rash huquqi bor."},
-{term:"USADA",en:"US Anti-Doping Agency",def:"AQSh Milliy Antidoping Agentligi. Lance Armstrong ni 2012-yilda umrbod diskvalifitsiya qilgan va 7 Tour de France g'alasini bekor qildirgan agentlik."},
-{term:"WADA",en:"World Anti-Doping Agency",def:"Jahon Antidoping Agentligi. 1999-yil tashkil etilgan. Bosh qarorgoh — Monreal (Kanada). Kodeks, Prohibited List, standartlar, ADEL, laboratoriya akkreditatsiyasi — barchasi WADA tomonidan."},
-{term:"Whereabouts",en:"Whereabouts Information",def:"RTP sportchisi tomonidan ADAMS ga kiritiladigan kunlik 60 daqiqalik aniq vaqt va joy. DCO shu vaqtda kutilmagan test o'tkazishi mumkin."},
-{term:"Whereabouts Failure",en:"Whereabouts Failure",def:"Missed test yoki filing failure. 12 oyda 3 ta = ADRV 2.4 = 2 yilgacha diskvalifikatsiya. ADAMSni kundalik tekshirish — eng oson himoya."},
-{term:"UzNADO",en:"Uzbekistan National Anti-Doping Organization",def:"O'zbekiston Milliy Antidoping Tashkiloti. 2005-yil tashkil etilgan. Rasmiy ta'lim platformasi: talim-uznada.uz. Yilik 25,000+ test o'tkazadi."},
+// ═══ ANTIDOPING MP3 ═══
+const mp3Data=[
+{n:1,file:`audio/01.mp3`,title:`Antidoping nima: jazomi yoki himoya?`,cat:`Umumiy`,yt:``,text:`"Antidoping" deganda ko'pchilik faqat jazo va taqiqni tushunadi. Aslida unday emas. Butunjahon antidoping agentligi (WADA)ning asosiy maqsadi — sportchi salomatligini himoya qilish va halol raqobatni ta'minlashdir. Taqiqlangan moddalar natijani sun'iy oshirsa-da, yurak xuruji, buyrak yetishmovchiligi va ruhiy buzilishlarga olib kelishi mumkin. Sport — bu inson imkoniyatining sof namoyishi; doping esa bu go'zallikni yo'q qiladi. Sog'lig'ingizni asrang va toza sport tarafdori bo'ling.`},
+{n:2,file:`audio/02.mp3`,title:`Kasal sportchi dori ichsa bo'ladimi? (TUE)`,cat:`Huquq`,yt:``,text:`Sportchi kasal bo'lsa, dori ichishi taqiqlanganmi? Yo'q — buning qonuniy yo'li bor, u "Terapevtik istisno" (TUE) deb ataladi. Agar sportchiga sog'lig'i tufayli tarkibida taqiqlangan modda bo'lgan dori zarur bo'lsa, u shifokor xulosasi bilan murojaat qiladi. Muhim shartlar: dorisiz sog'liqqa jiddiy zarar yetishi kerak; dori boshqalardan ortiqcha ustunlik bermasligi lozim; muqobil ruxsat etilgan dori bo'lmasligi kerak. Hammasi qonun doirasida bo'lsa, chetlatish xavfi yo'q.`},
+{n:3,file:`audio/03.mp3`,title:`Oddiy vitamin ham testdan yiqitishi mumkin`,cat:`Qo'shimchalar`,yt:``,text:`Diqqat, sportchi! Oddiy oqsil yoki vitamin ham doping testdan yiqitishi mumkin. Sport qo'shimchalari bozori juda nazoratsiz — ko'p ishlab chiqaruvchilar tarkibni to'liq yozmaydi, tez effekt uchun yashirincha gormon yoki stimulyator qo'shishi mumkin. Buni "kontaminatsiya" (ifloslanish) deyiladi. WADA qoidasiga ko'ra, sportchi o'z organizmiga kirgan har qanday modda uchun shaxsan javobgar. Maslahat: faqat xalqaro sertifikatga (masalan, "Informed Sport") ega, tekshirilgan brendlarni tanlang.`},
+{n:4,file:`audio/04.mp3`,title:`ADAMS: "Sizni qayerdan bo'lsa ham topishadi"`,cat:`Nazorat`,yt:``,text:`"Meni qayerdan bo'lsa ham topishadi!" — ADAMS tizimi haqida eshitganmisiz? Professional sportchilar har kuni 1 soatlik vaqt oralig'i va turar joyini ADAMS tizimiga kiritishi shart. Antidoping inspektori istalgan vaqtda — tonggi soat beshdami yoki xorijdagi mashg'ulotdami — kelib namuna olishi mumkin. Agar sportchi 12 oy ichida 3 marta ko'rsatilgan joyda topilmasa yoki testdan qochsa, bu qoidabuzarlik hisoblanadi va 2 yilgacha chetlatilishga olib keladi. Halollik va tartib — chempionlik poydevoridir.`},
+{n:5,file:`audio/05.mp3`,title:`Biologik pasport: aldash mumkin emas`,cat:`Ilmiy usul`,yt:``,text:`Dopingni yashirish endi imkonsiz — biologik pasport nima? Eski usulda faqat ma'lum bir dori organizmda bor-yo'qligi tekshirilardi. Zamonaviy usul — Sportchining Biologik Pasporti (ABP): bunda dorining o'zi emas, uning organizmga ta'siri yillar davomida kuzatiladi. Qondagi gemoglobin yoki gormon miqdori keskin o'zgarsa, tizim darhol signal beradi. Bu — tana ko'rsatkichlarining shaxsiy "barmoq izi". Uni aldashning iloji yo'q. Texnologiya toza sport xizmatida.`},
+{n:6,file:`audio/06.mp3`,title:`Diuretiklar: yashirin xavf`,cat:`Taqiqlangan moddalar`,yt:``,text:`Diuretiklar (peshob haydovchi vositalar) tez vazn yo'qotish uchun ishlatilsa-da, jiddiy sog'liq muammosi keltiradi va antidoping qoidalarini buzadi. Asosiy faktlar: diuretiklar WADA taqiqlangan ro'yxatiga kiritilgan; ular organizmning suvsizlanishi, buyrak yetishmovchiligi va yurak to'xtashiga sabab bo'lishi mumkin; boshqa taqiqlangan moddalarni tanadan tez chiqarib (niqoblab) yuborish uchun ishlatilganda ham qattiq jazolanadi. Shifokor ko'rsatmasisiz har qanday dori diskvalifikatsiyaga olib kelishi mumkin.`},
+{n:7,file:`audio/07.mp3`,title:`Deksametazon nega taqiqlangan?`,cat:`Glukokortikosteroidlar`,yt:``,text:`Glukokortikosteroidlar guruhiga kiruvchi deksametazon yallig'lanishga qarshi va og'riqsizlantiruvchi ta'siri sababli suiiste'mol qilinishi mumkin. Asosiy faktlar: bu kuchli gormon organizmning stressga chidamliligini sun'iy oshiradi va charchoqni niqoblaydi; WADA qoidasiga ko'ra u musobaqa vaqtida og'iz orqali, tomir yoki mushak ichiga yuborilganda qat'iy taqiqlangan; asossiz qabul qilish yurak-qon tomir va asab tizimiga jiddiy zarar yetkazadi. Dori vositalarini shifokor va antidoping agentligi ruxsatisiz qabul qilish qoidabuzarlikdir.`},
+{n:8,file:`audio/08.mp3`,title:`WADA ro'yxati har yili yangilanadi`,cat:`Qoidalar`,yt:``,text:`Butunjahon antidoping agentligi (WADA) taqiqlangan moddalar va usullar ro'yxatini har yili yangilaydi va rasman kuchga kiritadi. Asosiy faktlar: ro'yxatga har yili yangi farmakologik birikmalar va usullar qo'shiladi; sportchi va murabbiylar yangilanish bilan albatta tanishib chiqishi shart; dori qabul qilishdan oldin uni milliy antidoping agentligi bazasida tekshirish zarur. Eslatma: "Men bilmas edim" degan bahona qoidabuzarlikdan ozod qilmaydi.`},
+{n:9,file:`audio/09.mp3`,title:`TUE ruxsatnomasini qanday olish kerak?`,cat:`Huquq`,yt:``,text:`Terapiya maqsadida taqiqlangan moddadan foydalanish huquqi (TUE) — har bir sportchining muhim huquqi. Asosiy faktlar: TUE — shifokor ko'rsatmasiga ko'ra zarur dorini qabul qilish uchun rasmiy ruxsatnoma; davolanish uchun taqiqlangan preparat zarur bo'lsa, musobaqadan kamida 30 kun oldin ariza berish shart; ruxsatnomani milliy antidoping agentligining TUE qo'mitasi ko'rib chiqadi va tasdiqlaydi. Ruxsatnomasiz taqiqlangan moddani qabul qilish qoidabuzarlikka olib keladi.`},
+{n:10,file:`audio/10.mp3`,title:`Protein qo'shimchalari xavfsizmi?`,cat:`Qo'shimchalar`,yt:``,text:`Sportchilar orasida oqsil (protein) qo'shimchalari keng tarqalgan, ammo ular qanchalik xavfsiz? Asosiy faktlar: sof oqsil moddalari taqiqlangan ro'yxatga kirmaydi — ular dori emas, oziq-ovqat qo'shimchasi; asosiy xavf shundaki, mahsulot tarkibida yashirin taqiqlangan moddalar (steroid, stimulyator) bo'lishi mumkin; sertifikatsiyadan o'tmagan qo'shimchalar ijobiy doping-sinoviga olib kelishi mumkin. Har qanday sport ozuqasini qabul qilishdan oldin uning tozaligiga va laboratoriya sinovidan o'tganiga ishonch hosil qiling.`},
+{n:11,file:`audio/11.mp3`,title:`Anabolik steroidlar: kuch ortida yashirin zarar`,cat:`Salomatlik`,yt:``,text:`Anabolik androgen steroidlar mushak massasini tez oshirsa-da, narxi juda qimmat — salomatlik. Ular organizmning o'z gormon ishlab chiqarishini bostiradi: steroid to'xtatilgach, tabiiy testosteron uzoq vaqt tiklanmaydi. Yurakka ta'siri xavfli — chap qorincha devori qalinlashadi, qon bosimi va "yomon" xolesterin ko'tariladi. Bundan tashqari jigar shikasti, ruhiy beqarorlik va tajovuzkorlik kuzatiladi. Vaqtinchalik kuch — umrbod zarar evaziga arzimaydi.`},
+{n:12,file:`audio/12.mp3`,title:`EPO va qon dopingi: nega o'ta xavfli?`,cat:`Qon dopingi`,yt:``,text:`Eritropoetin (EPO) va qon dopingi qondagi eritrotsitlar sonini oshirib, mushaklarga ko'proq kislorod yetkazadi — shu bois chidamlilik sportida suiiste'mol qilinadi. Xavfi katta: qon quyuqlashadi, yurak uni haydash uchun zo'riqadi, tromb (qon ivishi) hosil bo'lib, insult yoki yurak xurujiga olib kelishi mumkin. Sport tarixida aynan EPO tufayli yosh sportchilar uyqusida vafot etgan holatlar qayd etilgan. Qonni sun'iy quyuqlashtirish — hayot bilan o'ynash.`},
+{n:13,file:`audio/13.mp3`,title:`Meldoniy: bir dori butun sportni larzaga solgani`,cat:`Tarix`,yt:``,text:`Meldoniy (mildronat) dastlab yurak kasalliklarini davolash uchun yaratilgan. U hujayralar energiya almashinuviga ta'sir qilib, charchoqni kamaytiradi va tiklanishni tezlashtiradi — shu sabab sportchilar orasida ommalashdi. WADA uni 2016 yildan taqiqlangan ro'yxatga kiritdi va ko'plab mashhur sportchilar chetlatildi. Bu voqea muhim saboq berdi: bugun ruxsat etilgan dori ertaga taqiqlanishi mumkin. Shuning uchun har doim eng so'nggi ro'yxatni tekshiring.`},
+{n:14,file:`audio/14.mp3`,title:`SARM: internetdagi "xavfsiz steroid" yolg'oni`,cat:`Yangi xavflar`,yt:``,text:`So'nggi yillarda internetda SARM (selektiv androgen retseptor modulatorlari) "xavfsiz steroid alternativasi" sifatida reklama qilinmoqda. Bu xavfli yolg'on. SARM moddalarining aksariyati hali tadqiqot bosqichida — ularning inson uchun xavfsizligi isbotlanmagan, ko'pi rasman dori sifatida ro'yxatdan o'tmagan. Ular jigarni shikastlashi, gormonal muvozanatni buzishi mumkin va WADA tomonidan taqiqlangan. "Tabiiy" yoki "xavfsiz" degan yorliqqa ishonmang — sinovdan o'tmagan modda bilan tanangizni tajriba maydoniga aylantirmang.`},
+{n:15,file:`audio/15.mp3`,title:`Gen dopingi: kelajakning eng katta tahdidi`,cat:`Ilmiy`,yt:``,text:`Gen dopingi — sportchining genlariga aralashib, mushak yoki chidamlilikni sun'iy oshirish urinishi. Bu antidoping oldidagi eng murakkab tahdid: chunki o'zgarish tananing o'z ichida sodir bo'ladi va oddiy test uni aniqlolmaydi. Xavfi esa nihoyatda jiddiy — genetik aralashuvning uzoq muddatli oqibatlari noma'lum, saraton kabi qaytmas kasalliklarga yo'l ochishi mumkin. WADA gen dopingini qat'iy taqiqlagan va uni aniqlashning yangi molekulyar usullari ustida ishlamoqda.`},
+{n:16,file:`audio/16.mp3`,title:`Beta-blokatorlar: xotirjamlik ham doping bo'lishi mumkin`,cat:`Taqiqlangan moddalar`,yt:``,text:`Har qanday doping kuch berish uchun emas. Beta-blokatorlar aksincha — yurak urishini sekinlashtiradi, qo'l titrashini kamaytiradi va odamni tinchlantiradi. Otishma, kamondan otish yoki bilyard kabi aniqlik talab qiladigan sport turlarida bu beg'araz ustunlik beradi. Shuning uchun WADA bu moddalarni aynan shunday sport turlarida taqiqlagan. Bu shuni ko'rsatadiki, "doping" tushunchasi sport turiga qarab o'zgaradi — bir joyda ruxsat etilgan modda boshqa joyda taqiqlangan bo'lishi mumkin.`},
+{n:17,file:`audio/17.mp3`,title:`Stimulyatorlar: qarzga olingan energiya`,cat:`Asab tizimi`,yt:``,text:`Amfetamin va shunga o'xshash stimulyatorlar markaziy asab tizimini qo'zg'atib, vaqtincha charchoqni "o'chiradi" va odamga tetiklik tuyg'usini beradi. Ammo bu — qarzga olingan energiya. Tana o'zining tabiiy chegarasidan o'tib zo'riqadi, keyin esa og'ir charchoq, kayfiyat tushishi va yurak ritmi buzilishi keladi. Musobaqa vaqtida stimulyatorlar qat'iy taqiqlangan. Ular giyohvandlik xavfini ham keltiradi. Chinakam tetiklik — yaxshi uyqu, to'g'ri ovqat va rejali mashg'ulotdan keladi, tabletdan emas.`},
+{n:18,file:`audio/18.mp3`,title:`Tana o'z testosteronini yashira olmaydi`,cat:`Aniqlash usuli`,yt:``,text:`Sportchi tashqaridan testosteron qabul qilsa, uni qanday aniqlaydilar? Tashqi (sintetik) va tabiiy testosteronning kimyoviy tuzilishi bir xil ko'rinsa-da, ularning uglerod izotoplari nisbati farq qiladi. Maxsus usul (GC-C-IRMS) aynan shu farqni o'lchaydi va sintetik gormonni "ushlaydi". Bundan tashqari, biologik pasportning steroid moduli har bir sportchining gormon ko'rsatkichini yillar davomida kuzatib boradi. Zamonaviy fan oldida tanani aldash tobora qiyinlashmoqda.`},
+{n:19,file:`audio/19.mp3`,title:`Murabbiy — sportchining birinchi himoyachisi`,cat:`Ta'lim / Psixologiya`,yt:``,text:`Doping ko'pincha modda emas, qaror muammosidir — va bu qaror atrofdagilar ta'sirida tug'iladi. "Hamma ichadi", "boshqa iloji yo'q" degan bosim yosh sportchini eng zaif nuqtasidan uradi. Aynan shu yerda murabbiyning roli hal qiluvchi: sportchi ishonadigan birinchi odam — murabbiy. Toza sportni tarbiyalash medaldan muhimroq. Yosh sportchiga halol yutuqning qadrini o'rgatgan murabbiy nafaqat natija, balki inson yetishtiradi. Profilaktika har qanday testdan kuchliroq.`},
+{n:20,file:`audio/20.mp3`,title:`Namuna qanday olinadi: A va B kolba siri`,cat:`Jarayon`,yt:``,text:`Doping namunasi qanday olinadi va nega adolatli? Jarayon qat'iy nazorat ostida: chaperon (kuzatuvchi) sportchini namuna berish davomida kuzatib turadi. Namuna ikkita idishga bo'linadi — A va B kolba. Avval faqat A kolba tekshiriladi. Agar natija ijobiy chiqsa, sportchi rozi bo'lmasa, uning ishtirokida B kolba ochiladi va qayta tekshiriladi. Bu tizim xatoning oldini oladi va sportchining huquqini himoya qiladi. Har bir bosqich hujjatlashtiriladi — shaffoflik adolatning kafolatidir.`}
 ];
-function buildAlpha(){const box=document.getElementById('gloss-alpha');const letters=[...new Set(glossData.map(g=>g.term[0].toUpperCase()))].sort();letters.forEach(l=>{const b=document.createElement('button');b.textContent=l;b.onclick=()=>filterGlossLetter(l,b);box.appendChild(b)})}
-function filterGlossLetter(l,btn){document.querySelectorAll('.gloss-alpha button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderGloss(glossData.filter(g=>g.term[0].toUpperCase()===l));document.getElementById('gloss-search').value=''}
-function filterGloss(){const q=document.getElementById('gloss-search').value.toLowerCase().trim();document.querySelectorAll('.gloss-alpha button').forEach(b=>b.classList.remove('active'));renderGloss(q?glossData.filter(g=>g.term.toLowerCase().includes(q)||g.en.toLowerCase().includes(q)||g.def.toLowerCase().includes(q)):glossData)}
-function renderGloss(data){const gl=document.getElementById('gloss-list');if(!data.length){gl.innerHTML='<p style="text-align:center;padding:24px;color:var(--muted)">Topilmadi</p>';return}gl.innerHTML=data.map(g=>`<div class="gloss-item"><div class="gi-term">${g.term}<span class="gi-en">(${g.en})</span></div><div class="gi-def">${g.def}</div></div>`).join('')}
-buildAlpha();renderGloss(glossData);
+function ytBtn(m){return m.yt?`<a class="mp3-yt" href="${m.yt}" target="_blank" rel="noopener">▶️ YouTube</a>`:''}
+function renderMp3(data){
+  const el=document.getElementById('mp3-list');
+  if(!data.length){el.innerHTML='<p style="text-align:center;padding:24px;color:var(--muted)">Topilmadi</p>';return}
+  el.innerHTML=data.map(m=>`<div class="mp3-item">
+    <div class="mp3-head">
+      <div class="mp3-num">${String(m.n).padStart(2,'0')}</div>
+      <div class="mp3-titles"><div class="mp3-title">${m.title}</div><div class="mp3-cat">${m.cat}</div></div>
+      ${ytBtn(m)}
+    </div>
+    <div class="mp3-text">${m.text}</div>
+    <audio class="mp3-audio" controls preload="none" src="${m.file}"></audio>
+  </div>`).join('')
+}
+function filterMp3(){
+  const q=document.getElementById('mp3-search').value.toLowerCase().trim();
+  renderMp3(q?mp3Data.filter(m=>m.title.toLowerCase().includes(q)||m.cat.toLowerCase().includes(q)||m.text.toLowerCase().includes(q)):mp3Data)
+}
+renderMp3(mp3Data);
 
 // ═══ QUIZ DATA ═══
 const quizData={
@@ -3154,7 +3175,7 @@ const RU_DICT = {
 "🎓 PhD Ilmiy Tadqiqot Loyihasi · sportedu.uz":"🎓 Научно-исследовательский проект PhD · sportedu.uz",
 "Tuzuvchi · PhD tadqiqotchisi · sportedu.uz":"Автор · исследователь PhD · sportedu.uz",
 "Sport tizimidagi rahbarlar, murabbiylar, metodistlar va sportchilar uchun WADA hamda UzNADO xalqaro standartlariga asoslangan ilmiy-metodologik ta'lim tizimi.":"Научно-методическая система обучения для руководителей, тренеров, методистов и спортсменов, основанная на международных стандартах WADA и UzNADO.",
-"Auditoriya":"Аудитории","Mavzu":"Тем","Test savol":"Тест-вопросов","WADA kategoriya":"Категорий WADA","Dorilar bazasi":"База лекарств","Lug'at atama":"Терминов",
+"Auditoriya":"Аудитории","Mavzu":"Тем","Test savol":"Тест-вопросов","WADA kategoriya":"Категорий WADA","Dorilar bazasi":"База лекарств","Audio dars":"Аудио-уроков",
 "Rahbarlar":"Руководители","Murabbiylar":"Тренеры","Metodistlar":"Методисты","Sportchilar":"Спортсмены",
 "O'quv Modullar":"Учебные модули","O'z toifangizni tanlang":"Выберите свою категорию",
 "Har bir modul shu toifa uchun maxsus ishlab chiqilgan. Har bir modulda 10 ta mavzu, amaliy checklist va 20 ta test savoli mavjud.":"Каждый модуль разработан специально для своей категории. В каждом модуле 10 тем, практический чек-лист и 20 тестовых вопросов.",
@@ -3165,7 +3186,7 @@ const RU_DICT = {
 "📋 10 mavzu":"📋 10 тем","🏅 10 mavzu":"🏅 10 тем","📄 10 mavzu":"📄 10 тем","✅ Checklist":"✅ Чек-лист","📝 20 test":"📝 20 тестов","✅ Kunlik reja":"✅ Дневной план",
 "Hujjatli Filmlar":"Документальные фильмы","Oskar sovrindori va dunyo miqyosida e'tirof etilgan filmlar — pedagogik tahlil bilan.":"Оскароносные и всемирно признанные фильмы — с педагогическим анализом.",
 "Klinik Holatlar":"Клинические случаи","Haqiqiy doping voqealari asosida o'rganish — xato va to'g'ri yo'l, WADA qoidalari.":"Обучение на реальных допинг-случаях — ошибки и верный путь, правила WADA.",
-"Antidoping Lug'at":"Антидопинговый словарь","WADA atamalarining o'zbekcha izohli lug'ati — 35+ atama, qidiruv va alifbo filtri.":"Толковый словарь терминов WADA — 35+ терминов, поиск и алфавитный фильтр.",
+"Antidoping MP3":"Антидопинг MP3","20 ta tayyor mavzu — matnini o'qing yoki \"Madina\" ovozida audio (MP3) eshiting.":"20 готовых тем — читайте текст или слушайте аудио (MP3) голосом \"Мадина\".",
 "🎥 3 film":"🎥 3 фильма","🏆 Oskar":"🏆 Оскар","📖 Tahlil":"📖 Анализ","📋 6 holat":"📋 6 случаев","❌→✅ Tahlil":"❌→✅ Анализ","📜 WADA qoida":"📜 Правила WADA","🔤 35+ atama":"🔤 35+ терминов","🔍 Qidiruv":"🔍 Поиск","📌 Harflar":"📌 Алфавит",
 "WADA Ma'lumotlar Bazasi":"База данных WADA","Taqiqlangan Moddalar Ro'yxati (2026)":"Список запрещённых веществ (2026)",
 "Barcha kategoriyalar":"Все категории","Modda nomi":"Название вещества","Misollar":"Примеры","Ta'siri":"Действие","Xavf darajasi":"Уровень риска",
@@ -3207,7 +3228,7 @@ const RU_DICT = {
 "📚 Mavzular":"📚 Темы","✅ Oylik checklist":"✅ Месячный чек-лист","📝 Test (20)":"📝 Тест (20)",
 "Oskar sovrindori va e'tirof etilgan filmlar — pedagogik tahlil":"Оскароносные и признанные фильмы — педагогический анализ",
 "Klinik Holatlar (Case Studies)":"Клинические случаи (Case Studies)","Haqiqiy doping voqealari asosida — xato va to'g'ri yo'l":"На основе реальных допинг-случаев — ошибки и верный путь",
-"Antidoping Lug'ati":"Антидопинговый словарь","WADA atamalarining o'zbekcha izohli lug'ati — 35+ atama":"Толковый словарь терминов WADA — 35+ терминов"
+"Antidoping MP3":"Антидопинг MP3","20 ta tayyor mavzu — matn va \"Madina\" ovozidagi audio":"20 готовых тем — текст и аудио голосом \"Мадина\""
 };
 
 // ── HTML almashinadigan (ichida teg bor) elementlar ──
