@@ -890,6 +890,383 @@ footer a:hover{color:#fff}
 </section>
 
 
+
+<!-- 1. DOPING FIZIOLOGIK SIMULYATORI (DOZA VA VAQT KINETIKASI) -->
+<section id="sim-sec" style="background:#040711;padding:60px 0;color:#f8fafc;border-top:3px solid #f59e0b;border-bottom:3px solid #1e293b;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 24px;">
+    
+    <div style="text-align:center;margin-bottom:32px;">
+      <div style="display:inline-block;padding:6px 18px;background:rgba(245,158,11,0.2);color:#fbbf24;border:1px solid #f59e0b;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">
+        ⚡ Interaktiv Ilmiy Trenajyor
+      </div>
+      <h2 style="font-size:32px;font-weight:900;color:#ffffff;letter-spacing:-0.5px;margin-bottom:8px;">
+        Doping Fiziologik Simulyatori: Doza va Vaqt Kinetikasi
+      </h2>
+      <p style="font-size:15px;color:#94a3b8;max-width:800px;margin:0 auto;">
+        Doping moddasi va qabul qilish muddatini tanlang — simulyator inson organizmi ko'rsatkichlarining
+        real vaqtdagi xatarli o'zgarishlarini va WADA tutilish ehtimolini hisoblab beradi.
+      </p>
+    </div>
+
+    <!-- Simulyator boshqaruv va metrikalar grid -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;background:#0d1527;border:2px solid #1e293b;border-radius:22px;padding:30px;box-shadow:0 12px 40px rgba(0,0,0,0.6);">
+      
+      <!-- Chap: Boshqaruv elementlari -->
+      <div>
+        <h4 style="font-size:16px;font-weight:800;color:#38bdf8;margin-bottom:14px;">1. Modda Guruhini Tanlang:</h4>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;">
+          <button class="sim-sub-btn active" onclick="setSimSub('S1', this)" style="padding:10px 12px;border-radius:10px;border:1px solid #ef4444;background:#1e1b4b;color:#fca5a5;font-size:12px;font-weight:700;cursor:pointer;text-align:left;">
+            🔴 S1: Anabolik Steroidlar
+          </button>
+          <button class="sim-sub-btn" onclick="setSimSub('S2', this)" style="padding:10px 12px;border-radius:10px;border:1px solid #334155;background:#1e293b;color:#cbd5e1;font-size:12px;font-weight:700;cursor:pointer;text-align:left;">
+            🔴 S2: Peptidlar &amp; EPO
+          </button>
+          <button class="sim-sub-btn" onclick="setSimSub('S3', this)" style="padding:10px 12px;border-radius:10px;border:1px solid #334155;background:#1e293b;color:#cbd5e1;font-size:12px;font-weight:700;cursor:pointer;text-align:left;">
+            🟠 S3: Beta-2 (Klenbuterol)
+          </button>
+          <button class="sim-sub-btn" onclick="setSimSub('S4', this)" style="padding:10px 12px;border-radius:10px;border:1px solid #334155;background:#1e293b;color:#cbd5e1;font-size:12px;font-weight:700;cursor:pointer;text-align:left;">
+            🟡 S4: Meldoniy &amp; Modulyator
+          </button>
+          <button class="sim-sub-btn" onclick="setSimSub('S5', this)" style="padding:10px 12px;border-radius:10px;border:1px solid #334155;background:#1e293b;color:#cbd5e1;font-size:12px;font-weight:700;cursor:pointer;text-align:left;">
+            🔵 S5: Diuretiklar
+          </button>
+          <button class="sim-sub-btn" onclick="setSimSub('S6', this)" style="padding:10px 12px;border-radius:10px;border:1px solid #334155;background:#1e293b;color:#cbd5e1;font-size:12px;font-weight:700;cursor:pointer;text-align:left;">
+            ⚡ S6: Stimulyatorlar
+          </button>
+        </div>
+
+        <h4 style="font-size:16px;font-weight:800;color:#38bdf8;margin-bottom:12px;">
+          2. Qabul Qilish Muddati (Vaqt): <span id="sim-duration-text" style="color:#f59e0b;font-weight:900;">6 OY</span>
+        </h4>
+        <input type="range" id="sim-range" min="1" max="4" value="2" step="1" oninput="updateSimCalculations()" style="width:100%;height:8px;accent-color:#f59e0b;cursor:pointer;margin-bottom:8px;">
+        <div style="display:flex;justify-content:space-between;font-size:11px;color:#94a3b8;font-weight:700;">
+          <span>1 Oy (Boshlang'ich)</span>
+          <span>6 Oy (Sikl)</span>
+          <span>2 Yil (Surunkali)</span>
+          <span>5 Yil (Qaytmas oqibat)</span>
+        </div>
+
+        <div style="margin-top:24px;padding:16px;background:rgba(239,68,68,0.1);border-left:4px solid #ef4444;border-radius:8px;">
+          <div style="font-size:13px;font-weight:800;color:#fca5a5;margin-bottom:4px;">🚨 Tibbiy Xulosa &amp; Klinik Xavf:</div>
+          <div id="sim-verdict" style="font-size:12px;line-height:1.5;color:#e2e8f0;">
+            Yurak chap qorinchasi qalinlashishi (gipertrofiya 18%), qon bosimining 150/95 gacha ko'tarilishi va jigarda jiddiy gepatotoksik o'zgarishlar boshlanishi.
+          </div>
+        </div>
+      </div>
+
+      <!-- O'ng: Real Vaqtdagi Fiziologik Ko'rsatkichlar & Metrikalar -->
+      <div style="display:flex;flex-direction:column;gap:16px;justify-content:center;">
+        
+        <!-- Metrika 1: Qon Bosimi -->
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:6px;">
+            <span>🩸 Arterial Qon Bosimi:</span>
+            <span id="m-bp" style="color:#ef4444;font-weight:900;">150 / 95 mmHg</span>
+          </div>
+          <div style="width:100%;height:10px;background:#1e293b;border-radius:5px;overflow:hidden;">
+            <div id="bar-bp" style="width:65%;height:100%;background:linear-gradient(90deg,#eab308,#ef4444);transition:0.3s;"></div>
+          </div>
+        </div>
+
+        <!-- Metrika 2: Yurak Gipertrofiyasi -->
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:6px;">
+            <span>🫀 Miokard Qalinlashuvi (Yurak Zo'riqishi):</span>
+            <span id="m-heart" style="color:#ef4444;font-weight:900;">+24%</span>
+          </div>
+          <div style="width:100%;height:10px;background:#1e293b;border-radius:5px;overflow:hidden;">
+            <div id="bar-heart" style="width:55%;height:100%;background:linear-gradient(90deg,#38bdf8,#ef4444);transition:0.3s;"></div>
+          </div>
+        </div>
+
+        <!-- Metrika 3: Jigar Toksikligi -->
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:6px;">
+            <span>🧪 Jigar Toksikligi (ALT / AST Fermentlari):</span>
+            <span id="m-liver" style="color:#f59e0b;font-weight:900;">95 U/L (Norma: 35)</span>
+          </div>
+          <div style="width:100%;height:10px;background:#1e293b;border-radius:5px;overflow:hidden;">
+            <div id="bar-liver" style="width:60%;height:100%;background:linear-gradient(90deg,#10b981,#f59e0b);transition:0.3s;"></div>
+          </div>
+        </div>
+
+        <!-- Metrika 4: Tabiiy Gormonlar So'nishi -->
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:6px;">
+            <span>📉 Tabiiy Gormonlar So'nishi (Atrofiya):</span>
+            <span id="m-hormone" style="color:#dc2626;font-weight:900;">-65%</span>
+          </div>
+          <div style="width:100%;height:10px;background:#1e293b;border-radius:5px;overflow:hidden;">
+            <div id="bar-hormone" style="width:65%;height:100%;background:linear-gradient(90deg,#f59e0b,#dc2626);transition:0.3s;"></div>
+          </div>
+        </div>
+
+        <!-- Metrika 5: WADA Tutilish Ehtimoli -->
+        <div style="background:#020617;padding:14px;border-radius:12px;border:1px solid #ef4444;display:flex;align-items:center;justify-content:space-between;">
+          <div>
+            <div style="font-size:12px;color:#94a3b8;font-weight:700;">WADA Mass-Spektrometriyasida Tutilish:</div>
+            <div style="font-size:11px;color:#fca5a5;">(Qon va siydikda metabolitlar saqlanishi)</div>
+          </div>
+          <div id="m-catch" style="font-size:24px;font-weight:900;color:#ef4444;">98.4%</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 2. VIRTUAL DOPING-NAZORAT XONASI TRENAJYORI -->
+<section id="doping-station-sec" style="background:#080d1a;padding:60px 0;color:#f8fafc;border-bottom:3px solid #0284c7;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 24px;">
+    
+    <div style="text-align:center;margin-bottom:36px;">
+      <div style="display:inline-block;padding:6px 18px;background:rgba(2,132,199,0.2);color:#38bdf8;border:1px solid #0284c7;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">
+        🏢 WADA Doping Control Station (DCS)
+      </div>
+      <h2 style="font-size:32px;font-weight:900;color:#ffffff;letter-spacing:-0.5px;margin-bottom:8px;">
+        Virtual Doping-Nazorat Xonasi Trenajyori
+      </h2>
+      <p style="font-size:15px;color:#94a3b8;max-width:800px;margin:0 auto;">
+        Sportchilarning 60% qoidani bilmagani uchun diskvalifikatsiya bo'ladi. Ushbu 4 bosqichli
+        interaktiv trenajyorda qadam-baqadam to'g'ri qarorlarni qabul qiling va xatolardan saqlaning!
+      </p>
+    </div>
+
+    <!-- 4 Bosqichli Interaktiv Karta -->
+    <div style="background:#0f172a;border:2px solid #334155;border-radius:24px;padding:34px;box-shadow:0 14px 40px rgba(0,0,0,0.5);">
+      
+      <!-- Progress Bar -->
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;border-bottom:1px solid #1e293b;padding-bottom:16px;">
+        <div style="display:flex;gap:12px;">
+          <span id="step-pill-1" style="background:#0284c7;color:#fff;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:800;">1-Bosqich: Chaperone</span>
+          <span id="step-pill-2" style="background:#1e293b;color:#64748b;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:800;">2-Bosqich: Nazorat Xonasi</span>
+          <span id="step-pill-3" style="background:#1e293b;color:#64748b;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:800;">3-Bosqich: Namuna &amp; Flakon</span>
+          <span id="step-pill-4" style="background:#1e293b;color:#64748b;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:800;">4-Bosqich: Protokol</span>
+        </div>
+        <div style="font-size:13px;font-weight:800;color:#38bdf8;">
+          🏆 To'g'ri Qarorlar: <span id="dcs-score" style="color:#34d399;font-size:16px;">0</span> / 4
+        </div>
+      </div>
+
+      <!-- Bosqich Mazmuni -->
+      <div id="dcs-stage-content">
+        <h3 id="dcs-question" style="font-size:20px;font-weight:800;color:#f8fafc;margin-bottom:12px;">
+          1-Vaziyat: Musobaqa tugagach Chaperone (kuzatuvchi) sizga doping-test bildirishnomasini topshirdi. Sizning to'g'ri harakatingiz?
+        </h3>
+        <p id="dcs-context" style="font-size:14px;color:#94a3b8;margin-bottom:20px;line-height:1.6;">
+          Siz shohsupaga chiqishingiz yoki matbuot anjumaniga borishingiz kerak. Chaperone sizga ergashmoqda.
+        </p>
+
+        <!-- Variantlar -->
+        <div id="dcs-options" style="display:flex;flex-direction:column;gap:12px;">
+          <button onclick="handleDCSChoice(1, 1)" style="text-align:left;background:#1e293b;border:1px solid #334155;color:#e2e8f0;padding:14px 18px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;">
+            A) Chaperonega bildirishnomani imzolab beraman, uning doimiy ko'z nazorati ostida vakilim (murabbiy) bilan matbuot anjumaniga boraman va so'ng zudlik bilan doping nazorati xonasiga o'taman.
+          </button>
+          <button onclick="handleDCSChoice(1, 2)" style="text-align:left;background:#1e293b;border:1px solid #334155;color:#e2e8f0;padding:14px 18px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;">
+            B) Chaperonega "hozir kiyinib chiqaman" deb yechinish xonasiga yolg'iz kirib ketaman va eshikni yopaman.
+          </button>
+          <button onclick="handleDCSChoice(1, 3)" style="text-align:left;background:#1e293b;border:1px solid #334155;color:#e2e8f0;padding:14px 18px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;">
+            C) Chaperoneni e'tiborsiz qoldirib, mehmonxonaga ketib qolaman (ertaga topshiraman deb o'ylayman).
+          </button>
+        </div>
+
+        <!-- Feedback alert -->
+        <div id="dcs-feedback" style="display:none;margin-top:20px;padding:16px;border-radius:12px;font-size:13px;line-height:1.6;"></div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 3. SPORT OZUQASI VA BAD RISK-KALKULYATORI -->
+<section id="bad-calc-sec" style="background:#0d1527;padding:60px 0;color:#f8fafc;border-bottom:3px solid #10b981;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 24px;">
+    
+    <div style="text-align:center;margin-bottom:34px;">
+      <div style="display:inline-block;padding:6px 18px;background:rgba(16,185,129,0.2);color:#34d399;border:1px solid #10b981;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">
+        🛡️ Kontaminatsiya Himoyasi
+      </div>
+      <h2 style="font-size:32px;font-weight:900;color:#ffffff;letter-spacing:-0.5px;margin-bottom:8px;">
+        Sport Ozuqasi &amp; BAD Risk-Kalkulyatori
+      </h2>
+      <p style="font-size:15px;color:#94a3b8;max-width:750px;margin:0 auto;">
+        Biologik Faol Qo'shimchalar (protein, geyner, aminokislotalar) ning 12–25 foizida yashirin taqiqlangan moddalar bor.
+        Qo'shimchangiz xavfsizlik darajasini 4 ta savol orqali tekshiring!
+      </p>
+    </div>
+
+    <!-- Kalkulyator Card -->
+    <div style="background:#0f172a;border:2px solid #334155;border-radius:22px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:26px;box-shadow:0 12px 40px rgba(0,0,0,0.5);">
+      
+      <!-- Savollar -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label style="font-size:13px;font-weight:700;color:#cbd5e1;display:block;margin-bottom:6px;">
+            1. Mustaqil Antidoping Xalqaro Sertifikati bormi?
+          </label>
+          <select id="bad-q1" onchange="calcBADRisk()" style="width:100%;padding:10px;border-radius:10px;background:#1e293b;border:1px solid #334155;color:#fff;font-size:13px;">
+            <option value="0">Bor: Informed-Sport / NSF Certified for Sport / Cologne List (Kölner Liste)</option>
+            <option value="25">Faqat umumiy ISO / Halol sertifikati bor (doping sinovi yo'q)</option>
+            <option value="50">Hech qanday sertifikat yo'q / Noma'lum</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-size:13px;font-weight:700;color:#cbd5e1;display:block;margin-bottom:6px;">
+            2. Tarkibida "Proprietary Blend" (Sirli Maxsus Aralashma) bormi?
+          </label>
+          <select id="bad-q2" onchange="calcBADRisk()" style="width:100%;padding:10px;border-radius:10px;background:#1e293b;border:1px solid #334155;color:#fff;font-size:13px;">
+            <option value="0">Yo'q, har bir modda milligrammgacha aniq ko'rsatilgan</option>
+            <option value="35">Ha, qutida "Matrix / Complex / Proprietary Blend" deb yozilgan</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-size:13px;font-weight:700;color:#cbd5e1;display:block;margin-bottom:6px;">
+            3. Mahsulot nimalarni va'da qilmoqda?
+          </label>
+          <select id="bad-q3" onchange="calcBADRisk()" style="width:100%;padding:10px;border-radius:10px;background:#1e293b;border:1px solid #334155;color:#fff;font-size:13px;">
+            <option value="0">Oddiy oziq-ovqat qo'shimchasi (oqsil, kreatin, multivitamin)</option>
+            <option value="30">Mo'jizaviy kuch, "portlovchi energiya", bir haftada 5 kg vazn tashlash</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-size:13px;font-weight:700;color:#cbd5e1;display:block;margin-bottom:6px;">
+            4. Mahsulot qayerdan sotib olingan?
+          </label>
+          <select id="bad-q4" onchange="calcBADRisk()" style="width:100%;padding:10px;border-radius:10px;background:#1e293b;border:1px solid #334155;color:#fff;font-size:13px;">
+            <option value="0">Rasmiy dorixona yoki brendning rasmiy dileri</option>
+            <option value="25">Internet (Telegram-kanal, noma'lum sayt, do'st tavsiyasi)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Natija va Xavf Indeksi -->
+      <div style="background:#080d1a;border:2px solid #334155;border-radius:16px;padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+        <div style="font-size:13px;color:#94a3b8;font-weight:700;margin-bottom:8px;">KONTAMINATSIYA XAVF INDEKSI:</div>
+        <div id="bad-risk-percent" style="font-size:52px;font-weight:900;color:#10b981;line-height:1;margin-bottom:12px;">0%</div>
+        <div id="bad-risk-badge" style="background:#064e3b;color:#34d399;font-weight:800;font-size:12px;padding:6px 16px;border-radius:20px;margin-bottom:16px;">
+          🟢 XAVFSIZ (Minimal Xavf)
+        </div>
+        <p id="bad-risk-advice" style="font-size:13px;color:#cbd5e1;line-height:1.6;margin:0;">
+          Ushbu mahsulot partiya raqami va xalqaro doping sinoviga ega. Toza sport uchun tavsiya etiladi.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 4. PhD DISSERTATSIYASI (13.00.04) ILMIY TAJRIBA-SINOV STATISTIKASI -->
+<section id="phd-stats-sec" style="background:#090d18;padding:60px 0;color:#f8fafc;border-bottom:3px solid #8b5cf6;">
+  <div style="max-width:1320px;margin:0 auto;padding:0 24px;">
+    
+    <div style="text-align:center;margin-bottom:36px;">
+      <div style="display:inline-block;padding:6px 18px;background:rgba(139,92,246,0.2);color:#c084fc;border:1px solid #8b5cf6;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">
+        🎓 PhD Dissertatsiyasi (13.00.04) Ilmiy Natijalar
+      </div>
+      <h2 style="font-size:32px;font-weight:900;color:#ffffff;letter-spacing:-0.5px;margin-bottom:8px;">
+        Pedagogik Tajriba-Sinov Statistikasi va Samaradorlik
+      </h2>
+      <p style="font-size:15px;color:#94a3b8;max-width:850px;margin:0 auto;">
+        Bo'lajak jismoniy tarbiya va sport mutaxassislarida antidoping kompetensiyasini shakllantirish
+        bo'yicha o'tkazilgan pedagogik tajriba-sinov ishlari (n = 240) dinamikasi va OAK talablari.
+      </p>
+    </div>
+
+    <!-- OAK Metrikalar Grid -->
+    <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;margin-bottom:26px;">
+      <div style="background:#0f172a;border:1px solid #334155;border-radius:16px;padding:20px;text-align:center;">
+        <div style="font-size:12px;color:#94a3b8;font-weight:700;">Jami Qamrov:</div>
+        <div style="font-size:32px;font-weight:900;color:#38bdf8;margin:4px 0;">n = 240</div>
+        <div style="font-size:11px;color:#cbd5e1;">(NG = 120, TG = 120 nafar)</div>
+      </div>
+
+      <div style="background:#0f172a;border:1px solid #334155;border-radius:16px;padding:20px;text-align:center;">
+        <div style="font-size:12px;color:#94a3b8;font-weight:700;">Styudent t-Mezoni:</div>
+        <div style="font-size:32px;font-weight:900;color:#34d399;margin:4px 0;">t = 6.84</div>
+        <div style="font-size:11px;color:#a7f3d0;">t_hisob &gt; t_jadval (1.98)</div>
+      </div>
+
+      <div style="background:#0f172a;border:1px solid #334155;border-radius:16px;padding:20px;text-align:center;">
+        <div style="font-size:12px;color:#94a3b8;font-weight:700;">Ishonchlilik Darajasi:</div>
+        <div style="font-size:32px;font-weight:900;color:#c084fc;margin:4px 0;">p &lt; 0.001</div>
+        <div style="font-size:11px;color:#e9d5ff;">99.9% Ilmiy Aniq Farq</div>
+      </div>
+
+      <div style="background:#0f172a;border:1px solid #334155;border-radius:16px;padding:20px;text-align:center;">
+        <div style="font-size:12px;color:#94a3b8;font-weight:700;">Pirson xi-kvadrat:</div>
+        <div style="font-size:32px;font-weight:900;color:#f59e0b;margin:4px 0;">χ² = 42.18</div>
+        <div style="font-size:11px;color:#fde68a;">χ²_hisob &gt; χ²_jadval (5.99)</div>
+      </div>
+    </div>
+
+    <!-- Taqqoslash Jadvali va Grafik -->
+    <div style="background:#0f172a;border:2px solid #334155;border-radius:20px;padding:26px;">
+      <h3 style="font-size:18px;font-weight:800;color:#ffffff;margin-bottom:16px;">
+        📋 Dastlabki va Yakuniy Bosqichlarda Antidoping Kompetensiyasi Ko'rsatkichlari:
+      </h3>
+      
+      <table style="width:100%;border-collapse:collapse;text-align:center;font-size:13px;color:#e2e8f0;">
+        <thead>
+          <tr style="background:#1e293b;color:#38bdf8;font-weight:800;">
+            <th style="padding:12px;border:1px solid #334155;text-align:left;">Guruhlar (n = 120)</th>
+            <th style="padding:12px;border:1px solid #334155;">Bosqich</th>
+            <th style="padding:12px;border:1px solid #334155;">Past Daraja (%)</th>
+            <th style="padding:12px;border:1px solid #334155;">O'rta Daraja (%)</th>
+            <th style="padding:12px;border:1px solid #334155;">Yuqori Daraja (%)</th>
+            <th style="padding:12px;border:1px solid #334155;">O'sish Dinamikasi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2" style="padding:12px;border:1px solid #334155;text-align:left;font-weight:700;">Nazorat Guruhi (NG)</td>
+            <td style="padding:10px;border:1px solid #334155;">Tajribadan oldin</td>
+            <td style="padding:10px;border:1px solid #334155;">48.3% (58)</td>
+            <td style="padding:10px;border:1px solid #334155;">36.7% (44)</td>
+            <td style="padding:10px;border:1px solid #334155;">15.0% (18)</td>
+            <td rowspan="2" style="padding:10px;border:1px solid #334155;color:#94a3b8;">+2.5% (Kam o'sish)</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;border:1px solid #334155;">Tajribadan keyin</td>
+            <td style="padding:10px;border:1px solid #334155;">39.2% (47)</td>
+            <td style="padding:10px;border:1px solid #334155;">43.3% (52)</td>
+            <td style="padding:10px;border:1px solid #334155;">17.5% (21)</td>
+          </tr>
+          <tr style="background:rgba(16,185,129,0.08);">
+            <td rowspan="2" style="padding:12px;border:1px solid #334155;text-align:left;font-weight:700;color:#34d399;">Tajriba Guruhi (TG — Doping3D)</td>
+            <td style="padding:10px;border:1px solid #334155;">Tajribadan oldin</td>
+            <td style="padding:10px;border:1px solid #334155;">49.1% (59)</td>
+            <td style="padding:10px;border:1px solid #334155;">35.8% (43)</td>
+            <td style="padding:10px;border:1px solid #334155;">15.1% (18)</td>
+            <td rowspan="2" style="padding:10px;border:1px solid #334155;color:#34d399;font-weight:900;">+42.4% (KESKIN O'SISH)</td>
+          </tr>
+          <tr style="background:rgba(16,185,129,0.15);">
+            <td style="padding:10px;border:1px solid #334155;font-weight:700;">Tajribadan keyin</td>
+            <td style="padding:10px;border:1px solid #334155;color:#34d399;font-weight:800;">8.3% (10) ⬇</td>
+            <td style="padding:10px;border:1px solid #334155;">34.2% (41)</td>
+            <td style="padding:10px;border:1px solid #334155;color:#34d399;font-weight:900;">57.5% (69) ⬆</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:20px;padding:14px;background:#1e293b;border-radius:12px;font-size:12px;color:#cbd5e1;display:flex;align-items:center;justify-content:space-between;">
+        <span>🎯 <strong>Ilmiy Xulosa:</strong> Doping3D platformasi qo'llanilgan Tajriba guruhida yuqori kompetentlik darajasi 15.1% dan 57.5% ga oshdi (p &lt; 0.001).</span>
+        <span style="color:#38bdf8;font-weight:700;">OAK 13.00.04 Standarti</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section id="checker-sec" style="background:linear-gradient(160deg,#0a1f3d,#1a3a6b);padding:56px 0;border-top:2px solid rgba(255,255,255,.1)">
   <div style="max-width:1320px;margin:0 auto;padding:0 24px">
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px;justify-content:center">
@@ -2676,6 +3053,245 @@ function startTUEGuide() {
 window.addEventListener('DOMContentLoaded', () => {
   setTimeout(initAnatomy3D, 500);
 });
+
+
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 1. DOPING FIZIOLOGIK SIMULYATORI JAVASCRIPT LOGIKASI
+// ═══════════════════════════════════════════════════════════════════════════
+let currentSimSub = 'S1';
+const SIM_MATRIX = {
+  S1: [
+    { bp: "130 / 85 mmHg", bpVal: 35, heart: "+8%", heartVal: 20, liver: "55 U/L", liverVal: 30, hormone: "-25%", hormoneVal: 25, catch: "92.0%", verdict: "Boshlang'ich qon bosimi oshishi, jigar fermentlarining yengil zo'riqishi." },
+    { bp: "150 / 95 mmHg", bpVal: 65, heart: "+24%", heartVal: 55, liver: "95 U/L", liverVal: 60, hormone: "-65%", hormoneVal: 65, catch: "98.4%", verdict: "Yurak miokardi gipertrofiyasi, tabiiy testosteron ishlab chiqarilishining keskin susayishi va gepatotoksiklik." },
+    { bp: "170 / 105 mmHg", bpVal: 85, heart: "+38%", heartVal: 80, liver: "165 U/L", liverVal: 85, hormone: "-85%", hormoneVal: 85, catch: "99.8%", verdict: "Yuqori gipertonik kriz xavfi, moyaklar atrofiyasi, bepushtlik, jigar kistasi xavfi." },
+    { bp: "195 / 115 mmHg", bpVal: 100, heart: "+52%", heartVal: 100, liver: "280 U/L", liverVal: 100, hormone: "-95%", hormoneVal: 95, catch: "99.9%", verdict: "Og'ir yurak yetishmovchiligi, to'satdan infarkt yoki jigar adenomasi xavfi 90% dan yuqori!" }
+  ],
+  S2: [
+    { bp: "128 / 82 mmHg", bpVal: 30, heart: "+5%", heartVal: 15, liver: "40 U/L", liverVal: 20, hormone: "-10%", hormoneVal: 10, catch: "90.0%", verdict: "Eritrotsitlar va gematokrit ko'payishi, qonning quyuqlashuv boshlanishi." },
+    { bp: "145 / 92 mmHg", bpVal: 60, heart: "+18%", heartVal: 45, liver: "50 U/L", liverVal: 35, hormone: "-30%", hormoneVal: 30, catch: "97.5%", verdict: "Qon yopishqoqligi keskin oshishi, arterial bosim zo'riqishi, mikrotromblar paydo bo'lishi." },
+    { bp: "168 / 102 mmHg", bpVal: 80, heart: "+32%", heartVal: 75, liver: "75 U/L", liverVal: 50, hormone: "-50%", hormoneVal: 50, catch: "99.5%", verdict: "Katta qon tomirlarida tromboemboliya xavfi, insult va gipertoniya xuruji." },
+    { bp: "190 / 112 mmHg", bpVal: 95, heart: "+48%", heartVal: 95, liver: "110 U/L", liverVal: 70, hormone: "-70%", hormoneVal: 70, catch: "99.9%", verdict: "O'pka arteriyasi tromboemboliyasi yoki uxlab yotganda to'satdan yurak to'xtashi xavfi!" }
+  ],
+  S3: [
+    { bp: "135 / 85 mmHg", bpVal: 40, heart: "+12%", heartVal: 25, liver: "42 U/L", liverVal: 25, hormone: "-5%", hormoneVal: 5, catch: "88.0%", verdict: "Qo'llarda tremor (qaltirash), taxikardiya (yurak 100+ zarba/min)." },
+    { bp: "152 / 92 mmHg", bpVal: 62, heart: "+26%", heartVal: 58, liver: "60 U/L", liverVal: 40, hormone: "-15%", hormoneVal: 15, catch: "96.0%", verdict: "Yurak ritmining buzilishi (aritmiya), qonda kaliy kamayishi, mushaklar spazmi." },
+    { bp: "165 / 100 mmHg", bpVal: 78, heart: "+36%", heartVal: 78, liver: "85 U/L", liverVal: 55, hormone: "-25%", hormoneVal: 25, catch: "99.0%", verdict: "Surunkali miokard distrofiyasi, uyqusizlik, doimiy vahima va xurujlar." },
+    { bp: "185 / 110 mmHg", bpVal: 90, heart: "+45%", heartVal: 90, liver: "120 U/L", liverVal: 75, hormone: "-40%", hormoneVal: 40, catch: "99.9%", verdict: "Xatarli qorinchalar fibrillyatsiyasi va yurak to'xtash xavfi!" }
+  ],
+  S4: [
+    { bp: "122 / 80 mmHg", bpVal: 20, heart: "+4%", heartVal: 10, liver: "45 U/L", liverVal: 25, hormone: "-20%", hormoneVal: 20, catch: "94.0%", verdict: "Yog' kislotalari oksidlanishi bloklanishi, organizmda to'planish boshlanishi." },
+    { bp: "138 / 88 mmHg", bpVal: 45, heart: "+14%", heartVal: 35, liver: "70 U/L", liverVal: 45, hormone: "-45%", hormoneVal: 45, catch: "99.0%", verdict: "Gipoglikemiya xavfi, dori to'qimalarda oylar davomida saqlanib qolishi." },
+    { bp: "150 / 94 mmHg", bpVal: 60, heart: "+25%", heartVal: 60, liver: "115 U/L", liverVal: 65, hormone: "-65%", hormoneVal: 65, catch: "99.8%", verdict: "Gormonal muvozanatning chuqur buzilishi, metabolik yetishmovchilik." },
+    { bp: "170 / 102 mmHg", bpVal: 80, heart: "+38%", heartVal: 80, liver: "180 U/L", liverVal: 85, hormone: "-85%", hormoneVal: 85, catch: "99.9%", verdict: "Og'ir endokrin buzilishlar, jigar va buyraklarning surunkali shikastlanishi!" }
+  ],
+  S5: [
+    { bp: "110 / 70 mmHg", bpVal: 15, heart: "+6%", heartVal: 15, liver: "40 U/L", liverVal: 20, hormone: "-10%", hormoneVal: 10, catch: "95.0%", verdict: "Kuchli suvsizlanish (3-4 litr suv yo'qotilishi), bosh aylanishi." },
+    { bp: "100 / 60 mmHg", bpVal: 10, heart: "+20%", heartVal: 45, liver: "65 U/L", liverVal: 40, hormone: "-20%", hormoneVal: 20, catch: "99.2%", verdict: "Gipokaliyemiya, kuchli sudorogilar (mushak tortishishi), qon quyuqlashishi." },
+    { bp: "95 / 55 mmHg", bpVal: 5, heart: "+35%", heartVal: 75, liver: "120 U/L", liverVal: 70, hormone: "-35%", hormoneVal: 35, catch: "99.8%", verdict: "O'tkir buyrak yetishmovchiligi, hushdan ketish va kollaps holati." },
+    { bp: "85 / 50 mmHg", bpVal: 5, heart: "+48%", heartVal: 95, liver: "220 U/L", liverVal: 95, hormone: "-50%", hormoneVal: 50, catch: "99.9%", verdict: "Buyraklar faoliyatining butunlay to'xtashi va koma xavfi!" }
+  ],
+  S6: [
+    { bp: "140 / 90 mmHg", bpVal: 50, heart: "+15%", heartVal: 30, liver: "45 U/L", liverVal: 25, hormone: "-10%", hormoneVal: 10, catch: "92.0%", verdict: "Yurak urishi tezlashishi, asabiylik, uyqusizlik va qaltirash." },
+    { bp: "165 / 100 mmHg", bpVal: 75, heart: "+30%", heartVal: 65, liver: "80 U/L", liverVal: 50, hormone: "-25%", hormoneVal: 25, catch: "98.8%", verdict: "Gipertermiya (tana haroratining 40°C ga ko'tarilishi), tajovuzkorlik, aritmiya." },
+    { bp: "185 / 110 mmHg", bpVal: 92, heart: "+42%", heartVal: 85, liver: "140 U/L", liverVal: 75, hormone: "-45%", hormoneVal: 45, catch: "99.8%", verdict: "Psixik buzilishlar, tutqanoqlar, insult va miyaga qon quyilishi xavfi." },
+    { bp: "210 / 125 mmHg", bpVal: 100, heart: "+55%", heartVal: 100, liver: "240 U/L", liverVal: 95, hormone: "-60%", hormoneVal: 60, catch: "99.9%", verdict: "To'satdan o'tkir miokard infarkti yoki o'lim holati!" }
+  ]
+};
+
+function setSimSub(subKey, btnElem) {
+  currentSimSub = subKey;
+  document.querySelectorAll('.sim-sub-btn').forEach(b => {
+    b.style.borderColor = '#334155';
+    b.style.background = '#1e293b';
+  });
+  if (btnElem) {
+    btnElem.style.borderColor = '#ef4444';
+    btnElem.style.background = '#1e1b4b';
+  }
+  updateSimCalculations();
+}
+
+function updateSimCalculations() {
+  const rangeVal = parseInt(document.getElementById('sim-range').value) - 1;
+  const labels = ["1 OY (Boshlang'ich)", "6 OY (Sikl)", "2 YIL (Surunkali)", "5 YIL (Qaytmas oqibat)"];
+  document.getElementById('sim-duration-text').innerText = labels[rangeVal];
+
+  const data = (SIM_MATRIX[currentSimSub] || SIM_MATRIX.S1)[rangeVal];
+  document.getElementById('m-bp').innerText = data.bp;
+  document.getElementById('bar-bp').style.width = data.bpVal + '%';
+
+  document.getElementById('m-heart').innerText = data.heart;
+  document.getElementById('bar-heart').style.width = data.heartVal + '%';
+
+  document.getElementById('m-liver').innerText = data.liver;
+  document.getElementById('bar-liver').style.width = data.liverVal + '%';
+
+  document.getElementById('m-hormone').innerText = data.hormone;
+  document.getElementById('bar-hormone').style.width = data.hormoneVal + '%';
+
+  document.getElementById('m-catch').innerText = data.catch;
+  document.getElementById('sim-verdict').innerText = data.verdict;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 2. VIRTUAL DOPING-NAZORAT TRENAJYORI JAVASCRIPT
+// ═══════════════════════════════════════════════════════════════════════════
+let dcsScore = 0;
+const DCS_STAGES = [
+  {
+    stage: 1,
+    pill: "step-pill-1",
+    q: "1-Vaziyat: Musobaqa tugagach Chaperone (kuzatuvchi) sizga doping-test bildirishnomasini topshirdi. Sizning to'g'ri harakatingiz?",
+    ctx: "Siz shohsupaga chiqishingiz yoki matbuot anjumaniga borishingiz kerak. Chaperone sizga ergashmoqda.",
+    options: [
+      { text: "A) Bildirishnomani imzolayman, Chaperonening uzluksiz ko'z nazorati ostida vakilim (murabbiy) bilan matbuot anjumani va taqdirlashga boraman, so'ng nazorat xonasiga o'taman.", correct: true, exp: "✅ TO'G'RI! WADA qoidasiga ko'ra sportchi bildirishnoma olgan lahzadan boshlab uzluksiz ko'z nazoratida bo'lishi shart, ammo rasmiy tadbirlarga hamrohlikda borishga haqli." },
+      { text: "B) Chaperonega 'hozir kiyinib chiqaman' deb yechinish xonasiga yolg'iz kirib ketaman va eshikni qulflayman.", correct: false, exp: "❌ XATO! Ko'z nazoratidan qochish — WADA 2.3-moddasi (Namuna topshirishdan bosh tortish yoki qochish) bo'yicha 4 yilgacha diskvalifikatsiyaga sabab bo'ladi!" },
+      { text: "C) Bildirishnomani olmayman, 'charchadim, ertaga topshiraman' deb ketib qolaman.", correct: false, exp: "❌ QO'POL XATO! Doping-testni qoldirib bo'lmaydi. Bu qoidabuzarlik hisoblanadi va to'g'ridan-to'g'ri jazo qo'llaniladi." }
+    ]
+  },
+  {
+    stage: 2,
+    pill: "step-pill-2",
+    q: "2-Vaziyat: Doping nazorati xonasiga (DCS) yetib keldingiz. Ichimlik ichishingiz kerak. Nima qilasiz?",
+    ctx: "Xonada har xil ochilgan va ochilmagan ichimliklar bor.",
+    options: [
+      { text: "A) Faqat zavodda muhrlangan (ochilmagan) idishdagi suv yoki sharbatni shaxsan o'zim tanlab olib, o'zim ochaman.", correct: true, exp: "✅ TO'G'RI! Boshqa odam ochgan yoki ochiq turgan ichimlikni aslo ichmang — begona moddalar tushish xavfi bor." },
+      { text: "B) Stol ustida ochiq turgan stakandagi suvni ichaveraman.", correct: false, exp: "❌ XATARLI XATO! Ochiq ichimlikda ifloslanish (kontaminatsiya) bo'lishi mumkin. Hamma mas'uliyat sportchining o'zida bo'ladi!" },
+      { text: "C) Tashqaridan do'stim bergan noma'lum idishdagi energetikni ichaman.", correct: false, exp: "❌ O'TA XATARLI! Energetik ichimliklar tarkibida taqiqlangan stimulyatorlar bo'lishi ehtimoli 80%!" }
+    ]
+  },
+  {
+    stage: 3,
+    pill: "step-pill-3",
+    q: "3-Vaziyat: Namuna topshirish uchun idishlar tanlash vaqti keldi. Qanday qilasiz?",
+    ctx: "Stol ustida 3 ta muhrlangan to'plam (kit) turibdi.",
+    options: [
+      { text: "A) Kamida 3 ta to'plam ichidan shaxsan o'zim bittasini tanlayman, qutining butunligini tekshirib, o'zim ochaman.", correct: true, exp: "✅ MUKAMMAL! To'plamni doimo sportchining o'zi tanlashi va butunligini shaxsan tekshirishi WADA standarti hisoblanadi." },
+      { text: "B) Doping ofitseriga \'o\'zingiz birortasini ochib bering\' deb ishonib topshiraman.", correct: false, exp: "❌ XATO! Doping ofitseri siz uchun tanlab bermasligi kerak. Butunlikni shaxsan o'zingiz tasdiqlashingiz shart." },
+      { text: "C) Qutisi yirtilgan yoki muhri buzilgan to'plamni ham ishlataveraman.", correct: false, exp: "❌ XATO! Agar muhr buzilgan bo'lsa, uni darhol rad etib, yangi butun to'plam talab qilish huquqingiz bor." }
+    ]
+  },
+  {
+    stage: 4,
+    pill: "step-pill-4",
+    q: "4-Vaziyat: Namunani A va B flakonlarga quydingiz. Protokol to'ldirishda eng muhim qoida qaysi?",
+    ctx: "Doping nazorati xodimi protokolni to'ldirmoqda.",
+    options: [
+      { text: "A) Oxirgi 7 kun davomida ichgan barcha dori, vitamin, tomchi va BADlarni protokolda to'liq yozdiraman, nusxadagi kodlar flakondagi bilan bir xilligini tekshirib so'ng imzo chekaman.", correct: true, exp: "✅ OLTIN QOIDA! Agar protokolda dori yozilmagan bo'lsa, keyinchalik uni oqlash 100 barobar qiyinlashadi. Flakon kodi va qog'ozdagi kod bir xil bo'lishi shart!" },
+      { text: "B) \'Vitaminlarimning ahamiyati yo\'q\' deb hech narsa yozdirmayman, tezroq ketish uchun o'qimasdan imzolayman.", correct: false, exp: "❌ FOJIALI XATO! Ko'p sportchilar aynan shunday beparvolik tufayli zararsiz vitamin yoki BAD orqali dopingga tushadi." },
+      { text: "C) Flakondagi kodni tekshirmayman, ofitserning o'zi biladi deb ketaman.", correct: false, exp: "❌ XATO! Har bir sportchi A va B flakonidagi 7 xonali kod bilan protokol kodini solishtirishi shart." }
+    ]
+  }
+];
+
+let curDCSStageIdx = 0;
+function handleDCSChoice(stageNum, optIdx) {
+  const stageData = DCS_STAGES[curDCSStageIdx];
+  const choice = stageData.options[optIdx - 1];
+  const fb = document.getElementById('dcs-feedback');
+
+  if (choice.correct) {
+    dcsScore++;
+    document.getElementById('dcs-score').innerText = dcsScore;
+    fb.style.display = 'block';
+    fb.style.background = 'rgba(16,185,129,0.15)';
+    fb.style.border = '1px solid #10b981';
+    fb.style.color = '#a7f3d0';
+    fb.innerHTML = choice.exp + '<div style="margin-top:10px;"><button onclick="nextDCSStage()" style="background:#10b981;color:#fff;border:none;padding:8px 18px;border-radius:10px;font-weight:700;cursor:pointer;">Keyingi Bosqich ➔</button></div>';
+  } else {
+    fb.style.display = 'block';
+    fb.style.background = 'rgba(239,68,68,0.15)';
+    fb.style.border = '1px solid #ef4444';
+    fb.style.color = '#fca5a5';
+    fb.innerHTML = choice.exp + '<div style="margin-top:10px;"><button onclick="retryDCSStage()" style="background:#ef4444;color:#fff;border:none;padding:8px 18px;border-radius:10px;font-weight:700;cursor:pointer;">Qayta Sinab Korish 🔄</button></div>';
+  }
+}
+
+function nextDCSStage() {
+  curDCSStageIdx++;
+  const fb = document.getElementById('dcs-feedback');
+  fb.style.display = 'none';
+
+  if (curDCSStageIdx >= DCS_STAGES.length) {
+    document.getElementById('dcs-stage-content').innerHTML = `
+      <div style="text-align:center;padding:40px 20px;">
+        <div style="font-size:50px;margin-bottom:12px;">🏆</div>
+        <h3 style="font-size:24px;font-weight:900;color:#34d399;margin-bottom:8px;">Tabriklaymiz! Doping-Nazorat Trenajyorini To'liq O'zlashtirdingiz!</h3>
+        <p style="font-size:14px;color:#cbd5e1;max-width:600px;margin:0 auto 20px;">
+          Siz WADA xalqaro standartlari bo'yicha namunalar topshirish, o'z huquqlaringizni himoya qilish va protokol rasmiylashtirishni 100% to'g'ri bajardingiz.
+        </p>
+        <button onclick="resetDCS()" style="background:#0284c7;color:#fff;border:none;padding:12px 24px;border-radius:12px;font-weight:800;cursor:pointer;">
+          🔄 Trenajyorni Qaytadan Boshlash
+        </button>
+      </div>`;
+    return;
+  }
+
+  const s = DCS_STAGES[curDCSStageIdx];
+  for (let i = 1; i <= 4; i++) {
+    const pill = document.getElementById('step-pill-' + i);
+    if (pill) {
+      pill.style.background = (i === curDCSStageIdx + 1) ? '#0284c7' : (i < curDCSStageIdx + 1) ? '#064e3b' : '#1e293b';
+      pill.style.color = (i <= curDCSStageIdx + 1) ? '#fff' : '#64748b';
+    }
+  }
+
+  document.getElementById('dcs-question').innerText = s.q;
+  document.getElementById('dcs-context').innerText = s.ctx;
+  let optsHtml = '';
+  s.options.forEach((opt, idx) => {
+    optsHtml += `<button onclick="handleDCSChoice(${s.stage}, ${idx + 1})" style="text-align:left;background:#1e293b;border:1px solid #334155;color:#e2e8f0;padding:14px 18px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;">${opt.text}</button>`;
+  });
+  document.getElementById('dcs-options').innerHTML = optsHtml;
+}
+
+function retryDCSStage() {
+  document.getElementById('dcs-feedback').style.display = 'none';
+}
+
+function resetDCS() {
+  curDCSStageIdx = 0;
+  dcsScore = 0;
+  location.reload();
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 3. BAD & SPORT OZUQASI RISK KALKULYATORI JAVASCRIPT
+// ═══════════════════════════════════════════════════════════════════════════
+function calcBADRisk() {
+  const q1 = parseInt(document.getElementById('bad-q1').value) || 0;
+  const q2 = parseInt(document.getElementById('bad-q2').value) || 0;
+  const q3 = parseInt(document.getElementById('bad-q3').value) || 0;
+  const q4 = parseInt(document.getElementById('bad-q4').value) || 0;
+
+  const totalRisk = Math.min(100, q1 + q2 + q3 + q4);
+  const pElem = document.getElementById('bad-risk-percent');
+  const bElem = document.getElementById('bad-risk-badge');
+  const aElem = document.getElementById('bad-risk-advice');
+
+  pElem.innerText = totalRisk + '%';
+
+  if (totalRisk <= 20) {
+    pElem.style.color = '#10b981';
+    bElem.style.background = '#064e3b';
+    bElem.style.color = '#34d399';
+    bElem.innerText = "🟢 XAVFSIZ (Minimal Xavf)";
+    aElem.innerText = "Ushbu mahsulot mustaqil partiya laboratoriya tekshiruviga va xalqaro doping sinoviga ega. Toza sportda xavfsiz foydalanish mumkin.";
+  } else if (totalRisk <= 55) {
+    pElem.style.color = '#f59e0b';
+    bElem.style.background = '#78350f';
+    bElem.style.color = '#fde68a';
+    bElem.innerText = "🟡 O'RTA XAVF (Ehtiyot Bo'ling)";
+    aElem.innerText = "Mahsulotda xalqaro antidoping sertifikati mavjud emas. Xochsimon ifloslanish (kontaminatsiya) ehtimoli 15-20%. Qabul qilishdan oldin sport shifokori bilan maslahatlashing.";
+  } else {
+    pElem.style.color = '#ef4444';
+    bElem.style.background = '#7f1d1d';
+    bElem.style.color = '#fca5a5';
+    bElem.innerText = "🔴 O'TA YUQORI XAVF (TAQIQLANADI!)";
+    aElem.innerText = "DIQQAT! Mahsulot tarkibida yashirin anabolik steroidlar, 1,3-DMAA yoki sibutramin moddalari bo'lishi ehtimoli 80% dan yuqori! Qabul qilish diskvalifikatsiyaga olib keladi!";
+  }
+}
 
 
 // Sahifa ochilishi bilanoq oldindan yuklab qo'yamiz — test tugaganda kutish bo'lmasin
