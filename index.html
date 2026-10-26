@@ -498,6 +498,188 @@ footer a:hover{color:#fff}
 .cert-tg-btn{display:inline-flex;align-items:center;gap:8px;background:#2196f3;color:#fff;font-weight:800;font-size:14px;padding:12px 24px;border-radius:30px;border:none;cursor:pointer;transition:.2s;font-family:inherit}
 .cert-tg-btn:hover{background:#1565c0;transform:scale(1.03)}
 
+
+
+/* ══════════════════════════════════════════════════════════════
+   DOPING3D SUPREME 2026/2027 CYBER-BIO DESIGN ENHANCEMENTS
+   ══════════════════════════════════════════════════════════════ */
+:root {
+  --neon-cyan: #00f2fe;
+  --neon-blue: #38bdf8;
+  --neon-emerald: #10b981;
+  --neon-red: #ef4444;
+  --glass-bg: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(37, 99, 235, 0.16);
+  --glass-shadow: 0 10px 32px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="dark"] {
+  --neon-cyan: #38bdf8;
+  --glass-bg: rgba(15, 23, 42, 0.88);
+  --glass-border: rgba(56, 189, 248, 0.22);
+  --glass-shadow: 0 10px 32px rgba(0, 0, 0, 0.55);
+}
+
+/* 3D Canvas Box Styling */
+#anatomy3d-container {
+  position: relative;
+  border-radius: 20px;
+  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.14) 0%, rgba(15, 23, 42, 0.02) 80%);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  box-shadow: inset 0 0 35px rgba(56, 189, 248, 0.12), 0 12px 36px rgba(15, 23, 42, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+#anatomy3d-container:hover {
+  border-color: rgba(56, 189, 248, 0.7);
+  box-shadow: inset 0 0 45px rgba(56, 189, 248, 0.18), 0 16px 48px rgba(14, 165, 233, 0.25);
+}
+
+/* Modern Card Enhancement */
+.modern-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.modern-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.16);
+}
+
+/* MP3 Modern Audio Controls */
+.mp3-cat-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: var(--blue-light);
+  color: var(--blue);
+  border: 1px solid var(--blue-mid);
+}
+
+.mp3-controls-bar {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.mp3-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mp3-play-btn {
+  background: linear-gradient(135deg, var(--blue), #1d4ed8);
+  color: #ffffff;
+  border: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.mp3-play-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
+}
+
+.mp3-speed-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+  border-radius: 16px;
+}
+
+.speed-label {
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+.speed-btn {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  padding: 3px 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.speed-btn.active {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.speed-btn:hover:not(.active) {
+  color: var(--blue);
+}
+
+/* Audio Waveform Animation */
+.mp3-wave-anim {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 20px;
+  opacity: 0.3;
+}
+
+.mp3-wave-anim.active {
+  opacity: 1;
+}
+
+.mp3-wave-anim span {
+  display: block;
+  width: 3px;
+  height: 6px;
+  background: var(--blue);
+  border-radius: 2px;
+  transition: height 0.2s ease;
+}
+
+.mp3-wave-anim.active span:nth-child(1) { animation: wavePulse 0.8s infinite ease-in-out; }
+.mp3-wave-anim.active span:nth-child(2) { animation: wavePulse 0.8s infinite ease-in-out 0.15s; }
+.mp3-wave-anim.active span:nth-child(3) { animation: wavePulse 0.8s infinite ease-in-out 0.3s; }
+.mp3-wave-anim.active span:nth-child(4) { animation: wavePulse 0.8s infinite ease-in-out 0.45s; }
+.mp3-wave-anim.active span:nth-child(5) { animation: wavePulse 0.8s infinite ease-in-out 0.6s; }
+
+@keyframes wavePulse {
+  0%, 100% { height: 4px; }
+  50% { height: 18px; background: var(--teal); }
+}
+
+.mp3-item.playing {
+  border-color: var(--blue) !important;
+  box-shadow: 0 0 24px rgba(37, 99, 235, 0.25) !important;
+}
+
 </style>
 </head>
 <body>
@@ -2129,24 +2311,141 @@ const mp3Data=[
 {n:20,file:`audio/20.mp3`,title:`Namuna qanday olinadi: A va B kolba siri`,cat:`Jarayon`,yt:``,text:`Doping namunasi qanday olinadi va nega adolatli? Jarayon qat'iy nazorat ostida: chaperon (kuzatuvchi) sportchini namuna berish davomida kuzatib turadi. Namuna ikkita idishga bo'linadi — A va B kolba. Avval faqat A kolba tekshiriladi. Agar natija ijobiy chiqsa, sportchi rozi bo'lmasa, uning ishtirokida B kolba ochiladi va qayta tekshiriladi. Bu tizim xatoning oldini oladi va sportchining huquqini himoya qiladi. Har bir bosqich hujjatlashtiriladi — shaffoflik adolatning kafolatidir.`}
 ];
 function ytBtn(m){return m.yt?`<a class="mp3-yt" href="${m.yt}" target="_blank" rel="noopener">▶️ YouTube</a>`:''}
-function renderMp3(data){
-  const el=document.getElementById('mp3-list');
-  if(!data.length){el.innerHTML='<p style="text-align:center;padding:24px;color:var(--muted)">Topilmadi</p>';return}
-  el.innerHTML=data.map(m=>`<div class="mp3-item">
+function renderMp3(data) {
+  const el = document.getElementById('mp3-list');
+  if (!data.length) {
+    el.innerHTML = '<p style="text-align:center;padding:24px;color:var(--muted)">Topilmadi</p>';
+    return;
+  }
+  el.innerHTML = data.map(m => `<div class="mp3-item modern-card" id="mp3-card-${m.n}">
     <div class="mp3-head">
       <div class="mp3-num">${String(m.n).padStart(2,'0')}</div>
-      <div class="mp3-titles"><div class="mp3-title">${m.title}</div><div class="mp3-cat">${m.cat}</div></div>
+      <div class="mp3-titles">
+        <div class="mp3-title">${m.title}</div>
+        <div class="mp3-cat-badge">${m.cat}</div>
+      </div>
       ${ytBtn(m)}
     </div>
     <div class="mp3-text">${m.text}</div>
-    <audio class="mp3-audio" controls preload="none" src="${m.file}"></audio>
-  </div>`).join('')
+    <div class="mp3-controls-bar">
+      <audio id="audio-${m.n}" class="mp3-audio" preload="none" src="${m.file}" onplay="onAudioPlay(${m.n})" onended="onAudioEnded(${m.n})"></audio>
+      <div class="mp3-actions-row">
+        <button class="mp3-play-btn" onclick="toggleCustomAudio(${m.n})" id="playbtn-${m.n}">▶ Tinglash</button>
+        <div class="mp3-speed-selector">
+          <span class="speed-label">Tezlik:</span>
+          <button class="speed-btn active" onclick="setSpeed(${m.n}, 1.0, this)">1.0x</button>
+          <button class="speed-btn" onclick="setSpeed(${m.n}, 1.25, this)">1.25x</button>
+          <button class="speed-btn" onclick="setSpeed(${m.n}, 1.5, this)">1.5x</button>
+          <button class="speed-btn" onclick="setSpeed(${m.n}, 2.0, this)">2.0x</button>
+        </div>
+        <div class="mp3-wave-anim" id="wave-${m.n}">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>`).join('');
 }
-function filterMp3(){
-  const q=document.getElementById('mp3-search').value.toLowerCase().trim();
-  renderMp3(q?mp3Data.filter(m=>m.title.toLowerCase().includes(q)||m.cat.toLowerCase().includes(q)||m.text.toLowerCase().includes(q)):mp3Data)
+
+let currentPlayingId = null;
+
+function toggleCustomAudio(id) {
+  const audio = document.getElementById(`audio-${id}`);
+  const btn = document.getElementById(`playbtn-${id}`);
+  const wave = document.getElementById(`wave-${id}`);
+  const card = document.getElementById(`mp3-card-${id}`);
+
+  if (!audio) return;
+
+  if (audio.paused) {
+    // Boshqa audiolarni to'xtatish
+    document.querySelectorAll('.mp3-audio').forEach(a => {
+      if (a !== audio && !a.paused) {
+        a.pause();
+        const otherId = a.id.replace('audio-', '');
+        const otherBtn = document.getElementById(`playbtn-${otherId}`);
+        const otherWave = document.getElementById(`wave-${otherId}`);
+        const otherCard = document.getElementById(`mp3-card-${otherId}`);
+        if (otherBtn) otherBtn.innerHTML = '▶ Tinglash';
+        if (otherWave) otherWave.classList.remove('active');
+        if (otherCard) otherCard.classList.remove('playing');
+      }
+    });
+
+    audio.play().then(() => {
+      btn.innerHTML = '⏸ To\'xtatish';
+      if (wave) wave.classList.add('active');
+      if (card) card.classList.add('playing');
+      currentPlayingId = id;
+    }).catch(e => console.log('Audio error:', e));
+  } else {
+    audio.pause();
+    btn.innerHTML = '▶ Tinglash';
+    if (wave) wave.classList.remove('active');
+    if (card) card.classList.remove('playing');
+    currentPlayingId = null;
+  }
+}
+
+function onAudioPlay(id) {
+  const btn = document.getElementById(`playbtn-${id}`);
+  const wave = document.getElementById(`wave-${id}`);
+  const card = document.getElementById(`mp3-card-${id}`);
+  if (btn) btn.innerHTML = '⏸ To\'xtatish';
+  if (wave) wave.classList.add('active');
+  if (card) card.classList.add('playing');
+}
+
+function onAudioEnded(id) {
+  const btn = document.getElementById(`playbtn-${id}`);
+  const wave = document.getElementById(`wave-${id}`);
+  const card = document.getElementById(`mp3-card-${id}`);
+  if (btn) btn.innerHTML = '▶ Tinglash';
+  if (wave) wave.classList.remove('active');
+  if (card) card.classList.remove('playing');
+  const nextId = id + 1;
+  const nextAudio = document.getElementById(`audio-${nextId}`);
+  if (nextAudio) {
+    toggleCustomAudio(nextId);
+  }
+}
+
+function setSpeed(id, speed, btnEl) {
+  const audio = document.getElementById(`audio-${id}`);
+  if (audio) {
+    audio.playbackRate = speed;
+  }
+  const parent = btnEl.parentElement;
+  if (parent) {
+    parent.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+    btnEl.classList.add('active');
+  }
+}
+
+function filterMp3() {
+  const q = document.getElementById('mp3-search').value.toLowerCase().trim();
+  renderMp3(q ? mp3Data.filter(m => m.title.toLowerCase().includes(q) || m.cat.toLowerCase().includes(q) || m.text.toLowerCase().includes(q)) : mp3Data);
 }
 renderMp3(mp3Data);
+
+// ─── BIO-CLICK AUDIO EFFECT (Web Audio API) ───
+let audioCtx = null;
+function playBioClick() {
+  try {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(587.33, audioCtx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.07);
+    gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.07);
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+    osc.stop(audioCtx.currentTime + 0.07);
+  } catch(e) {}
+}
 
 // ═══ QUIZ DATA ═══
 const quizData={
@@ -2790,200 +3089,350 @@ function initAnatomy3D() {
   if (!container || typeof THREE === 'undefined') return;
 
   const w = container.clientWidth || 600;
-  const h = container.clientHeight || 500;
+  const h = container.clientHeight || 540;
 
   d3dScene = new THREE.Scene();
   d3dCamera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);
-  d3dCamera.position.set(0, 0.5, 9);
+  d3dCamera.position.set(0, 0.5, 8.8);
 
   try {
-    d3dRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    d3dRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
   } catch (e) {
-    container.innerHTML = '<div style="color:#ef4444;padding:40px;text-align:center;">WebGL yuklanmadi</div>';
+    container.innerHTML = '<div style="color:#ef4444;padding:40px;text-align:center;font-weight:700;">WebGL yuklanmadi</div>';
     return;
   }
   d3dRenderer.setSize(w, h);
   d3dRenderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  container.innerHTML = '';
   container.appendChild(d3dRenderer.domElement);
 
-  // Chiroqlar
-  d3dScene.add(new THREE.AmbientLight(0xffffff, 0.7));
-  const dirLight1 = new THREE.DirectionalLight(0x38bdf8, 1.2);
-  dirLight1.position.set(5, 10, 7);
-  d3dScene.add(dirLight1);
+  // ─── CYBER-BIO YORUG'LIK TIZIMI ───
+  d3dScene.add(new THREE.AmbientLight(0xdbeafe, 0.85));
 
-  const dirLight2 = new THREE.DirectionalLight(0xef4444, 0.6);
-  dirLight2.position.set(-5, -5, -5);
-  d3dScene.add(dirLight2);
+  const cyanDir = new THREE.DirectionalLight(0x00f2fe, 1.8);
+  cyanDir.position.set(5, 12, 8);
+  d3dScene.add(cyanDir);
+
+  const neonRedDir = new THREE.DirectionalLight(0xef4444, 1.2);
+  neonRedDir.position.set(-6, -4, -6);
+  d3dScene.add(neonRedDir);
+
+  const purpleRim = new THREE.PointLight(0xa855f7, 2.2, 16);
+  purpleRim.position.set(0, 3, -4);
+  d3dScene.add(purpleRim);
 
   // Inson Gavdasi Guruhi
   d3dBodyGroup = new THREE.Group();
   d3dScene.add(d3dBodyGroup);
 
-  // 1. Siluet Material (shaffof futuristik ko'k)
-  const bodyMat = new THREE.MeshPhongMaterial({
-    color: 0x0284c7,
+  // ─── 1. KIBER-GAVDA SILUETI (Shaffof neon to'r va ichki nur) ───
+  const bodyWireMat = new THREE.MeshPhongMaterial({
+    color: 0x38bdf8,
     transparent: true,
-    opacity: 0.22,
-    wireframe: true
+    opacity: 0.32,
+    wireframe: true,
+    wireframeLinewidth: 1.2
   });
 
-  // Gavda qismlari
-  // Bosh
-  const head = new THREE.Mesh(new THREE.SphereGeometry(0.55, 20, 20), bodyMat);
-  head.position.y = 2.4;
+  const bodyGlowMat = new THREE.MeshBasicMaterial({
+    color: 0x0284c7,
+    transparent: true,
+    opacity: 0.08
+  });
+
+  // Bosh (Cranium)
+  const headGeo = new THREE.SphereGeometry(0.55, 24, 24);
+  const head = new THREE.Mesh(headGeo, bodyWireMat);
+  head.position.y = 2.45;
+  head.add(new THREE.Mesh(headGeo, bodyGlowMat));
   d3dBodyGroup.add(head);
 
-  // Bo'yin
-  const neck = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.25, 0.4, 16), bodyMat);
-  neck.position.y = 1.85;
+  // Bo'yin (Cervical spine)
+  const neckGeo = new THREE.CylinderGeometry(0.2, 0.24, 0.38, 16);
+  const neck = new THREE.Mesh(neckGeo, bodyWireMat);
+  neck.position.y = 1.95;
   d3dBodyGroup.add(neck);
 
-  // Ko'krak & Qorin
-  const torso = new THREE.Mesh(new THREE.CylinderGeometry(0.7, 0.55, 1.9, 20), bodyMat);
-  torso.position.y = 0.8;
+  // Qovurg'alar qafasi & Toraks (Ribcage Torso)
+  const torsoGeo = new THREE.CylinderGeometry(0.72, 0.52, 1.85, 20);
+  const torso = new THREE.Mesh(torsoGeo, bodyWireMat);
+  torso.position.y = 0.85;
+  torso.add(new THREE.Mesh(torsoGeo, bodyGlowMat));
   d3dBodyGroup.add(torso);
 
-  // Tos suyagi
-  const pelvis = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.5, 0.6, 16), bodyMat);
-  pelvis.position.y = -0.4;
+  // Umurtqa pog'onasi (Spine - 9 ta neon disk)
+  for (let i = 0; i < 9; i++) {
+    const vDisk = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.08, 0.08, 0.04, 12),
+      new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.65 })
+    );
+    vDisk.position.set(0, 1.7 - (i * 0.2), -0.08);
+    d3dBodyGroup.add(vDisk);
+  }
+
+  // Chanoq (Pelvis)
+  const pelvisGeo = new THREE.CylinderGeometry(0.54, 0.48, 0.55, 16);
+  const pelvis = new THREE.Mesh(pelvisGeo, bodyWireMat);
+  pelvis.position.y = -0.35;
   d3dBodyGroup.add(pelvis);
 
-  // Qo'llar
-  const armGeo = new THREE.CylinderGeometry(0.14, 0.11, 1.8, 12);
-  const leftArm = new THREE.Mesh(armGeo, bodyMat);
-  leftArm.position.set(-0.95, 0.7, 0);
-  leftArm.rotation.z = 0.15;
-  d3dBodyGroup.add(leftArm);
+  // Yelka bo'g'inlari (Shoulders)
+  const shoulderGeo = new THREE.SphereGeometry(0.16, 12, 12);
+  const leftShoulder = new THREE.Mesh(shoulderGeo, bodyWireMat);
+  leftShoulder.position.set(-0.85, 1.6, 0);
+  const rightShoulder = new THREE.Mesh(shoulderGeo, bodyWireMat);
+  rightShoulder.position.set(0.85, 1.6, 0);
+  d3dBodyGroup.add(leftShoulder, rightShoulder);
 
-  const rightArm = new THREE.Mesh(armGeo, bodyMat);
-  rightArm.position.set(0.95, 0.7, 0);
-  rightArm.rotation.z = -0.15;
-  d3dBodyGroup.add(rightArm);
+  // Qo'llar (Biceps + Forearms)
+  const upperArmGeo = new THREE.CylinderGeometry(0.13, 0.11, 0.9, 12);
+  const forearmGeo = new THREE.CylinderGeometry(0.11, 0.09, 0.9, 12);
 
-  // Oyoqlar
-  const legGeo = new THREE.CylinderGeometry(0.2, 0.13, 2.4, 14);
-  const leftLeg = new THREE.Mesh(legGeo, bodyMat);
-  leftLeg.position.set(-0.35, -1.8, 0);
-  d3dBodyGroup.add(leftLeg);
+  const leftUpperArm = new THREE.Mesh(upperArmGeo, bodyWireMat);
+  leftUpperArm.position.set(-0.95, 1.15, 0);
+  leftUpperArm.rotation.z = 0.12;
+  const leftForearm = new THREE.Mesh(forearmGeo, bodyWireMat);
+  leftForearm.position.set(-1.08, 0.35, 0.05);
+  leftForearm.rotation.z = 0.08;
+  d3dBodyGroup.add(leftUpperArm, leftForearm);
 
-  const rightLeg = new THREE.Mesh(legGeo, bodyMat);
-  rightLeg.position.set(0.35, -1.8, 0);
-  d3dBodyGroup.add(rightLeg);
+  const rightUpperArm = new THREE.Mesh(upperArmGeo, bodyWireMat);
+  rightUpperArm.position.set(0.95, 1.15, 0);
+  rightUpperArm.rotation.z = -0.12;
+  const rightForearm = new THREE.Mesh(forearmGeo, bodyWireMat);
+  rightForearm.position.set(1.08, 0.35, 0.05);
+  rightForearm.rotation.z = -0.08;
+  d3dBodyGroup.add(rightUpperArm, rightForearm);
 
-  // ══════ A'ZOLAR (ORGAN MESHES) ══════
-  // 1. Miya (Brain)
-  const brainGeo = new THREE.SphereGeometry(0.35, 16, 16);
-  const brainMat = new THREE.MeshStandardMaterial({ color: 0xc084fc, roughness: 0.3, emissive: 0x581c87, emissiveIntensity: 0.3 });
+  // Oyoqlar (Thighs + Calves)
+  const thighGeo = new THREE.CylinderGeometry(0.21, 0.16, 1.25, 14);
+  const calfGeo = new THREE.CylinderGeometry(0.15, 0.11, 1.25, 14);
+
+  const leftThigh = new THREE.Mesh(thighGeo, bodyWireMat);
+  leftThigh.position.set(-0.35, -1.2, 0);
+  const leftCalf = new THREE.Mesh(calfGeo, bodyWireMat);
+  leftCalf.position.set(-0.35, -2.4, 0);
+  d3dBodyGroup.add(leftThigh, leftCalf);
+
+  const rightThigh = new THREE.Mesh(thighGeo, bodyWireMat);
+  rightThigh.position.set(0.35, -1.2, 0);
+  const rightCalf = new THREE.Mesh(calfGeo, bodyWireMat);
+  rightCalf.position.set(0.35, -2.4, 0);
+  d3dBodyGroup.add(rightThigh, rightCalf);
+
+  // ─── 2. BIOLUMINESCENT A'ZOLAR (ORGAN MESHES) ───
+  organMeshes = {};
+
+  // 1. Miya (Brain & Synapses)
+  const brainGeo = new THREE.SphereGeometry(0.36, 20, 20);
+  brainGeo.scale(0.9, 1.1, 1.05);
+  const brainMat = new THREE.MeshStandardMaterial({
+    color: 0xc084fc,
+    roughness: 0.2,
+    metalness: 0.1,
+    emissive: 0x9333ea,
+    emissiveIntensity: 0.65
+  });
   const brain = new THREE.Mesh(brainGeo, brainMat);
-  brain.position.set(0, 2.42, 0);
+  brain.position.set(0, 2.48, 0.05);
   d3dBodyGroup.add(brain);
   organMeshes.brain = brain;
 
-  // 2. O'pka (Lungs - ikkita)
-  const lungGeo = new THREE.SphereGeometry(0.28, 16, 16);
-  lungGeo.scale(0.8, 1.4, 0.6);
-  const lungMat = new THREE.MeshStandardMaterial({ color: 0x38bdf8, roughness: 0.4, emissive: 0x0369a1, emissiveIntensity: 0.2 });
-  const leftLung = new THREE.Mesh(lungGeo, lungMat);
-  leftLung.position.set(-0.32, 1.05, 0.05);
-  d3dBodyGroup.add(leftLung);
-
-  const rightLung = new THREE.Mesh(lungGeo, lungMat);
-  rightLung.position.set(0.32, 1.05, 0.05);
-  d3dBodyGroup.add(rightLung);
+  // 2. O'pka (Bioluminescent Lungs - chap & o'ng)
+  const lungGeo = new THREE.SphereGeometry(0.3, 16, 16);
+  lungGeo.scale(0.85, 1.45, 0.65);
+  const lungMat = new THREE.MeshStandardMaterial({
+    color: 0x38bdf8,
+    roughness: 0.3,
+    metalness: 0.2,
+    emissive: 0x0284c7,
+    emissiveIntensity: 0.45
+  });
+  const leftLung = new THREE.Mesh(lungGeo, lungMat.clone());
+  leftLung.position.set(-0.34, 1.1, 0.06);
+  const rightLung = new THREE.Mesh(lungGeo, lungMat.clone());
+  rightLung.position.set(0.34, 1.1, 0.06);
+  d3dBodyGroup.add(leftLung, rightLung);
   organMeshes.lungs = [leftLung, rightLung];
 
-  // 3. Yurak (Heart)
-  const heartGeo = new THREE.SphereGeometry(0.22, 16, 16);
-  heartGeo.scale(1, 1.15, 0.85);
-  const heartMat = new THREE.MeshStandardMaterial({ color: 0xef4444, roughness: 0.2, emissive: 0xb91c1c, emissiveIntensity: 0.6 });
+  // 3. Yurak (Dynamic Pulsing Heart & Aorta)
+  const heartGeo = new THREE.SphereGeometry(0.24, 20, 20);
+  heartGeo.scale(1.0, 1.25, 0.9);
+  const heartMat = new THREE.MeshStandardMaterial({
+    color: 0xef4444,
+    roughness: 0.15,
+    metalness: 0.2,
+    emissive: 0xdc2626,
+    emissiveIntensity: 0.85
+  });
   const heart = new THREE.Mesh(heartGeo, heartMat);
-  heart.position.set(-0.06, 0.95, 0.22);
+  heart.position.set(-0.06, 1.02, 0.22);
   d3dBodyGroup.add(heart);
   organMeshes.heart = heart;
 
-  // 4. Jigar (Liver)
-  const liverGeo = new THREE.ConeGeometry(0.38, 0.45, 12);
-  liverGeo.scale(1.2, 0.7, 0.9);
-  const liverMat = new THREE.MeshStandardMaterial({ color: 0xb45309, roughness: 0.3, emissive: 0x78350f, emissiveIntensity: 0.4 });
+  // Aorta yoyi
+  const aortaCurve = new THREE.QuadraticBezierCurve3(
+    new THREE.Vector3(-0.06, 1.15, 0.22),
+    new THREE.Vector3(-0.06, 1.45, 0.18),
+    new THREE.Vector3(0.04, 1.25, 0.12)
+  );
+  const aortaMesh = new THREE.Mesh(
+    new THREE.TubeGeometry(aortaCurve, 16, 0.05, 8, false),
+    new THREE.MeshStandardMaterial({ color: 0xff0055, emissive: 0xff0033, emissiveIntensity: 0.8 })
+  );
+  d3dBodyGroup.add(aortaMesh);
+
+  // 4. Jigar (Organik 3D Liver)
+  const liverGeo = new THREE.ConeGeometry(0.42, 0.48, 16);
+  liverGeo.scale(1.3, 0.75, 0.95);
+  const liverMat = new THREE.MeshStandardMaterial({
+    color: 0xd97706,
+    roughness: 0.35,
+    metalness: 0.1,
+    emissive: 0xb45309,
+    emissiveIntensity: 0.55
+  });
   const liver = new THREE.Mesh(liverGeo, liverMat);
-  liver.position.set(0.22, 0.42, 0.18);
-  liver.rotation.z = -Math.PI / 4;
+  liver.position.set(0.22, 0.44, 0.19);
+  liver.rotation.z = -Math.PI / 3.8;
   d3dBodyGroup.add(liver);
   organMeshes.liver = liver;
 
-  // 5. Buyraklar (Kidneys)
-  const kidneyGeo = new THREE.SphereGeometry(0.14, 12, 12);
-  kidneyGeo.scale(0.7, 1.2, 0.7);
-  const kidneyMat = new THREE.MeshStandardMaterial({ color: 0x2563eb, roughness: 0.3, emissive: 0x1d4ed8, emissiveIntensity: 0.3 });
-  const leftKidney = new THREE.Mesh(kidneyGeo, kidneyMat);
-  leftKidney.position.set(-0.25, 0.22, -0.15);
-  d3dBodyGroup.add(leftKidney);
-
-  const rightKidney = new THREE.Mesh(kidneyGeo, kidneyMat);
-  rightKidney.position.set(0.25, 0.22, -0.15);
-  d3dBodyGroup.add(rightKidney);
+  // 5. Buyraklar (Paired Kidneys)
+  const kidneyGeo = new THREE.SphereGeometry(0.15, 14, 14);
+  kidneyGeo.scale(0.75, 1.25, 0.75);
+  const kidneyMat = new THREE.MeshStandardMaterial({
+    color: 0x2563eb,
+    roughness: 0.3,
+    metalness: 0.2,
+    emissive: 0x1d4ed8,
+    emissiveIntensity: 0.5
+  });
+  const leftKidney = new THREE.Mesh(kidneyGeo, kidneyMat.clone());
+  leftKidney.position.set(-0.26, 0.24, -0.14);
+  leftKidney.rotation.z = 0.2;
+  const rightKidney = new THREE.Mesh(kidneyGeo, kidneyMat.clone());
+  rightKidney.position.set(0.26, 0.24, -0.14);
+  rightKidney.rotation.z = -0.2;
+  d3dBodyGroup.add(leftKidney, rightKidney);
   organMeshes.kidneys = [leftKidney, rightKidney];
 
-  // 6. Qon Tomirlar (Vascular lines)
+  // ─── 3. VASKULYAR TIZIM (Arterial & Venous Vascular Network) ───
   const vPoints = [
-    new THREE.Vector3(0, 0.95, 0.2), new THREE.Vector3(0, 1.8, 0),
-    new THREE.Vector3(0, 0.95, 0.2), new THREE.Vector3(0, -0.4, 0),
-    new THREE.Vector3(0, -0.4, 0), new THREE.Vector3(-0.35, -1.8, 0),
-    new THREE.Vector3(0, -0.4, 0), new THREE.Vector3(0.35, -1.8, 0),
-    new THREE.Vector3(0, 1.4, 0), new THREE.Vector3(-0.95, 0.7, 0),
-    new THREE.Vector3(0, 1.4, 0), new THREE.Vector3(0.95, 0.7, 0),
+    new THREE.Vector3(0, 1.02, 0.2), new THREE.Vector3(0, 1.9, 0),
+    new THREE.Vector3(0, 1.02, 0.2), new THREE.Vector3(0, -0.35, 0),
+    new THREE.Vector3(0, -0.35, 0), new THREE.Vector3(-0.35, -1.8, 0),
+    new THREE.Vector3(0, -0.35, 0), new THREE.Vector3(0.35, -1.8, 0),
+    new THREE.Vector3(0, 1.5, 0), new THREE.Vector3(-0.95, 0.8, 0),
+    new THREE.Vector3(0, 1.5, 0), new THREE.Vector3(0.95, 0.8, 0),
+    new THREE.Vector3(0, 0.44, 0.1), new THREE.Vector3(0.22, 0.44, 0.19),
+    new THREE.Vector3(0, 0.24, -0.1), new THREE.Vector3(-0.26, 0.24, -0.14),
+    new THREE.Vector3(0, 0.24, -0.1), new THREE.Vector3(0.26, 0.24, -0.14)
   ];
   const vGeo = new THREE.BufferGeometry().setFromPoints(vPoints);
-  const vMat = new THREE.LineBasicMaterial({ color: 0xdc2626, linewidth: 2, transparent: true, opacity: 0.8 });
-  const vLines = new THREE.LineSegments(vGeo, vMat);
-  d3dBodyGroup.add(vLines);
-  organMeshes.vessels = vLines;
+  const vMat = new THREE.LineBasicMaterial({ color: 0x00f2fe, transparent: true, opacity: 0.75, linewidth: 2 });
+  const vascularMesh = new THREE.LineSegments(vGeo, vMat);
+  d3dBodyGroup.add(vascularMesh);
+  organMeshes.vessels = vascularMesh;
 
-  // Sichqoncha / Touch orqali aylantirish
-  container.addEventListener('mousedown', (e) => { isD3DDragging = true; prevMousePos = { x: e.clientX, y: e.clientY }; });
-  window.addEventListener('mouseup', () => { isD3DDragging = false; });
-  window.addEventListener('mousemove', (e) => {
-    if (!isD3DDragging) return;
+  // ─── 4. KIBER-SKANER VA ATROF NANO-ZARRACHALARI ───
+  const ringGeo = new THREE.RingGeometry(1.25, 1.32, 48);
+  const ringMat = new THREE.MeshBasicMaterial({ color: 0x00f2fe, side: THREE.DoubleSide, transparent: true, opacity: 0.45 });
+  const scanRing = new THREE.Mesh(ringGeo, ringMat);
+  scanRing.rotation.x = Math.PI / 2;
+  d3dBodyGroup.add(scanRing);
+
+  // Suzuvchi Bio-Zarrachalar (Holographic Bio-Dust)
+  const partCount = 180;
+  const partGeo = new THREE.BufferGeometry();
+  const partPos = new Float32Array(partCount * 3);
+  for (let i = 0; i < partCount * 3; i += 3) {
+    partPos[i] = (Math.random() - 0.5) * 4.5;
+    partPos[i + 1] = (Math.random() - 0.5) * 6.5;
+    partPos[i + 2] = (Math.random() - 0.5) * 4.5;
+  }
+  partGeo.setAttribute('position', new THREE.BufferAttribute(partPos, 3));
+  const partMat = new THREE.PointsMaterial({ color: 0x38bdf8, size: 0.055, transparent: true, opacity: 0.65, blending: THREE.AdditiveBlending });
+  const particles = new THREE.Points(partGeo, partMat);
+  d3dScene.add(particles);
+
+  // ─── INTERAKTIV NAZORAT ───
+  let isDragging = false;
+  let prevMousePos = { x: 0, y: 0 };
+  const dom = d3dRenderer.domElement;
+  dom.style.cursor = 'grab';
+
+  container.addEventListener('mousedown', e => {
+    isDragging = true;
+    prevMousePos = { x: e.clientX, y: e.clientY };
+    dom.style.cursor = 'grabbing';
+  });
+
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+    dom.style.cursor = 'grab';
+  });
+
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
     const dx = e.clientX - prevMousePos.x;
     const dy = e.clientY - prevMousePos.y;
-    d3dBodyGroup.rotation.y += dx * 0.01;
-    d3dBodyGroup.rotation.x += dy * 0.005;
+    d3dBodyGroup.rotation.y += dx * 0.008;
+    d3dBodyGroup.rotation.x = Math.max(-0.4, Math.min(0.4, d3dBodyGroup.rotation.x + dy * 0.005));
     prevMousePos = { x: e.clientX, y: e.clientY };
   });
 
   // Touch qo'llab-quvvatlash
-  container.addEventListener('touchstart', (e) => {
+  container.addEventListener('touchstart', e => {
     if (e.touches.length === 1) {
-      isD3DDragging = true;
+      isDragging = true;
       prevMousePos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
     }
   }, { passive: true });
-  window.addEventListener('touchend', () => { isD3DDragging = false; });
-  container.addEventListener('touchmove', (e) => {
-    if (!isD3DDragging || e.touches.length !== 1) return;
+
+  window.addEventListener('touchend', () => { isDragging = false; });
+
+  container.addEventListener('touchmove', e => {
+    if (!isDragging || e.touches.length !== 1) return;
     const dx = e.touches[0].clientX - prevMousePos.x;
     const dy = e.touches[0].clientY - prevMousePos.y;
     d3dBodyGroup.rotation.y += dx * 0.01;
+    d3dBodyGroup.rotation.x = Math.max(-0.4, Math.min(0.4, d3dBodyGroup.rotation.x + dy * 0.006));
     prevMousePos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
   }, { passive: true });
 
-  // Animatsiya sikli
+  // ─── REAL VAQT ANIMATSIYA SIKLI ───
   let clock = new THREE.Clock();
+
   function animateAnatomy() {
     requestAnimationFrame(animateAnatomy);
     const t = clock.getElapsedTime();
 
-    // Dastlabki yengil avto-aylanish
-    if (!isD3DDragging) {
-      d3dBodyGroup.rotation.y += 0.003;
+    // 1. Sekin erkin aylanish (agar ushlab turilmasa)
+    if (!isDragging) {
+      d3dBodyGroup.rotation.y += 0.0035;
     }
 
-    // Yurak urishi (Heartbeat pulse)
+    // 2. Real vaqtda urib turuvchi yurak (Heartbeat pulse)
     if (organMeshes.heart) {
-      const scale = 1 + Math.sin(t * 7) * 0.07;
-      organMeshes.heart.scale.set(scale, scale * 1.15, scale * 0.85);
+      const pulseRate = (currentSelectedClass === 'S1' || currentSelectedClass === 'S6') ? 11.0 : 6.8;
+      const scale = 1.0 + Math.sin(t * pulseRate) * 0.12 * Math.exp(-Math.abs(Math.sin(t * pulseRate * 0.5)));
+      organMeshes.heart.scale.set(scale * 1.0, scale * 1.25, scale * 0.9);
     }
+
+    // 3. Ritmik nafas oluvchi o'pka (Breathing Lungs)
+    if (organMeshes.lungs && organMeshes.lungs[0]) {
+      const breath = 1.0 + Math.sin(t * 1.8) * 0.07;
+      organMeshes.lungs[0].scale.set(0.85 * breath, 1.45 * breath, 0.65 * breath);
+      organMeshes.lungs[1].scale.set(0.85 * breath, 1.45 * breath, 0.65 * breath);
+    }
+
+    // 4. Skaner halqasining vertikal harakati
+    scanRing.position.y = Math.sin(t * 1.6) * 2.6 + 0.3;
+    scanRing.material.opacity = 0.22 + Math.abs(Math.cos(t * 1.6)) * 0.38;
+
+    // 5. Zarrachalarning sekin aylanishi
+    particles.rotation.y = t * 0.025;
 
     d3dRenderer.render(d3dScene, d3dCamera);
   }
@@ -2993,43 +3442,63 @@ function initAnatomy3D() {
   select3DClass('S1', document.querySelector('.d3d-btn.active'));
 }
 
+let currentSelectedClass = 'S1';
+
 function reset3DCamera() {
   if (d3dBodyGroup) {
     d3dBodyGroup.rotation.set(0, 0, 0);
   }
+  if (d3dCamera) {
+    d3dCamera.position.set(0, 0.5, 8.8);
+  }
+  playBioClick();
 }
 
 function select3DClass(clsKey, btnElem) {
   const data = D3D_DATA[clsKey];
   if (!data) return;
+  currentSelectedClass = clsKey;
 
   // Tugmalar stilini yangilash
   document.querySelectorAll('.d3d-btn').forEach(b => {
-    b.style.borderColor = '#334155';
-    b.style.background = '#1e293b';
+    b.style.borderColor = 'rgba(56, 189, 248, 0.25)';
+    b.style.background = 'rgba(15, 23, 42, 0.85)';
+    b.classList.remove('active');
   });
   if (btnElem) {
-    btnElem.style.borderColor = '#ef4444';
-    btnElem.style.background = '#1e1b4b';
+    btnElem.style.borderColor = '#00f2fe';
+    btnElem.style.background = 'linear-gradient(135deg, rgba(37, 99, 235, 0.35), rgba(13, 148, 136, 0.35))';
+    btnElem.classList.add('active');
   }
 
   // Matnli ma'lumotlarni yangilash
-  document.getElementById('d3d-title').innerText = data.title;
-  document.getElementById('d3d-title').style.color = (clsKey === 'S5' ? '#38bdf8' : clsKey === 'S6' ? '#c084fc' : '#ef4444');
-  document.getElementById('d3d-wada-badge').innerText = data.badge;
-  document.getElementById('d3d-wada-badge').style.background = data.badgeBg;
-  document.getElementById('active-organ-label').innerText = data.organsLabel;
-  document.getElementById('d3d-organs-desc').innerText = data.organsDesc;
-  document.getElementById('d3d-clinical').innerText = data.clinical;
-  document.getElementById('d3d-penalty').innerText = data.penalty;
-  document.getElementById('d3d-alternative').innerText = data.alternative;
+  const titleEl = document.getElementById('d3d-title');
+  if (titleEl) {
+    titleEl.innerText = data.title;
+    titleEl.style.color = (clsKey === 'S5' ? '#38bdf8' : clsKey === 'S6' ? '#c084fc' : '#ef4444');
+  }
+  const badgeEl = document.getElementById('d3d-wada-badge');
+  if (badgeEl) {
+    badgeEl.innerText = data.badge;
+    badgeEl.style.background = data.badgeBg;
+  }
+  const labelEl = document.getElementById('active-organ-label');
+  if (labelEl) labelEl.innerText = data.organsLabel;
+  const descEl = document.getElementById('d3d-organs-desc');
+  if (descEl) descEl.innerText = data.organsDesc;
+  const clinEl = document.getElementById('d3d-clinical');
+  if (clinEl) clinEl.innerText = data.clinical;
+  const penEl = document.getElementById('d3d-penalty');
+  if (penEl) penEl.innerText = data.penalty;
+  const altEl = document.getElementById('d3d-alternative');
+  if (altEl) altEl.innerText = data.alternative;
 
   // 3D organlarni nurlantirish
   Object.keys(organMeshes).forEach(k => {
     const obj = organMeshes[k];
-    const isTarget = data.highlight.includes(k);
+    const isTarget = data.highlight && data.highlight.includes(k);
     const color = isTarget ? 0xff2222 : 0x0284c7;
-    const intensity = isTarget ? 1.0 : 0.2;
+    const intensity = isTarget ? 1.2 : 0.25;
 
     if (Array.isArray(obj)) {
       obj.forEach(m => {
@@ -3043,6 +3512,9 @@ function select3DClass(clsKey, btnElem) {
       obj.material.emissiveIntensity = intensity;
     }
   });
+
+  // Audio bio-klik
+  playBioClick();
 }
 
 function startTUEGuide() {
