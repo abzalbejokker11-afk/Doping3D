@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Antidoping Kompetensiyasi | Ta'lim Portali · 3D</title>
+<title>Antidoping Kompetensiyasi | Rasmiy Ta'lim Portali</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="theme-color" content="#0a192f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+
 <meta name="description" content="WADA va UzNADO standartlariga asoslangan antidoping ta'lim portali: rahbarlar, murabbiylar, metodistlar va sportchilar uchun 40 mavzu, 80 test savoli, interaktiv trening va sertifikat.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://doping.uz/">
@@ -520,21 +527,7 @@ footer a:hover{color:#fff}
   --glass-shadow: 0 10px 32px rgba(0, 0, 0, 0.55);
 }
 
-/* 3D Canvas Box Styling */
-#anatomy3d-container {
-  position: relative;
-  border-radius: 20px;
-  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.14) 0%, rgba(15, 23, 42, 0.02) 80%);
-  border: 1.5px solid rgba(56, 189, 248, 0.35);
-  box-shadow: inset 0 0 35px rgba(56, 189, 248, 0.12), 0 12px 36px rgba(15, 23, 42, 0.1);
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
 
-#anatomy3d-container:hover {
-  border-color: rgba(56, 189, 248, 0.7);
-  box-shadow: inset 0 0 45px rgba(56, 189, 248, 0.18), 0 16px 48px rgba(14, 165, 233, 0.25);
-}
 
 /* Modern Card Enhancement */
 .modern-card {
@@ -680,6 +673,51 @@ footer a:hover{color:#fff}
   box-shadow: 0 0 24px rgba(37, 99, 235, 0.25) !important;
 }
 
+
+/* ═══════════════════════════════════════════════════════════════════
+   ⚡ ULTRA-SPEED TURBO OPTIMIZATION (MOBILE & DESKTOP) 
+   ═══════════════════════════════════════════════════════════════════ */
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+button, a, input, select, .role-card, .btn-wada, .btn-uznado, .btn-inst {
+  touch-action: manipulation;
+  cursor: pointer;
+}
+/* Skip rendering of off-screen sections until scrolled into view (10x faster first paint) */
+section:not(.hero) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+/* Lightweight modern GPU-accelerated Hero background (0% CPU, 0% GPU waste) */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.12) 0%, transparent 60%),
+              radial-gradient(circle at 15% 80%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+              var(--bg, #f8fafc);
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; width: 450px; height: 450px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-grid {
+  position: relative;
+  z-index: 1;
+}
+
 </style>
 </head>
 <body>
@@ -695,7 +733,6 @@ footer a:hover{color:#fff}
     </div>
     <nav>
       <a onclick="scrollToSec('roles')">Modullar</a>
-      <a onclick="scrollToSec('anatomy3d-sec')">🧬 3D Anatomiya</a>
       <a onclick="scrollToSec('checker-sec')">🤖 AI Dori</a>
       <a onclick="scrollToSec('dashboard-sec')">📊 Dashboard</a>
       <a onclick="scrollToSec('scenario-sec')">🎯 Trening</a>
@@ -766,116 +803,7 @@ footer a:hover{color:#fff}
 
 <!-- MODULES -->
 
-<!-- 3D ANATOMIYA VA DOPING PATOLOGIYASI BO'LIMI -->
-<section id="anatomy3d-sec" style="background:linear-gradient(180deg,#0a1124 0%,#0f172a 100%);padding:60px 0;color:#f8fafc;border-top:3px solid #0284c7;border-bottom:3px solid #0284c7;">
-  <div style="max-width:1320px;margin:0 auto;padding:0 24px;">
-    
-    <div style="text-align:center;margin-bottom:36px;">
-      <div style="display:inline-block;padding:6px 18px;background:rgba(2,132,199,0.2);color:#38bdf8;border:1px solid #0284c7;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">
-        🔬 3D Virtual Laboratoriya &amp; Ilmiy Anatomiya
-      </div>
-      <h2 style="font-size:32px;font-weight:900;color:#ffffff;letter-spacing:-0.5px;margin-bottom:8px;">
-        Inson Tanasi va Doping Patologiyasi (3D Explorer)
-      </h2>
-      <p style="font-size:15px;color:#94a3b8;max-width:750px;margin:0 auto;">
-        WADA taqiqlangan moddalari insonning qaysi a'zolariga halokatli zarba berishini 3D modelda ko'ring.
-        Har bir guruh ustiga bosing — 3D tanadagi a'zolar nurlanib, klinik oqibatlar ochiladi.
-      </p>
-    </div>
 
-    <!-- 3D Interaktiv Grid -->
-    <div style="display:grid;grid-template-columns:320px 1fr 380px;gap:20px;align-items:stretch;">
-      
-      <!-- Chap Panel: WADA Guruhlarni Tanlash -->
-      <div style="background:rgba(15,23,42,0.85);border:1px solid #334155;border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px;box-shadow:0 10px 30px rgba(0,0,0,0.5);">
-        <div style="font-size:14px;font-weight:800;color:#38bdf8;margin-bottom:4px;display:flex;align-items:center;gap:6px;">
-          <span>🎯 WADA Taqiq Guruhlari:</span>
-        </div>
-        
-        <button class="d3d-btn active" onclick="select3DClass('S1', this)" style="padding:10px 14px;border-radius:12px;border:1px solid #ef4444;background:#1e1b4b;color:#fca5a5;font-weight:700;font-size:13px;text-align:left;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:space-between;">
-          <span>🔴 S1: Anabolik Steroidlar</span>
-          <span style="font-size:11px;background:#ef4444;color:#fff;padding:2px 6px;border-radius:6px;">Yurak/Jigar</span>
-        </button>
-
-        <button class="d3d-btn" onclick="select3DClass('S2', this)" style="padding:10px 14px;border-radius:12px;border:1px solid #334155;background:#1e293b;color:#cbd5e1;font-weight:700;font-size:13px;text-align:left;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:space-between;">
-          <span>🔴 S2: Peptidlar &amp; EPO</span>
-          <span style="font-size:11px;background:#dc2626;color:#fff;padding:2px 6px;border-radius:6px;">Qon tomir</span>
-        </button>
-
-        <button class="d3d-btn" onclick="select3DClass('S3', this)" style="padding:10px 14px;border-radius:12px;border:1px solid #334155;background:#1e293b;color:#cbd5e1;font-weight:700;font-size:13px;text-align:left;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:space-between;">
-          <span>🟠 S3: Beta-2 Agonistlar</span>
-          <span style="font-size:11px;background:#d97706;color:#fff;padding:2px 6px;border-radius:6px;">O'pka/Yurak</span>
-        </button>
-
-        <button class="d3d-btn" onclick="select3DClass('S4', this)" style="padding:10px 14px;border-radius:12px;border:1px solid #334155;background:#1e293b;color:#cbd5e1;font-weight:700;font-size:13px;text-align:left;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:space-between;">
-          <span>🟡 S4: Modulyatorlar (Meldoniy)</span>
-          <span style="font-size:11px;background:#ca8a04;color:#fff;padding:2px 6px;border-radius:6px;">Metabolizm</span>
-        </button>
-
-        <button class="d3d-btn" onclick="select3DClass('S5', this)" style="padding:10px 14px;border-radius:12px;border:1px solid #334155;background:#1e293b;color:#cbd5e1;font-weight:700;font-size:13px;text-align:left;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:space-between;">
-          <span>🔵 S5: Diuretiklar (Siydik haydovchi)</span>
-          <span style="font-size:11px;background:#2563eb;color:#fff;padding:2px 6px;border-radius:6px;">Buyraklar</span>
-        </button>
-
-        <button class="d3d-btn" onclick="select3DClass('S6', this)" style="padding:10px 14px;border-radius:12px;border:1px solid #334155;background:#1e293b;color:#cbd5e1;font-weight:700;font-size:13px;text-align:left;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:space-between;">
-          <span>⚡ S6: Stimulyatorlar (Kokain/Efedrin)</span>
-          <span style="font-size:11px;background:#7c3aed;color:#fff;padding:2px 6px;border-radius:6px;">Miya/Asab</span>
-        </button>
-
-        <div style="margin-top:auto;padding-top:12px;border-top:1px solid #334155;font-size:11px;color:#94a3b8;display:flex;align-items:center;gap:6px;">
-          <span>💡 3D boshqaruv: Sichqoncha yoki barmoq bilan 360° erkin aylantiring.</span>
-        </div>
-      </div>
-
-      <!-- Markaz: Three.js 3D Inson Tanasi Canvas -->
-      <div style="background:#020617;border:2px solid #0284c7;border-radius:20px;position:relative;overflow:hidden;min-height:500px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 50px rgba(2,132,199,0.25);">
-        <div id="anatomy3d-container" style="width:100%;height:100%;min-height:500px;position:relative;"></div>
-        
-        <!-- 3D Overlay ko'rsatkich -->
-        <div style="position:absolute;top:14px;left:14px;background:rgba(15,23,42,0.8);backdrop-filter:blur(8px);border:1px solid #38bdf8;padding:6px 14px;border-radius:20px;font-size:12px;color:#38bdf8;font-weight:700;pointer-events:none;">
-          <span id="active-organ-label">🫀 Nurlanayotgan A'zo: YURAK &amp; JIGAR</span>
-        </div>
-
-        <button onclick="reset3DCamera()" style="position:absolute;bottom:14px;right:14px;background:#0369a1;color:#fff;border:none;padding:6px 14px;border-radius:16px;font-size:12px;font-weight:700;cursor:pointer;">
-          🔄 Ko'rinishni tiklash
-        </button>
-      </div>
-
-      <!-- O'ng Panel: Klinik Patologiya & Ustoz Tavsiyasi -->
-      <div id="anatomy3d-details" style="background:rgba(15,23,42,0.85);border:1px solid #334155;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 10px 30px rgba(0,0,0,0.5);">
-        <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #334155;padding-bottom:10px;">
-          <h3 id="d3d-title" style="font-size:18px;font-weight:800;color:#ef4444;margin:0;">S1: Anabolik Steroidlar</h3>
-          <span id="d3d-wada-badge" style="background:#b91c1c;color:#fff;font-size:11px;font-weight:800;padding:3px 8px;border-radius:6px;">HAR DOIM TAQIQLANGAN</span>
-        </div>
-
-        <div style="font-size:13px;line-height:1.6;color:#cbd5e1;">
-          <strong style="color:#f8fafc;display:block;margin-bottom:4px;">⚠️ Nishon A'zolar va Zararlanish:</strong>
-          <span id="d3d-organs-desc">Yurak miokardi gipertrofiyasi, qon bosimi oshishi, infarkt xavfi 5x barobar yuqori. Jigarda toksik gepatit, sariqlik va adenoma o'smalari rivojlanishi.</span>
-        </div>
-
-        <div style="font-size:13px;line-height:1.6;color:#cbd5e1;">
-          <strong style="color:#f8fafc;display:block;margin-bottom:4px;">🚫 Klinik Oqibatlari:</strong>
-          <span id="d3d-clinical">Bepushtlik, gormonal o'qning sinishi (gipogonadizm), tajovuzkorlik ("roid rage"), erta to'satdan yurak to'xtashi.</span>
-        </div>
-
-        <div style="background:rgba(239,68,68,0.1);border-left:4px solid #ef4444;padding:10px 12px;border-radius:8px;font-size:12px;color:#fca5a5;">
-          <strong>⚖️ WADA Me'yori:</strong> <span id="d3d-penalty">4 yil diskvalifikatsiya, barcha musobaqa natijalari va medallarni bekor qilish.</span>
-        </div>
-
-        <div style="background:linear-gradient(135deg,rgba(16,185,129,0.15),rgba(4,120,87,0.15));border:1px solid #10b981;padding:12px 14px;border-radius:12px;margin-top:auto;">
-          <div style="font-size:12px;font-weight:800;color:#34d399;margin-bottom:4px;display:flex;align-items:center;gap:6px;">
-            <span>💡 Ustoz Abzalbek Tavsiyasi (Xavfsiz Muqobil):</span>
-          </div>
-          <p id="d3d-alternative" style="font-size:12px;line-height:1.5;color:#e2e8f0;margin:0;">
-            Mushak massasini oshirish uchun taqiqlangan steroid emas, balki tabiiy biologik oqsil balansi (tuxum, tvorog, mol go'shti), Kreatin-monogidrat (WADA ruxsat etgan), to'g'ri tiklanish va gormonal sog'lom uyqu rejimi (22:00 - 06:00).
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
 
 <section id="roles">
   <div class="role-section">
@@ -3008,523 +2936,20 @@ function loadCertTemplate(){
   return _certTemplatePromise;
 }
 
+
 // ═══════════════════════════════════════════════════════════════════════════
-// 🧬 3D INSON ANATOMIYASI & DOPING PATOLOGIYASI (Three.js WebGL)
+// TUE (TERAPEVTIK ISTISNO) YO'RIQNOMASI
 // ═══════════════════════════════════════════════════════════════════════════
-const D3D_DATA = {
-  S1: {
-    title: "S1: Anabolik Androgen Steroidlar",
-    badge: "HAR DOIM TAQIQLANGAN",
-    badgeBg: "#b91c1c",
-    organsLabel: "🫀 Nurlanayotgan A'zo: YURAK & JIGAR",
-    organsDesc: "Miokard gipertrofiyasi, qon bosimi oshishi, infarkt xavfi 5x barobar yuqori. Jigarda toksik gepatit, xolestatik sariqlik va adenoma o'smalari rivojlanishi.",
-    clinical: "Gormonal o'qning sinishi (erkaklarda bepushtlik, ginekomastiya; ayollarda virilizatsiya), tajovuzkorlik ('roid rage'), erta to'satdan yurak to'xtashi.",
-    penalty: "4 yilgacha diskvalifikatsiya, barcha musobaqa natijalari va medallarni bekor qilish.",
-    alternative: "Tabiiy biologik oqsil balansi (tuxum, tvorog, mol go'shti), Kreatin-monogidrat (WADA ruxsat etgan), to'g'ri tiklanish va gormonal sog'lom uyqu rejimi (22:00 - 06:00).",
-    highlight: ["heart", "liver"]
-  },
-  S2: {
-    title: "S2: Peptid Gormonlar & EPO (Eritropoetin)",
-    badge: "HAR DOIM TAQIQLANGAN",
-    badgeBg: "#dc2626",
-    organsLabel: "🩸 Nurlanayotgan A'zo: QON TOMIRLAR & YURAK",
-    organsDesc: "Eritrotsitlar massasi va gematokrit sun'iy oshiriladi (qon loydek quyuqlashadi). Arterial qon bosimi keskin oshadi, yurak zo'riqishi.",
-    clinical: "Qon quyuqlashishi oqibatida tromboemboliya, miyaga qon quyilishi (insult), o'pka arteriyasi trombozi va uxlab yotganda to'satdan o'lim.",
-    penalty: "4 yil diskvalifikatsiya, sportdan chetlatish.",
-    alternative: "Baland tog' mashg'ulotlari (gipoksiya effekti), temir moddasi (Ferritin nazorati), B12 vitamini (Kobalamin) va to'g'ri nafas olish metodikasi.",
-    highlight: ["vessels", "heart"]
-  },
-  S3: {
-    title: "S3: Beta-2 Agonistlar (Salbutamol, Klenbuterol)",
-    badge: "HAR DOIM TAQIQLANGAN (Inhalatsiya me'yordan oshsa)",
-    badgeBg: "#d97706",
-    organsLabel: "🫁 Nurlanayotgan A'zo: O'PKA & YURAK",
-    organsDesc: "Bronxlarni kengaytiradi va yurak beta-retseptorlarini ortiqcha qo'zg'atadi. Kuchli tremor (qo'l qaltirashi) va taxikardiya.",
-    clinical: "Yurak aritmiyasi, miokard ishemiyasi, qonda kaliy miqdorining xatarli tushib ketishi (gipokaliyemiya), tutqanoqlar.",
-    penalty: "2 yildan 4 yilgacha diskvalifikatsiya.",
-    alternative: "Nafas mashqlari (diafragma gimnastikasi), suzish, kardio-chidamlilik va ruxsat etilgan TUE (faqat astmasi isbotlanganlar uchun).",
-    highlight: ["lungs", "heart"]
-  },
-  S4: {
-    title: "S4: Gormon & Metabolik Modulyatorlar (Meldoniy)",
-    badge: "HAR DOIM TAQIQLANGAN",
-    badgeBg: "#ca8a04",
-    organsLabel: "⚡ Nurlanayotgan A'zo: METABOLIK HUJAYRALAR",
-    organsDesc: "L-karnitin biosintezini bloklaydi, yog' kislotalari o'rniga glyukoza oksidlanishini majburiy tezlashtiradi. Gormonal muvozanatni sun'iy o'zgartiradi.",
-    clinical: "Gipoglikemiya, oshqozon-ichak buzilishlari, yurak ritmining noaniq o'zgarishi, dori organizmda oylar davomida qolib diskvalifikatsiyaga sabab bo'lishi.",
-    penalty: "4 yil diskvalifikatsiya.",
-    alternative: "Koferment Q10 (Ubixinon), L-Karnitin (tabiiy oziq-ovqat manbalari), Sitrullin-Malat va tabiiy antioksidantlar.",
-    highlight: ["heart", "liver"]
-  },
-  S5: {
-    title: "S5: Diuretiklar & Niqoblovchi Vositalar",
-    badge: "HAR DOIM TAQIQLANGAN",
-    badgeBg: "#2563eb",
-    organsLabel: "💧 Nurlanayotgan A'zo: BUYRAKLAR & ELEKTROLITLAR",
-    organsDesc: "Buyraklarning nefron kanallarida suv va tuzlar qayta so'rilishini to'xtatadi. Qisqa vaqtda bir necha litr suyuqlik chiqarib yuboriladi.",
-    clinical: "O'tkir buyrak yetishmovchiligi, elektrolitlar buzilishi (giponatriyemiya, gipokaliyemiya), mushaklar tortishishi (sudorogi), qon quyulishi.",
-    penalty: "2 yildan 4 yilgacha diskvalifikatsiya.",
-    alternative: "To'g'ri tabiiy vazn tashlash retsenziyasi (dietolog nazorati), sauna me'yori, suv-tuz balansini saqlash.",
-    highlight: ["kidneys"]
-  },
-  S6: {
-    title: "S6: Stimulyatorlar (Kokain, Efedrin, Amfetamin)",
-    badge: "MUSOBAQA PAYTIDA TAQIQLANGAN",
-    badgeBg: "#7c3aed",
-    organsLabel: "🧠 Nurlanayotgan A'zo: MIYA & ASAB TIZIMI",
-    organsDesc: "Markaziy asab tizimida dofamin va noradrenalinni portlovchi tarzda chiqaradi. Charchoq hissi sun'iy o'chiriladi.",
-    clinical: "Psixik buzilishlar, agressiya, uyqusizlik, gipertermiya (tana haroratining 41°C gacha qizishi), miyaga qon quyilishi va to'satdan yurak to'xtashi.",
-    penalty: "2 yildan 4 yilgacha diskvalifikatsiya.",
-    alternative: "Tabiiy ko'k choy (L-teanin), to'g'ri uxlash rejimi, B guruhi vitaminlari, kofeinning ruxsat etilgan me'yori.",
-    highlight: ["brain", "heart"]
-  }
-};
-
-let d3dScene, d3dCamera, d3dRenderer, d3dBodyGroup;
-let organMeshes = {};
-let isD3DDragging = false, prevMousePos = { x: 0, y: 0 };
-
-function initAnatomy3D() {
-  const container = document.getElementById('anatomy3d-container');
-  if (!container || typeof THREE === 'undefined') return;
-
-  const w = container.clientWidth || 600;
-  const h = container.clientHeight || 540;
-
-  d3dScene = new THREE.Scene();
-  d3dCamera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);
-  d3dCamera.position.set(0, 0.5, 8.8);
-
-  try {
-    d3dRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
-  } catch (e) {
-    container.innerHTML = '<div style="color:#ef4444;padding:40px;text-align:center;font-weight:700;">WebGL yuklanmadi</div>';
-    return;
-  }
-  d3dRenderer.setSize(w, h);
-  d3dRenderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  container.innerHTML = '';
-  container.appendChild(d3dRenderer.domElement);
-
-  // ─── CYBER-BIO YORUG'LIK TIZIMI ───
-  d3dScene.add(new THREE.AmbientLight(0xdbeafe, 0.85));
-
-  const cyanDir = new THREE.DirectionalLight(0x00f2fe, 1.8);
-  cyanDir.position.set(5, 12, 8);
-  d3dScene.add(cyanDir);
-
-  const neonRedDir = new THREE.DirectionalLight(0xef4444, 1.2);
-  neonRedDir.position.set(-6, -4, -6);
-  d3dScene.add(neonRedDir);
-
-  const purpleRim = new THREE.PointLight(0xa855f7, 2.2, 16);
-  purpleRim.position.set(0, 3, -4);
-  d3dScene.add(purpleRim);
-
-  // Inson Gavdasi Guruhi
-  d3dBodyGroup = new THREE.Group();
-  d3dScene.add(d3dBodyGroup);
-
-  // ─── 1. KIBER-GAVDA SILUETI (Shaffof neon to'r va ichki nur) ───
-  const bodyWireMat = new THREE.MeshPhongMaterial({
-    color: 0x38bdf8,
-    transparent: true,
-    opacity: 0.32,
-    wireframe: true,
-    wireframeLinewidth: 1.2
-  });
-
-  const bodyGlowMat = new THREE.MeshBasicMaterial({
-    color: 0x0284c7,
-    transparent: true,
-    opacity: 0.08
-  });
-
-  // Bosh (Cranium)
-  const headGeo = new THREE.SphereGeometry(0.55, 24, 24);
-  const head = new THREE.Mesh(headGeo, bodyWireMat);
-  head.position.y = 2.45;
-  head.add(new THREE.Mesh(headGeo, bodyGlowMat));
-  d3dBodyGroup.add(head);
-
-  // Bo'yin (Cervical spine)
-  const neckGeo = new THREE.CylinderGeometry(0.2, 0.24, 0.38, 16);
-  const neck = new THREE.Mesh(neckGeo, bodyWireMat);
-  neck.position.y = 1.95;
-  d3dBodyGroup.add(neck);
-
-  // Qovurg'alar qafasi & Toraks (Ribcage Torso)
-  const torsoGeo = new THREE.CylinderGeometry(0.72, 0.52, 1.85, 20);
-  const torso = new THREE.Mesh(torsoGeo, bodyWireMat);
-  torso.position.y = 0.85;
-  torso.add(new THREE.Mesh(torsoGeo, bodyGlowMat));
-  d3dBodyGroup.add(torso);
-
-  // Umurtqa pog'onasi (Spine - 9 ta neon disk)
-  for (let i = 0; i < 9; i++) {
-    const vDisk = new THREE.Mesh(
-      new THREE.CylinderGeometry(0.08, 0.08, 0.04, 12),
-      new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.65 })
-    );
-    vDisk.position.set(0, 1.7 - (i * 0.2), -0.08);
-    d3dBodyGroup.add(vDisk);
-  }
-
-  // Chanoq (Pelvis)
-  const pelvisGeo = new THREE.CylinderGeometry(0.54, 0.48, 0.55, 16);
-  const pelvis = new THREE.Mesh(pelvisGeo, bodyWireMat);
-  pelvis.position.y = -0.35;
-  d3dBodyGroup.add(pelvis);
-
-  // Yelka bo'g'inlari (Shoulders)
-  const shoulderGeo = new THREE.SphereGeometry(0.16, 12, 12);
-  const leftShoulder = new THREE.Mesh(shoulderGeo, bodyWireMat);
-  leftShoulder.position.set(-0.85, 1.6, 0);
-  const rightShoulder = new THREE.Mesh(shoulderGeo, bodyWireMat);
-  rightShoulder.position.set(0.85, 1.6, 0);
-  d3dBodyGroup.add(leftShoulder, rightShoulder);
-
-  // Qo'llar (Biceps + Forearms)
-  const upperArmGeo = new THREE.CylinderGeometry(0.13, 0.11, 0.9, 12);
-  const forearmGeo = new THREE.CylinderGeometry(0.11, 0.09, 0.9, 12);
-
-  const leftUpperArm = new THREE.Mesh(upperArmGeo, bodyWireMat);
-  leftUpperArm.position.set(-0.95, 1.15, 0);
-  leftUpperArm.rotation.z = 0.12;
-  const leftForearm = new THREE.Mesh(forearmGeo, bodyWireMat);
-  leftForearm.position.set(-1.08, 0.35, 0.05);
-  leftForearm.rotation.z = 0.08;
-  d3dBodyGroup.add(leftUpperArm, leftForearm);
-
-  const rightUpperArm = new THREE.Mesh(upperArmGeo, bodyWireMat);
-  rightUpperArm.position.set(0.95, 1.15, 0);
-  rightUpperArm.rotation.z = -0.12;
-  const rightForearm = new THREE.Mesh(forearmGeo, bodyWireMat);
-  rightForearm.position.set(1.08, 0.35, 0.05);
-  rightForearm.rotation.z = -0.08;
-  d3dBodyGroup.add(rightUpperArm, rightForearm);
-
-  // Oyoqlar (Thighs + Calves)
-  const thighGeo = new THREE.CylinderGeometry(0.21, 0.16, 1.25, 14);
-  const calfGeo = new THREE.CylinderGeometry(0.15, 0.11, 1.25, 14);
-
-  const leftThigh = new THREE.Mesh(thighGeo, bodyWireMat);
-  leftThigh.position.set(-0.35, -1.2, 0);
-  const leftCalf = new THREE.Mesh(calfGeo, bodyWireMat);
-  leftCalf.position.set(-0.35, -2.4, 0);
-  d3dBodyGroup.add(leftThigh, leftCalf);
-
-  const rightThigh = new THREE.Mesh(thighGeo, bodyWireMat);
-  rightThigh.position.set(0.35, -1.2, 0);
-  const rightCalf = new THREE.Mesh(calfGeo, bodyWireMat);
-  rightCalf.position.set(0.35, -2.4, 0);
-  d3dBodyGroup.add(rightThigh, rightCalf);
-
-  // ─── 2. BIOLUMINESCENT A'ZOLAR (ORGAN MESHES) ───
-  organMeshes = {};
-
-  // 1. Miya (Brain & Synapses)
-  const brainGeo = new THREE.SphereGeometry(0.36, 20, 20);
-  brainGeo.scale(0.9, 1.1, 1.05);
-  const brainMat = new THREE.MeshStandardMaterial({
-    color: 0xc084fc,
-    roughness: 0.2,
-    metalness: 0.1,
-    emissive: 0x9333ea,
-    emissiveIntensity: 0.65
-  });
-  const brain = new THREE.Mesh(brainGeo, brainMat);
-  brain.position.set(0, 2.48, 0.05);
-  d3dBodyGroup.add(brain);
-  organMeshes.brain = brain;
-
-  // 2. O'pka (Bioluminescent Lungs - chap & o'ng)
-  const lungGeo = new THREE.SphereGeometry(0.3, 16, 16);
-  lungGeo.scale(0.85, 1.45, 0.65);
-  const lungMat = new THREE.MeshStandardMaterial({
-    color: 0x38bdf8,
-    roughness: 0.3,
-    metalness: 0.2,
-    emissive: 0x0284c7,
-    emissiveIntensity: 0.45
-  });
-  const leftLung = new THREE.Mesh(lungGeo, lungMat.clone());
-  leftLung.position.set(-0.34, 1.1, 0.06);
-  const rightLung = new THREE.Mesh(lungGeo, lungMat.clone());
-  rightLung.position.set(0.34, 1.1, 0.06);
-  d3dBodyGroup.add(leftLung, rightLung);
-  organMeshes.lungs = [leftLung, rightLung];
-
-  // 3. Yurak (Dynamic Pulsing Heart & Aorta)
-  const heartGeo = new THREE.SphereGeometry(0.24, 20, 20);
-  heartGeo.scale(1.0, 1.25, 0.9);
-  const heartMat = new THREE.MeshStandardMaterial({
-    color: 0xef4444,
-    roughness: 0.15,
-    metalness: 0.2,
-    emissive: 0xdc2626,
-    emissiveIntensity: 0.85
-  });
-  const heart = new THREE.Mesh(heartGeo, heartMat);
-  heart.position.set(-0.06, 1.02, 0.22);
-  d3dBodyGroup.add(heart);
-  organMeshes.heart = heart;
-
-  // Aorta yoyi
-  const aortaCurve = new THREE.QuadraticBezierCurve3(
-    new THREE.Vector3(-0.06, 1.15, 0.22),
-    new THREE.Vector3(-0.06, 1.45, 0.18),
-    new THREE.Vector3(0.04, 1.25, 0.12)
-  );
-  const aortaMesh = new THREE.Mesh(
-    new THREE.TubeGeometry(aortaCurve, 16, 0.05, 8, false),
-    new THREE.MeshStandardMaterial({ color: 0xff0055, emissive: 0xff0033, emissiveIntensity: 0.8 })
-  );
-  d3dBodyGroup.add(aortaMesh);
-
-  // 4. Jigar (Organik 3D Liver)
-  const liverGeo = new THREE.ConeGeometry(0.42, 0.48, 16);
-  liverGeo.scale(1.3, 0.75, 0.95);
-  const liverMat = new THREE.MeshStandardMaterial({
-    color: 0xd97706,
-    roughness: 0.35,
-    metalness: 0.1,
-    emissive: 0xb45309,
-    emissiveIntensity: 0.55
-  });
-  const liver = new THREE.Mesh(liverGeo, liverMat);
-  liver.position.set(0.22, 0.44, 0.19);
-  liver.rotation.z = -Math.PI / 3.8;
-  d3dBodyGroup.add(liver);
-  organMeshes.liver = liver;
-
-  // 5. Buyraklar (Paired Kidneys)
-  const kidneyGeo = new THREE.SphereGeometry(0.15, 14, 14);
-  kidneyGeo.scale(0.75, 1.25, 0.75);
-  const kidneyMat = new THREE.MeshStandardMaterial({
-    color: 0x2563eb,
-    roughness: 0.3,
-    metalness: 0.2,
-    emissive: 0x1d4ed8,
-    emissiveIntensity: 0.5
-  });
-  const leftKidney = new THREE.Mesh(kidneyGeo, kidneyMat.clone());
-  leftKidney.position.set(-0.26, 0.24, -0.14);
-  leftKidney.rotation.z = 0.2;
-  const rightKidney = new THREE.Mesh(kidneyGeo, kidneyMat.clone());
-  rightKidney.position.set(0.26, 0.24, -0.14);
-  rightKidney.rotation.z = -0.2;
-  d3dBodyGroup.add(leftKidney, rightKidney);
-  organMeshes.kidneys = [leftKidney, rightKidney];
-
-  // ─── 3. VASKULYAR TIZIM (Arterial & Venous Vascular Network) ───
-  const vPoints = [
-    new THREE.Vector3(0, 1.02, 0.2), new THREE.Vector3(0, 1.9, 0),
-    new THREE.Vector3(0, 1.02, 0.2), new THREE.Vector3(0, -0.35, 0),
-    new THREE.Vector3(0, -0.35, 0), new THREE.Vector3(-0.35, -1.8, 0),
-    new THREE.Vector3(0, -0.35, 0), new THREE.Vector3(0.35, -1.8, 0),
-    new THREE.Vector3(0, 1.5, 0), new THREE.Vector3(-0.95, 0.8, 0),
-    new THREE.Vector3(0, 1.5, 0), new THREE.Vector3(0.95, 0.8, 0),
-    new THREE.Vector3(0, 0.44, 0.1), new THREE.Vector3(0.22, 0.44, 0.19),
-    new THREE.Vector3(0, 0.24, -0.1), new THREE.Vector3(-0.26, 0.24, -0.14),
-    new THREE.Vector3(0, 0.24, -0.1), new THREE.Vector3(0.26, 0.24, -0.14)
-  ];
-  const vGeo = new THREE.BufferGeometry().setFromPoints(vPoints);
-  const vMat = new THREE.LineBasicMaterial({ color: 0x00f2fe, transparent: true, opacity: 0.75, linewidth: 2 });
-  const vascularMesh = new THREE.LineSegments(vGeo, vMat);
-  d3dBodyGroup.add(vascularMesh);
-  organMeshes.vessels = vascularMesh;
-
-  // ─── 4. KIBER-SKANER VA ATROF NANO-ZARRACHALARI ───
-  const ringGeo = new THREE.RingGeometry(1.25, 1.32, 48);
-  const ringMat = new THREE.MeshBasicMaterial({ color: 0x00f2fe, side: THREE.DoubleSide, transparent: true, opacity: 0.45 });
-  const scanRing = new THREE.Mesh(ringGeo, ringMat);
-  scanRing.rotation.x = Math.PI / 2;
-  d3dBodyGroup.add(scanRing);
-
-  // Suzuvchi Bio-Zarrachalar (Holographic Bio-Dust)
-  const partCount = 180;
-  const partGeo = new THREE.BufferGeometry();
-  const partPos = new Float32Array(partCount * 3);
-  for (let i = 0; i < partCount * 3; i += 3) {
-    partPos[i] = (Math.random() - 0.5) * 4.5;
-    partPos[i + 1] = (Math.random() - 0.5) * 6.5;
-    partPos[i + 2] = (Math.random() - 0.5) * 4.5;
-  }
-  partGeo.setAttribute('position', new THREE.BufferAttribute(partPos, 3));
-  const partMat = new THREE.PointsMaterial({ color: 0x38bdf8, size: 0.055, transparent: true, opacity: 0.65, blending: THREE.AdditiveBlending });
-  const particles = new THREE.Points(partGeo, partMat);
-  d3dScene.add(particles);
-
-  // ─── INTERAKTIV NAZORAT ───
-  let isDragging = false;
-  let prevMousePos = { x: 0, y: 0 };
-  const dom = d3dRenderer.domElement;
-  dom.style.cursor = 'grab';
-
-  container.addEventListener('mousedown', e => {
-    isDragging = true;
-    prevMousePos = { x: e.clientX, y: e.clientY };
-    dom.style.cursor = 'grabbing';
-  });
-
-  window.addEventListener('mouseup', () => {
-    isDragging = false;
-    dom.style.cursor = 'grab';
-  });
-
-  window.addEventListener('mousemove', e => {
-    if (!isDragging) return;
-    const dx = e.clientX - prevMousePos.x;
-    const dy = e.clientY - prevMousePos.y;
-    d3dBodyGroup.rotation.y += dx * 0.008;
-    d3dBodyGroup.rotation.x = Math.max(-0.4, Math.min(0.4, d3dBodyGroup.rotation.x + dy * 0.005));
-    prevMousePos = { x: e.clientX, y: e.clientY };
-  });
-
-  // Touch qo'llab-quvvatlash
-  container.addEventListener('touchstart', e => {
-    if (e.touches.length === 1) {
-      isDragging = true;
-      prevMousePos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-    }
-  }, { passive: true });
-
-  window.addEventListener('touchend', () => { isDragging = false; });
-
-  container.addEventListener('touchmove', e => {
-    if (!isDragging || e.touches.length !== 1) return;
-    const dx = e.touches[0].clientX - prevMousePos.x;
-    const dy = e.touches[0].clientY - prevMousePos.y;
-    d3dBodyGroup.rotation.y += dx * 0.01;
-    d3dBodyGroup.rotation.x = Math.max(-0.4, Math.min(0.4, d3dBodyGroup.rotation.x + dy * 0.006));
-    prevMousePos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-  }, { passive: true });
-
-  // ─── REAL VAQT ANIMATSIYA SIKLI ───
-  let clock = new THREE.Clock();
-
-  function animateAnatomy() {
-    requestAnimationFrame(animateAnatomy);
-    const t = clock.getElapsedTime();
-
-    // 1. Sekin erkin aylanish (agar ushlab turilmasa)
-    if (!isDragging) {
-      d3dBodyGroup.rotation.y += 0.0035;
-    }
-
-    // 2. Real vaqtda urib turuvchi yurak (Heartbeat pulse)
-    if (organMeshes.heart) {
-      const pulseRate = (currentSelectedClass === 'S1' || currentSelectedClass === 'S6') ? 11.0 : 6.8;
-      const scale = 1.0 + Math.sin(t * pulseRate) * 0.12 * Math.exp(-Math.abs(Math.sin(t * pulseRate * 0.5)));
-      organMeshes.heart.scale.set(scale * 1.0, scale * 1.25, scale * 0.9);
-    }
-
-    // 3. Ritmik nafas oluvchi o'pka (Breathing Lungs)
-    if (organMeshes.lungs && organMeshes.lungs[0]) {
-      const breath = 1.0 + Math.sin(t * 1.8) * 0.07;
-      organMeshes.lungs[0].scale.set(0.85 * breath, 1.45 * breath, 0.65 * breath);
-      organMeshes.lungs[1].scale.set(0.85 * breath, 1.45 * breath, 0.65 * breath);
-    }
-
-    // 4. Skaner halqasining vertikal harakati
-    scanRing.position.y = Math.sin(t * 1.6) * 2.6 + 0.3;
-    scanRing.material.opacity = 0.22 + Math.abs(Math.cos(t * 1.6)) * 0.38;
-
-    // 5. Zarrachalarning sekin aylanishi
-    particles.rotation.y = t * 0.025;
-
-    d3dRenderer.render(d3dScene, d3dCamera);
-  }
-  animateAnatomy();
-
-  // Boshlang'ich S1 ni faollashtirish
-  select3DClass('S1', document.querySelector('.d3d-btn.active'));
-}
-
-let currentSelectedClass = 'S1';
-
-function reset3DCamera() {
-  if (d3dBodyGroup) {
-    d3dBodyGroup.rotation.set(0, 0, 0);
-  }
-  if (d3dCamera) {
-    d3dCamera.position.set(0, 0.5, 8.8);
-  }
-  playBioClick();
-}
-
-function select3DClass(clsKey, btnElem) {
-  const data = D3D_DATA[clsKey];
-  if (!data) return;
-  currentSelectedClass = clsKey;
-
-  // Tugmalar stilini yangilash
-  document.querySelectorAll('.d3d-btn').forEach(b => {
-    b.style.borderColor = 'rgba(56, 189, 248, 0.25)';
-    b.style.background = 'rgba(15, 23, 42, 0.85)';
-    b.classList.remove('active');
-  });
-  if (btnElem) {
-    btnElem.style.borderColor = '#00f2fe';
-    btnElem.style.background = 'linear-gradient(135deg, rgba(37, 99, 235, 0.35), rgba(13, 148, 136, 0.35))';
-    btnElem.classList.add('active');
-  }
-
-  // Matnli ma'lumotlarni yangilash
-  const titleEl = document.getElementById('d3d-title');
-  if (titleEl) {
-    titleEl.innerText = data.title;
-    titleEl.style.color = (clsKey === 'S5' ? '#38bdf8' : clsKey === 'S6' ? '#c084fc' : '#ef4444');
-  }
-  const badgeEl = document.getElementById('d3d-wada-badge');
-  if (badgeEl) {
-    badgeEl.innerText = data.badge;
-    badgeEl.style.background = data.badgeBg;
-  }
-  const labelEl = document.getElementById('active-organ-label');
-  if (labelEl) labelEl.innerText = data.organsLabel;
-  const descEl = document.getElementById('d3d-organs-desc');
-  if (descEl) descEl.innerText = data.organsDesc;
-  const clinEl = document.getElementById('d3d-clinical');
-  if (clinEl) clinEl.innerText = data.clinical;
-  const penEl = document.getElementById('d3d-penalty');
-  if (penEl) penEl.innerText = data.penalty;
-  const altEl = document.getElementById('d3d-alternative');
-  if (altEl) altEl.innerText = data.alternative;
-
-  // 3D organlarni nurlantirish
-  Object.keys(organMeshes).forEach(k => {
-    const obj = organMeshes[k];
-    const isTarget = data.highlight && data.highlight.includes(k);
-    const color = isTarget ? 0xff2222 : 0x0284c7;
-    const intensity = isTarget ? 1.2 : 0.25;
-
-    if (Array.isArray(obj)) {
-      obj.forEach(m => {
-        if (m.material && m.material.emissive) {
-          m.material.emissive.setHex(color);
-          m.material.emissiveIntensity = intensity;
-        }
-      });
-    } else if (obj && obj.material && obj.material.emissive) {
-      obj.material.emissive.setHex(color);
-      obj.material.emissiveIntensity = intensity;
-    }
-  });
-
-  // Audio bio-klik
-  playBioClick();
-}
-
 function startTUEGuide() {
-  alert("📋 TUE (Terapevtik Istisno) 3 Bosqichli Yo'riqnomasi:\n\n1. Faqat rasmiy shifokor xulosasi va laboratoriya tahlillari lozim.\n2. Qonuniy muqobil ruxsat etilgan dorilar yo'qligi isbotlanadi.\n3. Musobaqadan kamida 30 kun oldin UzNADA TUE qo'mitasiga ariza topshiriladi.\n\nSavollar bo'yicha @antidopi kanaliga murojaat qiling!");
+  alert("📋 TUE (Terapevtik Istisno) 3 Bosqichli Yo'riqnomasi:
+
+1. Faqat rasmiy shifokor xulosasi va laboratoriya tahlillari lozim.
+2. Qonuniy muqobil ruxsat etilgan dorilar yo'qligi isbotlanadi.
+3. Musobaqadan kamida 30 kun oldin UzNADA TUE qo'mitasiga ariza topshiriladi.
+
+Savollar bo'yicha @antidopi kanaliga murojaat qiling!");
 }
 
-// Sahifa yuklangach 3D anatomiyani ishga tushirish
-window.addEventListener('DOMContentLoaded', () => {
-  setTimeout(initAnatomy3D, 500);
-});
 
 
 
@@ -4999,135 +4424,35 @@ if(window.CUR_LANG==='ru') setLang('ru');
   #hero3d-canvas{display:none}
 }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script id="threed-js">
 (function(){
-'use strict';
-var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  'use strict';
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ── 1. HERO: Three.js DNK spirali + zarrachalar ── */
-function initHero3D(){
-  if(reduced || typeof THREE === 'undefined') return;
-  var hero = document.querySelector('.hero');
-  if(!hero) return;
-  var canvas = document.createElement('canvas');
-  canvas.id = 'hero3d-canvas';
-  hero.insertBefore(canvas, hero.firstChild);
-  var renderer;
-  try{
-    renderer = new THREE.WebGLRenderer({canvas:canvas, alpha:true, antialias:true});
-  }catch(e){ canvas.remove(); return; }
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1, 2));
-  var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(50, 2, 0.1, 100);
-  camera.position.set(0, 0, 16);
-  scene.add(new THREE.AmbientLight(0xffffff, 0.9));
-  var dir = new THREE.DirectionalLight(0x2563eb, 1.1);
-  dir.position.set(4, 6, 8);
-  scene.add(dir);
-
-  /* DNK ikki zanjirli spiral */
-  var helix = new THREE.Group();
-  var COLORS = [0x2563eb, 0x60a5fa, 0x93c5fd, 0x1e40af];
-  var sGeo = new THREE.SphereGeometry(0.22, 16, 16);
-  var rungGeo = new THREE.CylinderGeometry(0.05, 0.05, 1, 8);
-  var N = 26, LEN = 14;
-  for(var i=0;i<N;i++){
-    var t = i/(N-1), y = (t-0.5)*LEN, ang = t*Math.PI*4;
-    var x1 = Math.cos(ang)*2.2, z1 = Math.sin(ang)*2.2;
-    var x2 = Math.cos(ang+Math.PI)*2.2, z2 = Math.sin(ang+Math.PI)*2.2;
-    var m1 = new THREE.Mesh(sGeo, new THREE.MeshPhongMaterial({color:COLORS[i%4], shininess:80}));
-    m1.position.set(x1,y,z1);
-    var m2 = new THREE.Mesh(sGeo, new THREE.MeshPhongMaterial({color:COLORS[(i+2)%4], shininess:80}));
-    m2.position.set(x2,y,z2);
-    helix.add(m1); helix.add(m2);
-    var rung = new THREE.Mesh(rungGeo, new THREE.MeshPhongMaterial({color:0xbfdbfe, transparent:true, opacity:0.7}));
-    rung.position.set(0,y,0);
-    rung.scale.y = 4.4;
-    rung.rotation.z = Math.PI/2;
-    rung.rotation.y = -ang;
-    helix.add(rung);
+  /* ── 1. Bo'limlarning silliq paydo bo'lishi (GPU IntersectionObserver) ── */
+  function initReveal(){
+    var secs = document.querySelectorAll('section[id]');
+    if(reduced || !('IntersectionObserver' in window)){ 
+      secs.forEach(function(s){ s.classList.add('shown'); });
+      return; 
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ 
+          en.target.classList.add('shown'); 
+          io.unobserve(en.target); 
+        }
+      });
+    }, {threshold: 0.05, rootMargin: '50px'});
+    secs.forEach(function(s){ s.classList.add('reveal3d'); io.observe(s); });
   }
-  helix.rotation.z = 0.35;
-  helix.position.x = 9;
-  scene.add(helix);
 
-  /* Suzuvchi zarrachalar */
-  var pGeo = new THREE.BufferGeometry();
-  var P = 160, pos = new Float32Array(P*3);
-  for(var j=0;j<P*3;j++) pos[j] = (Math.random()-0.5)*30;
-  pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  var points = new THREE.Points(pGeo, new THREE.PointsMaterial({color:0x60a5fa, size:0.09, transparent:true, opacity:0.65}));
-  scene.add(points);
-
-  var mouseX = 0, mouseY = 0;
-  window.addEventListener('mousemove', function(e){
-    mouseX = (e.clientX/window.innerWidth - 0.5);
-    mouseY = (e.clientY/window.innerHeight - 0.5);
-  }, {passive:true});
-
-  function resize(){
-    var w = hero.clientWidth, h = hero.clientHeight;
-    renderer.setSize(w, h, false);
-    camera.aspect = w/h;
-    camera.updateProjectionMatrix();
+  /* ── 2. Mobil va kompyuter uchun tezkor yuklash ── */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initReveal, {passive: true});
+  } else {
+    initReveal();
   }
-  resize();
-  window.addEventListener('resize', resize, {passive:true});
-
-  var running = true;
-  document.addEventListener('visibilitychange', function(){ running = !document.hidden; });
-  var clock = new THREE.Clock();
-  (function loop(){
-    requestAnimationFrame(loop);
-    if(!running) return;
-    var t = clock.getElapsedTime();
-    helix.rotation.y = t*0.55;
-    helix.position.y = Math.sin(t*0.6)*0.4;
-    points.rotation.y = t*0.06;
-    camera.position.x += (mouseX*2.4 - camera.position.x)*0.04;
-    camera.position.y += (-mouseY*1.6 - camera.position.y)*0.04;
-    camera.lookAt(2.5, 0, 0);
-    renderer.render(scene, camera);
-  })();
-}
-
-/* ── 2. Kartalarga real 3D tilt (sichqonchaga ergashadi) ── */
-function initTilt(){
-  if(reduced) return;
-  var cards = document.querySelectorAll('.deco-card');
-  cards.forEach(function(card){
-    card.addEventListener('mousemove', function(e){
-      var r = card.getBoundingClientRect();
-      var px = (e.clientX - r.left)/r.width - 0.5;
-      var py = (e.clientY - r.top)/r.height - 0.5;
-      card.style.transform = 'perspective(900px) rotateY('+(px*20)+'deg) rotateX('+(-py*16)+'deg) translateZ(30px) scale(1.03)';
-      card.classList.add('tilt3d');
-    }, {passive:true});
-    card.addEventListener('mouseleave', function(){
-      card.style.transform = '';
-      card.classList.remove('tilt3d');
-    }, {passive:true});
-  });
-}
-
-/* ── 3. Bo'limlarning 3D paydo bo'lishi ── */
-function initReveal(){
-  var secs = document.querySelectorAll('section[id]');
-  if(reduced || !('IntersectionObserver' in window)){ return; }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if(en.isIntersecting){ en.target.classList.add('shown'); io.unobserve(en.target); }
-    });
-  }, {threshold:0.08});
-  secs.forEach(function(s){ s.classList.add('reveal3d'); io.observe(s); });
-}
-
-if(document.readyState === 'loading'){
-  document.addEventListener('DOMContentLoaded', function(){ initHero3D(); initTilt(); });
-}else{
-  initHero3D(); initTilt();
-}
 })();
 </script>
 <!-- ═══════════ /3D QATLAM ═══════════ -->
