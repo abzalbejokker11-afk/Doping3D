@@ -2,6 +2,11 @@
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://antidoni-tg.abzalbejokker11.workers.dev; connect-src 'self' https://antidoni-tg.abzalbejokker11.workers.dev https://api.telegram.org; img-src 'self' data: blob: https:; font-src 'self' data: https://fonts.gstatic.com; frame-ancestors 'self';">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Antidoping Kompetensiyasi | Ta'lim Portali · 3D</title>
 <meta name="description" content="WADA va UzNADO standartlariga asoslangan antidoping ta'lim portali: rahbarlar, murabbiylar, metodistlar va sportchilar uchun 40 mavzu, 80 test savoli, interaktiv trening va sertifikat.">
@@ -479,6 +484,20 @@ footer a:hover{color:#fff}
 .cert-tg-btn{display:inline-flex;align-items:center;gap:8px;background:#2196f3;color:#fff;font-weight:800;font-size:14px;padding:12px 24px;border-radius:30px;border:none;cursor:pointer;transition:.2s;font-family:inherit}
 .cert-tg-btn:hover{background:#1565c0;transform:scale(1.03)}
 
+
+/* 🛡️ XAVFSIZLIK VA MOBIL TEZLIK */
+* {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+button, a, input, select {
+  touch-action: manipulation;
+}
+section:not(.hero) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
 </style>
 </head>
 <body>
@@ -508,9 +527,9 @@ footer a:hover{color:#fff}
       <button id="lang-btn-ru" onclick="setLang('ru')">RU</button>
     </div>
     <div class="ext-links">
-      <a href="https://www.wada-ama.org" target="_blank" class="btn-wada">🌐 WADA</a>
-      <a href="https://talim-uznada.uz/landing" target="_blank" class="btn-uznado">🇺🇿 UzNADO</a>
-      <a href="https://sportedu.uz/uz/news/all-news/yangiliklar" target="_blank" class="btn-inst">🎓 Institut</a>
+      <a href="https://www.wada-ama.org" target="_blank" class="btn-wada" rel="noopener noreferrer">🌐 WADA</a>
+      <a href="https://talim-uznada.uz/landing" target="_blank" class="btn-uznado" rel="noopener noreferrer">🇺🇿 UzNADO</a>
+      <a href="https://sportedu.uz/uz/news/all-news/yangiliklar" target="_blank" class="btn-inst" rel="noopener noreferrer">🎓 Institut</a>
     </div>
     <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menyu">
       <span></span><span></span><span></span>
@@ -525,9 +544,9 @@ footer a:hover{color:#fff}
   <a onclick="scrollToSec('faq-sec');closeMobileNav()">❓ FAQ</a>
   <a onclick="scrollToSec('links-sec');closeMobileNav()">🔗 Resurslar</a>
   <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
-    <a href="https://www.wada-ama.org" target="_blank" style="background:#fee2e2;color:#991b1b;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700">🌐 WADA</a>
-    <a href="https://talim-uznada.uz/landing" target="_blank" style="background:#ccfbf1;color:#0f766e;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700">🇺🇿 UzNADO</a>
-    <a href="https://sportedu.uz" target="_blank" style="background:var(--blue-light);color:var(--blue);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700">🎓 Institut</a>
+    <a href="https://www.wada-ama.org" target="_blank" style="background:#fee2e2;color:#991b1b;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700" rel="noopener noreferrer">🌐 WADA</a>
+    <a href="https://talim-uznada.uz/landing" target="_blank" style="background:#ccfbf1;color:#0f766e;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700" rel="noopener noreferrer">🇺🇿 UzNADO</a>
+    <a href="https://sportedu.uz" target="_blank" style="background:var(--blue-light);color:var(--blue);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700" rel="noopener noreferrer">🎓 Institut</a>
   </div>
 </nav>
 
@@ -805,7 +824,7 @@ footer a:hover{color:#fff}
         <div class="dr-notfound" id="drug-nf">
           <div class="nf-ic">🔍</div>
           <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Topilmadi — AI Tekshirgichdan foydalaning</p>
-          <p style="font-size:12px;color:#a8c4e0">Yoki <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--gold-light)">WADA ro'yxati</a>da qidiring</p>
+          <p style="font-size:12px;color:#a8c4e0">Yoki <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--gold-light)" rel="noopener noreferrer">WADA ro'yxati</a>da qidiring</p>
         </div>
       </div>
     </div>
@@ -875,7 +894,7 @@ footer a:hover{color:#fff}
     </div>
     <div class="toza-grid">
       <div class="toza-card"><h4>📜 Dunyo Tarix</h4><ul><li><strong>1960 Rim:</strong> Jensen vafot — amfetamin</li><li><strong>1988 Seul:</strong> Ben Johnson — stanozolol, diskvalifikatsiya</li><li><strong>1998 Festina:</strong> Tour de France — EPO skanal</li><li><strong>1999:</strong> WADA Lausanneda tashkil etildi</li><li><strong>2003:</strong> BALCO — THG fosh, Marion Jones va boshqalar</li><li><strong>2012:</strong> Lance Armstrong — 7 g'ala bekor, USADA</li><li><strong>2016 Rio:</strong> ROSSADA — davlat doping, 100+ diskvalifikatsiya</li><li><strong>2021:</strong> WADA Kodeks yangi versiya (ISE 3.0)</li></ul></div>
-      <div class="toza-card"><h4>🇺🇿 O'zbekistonda</h4><ul><li><strong>2005:</strong> UzNADO tashkil etildi</li><li><strong>2019:</strong> "Antidopingga qarshi" qonun (O'zRQ)</li><li><strong>2020:</strong> PQ-4877 — sport tizimini isloh qilish</li><li><strong>2022:</strong> PQ-414 — jismoniy tarbiya rivojlantirish</li><li><strong>2023:</strong> PQ-149 — yangi sport siyosati</li><li><strong>25,000+ test/yil</strong> — barcha sport turlari</li><li><strong>Ta'lim:</strong> <a href="https://talim-uznada.uz/landing" target="_blank" style="color:var(--gold-light)">talim-uznada.uz</a></li><li><strong>Institut:</strong> <a href="https://sportedu.uz" target="_blank" style="color:var(--gold-light)">sportedu.uz</a></li></ul></div>
+      <div class="toza-card"><h4>🇺🇿 O'zbekistonda</h4><ul><li><strong>2005:</strong> UzNADO tashkil etildi</li><li><strong>2019:</strong> "Antidopingga qarshi" qonun (O'zRQ)</li><li><strong>2020:</strong> PQ-4877 — sport tizimini isloh qilish</li><li><strong>2022:</strong> PQ-414 — jismoniy tarbiya rivojlantirish</li><li><strong>2023:</strong> PQ-149 — yangi sport siyosati</li><li><strong>25,000+ test/yil</strong> — barcha sport turlari</li><li><strong>Ta'lim:</strong> <a href="https://talim-uznada.uz/landing" target="_blank" style="color:var(--gold-light)" rel="noopener noreferrer">talim-uznada.uz</a></li><li><strong>Institut:</strong> <a href="https://sportedu.uz" target="_blank" style="color:var(--gold-light)" rel="noopener noreferrer">sportedu.uz</a></li></ul></div>
       <div class="toza-card"><h4>📚 O'qitish Standartlari</h4><ul><li><strong>WADA ISE 3.0 (2021):</strong> uzluksiz ta'lim standarti</li><li><strong>ADEL:</strong> bepul onlayn platform, 20+ til, 50+ kurs</li><li><strong>3 yo'nalish:</strong> qoidalar; salomatlik; amaliy ko'nikmalar</li><li><strong>Formatlar:</strong> onlayn, vebinar, yuzma-yuz, rol o'yin</li><li><strong>Maqsadli guruhlar:</strong> 5 toifa — sportchi, murabbiy, metodist, rahbar, shifokor</li><li><strong>Baholash:</strong> oldindan→keyingi→3-6 oy takroriy. 75% = sertifikat</li></ul></div>
       <div class="toza-card"><h4>🎯 O'qitish Metodikasi</h4><ul><li><strong>Modullar:</strong> Qoidalar; Moddalar; Huquqlar va mas'uliyatlar</li><li><strong>Auditoriyaga mos:</strong> rahbar, metodist, sportchi, murabbiy, shifokor</li><li><strong>Interaktiv:</strong> klinik holatlar, rol o'yinlari, quiz, simulyatsiya</li><li><strong>Amaliy:</strong> ADAMS, Whereabouts, TUE, doping-kontrol simulyatsiyasi</li><li><strong>Muddatlar:</strong> asosiy 4s, chuqur 16s, yillik yangilanish 2s</li><li><strong>Baholash vositasi:</strong> ADKT-25 (raqamli) + DMS-12 (motivatsion)</li></ul></div>
       <div class="toza-card toza-full"><h4>📅 6 Bosqichli O'quv Dastur (ISE 3.0 asosida)</h4><div class="toza-timeline">
@@ -937,12 +956,12 @@ footer a:hover{color:#fff}
     <h2>Rasmiy Resurslar</h2>
     <p>WADA, UzNADO, Institut va boshqa rasmiy platformalarga to'g'ridan-to'g'ri kirishlar</p>
     <div class="links-grid">
-      <a href="https://www.wada-ama.org" target="_blank" class="link-card"><div class="lc-icon">🌐</div><h4>WADA</h4><p>Jahon Antidoping Agentligi. Taqiqlangan ro'yxat, Kodeks, standartlar, yangiliklar.</p><span class="lc-btn">wada-ama.org →</span></a>
-      <a href="https://talim-uznada.uz/landing" target="_blank" class="link-card"><div class="lc-icon">🇺🇿</div><h4>UzNADO Ta'lim</h4><p>Rasmiy o'zbek ta'lim platformasi. Onlayn kurslar, testlar, sertifikatlash.</p><span class="lc-btn">talim-uznada.uz →</span></a>
-      <a href="https://sportedu.uz" target="_blank" class="link-card"><div class="lc-icon">🎓</div><h4>Malaka Instituti</h4><p>Sportchilar Malakasini Oshirish Instituti — yangiliklar, dasturlar, ilmiy ishlar.</p><span class="lc-btn">sportedu.uz →</span></a>
-      <a href="https://www.wada-ama.org/en/adams" target="_blank" class="link-card"><div class="lc-icon">📲</div><h4>ADAMS</h4><p>Whereabouts, test natijalari, TUE holati, sportchi profili boshqaruvi.</p><span class="lc-btn">ADAMS →</span></a>
-      <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" class="link-card"><div class="lc-icon">📜</div><h4>Taqiqlangan Ro'yxat</h4><p>2026-yil WADA Prohibited List — to'liq va yangilangan ro'yxat.</p><span class="lc-btn">Prohibited List →</span></a>
-      <a href="https://adel.wada-ama.org" target="_blank" class="link-card"><div class="lc-icon">📚</div><h4>ADEL Platforma</h4><p>WADA bepul onlayn ta'lim platformasi. 20+ til, 50+ kurs, sertifikat.</p><span class="lc-btn">adel.wada-ama.org →</span></a>
+      <a href="https://www.wada-ama.org" target="_blank" class="link-card" rel="noopener noreferrer"><div class="lc-icon">🌐</div><h4>WADA</h4><p>Jahon Antidoping Agentligi. Taqiqlangan ro'yxat, Kodeks, standartlar, yangiliklar.</p><span class="lc-btn">wada-ama.org →</span></a>
+      <a href="https://talim-uznada.uz/landing" target="_blank" class="link-card" rel="noopener noreferrer"><div class="lc-icon">🇺🇿</div><h4>UzNADO Ta'lim</h4><p>Rasmiy o'zbek ta'lim platformasi. Onlayn kurslar, testlar, sertifikatlash.</p><span class="lc-btn">talim-uznada.uz →</span></a>
+      <a href="https://sportedu.uz" target="_blank" class="link-card" rel="noopener noreferrer"><div class="lc-icon">🎓</div><h4>Malaka Instituti</h4><p>Sportchilar Malakasini Oshirish Instituti — yangiliklar, dasturlar, ilmiy ishlar.</p><span class="lc-btn">sportedu.uz →</span></a>
+      <a href="https://www.wada-ama.org/en/adams" target="_blank" class="link-card" rel="noopener noreferrer"><div class="lc-icon">📲</div><h4>ADAMS</h4><p>Whereabouts, test natijalari, TUE holati, sportchi profili boshqaruvi.</p><span class="lc-btn">ADAMS →</span></a>
+      <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" class="link-card" rel="noopener noreferrer"><div class="lc-icon">📜</div><h4>Taqiqlangan Ro'yxat</h4><p>2026-yil WADA Prohibited List — to'liq va yangilangan ro'yxat.</p><span class="lc-btn">Prohibited List →</span></a>
+      <a href="https://adel.wada-ama.org" target="_blank" class="link-card" rel="noopener noreferrer"><div class="lc-icon">📚</div><h4>ADEL Platforma</h4><p>WADA bepul onlayn ta'lim platformasi. 20+ til, 50+ kurs, sertifikat.</p><span class="lc-btn">adel.wada-ama.org →</span></a>
     </div>
   </div>
 </section>
@@ -950,10 +969,10 @@ footer a:hover{color:#fff}
 <footer>
   <p>© 2026 · Antidoping Kompetensiyasi Ta'lim Portali · PhD Ilmiy Tadqiqot · sportedu.uz</p>
   <p style="margin-top:6px">
-    <a href="https://www.wada-ama.org" target="_blank">WADA</a>
-    <a href="https://talim-uznada.uz/landing" target="_blank">UzNADO</a>
-    <a href="https://sportedu.uz" target="_blank">Institut</a>
-    <a href="https://adel.wada-ama.org" target="_blank">ADEL</a>
+    <a href="https://www.wada-ama.org" target="_blank" rel="noopener noreferrer">WADA</a>
+    <a href="https://talim-uznada.uz/landing" target="_blank" rel="noopener noreferrer">UzNADO</a>
+    <a href="https://sportedu.uz" target="_blank" rel="noopener noreferrer">Institut</a>
+    <a href="https://adel.wada-ama.org" target="_blank" rel="noopener noreferrer">ADEL</a>
   </p>
 </footer>
 
@@ -1027,7 +1046,7 @@ footer a:hover{color:#fff}
             <div>
               <div class="tg-step-title">@antidopi kanaliga obuna bo'ling</div>
               <div class="tg-step-desc">Test natijangiz va sertifikatingiz shu kanalga yuboriladi.</div>
-              <a href="https://t.me/antidopi" target="_blank" class="tg-open-btn" style="font-size:13px;padding:8px 18px">📢 Kanalga o'tish →</a>
+              <a href="https://t.me/antidopi" target="_blank" class="tg-open-btn" style="font-size:13px;padding:8px 18px" rel="noopener noreferrer">📢 Kanalga o'tish →</a>
             </div>
           </div>
           <div class="tg-step-box" style="margin-top:12px">
@@ -1121,7 +1140,7 @@ footer a:hover{color:#fff}
             <div>
               <div class="tg-step-title">@antidopi kanaliga obuna bo'ling</div>
               <div class="tg-step-desc">Test natijangiz va sertifikatingiz shu kanalga yuboriladi.</div>
-              <a href="https://t.me/antidopi" target="_blank" class="tg-open-btn" style="font-size:13px;padding:8px 18px">📢 Kanalga o'tish →</a>
+              <a href="https://t.me/antidopi" target="_blank" class="tg-open-btn" style="font-size:13px;padding:8px 18px" rel="noopener noreferrer">📢 Kanalga o'tish →</a>
             </div>
           </div>
           <div class="tg-step-box" style="margin-top:12px">
@@ -1169,7 +1188,7 @@ footer a:hover{color:#fff}
     <div class="tab-panel active" id="metodist-mavzu">
       <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>2.1 · WADA hujjatlari tizimi</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>Prohibited List — har yil 1-yanvar yangilanadi, 15 kun ichida barcha xodimlarga tarqatish.</li><li>WADA Kodeks 2021 — 25 bob. Asosiy boblar: 2 (ADRV), 4 (Prohibited List), 10 (sanksiyalar), 21 (mas'uliyatlar).</li><li>Standartlar: ISL (laboratoriya), ISTI (test), ISTUEC (TUE), ISTP (tadbir himoyasi), ISCO (muvofiqlik).</li><li>Tarjima: huquqiy atamalar mutaxassis yordamida tarjima qilinadi. Arxiv 5 yil saqlanadi.</li><li>O'zbekiston: "Antidopingga qarshi" qonun (2019) + UzNADO me'yoriy hujjatlari.</li></ul><div class="info-badge green">✅ Manba: wada-ama.org/resources</div></div></div>
       <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>2.2 · ADAMS tizimi va SMS-tahlil</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>ADAMS — Whereabouts, test natijalari, TUE arizalari, sportchi profili, reestr boshqaruvi.</li><li>SMS-tahlil 4 bosqich: Aniqlash (nima keldi) → Tushuntirish (nima demak) → Xabardor qilish (kimga) → Javob berish (nima qilish).</li><li>Xabarlar va muddatlar: Whereabouts (chorak oxiri), eslatma (48s), missed test (14 kun javob), ATF (10 kun), AAF (10 kun B-namuna), TUE rad (21 kun apellyatsiya).</li><li>3 missed/12 oy = 2 yil chetlashtirish (Kodeks 2.4). Bu avtomatik sanalar kitobida yozib boriladi.</li></ul><div class="info-badge red">⚠️ 3 missed test = 2 yil diskvalifikatsiya</div></div></div>
-      <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>2.3 · Federatsiyalar bilan koordinatsiya</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>Yillik reestr: barcha a'zolar ADAMS ID bilan ro'yxatda. RTP sportchilari alohida belgilangan.</li><li>UzNADO — oylik aloqa, choraklik yozma hisobot topshirish. <a href="https://talim-uznada.uz/landing" target="_blank" style="color:var(--blue)">talim-uznada.uz</a></li><li>Xalqaro federatsiyalar (IF) — musobaqa oldidan alohida bildirishnoma va qoida yangilanishi so'ralishi mumkin.</li><li>Yiliga kamida 2 marta ta'lim seminari — barcha sport turlar uchun.</li></ul></div></div>
+      <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>2.3 · Federatsiyalar bilan koordinatsiya</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>Yillik reestr: barcha a'zolar ADAMS ID bilan ro'yxatda. RTP sportchilari alohida belgilangan.</li><li>UzNADO — oylik aloqa, choraklik yozma hisobot topshirish. <a href="https://talim-uznada.uz/landing" target="_blank" style="color:var(--blue)" rel="noopener noreferrer">talim-uznada.uz</a></li><li>Xalqaro federatsiyalar (IF) — musobaqa oldidan alohida bildirishnoma va qoida yangilanishi so'ralishi mumkin.</li><li>Yiliga kamida 2 marta ta'lim seminari — barcha sport turlar uchun.</li></ul></div></div>
       <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>2.4 · TUE jarayoni boshqaruvi</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>TUE ariza shakli (A-F bo'limlari): A-sportchi ma'lumoti, B-tashkilot, C-tibbiy holat, D-taqiqlangan modda, E-muqobil, F-shifokor imzosi.</li><li>Topshirish: musobaqadan 30 kun oldin — ADAMS orqali.</li><li>Muddatlar: 21 kun ichida TUEC qaror beradi. Qo'shimcha hujjat so'ralsa — 5 kun.</li><li>Retroaktiv TUE — faqat favqulodda holat + 7 kun ichida.</li><li>TUE rad bo'lsa — 21 kun ichida apellyatsiya CAS ga.</li><li>Metodist arxivi: barcha TUElar ADAMS da + qog'oz nusxa 5 yil.</li></ul></div></div>
       <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>2.5 · ADAMS xabarlar jadvali va amallar</span><span class="acc-arrow">▾</span></div><div class="acc-body"><div style="overflow-x:auto"><table class="wada-table"><thead><tr><th>Xabar turi</th><th>Javob muddati</th><th>Qoidabuzarlik</th><th>Natija</th></tr></thead><tbody><tr><td>Whereabouts yangilash</td><td>Chorak oxiri</td><td>Filing failure</td><td>3 da = 2 yil</td></tr><tr><td>48s eslatma</td><td>Darhol yangilash</td><td>Filing failure</td><td>Sanalar kitobida</td></tr><tr><td>Missed test</td><td>14 kun javob</td><td>Whereabouts failure</td><td>3 da = 2 yil</td></tr><tr><td>ATF (Atypical)</td><td>10 kun</td><td>Kutiladi</td><td>Tahlil davom etadi</td></tr><tr><td>AAF (Adverse)</td><td>10 kun (B-namuna)</td><td>ADRV 2.1/2.2</td><td>2-4 yil / umrbod</td></tr><tr><td>TUE rad etildi</td><td>21 kun apellyatsiya</td><td>AAF sifatida</td><td>CAS ga murojaat</td></tr></tbody></table></div></div></div>
       <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>2.6 · Individual suhbat va hisobot formati</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>Suhbat (30-45 daqiqa): sportchi ahvoli → o'zgarishlar → daftarcha → ADAMS holati → savollar → reja.</li><li>Oylik hisobot: reestr yangilanishi, ta'lim holati, test natijalari, TUE holati, Whereabouts muammolari.</li><li>Yillik hisobot: barcha ko'rsatkichlar, tendentsiyalar, reja — UzNADO ga topshiriladi.</li><li>Arxiv: barcha hujjatlar 5 yil, ADAMS da qayd, tekshiruv uchun 3 kun ichida taqdim etish.</li></ul></div></div>
@@ -1203,7 +1222,7 @@ footer a:hover{color:#fff}
       <ul class="checklist">
         <li><span class="cl-icon">📱</span>ADAMS xabarlar yakuniy tahlil</li>
         <li><span class="cl-icon">📋</span>Oylik hisobot UzNADO ga yuborildi</li>
-        <li><span class="cl-icon">🎓</span>O'z malakasi yangilandi — <a href="https://adel.wada-ama.org" target="_blank" style="color:var(--blue)">ADEL</a> yoki <a href="https://talim-uznada.uz/landing" target="_blank" style="color:var(--blue)">UzNADO</a></li>
+        <li><span class="cl-icon">🎓</span>O'z malakasi yangilandi — <a href="https://adel.wada-ama.org" target="_blank" style="color:var(--blue)" rel="noopener noreferrer">ADEL</a> yoki <a href="https://talim-uznada.uz/landing" target="_blank" style="color:var(--blue)" rel="noopener noreferrer">UzNADO</a></li>
       </ul>
     </div>
     <div class="tab-panel" id="metodist-test">
@@ -1215,7 +1234,7 @@ footer a:hover{color:#fff}
             <div>
               <div class="tg-step-title">@antidopi kanaliga obuna bo'ling</div>
               <div class="tg-step-desc">Test natijangiz va sertifikatingiz shu kanalga yuboriladi.</div>
-              <a href="https://t.me/antidopi" target="_blank" class="tg-open-btn" style="font-size:13px;padding:8px 18px">📢 Kanalga o'tish →</a>
+              <a href="https://t.me/antidopi" target="_blank" class="tg-open-btn" style="font-size:13px;padding:8px 18px" rel="noopener noreferrer">📢 Kanalga o'tish →</a>
             </div>
           </div>
           <div class="tg-step-box" style="margin-top:12px">
@@ -1306,7 +1325,7 @@ footer a:hover{color:#fff}
             <div>
               <div class="tg-step-title">@antidopi kanaliga obuna bo'ling</div>
               <div class="tg-step-desc">Test natijangiz va sertifikatingiz shu kanalga yuboriladi.</div>
-              <a href="https://t.me/antidopi" target="_blank" class="tg-open-btn" style="font-size:13px;padding:8px 18px">📢 Kanalga o'tish →</a>
+              <a href="https://t.me/antidopi" target="_blank" class="tg-open-btn" style="font-size:13px;padding:8px 18px" rel="noopener noreferrer">📢 Kanalga o'tish →</a>
             </div>
           </div>
           <div class="tg-step-box" style="margin-top:12px">
@@ -1363,8 +1382,8 @@ footer a:hover{color:#fff}
             <p><strong>Dars:</strong> hatto milliy darajadagi tizim ham yashirin bo'lishi mumkin — individual mas'uliyat muhim.</p>
           </div>
           <div class="film-links">
-            <a href="https://www.youtube.com/watch?v=qXoRdSTrR-8" target="_blank" class="film-link fl-youtube">▶ YouTube Treyler</a>
-            <a href="https://www.imdb.com/title/tt6333060/" target="_blank" class="film-link fl-imdb">⭐ IMDb</a>
+            <a href="https://www.youtube.com/watch?v=qXoRdSTrR-8" target="_blank" class="film-link fl-youtube" rel="noopener noreferrer">▶ YouTube Treyler</a>
+            <a href="https://www.imdb.com/title/tt6333060/" target="_blank" class="film-link fl-imdb" rel="noopener noreferrer">⭐ IMDb</a>
           </div>
         </div>
       </div>
@@ -1387,8 +1406,8 @@ footer a:hover{color:#fff}
             <p><strong>Dars:</strong> eng katta g'alaba ham pirovardida qulab tushadi — toza sport — bardavom.</p>
           </div>
           <div class="film-links">
-            <a href="https://www.youtube.com/watch?v=z_GF6uqtDrk" target="_blank" class="film-link fl-youtube">▶ YouTube Treyler</a>
-            <a href="https://www.imdb.com/title/tt3604066/" target="_blank" class="film-link fl-imdb">⭐ IMDb</a>
+            <a href="https://www.youtube.com/watch?v=z_GF6uqtDrk" target="_blank" class="film-link fl-youtube" rel="noopener noreferrer">▶ YouTube Treyler</a>
+            <a href="https://www.imdb.com/title/tt3604066/" target="_blank" class="film-link fl-imdb" rel="noopener noreferrer">⭐ IMDb</a>
           </div>
         </div>
       </div>
@@ -1411,8 +1430,8 @@ footer a:hover{color:#fff}
             <p><strong>Dars:</strong> bir yo'l bilan boshlangan doping — hayot yo'lini butunlay o'zgartiradi.</p>
           </div>
           <div class="film-links">
-            <a href="https://www.youtube.com/watch?v=Ox-pCbiyFoU" target="_blank" class="film-link fl-youtube">▶ YouTube Treyler</a>
-            <a href="https://www.imdb.com/title/tt2659188/" target="_blank" class="film-link fl-imdb">⭐ IMDb</a>
+            <a href="https://www.youtube.com/watch?v=Ox-pCbiyFoU" target="_blank" class="film-link fl-youtube" rel="noopener noreferrer">▶ YouTube Treyler</a>
+            <a href="https://www.imdb.com/title/tt2659188/" target="_blank" class="film-link fl-imdb" rel="noopener noreferrer">⭐ IMDb</a>
           </div>
         </div>
       </div>
@@ -1462,6 +1481,20 @@ footer a:hover{color:#fff}
 
 <!-- ══════════════ JAVASCRIPT ══════════════ -->
 <script>
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 🛡️ XAVFSIZLIK: XSS (Cross-Site Scripting) HIMOYA FUNKSIYASI
+// ═══════════════════════════════════════════════════════════════════════════
+function escapeHTML(str) {
+  if (str === null || str === undefined) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 // ═══ SCROLL ═══
 function scrollToSec(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}
 window.__scrollTopBtn = document.getElementById('scrollTop');
@@ -1745,8 +1778,9 @@ const TG_PROXY_URL = 'https://antidoni-tg.abzalbejokker11.workers.dev'; // 2-USU
 // 1-USUL: Bot token — XAVFSIZLIK: token bo'laklab saqlangan, shunda avtomatik
 // token-skanerlar (regex qidiruv) uni topa olmaydi. O'zgartirish kerak bo'lsa,
 // yangi tokenni xuddi shunday bo'laklarga bo'lib yozing.
-const _tk = ['88488','14331','AAGRKxaLvv','NqnSTveNZv','kAGb_8iiDGoNWBQ'];
-const BOT_TOKEN    = _tk[0] + _tk[1] + ':' + _tk[2] + _tk[3] + _tk[4];
+// XAVFSIZLIK: Telegram bot tokeni frontend kodida saqlanmaydi!
+// Barcha xabarlar va sertifikatlar Cloudflare Worker (TG_PROXY_URL) orqali xavfsiz proksi qilinadi.
+const BOT_TOKEN    = '';
 const TG_CHANNEL   = '@antidopi';         // Sertifikat yuboriladigan kanal
 const TG_ADMIN_ID  = '';                    // (ixtiyoriy) Adminga nusxa uchun Telegram ID raqami
 const ADMIN_ID      = 'ADMIN';   // Worker o'zi haqiqiy ID ga almashtiradi
@@ -2645,12 +2679,12 @@ Agar dori nomi noto'g'ri yoki tushunarsiz bo'lsa — eng yaqin variantni taklif 
     res.innerHTML=`
       <div style="background:#fff;border-radius:14px;padding:20px;margin-top:4px">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px">
-          <div style="font-size:16px;font-weight:900;color:#0a1f3d">🤖 AI Tahlil: "${q}"</div>
+          <div style="font-size:16px;font-weight:900;color:#0a1f3d">🤖 AI Tahlil: "${escapeHTML(q)}"</div>
           <span style="background:${statusBg};color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-radius:20px">${statusText}</span>
         </div>
         <div style="font-size:13px;color:#334155;line-height:1.8">${formatted}</div>
         <div style="margin-top:14px;padding:10px 14px;background:#f0f6ff;border-radius:8px;font-size:11px;color:#546e7a;display:flex;gap:6px">
-          <span>⚠️</span><span>Bu AI tahlil — ma'lumot uchun. Rasmiy qaror uchun: <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--blue);font-weight:700">WADA Taqiqlangan Ro'yxati</a> yoki UzNADO.</span>
+          <span>⚠️</span><span>Bu AI tahlil — ma'lumot uchun. Rasmiy qaror uchun: <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--blue);font-weight:700" rel="noopener noreferrer">WADA Taqiqlangan Ro'yxati</a> yoki UzNADO.</span>
         </div>
       </div>`;
   }catch(e){
@@ -2685,17 +2719,17 @@ function aiFallbackToOfflineDB(q, res){
           <strong>Izoh:</strong> ${d.note}
         </div>
         <div style="margin-top:14px;padding:10px 14px;background:#f0f6ff;border-radius:8px;font-size:11px;color:#546e7a;display:flex;gap:6px">
-          <span>📋</span><span>Tezkor (offline) ma'lumotlar bazasidan. Rasmiy qaror uchun: <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--blue);font-weight:700">WADA Taqiqlangan Ro'yxati</a> yoki UzNADO.</span>
+          <span>📋</span><span>Tezkor (offline) ma'lumotlar bazasidan. Rasmiy qaror uchun: <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--blue);font-weight:700" rel="noopener noreferrer">WADA Taqiqlangan Ro'yxati</a> yoki UzNADO.</span>
         </div>
       </div>`).join('');
   } else {
     res.innerHTML = `
       <div style="background:#fff;border-radius:14px;padding:24px;margin-top:4px;text-align:center">
         <div style="font-size:32px;margin-bottom:8px">🔍</div>
-        <div style="font-size:14px;font-weight:700;color:#0a1f3d;margin-bottom:6px">"${q}" bazada topilmadi</div>
+        <div style="font-size:14px;font-weight:700;color:#0a1f3d;margin-bottom:6px">"${escapeHTML(q)}" bazada topilmadi</div>
         <div style="font-size:13px;color:#64748b;margin-bottom:14px">AI tahlil hozircha ulanmagan. Quyidagi rasmiy manbalarda qidiring:</div>
-        <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:700;margin:4px">📜 WADA Ro'yxati</a>
-        <a href="https://talim-uznada.uz/landing" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:700;margin:4px">🇺🇿 UzNADO</a>
+        <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:700;margin:4px" rel="noopener noreferrer">📜 WADA Ro'yxati</a>
+        <a href="https://talim-uznada.uz/landing" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:700;margin:4px" rel="noopener noreferrer">🇺🇿 UzNADO</a>
       </div>`;
   }
 }
@@ -3427,135 +3461,34 @@ if(window.CUR_LANG==='ru') setLang('ru');
   #hero3d-canvas{display:none}
 }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script id="threed-js">
 (function(){
-'use strict';
-var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  'use strict';
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ── 1. HERO: Three.js DNK spirali + zarrachalar ── */
-function initHero3D(){
-  if(reduced || typeof THREE === 'undefined') return;
-  var hero = document.querySelector('.hero');
-  if(!hero) return;
-  var canvas = document.createElement('canvas');
-  canvas.id = 'hero3d-canvas';
-  hero.insertBefore(canvas, hero.firstChild);
-  var renderer;
-  try{
-    renderer = new THREE.WebGLRenderer({canvas:canvas, alpha:true, antialias:true});
-  }catch(e){ canvas.remove(); return; }
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1, 2));
-  var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(50, 2, 0.1, 100);
-  camera.position.set(0, 0, 16);
-  scene.add(new THREE.AmbientLight(0xffffff, 0.9));
-  var dir = new THREE.DirectionalLight(0x2563eb, 1.1);
-  dir.position.set(4, 6, 8);
-  scene.add(dir);
-
-  /* DNK ikki zanjirli spiral */
-  var helix = new THREE.Group();
-  var COLORS = [0x2563eb, 0x60a5fa, 0x93c5fd, 0x1e40af];
-  var sGeo = new THREE.SphereGeometry(0.22, 16, 16);
-  var rungGeo = new THREE.CylinderGeometry(0.05, 0.05, 1, 8);
-  var N = 26, LEN = 14;
-  for(var i=0;i<N;i++){
-    var t = i/(N-1), y = (t-0.5)*LEN, ang = t*Math.PI*4;
-    var x1 = Math.cos(ang)*2.2, z1 = Math.sin(ang)*2.2;
-    var x2 = Math.cos(ang+Math.PI)*2.2, z2 = Math.sin(ang+Math.PI)*2.2;
-    var m1 = new THREE.Mesh(sGeo, new THREE.MeshPhongMaterial({color:COLORS[i%4], shininess:80}));
-    m1.position.set(x1,y,z1);
-    var m2 = new THREE.Mesh(sGeo, new THREE.MeshPhongMaterial({color:COLORS[(i+2)%4], shininess:80}));
-    m2.position.set(x2,y,z2);
-    helix.add(m1); helix.add(m2);
-    var rung = new THREE.Mesh(rungGeo, new THREE.MeshPhongMaterial({color:0xbfdbfe, transparent:true, opacity:0.7}));
-    rung.position.set(0,y,0);
-    rung.scale.y = 4.4;
-    rung.rotation.z = Math.PI/2;
-    rung.rotation.y = -ang;
-    helix.add(rung);
+  /* ── 1. Bo'limlarning xavfsiz va silliq paydo bo'lishi (IntersectionObserver) ── */
+  function initReveal(){
+    var secs = document.querySelectorAll('section[id]');
+    if(reduced || !('IntersectionObserver' in window)){ 
+      secs.forEach(function(s){ s.classList.add('shown'); });
+      return; 
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ 
+          en.target.classList.add('shown'); 
+          io.unobserve(en.target); 
+        }
+      });
+    }, {threshold: 0.05, rootMargin: '50px'});
+    secs.forEach(function(s){ s.classList.add('reveal3d'); io.observe(s); });
   }
-  helix.rotation.z = 0.35;
-  helix.position.x = 9;
-  scene.add(helix);
 
-  /* Suzuvchi zarrachalar */
-  var pGeo = new THREE.BufferGeometry();
-  var P = 160, pos = new Float32Array(P*3);
-  for(var j=0;j<P*3;j++) pos[j] = (Math.random()-0.5)*30;
-  pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  var points = new THREE.Points(pGeo, new THREE.PointsMaterial({color:0x60a5fa, size:0.09, transparent:true, opacity:0.65}));
-  scene.add(points);
-
-  var mouseX = 0, mouseY = 0;
-  window.addEventListener('mousemove', function(e){
-    mouseX = (e.clientX/window.innerWidth - 0.5);
-    mouseY = (e.clientY/window.innerHeight - 0.5);
-  }, {passive:true});
-
-  function resize(){
-    var w = hero.clientWidth, h = hero.clientHeight;
-    renderer.setSize(w, h, false);
-    camera.aspect = w/h;
-    camera.updateProjectionMatrix();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initReveal, {passive: true});
+  } else {
+    initReveal();
   }
-  resize();
-  window.addEventListener('resize', resize, {passive:true});
-
-  var running = true;
-  document.addEventListener('visibilitychange', function(){ running = !document.hidden; });
-  var clock = new THREE.Clock();
-  (function loop(){
-    requestAnimationFrame(loop);
-    if(!running) return;
-    var t = clock.getElapsedTime();
-    helix.rotation.y = t*0.55;
-    helix.position.y = Math.sin(t*0.6)*0.4;
-    points.rotation.y = t*0.06;
-    camera.position.x += (mouseX*2.4 - camera.position.x)*0.04;
-    camera.position.y += (-mouseY*1.6 - camera.position.y)*0.04;
-    camera.lookAt(2.5, 0, 0);
-    renderer.render(scene, camera);
-  })();
-}
-
-/* ── 2. Kartalarga real 3D tilt (sichqonchaga ergashadi) ── */
-function initTilt(){
-  if(reduced) return;
-  var cards = document.querySelectorAll('.deco-card');
-  cards.forEach(function(card){
-    card.addEventListener('mousemove', function(e){
-      var r = card.getBoundingClientRect();
-      var px = (e.clientX - r.left)/r.width - 0.5;
-      var py = (e.clientY - r.top)/r.height - 0.5;
-      card.style.transform = 'perspective(900px) rotateY('+(px*20)+'deg) rotateX('+(-py*16)+'deg) translateZ(30px) scale(1.03)';
-      card.classList.add('tilt3d');
-    }, {passive:true});
-    card.addEventListener('mouseleave', function(){
-      card.style.transform = '';
-      card.classList.remove('tilt3d');
-    }, {passive:true});
-  });
-}
-
-/* ── 3. Bo'limlarning 3D paydo bo'lishi ── */
-function initReveal(){
-  var secs = document.querySelectorAll('section[id]');
-  if(reduced || !('IntersectionObserver' in window)){ return; }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if(en.isIntersecting){ en.target.classList.add('shown'); io.unobserve(en.target); }
-    });
-  }, {threshold:0.08});
-  secs.forEach(function(s){ s.classList.add('reveal3d'); io.observe(s); });
-}
-
-if(document.readyState === 'loading'){
-  document.addEventListener('DOMContentLoaded', function(){ initHero3D(); initTilt(); });
-}else{
-  initHero3D(); initTilt();
-}
 })();
 </script>
 <!-- ═══════════ /3D QATLAM ═══════════ -->
@@ -4371,15 +4304,15 @@ aiFallbackToOfflineDB = function(q, res){
         '<strong>Нужно ли TUE:</strong> ' + tue + '<br>' +
         '<strong>Примечание:</strong> ' + note + '</div>' +
         '<div style="margin-top:14px;padding:10px 14px;background:#f0f6ff;border-radius:8px;font-size:11px;color:#546e7a;display:flex;gap:6px">' +
-        '<span>📋</span><span>Из быстрой (офлайн) базы данных. Для официального решения: <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--blue);font-weight:700">Запрещённый список WADA</a> или UzNADO.</span></div></div>';
+        '<span>📋</span><span>Из быстрой (офлайн) базы данных. Для официального решения: <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--blue);font-weight:700" rel="noopener noreferrer">Запрещённый список WADA</a> или UzNADO.</span></div></div>';
     }).join('');
   } else {
     res.innerHTML = '<div style="background:#fff;border-radius:14px;padding:24px;margin-top:4px;text-align:center">' +
       '<div style="font-size:32px;margin-bottom:8px">🔍</div>' +
-      '<div style="font-size:14px;font-weight:700;color:#0a1f3d;margin-bottom:6px">«' + q + '» не найдено в базе</div>' +
+      '<div style="font-size:14px;font-weight:700;color:#0a1f3d;margin-bottom:6px">«' + escapeHTML(q) + '» не найдено в базе</div>' +
       '<div style="font-size:13px;color:#64748b;margin-bottom:14px">ИИ-анализ пока не подключён. Ищите в официальных источниках:</div>' +
-      '<a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:700;margin:4px">🌐 Список WADA</a>' +
-      '<a href="https://talim-uznada.uz/landing" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:700;margin:4px">🇺🇿 UzNADO</a></div>';
+      '<a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:700;margin:4px" rel="noopener noreferrer">🌐 Список WADA</a>' +
+      '<a href="https://talim-uznada.uz/landing" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:700;margin:4px" rel="noopener noreferrer">🇺🇿 UzNADO</a></div>';
   }
 };
 })();
@@ -4501,8 +4434,8 @@ window.aiCheckDrug = async function(){
       '<div style="font-size:13px;color:#334155;line-height:1.9">' + md(d.text) + '</div>' +
       '<div style="margin-top:14px;padding:10px 14px;background:#fff7ed;border-radius:8px;font-size:11px;color:#92400e;display:flex;gap:6px">' +
       '<span>⚠️</span><span>' + (ru
-        ? 'Это НЕ медицинский совет. Официальное решение: <a href="https://www.globaldro.com" target="_blank" style="color:var(--blue);font-weight:700">Global DRO</a>, <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--blue);font-weight:700">WADA</a> или UzNADO.'
-        : 'Bu tibbiy maslahat EMAS. Rasmiy qaror uchun: <a href="https://www.globaldro.com" target="_blank" style="color:var(--blue);font-weight:700">Global DRO</a>, <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--blue);font-weight:700">WADA</a> yoki UzNADO.') +
+        ? 'Это НЕ медицинский совет. Официальное решение: <a href="https://www.globaldro.com" target="_blank" style="color:var(--blue);font-weight:700" rel="noopener noreferrer">Global DRO</a>, <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--blue);font-weight:700" rel="noopener noreferrer">WADA</a> или UzNADO.'
+        : 'Bu tibbiy maslahat EMAS. Rasmiy qaror uchun: <a href="https://www.globaldro.com" target="_blank" style="color:var(--blue);font-weight:700" rel="noopener noreferrer">Global DRO</a>, <a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" style="color:var(--blue);font-weight:700" rel="noopener noreferrer">WADA</a> yoki UzNADO.') +
       '</span></div></div>';
   }catch(e){
     /* AI ishlamasa — jimgina offline bazaga qaytadi, foydalanuvchi xato ko'rmaydi */
