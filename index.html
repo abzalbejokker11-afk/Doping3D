@@ -2051,7 +2051,11 @@ async function sendResultToAdmin(role, score, pct, passed) {
     year:'numeric', hour:'2-digit', minute:'2-digit'
   });
   const bars   = '█'.repeat(Math.round(pct/10)) + '░'.repeat(10-Math.round(pct/10));
-  const status = passed ? '✅ O\'TDI — SERTIFIKAT BERILDI' : pct>=60 ? '⚠️ YETARLI EMAS' : '❌ O\'TMADI';
+  const isRu = (window.CUR_LANG === 'ru');
+  const status = passed
+    ? (isRu ? '✅ СДАНО — ОСВОЕНО' : '✅ O\'TDI — O‘ZLASHTIRILDI')
+    : pct>=60 ? (isRu ? '⚠️ НЕ ДОСТАТОЧНО' : '⚠️ YETARLI EMAS')
+    : (isRu ? '❌ НЕ СДАНО' : '❌ O\'TMADI');
 
   const text =
 `🎓 <b>TEST NATIJASI</b>
@@ -2089,8 +2093,9 @@ const certMeta = {}; // har bir rol uchun sertifikat ma'lumotlari (qayta yuboris
 
 function showCertificate(role, score, pct) {
   const info    = userInfo[role];
+  const isRu    = (window.CUR_LANG === 'ru');
   const certId  = 'AD-' + Date.now().toString(36).toUpperCase();
-  const sana    = new Date().toLocaleDateString('uz-UZ', {day:'2-digit', month:'long', year:'numeric'});
+  const sana    = new Date().toLocaleDateString(isRu ? 'ru-RU' : 'uz-UZ', {day:'2-digit', month:'long', year:'numeric'});
   const certDiv = document.getElementById(role+'-cert');
   certMeta[role] = { score, pct, certId, sana };
 
@@ -2148,13 +2153,19 @@ async function sendCertToChannel(role) {
     status.textContent = tr('cert_sending');
   }
 
+  const isRu = (window.CUR_LANG === 'ru');
+  const roleNamesRu = { rahbar: '🧑‍💼 Руководитель', murabbiy: '🏋️ Тренер', metodist: '📋 Методист', sportchi: '🏃 Спортсмен' };
+  const captionTitle = isRu ? '🏆 <b>АНТИДОПИНГОВОЕ ОБУЧЕНИЕ — ОСВОЕНО</b>' : '🏆 <b>ANTIDOPING TA\'LIMI — O‘ZLASHTIRILDI</b>';
+  const roleDisplay = isRu ? (roleNamesRu[role] || roleNames[role]) : roleNames[role];
+  const scoreLabel = isRu ? 'правильных' : 'to\'g\'ri';
+
   const caption =
-`🏆 <b>ANTIDOPING SERTIFIKATI</b>
+`${captionTitle}
 ━━━━━━━━━━━━━━━━━━
 👤 <b>${info.ism}</b>
 🏢 ${info.tashkilot}
-📂 ${roleNames[role]}
-📊 ${meta.score}/20 — ${meta.pct}%
+📂 ${roleDisplay}
+📊 ${meta.score}/20 (${scoreLabel}) — ${meta.pct}%
 📅 ${meta.sana}
 🆔 ${meta.certId}
 ━━━━━━━━━━━━━━━━━━
@@ -2278,8 +2289,12 @@ function drawCert(role, ism, tashkilot, roleName, score, pct, certId, sana) {
 
     ctx.textBaseline = 'alphabetic';
 
-    // ── SARLAVHA: SERTIFIKAT -> O'ZLASHTIRILDI ──
-    drawCertField(ctx, img, CERT_TITLE_BOX, "O\u2018ZLASHTIRILDI", {
+    const isRu = (window.CUR_LANG === 'ru');
+    const roleNamesRu = { rahbar: 'Руководитель', murabbiy: 'Тренер', metodist: 'Методист', sportchi: 'Спортсмен' };
+
+    // ── SARLAVHA: SERTIFIKAT -> O'ZLASHTIRILDI (RU: ОСВОЕНО) ──
+    const titleText = isRu ? "ОСВОЕНО" : "O\u2018ZLASHTIRILDI";
+    drawCertField(ctx, img, CERT_TITLE_BOX, titleText, {
       font: 'Poppins', weight: 800, color: CERT_NAVY, align:'center',
       maxSizeRatio: 0.85, minSize: 60, bg: '#fbfbfd'
     });
@@ -2299,13 +2314,21 @@ function drawCert(role, ism, tashkilot, roleName, score, pct, certId, sana) {
     }
 
     // ── TEST TURI (rol) ──
-    drawCertField(ctx, img, CERT_ROLE_BOX, roleName.replace(/^\S+\s/,'')+' bo\u2019yicha malaka testi', {
+    const roleText = isRu
+      ? 'Квалификационный тест: ' + (roleNamesRu[role] || roleName.replace(/^\S+\s/,''))
+      : roleName.replace(/^\S+\s/,'')+' bo\u2019yicha malaka testi';
+
+    drawCertField(ctx, img, CERT_ROLE_BOX, roleText, {
       font: 'Poppins', weight: 600, color: CERT_GRAY, align:'left',
       maxSizeRatio: 0.62, minSize: 14
     });
 
     // ── NATIJA (ball / foiz) ──
-    drawCertField(ctx, img, CERT_SCORE_BOX, score+'/20 to\u2018g\u2018ri javob  \u2014  '+pct+'%', {
+    const scoreText = isRu
+      ? score+'/20 правильных ответов  \u2014  '+pct+'%'
+      : score+'/20 to\u2018g\u2018ri javob  \u2014  '+pct+'%';
+
+    drawCertField(ctx, img, CERT_SCORE_BOX, scoreText, {
       font: 'Poppins', weight: 700, color: CERT_TEAL, align:'left',
       maxSizeRatio: 0.72, minSize: 20
     });
@@ -2620,8 +2643,10 @@ function roundRect(ctx,x,y,w,h,r){
 function downloadCert(role, ism) {
   const canvas = document.getElementById(role+'-canvas');
   if (!canvas) return;
+  const isRu = (window.CUR_LANG === 'ru');
+  const prefix = isRu ? 'Osvoeno_' : 'Ozlashtirildi_';
   const a = document.createElement('a');
-  a.download = 'Sertifikat_'+ism.replace(/\s+/g,'_')+'_Antidoping.png';
+  a.download = prefix + ism.replace(/\s+/g,'_') + '_Antidoping.png';
   a.href = canvas.toDataURL('image/png',1.0);
   a.click();
 }
@@ -3288,12 +3313,12 @@ window.CUR_LANG = localStorage.getItem('site_lang') || 'uz';
 const STR = {
 uz:{
   savol:'Savol',
-  res_pass:'✅ Tabriklaymiz! Sertifikat olish huquqini qozonding! Quyida sertifikatni yuklab oling.',
+  res_pass:'✅ Tabriklaymiz! Test muvaffaqiyatli o‘zlashtirildi! Quyida tasdiqlovchi hujjatni yuklab oling.',
   res_mid:"👍 Yaxshi natija, lekin 75% kerak. Mavzularni takrorlab, qayta urinib ko'ring.",
   res_low:"📚 Ko'proq o'qib, qayta sinab ko'ring.",
   unanswered:"{n} ta savolga javob bermagansiz. Baribir natijani ko'rmoqchimisiz?",
   err_name:'❗ Ism va Familiya kiritish majburiy!',
-  cert_ready:'🏆 75% dan yuqori — Sertifikat tayyor! Yuklab oling.',
+  cert_ready:'🏆 75% dan yuqori — Natija tayyor! O‘zlashtirildi deb belgilandi.',
   cert_field_date:"Berilgan sana:",
   cert_field_id:"Sertifikat ID:",
   cert_dl:'⬇️ PNG yuklab olish',
@@ -3322,12 +3347,12 @@ uz:{
 },
 ru:{
   savol:'Вопрос',
-  res_pass:'✅ Поздравляем! Вы получили право на сертификат! Скачайте его ниже.',
+  res_pass:'✅ Поздравляем! Тест успешно освоен! Скачайте подтверждающий документ ниже.',
   res_mid:'👍 Хороший результат, но нужно 75%. Повторите темы и попробуйте снова.',
   res_low:'📚 Изучите материалы и попробуйте ещё раз.',
   unanswered:'Вы не ответили на {n} вопрос(ов). Всё равно показать результат?',
   err_name:'❗ Имя и фамилия обязательны!',
-  cert_ready:'🏆 Более 75% — сертификат готов! Скачайте его.',
+  cert_ready:'🏆 Более 75% — Тест успешно освоен! Скачайте документ.',
   cert_field_date:"Дата выдачи:",
   cert_field_id:"ID сертификата:",
   cert_dl:'⬇️ Скачать PNG',
