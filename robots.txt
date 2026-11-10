@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /worker/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://doping.uz/sitemap.xml
