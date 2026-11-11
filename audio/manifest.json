@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "file": "antidoping_audio_01.mp3",
+    "duration": 178.207347,
+    "title": "Audio dars 01"
+  },
+  {
+    "id": 2,
+    "file": "antidoping_audio_02.mp3",
+    "duration": 209.998367,
+    "title": "Audio dars 02"
+  },
+  {
+    "id": 3,
+    "file": "antidoping_audio_03.mp3",
+    "duration": 191.947755,
+    "title": "Audio dars 03"
+  },
+  {
+    "id": 4,
+    "file": "antidoping_audio_04.mp3",
+    "duration": 184.555102,
+    "title": "Audio dars 04"
+  },
+  {
+    "id": 5,
+    "file": "antidoping_audio_05.mp3",
+    "duration": 154.618776,
+    "title": "Audio dars 05"
+  },
+  {
+    "id": 6,
+    "file": "antidoping_audio_06.mp3",
+    "duration": 142.28898,
+    "title": "Audio dars 06"
+  },
+  {
+    "id": 7,
+    "file": "antidoping_audio_07.mp3",
+    "duration": 166.426122,
+    "title": "Audio dars 07"
+  },
+  {
+    "id": 8,
+    "file": "antidoping_audio_08.mp3",
+    "duration": 222.61551,
+    "title": "Audio dars 08"
+  },
+  {
+    "id": 9,
+    "file": "antidoping_audio_09.mp3",
+    "duration": 168.907755,
+    "title": "Audio dars 09"
+  },
+  {
+    "id": 10,
+    "file": "antidoping_audio_10.mp3",
+    "duration": 129.227755,
+    "title": "Audio dars 10"
+  },
+  {
+    "id": 11,
+    "file": "antidoping_audio_11.mp3",
+    "duration": 163.395918,
+    "title": "Audio dars 11"
+  },
+  {
+    "id": 12,
+    "file": "antidoping_audio_12.mp3",
+    "duration": 181.890612,
+    "title": "Audio dars 12"
+  },
+  {
+    "id": 13,
+    "file": "antidoping_audio_13.mp3",
+    "duration": 224.626939,
+    "title": "Audio dars 13"
+  }
+]
