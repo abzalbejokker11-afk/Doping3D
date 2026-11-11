@@ -518,6 +518,7 @@ async function sendCertToChannel(role) {
   const scoreLabel = isRu ? 'правильных' : 'to\'g\'ri';
   const statusLabel = isRu ? '✅ Успешно освоено' : '✅ Muvaffaqiyatli o‘zlashtirildi';
 
+  const resLabel = isRu ? 'Результат' : 'Natija';
   const caption =
 `${captionTitle}
 ━━━━━━━━━━━━━━━━━━
@@ -527,7 +528,7 @@ async function sendCertToChannel(role) {
 📊 ${meta.score}/20 (${scoreLabel}) — ${meta.pct}%
 📅 ${meta.sana}
 🆔 ${meta.certId}
-🏅 <b>Natija:</b> ${statusLabel}
+🏅 <b>${resLabel}:</b> ${statusLabel}
 ━━━━━━━━━━━━━━━━━━
 🌐 sportedu.uz | UzNADO`;
 
@@ -913,7 +914,7 @@ renderScenarios();
 
 async function sendRemind(type){
   const tgid=document.getElementById('rem-tgid').value.trim();
-  const ism=document.getElementById('rem-ism').value.trim()||'Sportchi';
+  const ism=_cleanName(document.getElementById('rem-ism').value, 60)||'Sportchi';
   const res=document.getElementById('remind-result');
   if(!tgid||!/^\d{5,12}$/.test(tgid)){
     res.style.display='block';
@@ -921,7 +922,7 @@ async function sendRemind(type){
     return;
   }
   const msg=remindMessages[type];
-  const text=msg.text.replace(/{ism}/g,ism);
+  const text=msg.text.replace(/{ism}/g, escapeHTML(ism));
   res.style.display='block';
   res.innerHTML=`<div style="padding:12px;background:#eff6ff;border-radius:10px;font-size:13px;color:var(--blue)">⏳ Yuborilmoqda...</div>`;
   const r=await tgSend(tgid,text);
@@ -1056,8 +1057,7 @@ if(window.CUR_LANG==='ru') setLang('ru');
 
 /* ── CSV EKSPORT (PhD tadqiqot statistikasi uchun) ── */
 window.exportResultsCSV = function(){
-  var data;
-  try{ data = JSON.parse(localStorage.getItem('antidoping_results')||'{}'); }catch(e){ data = {}; }
+  var data = safeJSONParse(localStorage.getItem('antidoping_results'), {});
   var roles = Object.keys(data);
   if(!roles.length){ alert("Hozircha natija yo'q — avval test topshiring."); return; }
   var names = {rahbar:'Rahbar',murabbiy:'Murabbiy',metodist:'Metodist',sportchi:'Sportchi'};
@@ -1068,53 +1068,34 @@ window.exportResultsCSV = function(){
     rows.push([names[r]||r, d.ism||'', d.score, d.total, pct+'%', (d.date||'').slice(0,10)]);
   });
   var csv = '\uFEFF' + rows.map(function(row){
-    return row.map(function(c){ return '"'+String(c==null?'':c).replace(/"/g,'""')+'"'; }).join(';');
+    return row.map(function(c){
+      var s = String(c==null?'':c);
+      if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+      return '"'+s.replace(/"/g,'""')+'"';
+    }).join(';');
   }).join('\r\n');
+  var url = URL.createObjectURL(new Blob([csv], {type:'text/csv;charset=utf-8'}));
   var a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv;charset=utf-8'}));
+  a.href = url;
   a.download = 'antidoping_natijalar.csv';
   document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(function(){ URL.revokeObjectURL(url); }, 2000);
 };
 
-/* ── SERTIFIKATGA QR-KOD (ID, ism, natija, sana kodlangan) ── */
-function drawQR(canvas, text){
-  if(typeof qrcode === 'undefined') return;
-  var qr = qrcode(0, 'M');
-  qr.addData(text);
-  qr.make();
-  var n = qr.getModuleCount();
-  var size = 150, margin = 10;
-  var x0 = canvas.width - size - 55, y0 = canvas.height - size - 55;
-  var ctx = canvas.getContext('2d');
-  ctx.fillStyle = '#ffffff';
-  ctx.fillRect(x0 - margin, y0 - margin, size + margin*2, size + margin*2);
-  var cell = size / n;
-  ctx.fillStyle = '#0a1f3d';
-  for(var r=0;r<n;r++) for(var c=0;c<n;c++)
-    if(qr.isDark(r,c)) ctx.fillRect(x0 + c*cell, y0 + r*cell, Math.ceil(cell), Math.ceil(cell));
-}
-/* QR: shablon rasmida QR ALLAQACHON bor edi, eski yamoq esa ikkinchisini chizardi (dublikat). Endi AYNAN BITTA QR bor:
-   shablondagi ramka ichiga bitta haqiqiy (o'qiladigan) QR chiziladi. Shablonning o'z QR rasmini qoldirish uchun: window.CERT_QR_OVERLAY = false. */
+/* ── TASDIQNOMAGA OFLAYN QR-KOD (https://t.me/antidopi) ── */
 window.CERT_QR_OVERLAY = true;
 window.CERT_VERIFY_URL = 'https://t.me/antidopi';
 window.drawCertQR = function(ctx){
+  if (typeof QR_ROWS === 'undefined') return;
   var fx = 1790, fy = 982, fw = 152, fh = 154;
   ctx.fillStyle = '#ffffff'; ctx.fillRect(fx, fy, fw, fh);
   ctx.fillStyle = '#0a1f3d';
-  if(typeof qrcode !== 'undefined'){
-    var qr = qrcode(0, 'M'); qr.addData(window.CERT_VERIFY_URL); qr.make();
-    var n = qr.getModuleCount(), cell = Math.max(3, Math.floor(130 / n)), size = cell * n;
-    var x0 = fx + Math.round((fw - size) / 2), y0 = fy + Math.round((fh - size) / 2);
-    for(var r = 0; r < n; r++) for(var c = 0; c < n; c++)
-      if(qr.isDark(r, c)) ctx.fillRect(x0 + c * cell, y0 + r * cell, cell, cell);
-  } else if (typeof QR_ROWS !== 'undefined') {
-    var cell = Math.floor(130 / QR_N), size = cell * QR_N;
-    var x0 = fx + Math.round((fw - size) / 2), y0 = fy + Math.round((fh - size) / 2);
-    for(var r = 0; r < QR_N; r++){
-      var bits = parseInt(QR_ROWS[r], 16);
-      for(var c = 0; c < QR_N; c++)
-        if((bits >> (QR_N - 1 - c)) & 1) ctx.fillRect(x0 + c * cell, y0 + r * cell, cell, cell);
-    }
+  var cell = Math.floor(130 / QR_N), size = cell * QR_N;
+  var x0 = fx + Math.round((fw - size) / 2), y0 = fy + Math.round((fh - size) / 2);
+  for(var r = 0; r < QR_N; r++){
+    var bits = parseInt(QR_ROWS[r], 16);
+    for(var c = 0; c < QR_N; c++)
+      if((bits >> (QR_N - 1 - c)) & 1) ctx.fillRect(x0 + c * cell, y0 + r * cell, cell, cell);
   }
 };
 })();
@@ -1138,11 +1119,11 @@ window.drawCertQR = function(ctx){
   try { syncThemeBtn(document.documentElement.classList.contains('dark')); } catch(e){}
 })();
 
-/* ── IXTIYORIY OVOZ EFFEKTLARI (DEFAULT SOKIN / OPT-IN) ── */
+/* ── YUMSHOQ MODAL OVOZI (SCROLL SHIVIRLASHISIZ, MURABBIY/METODIST/MODAL UCHUN SOKIN OHANG) ── */
 (function(){
   'use strict';
-  var ctx = null, enabled = false, lastT = 0;
-  try { enabled = localStorage.getItem('site_sound') === 'on'; } catch(e){}
+  var ctx = null, enabled = true, lastT = 0;
+  try { enabled = localStorage.getItem('site_sound') !== 'off'; } catch(e){}
   function initBtn(){
     var b = document.getElementById('sound-btn');
     if (b) {
@@ -1156,45 +1137,43 @@ window.drawCertQR = function(ctx){
     if(ctx && ctx.state === 'suspended') ctx.resume();
     return ctx;
   }
-  function throttled(){ var now = Date.now(); if(now - lastT < 90) return true; lastT = now; return false; }
-  function blip(freq, dur, vol){
-    if(!enabled || throttled()) return;
+  function softTone(freq, delay, peak, dur){
     var c = getCtx(); if(!c) return;
+    var t = c.currentTime + (delay || 0);
     var o = c.createOscillator(), g = c.createGain();
     o.type = 'sine'; o.frequency.value = freq;
-    g.gain.setValueAtTime(vol, c.currentTime);
-    g.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + dur);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.linearRampToValueAtTime(peak, t + 0.025);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
     o.connect(g); g.connect(c.destination);
-    o.start(); o.stop(c.currentTime + dur);
+    o.start(t); o.stop(t + dur + 0.03);
   }
-  function chime(){
-    if(!enabled || throttled()) return;
-    var c = getCtx(); if(!c) return;
-    [523.25, 783.99].forEach(function(f, i){
-      var o = c.createOscillator(), g = c.createGain();
-      o.type = 'sine'; o.frequency.value = f;
-      var t = c.currentTime + i * 0.09;
-      g.gain.setValueAtTime(0.14, t);
-      g.gain.exponentialRampToValueAtTime(0.0001, t + .24);
-      o.connect(g); g.connect(c.destination);
-      o.start(t); o.stop(t + .26);
-    });
+  function softChime(){
+    if(!enabled) return;
+    var now = Date.now(); if(now - lastT < 160) return; lastT = now;
+    // Yumshoq, mayin G4 -> C5 ohangi (hech qanday keskin chiyillashsiz)
+    softTone(392.00, 0.00, 0.026, 0.28);
+    softTone(523.25, 0.08, 0.022, 0.36);
   }
   window.toggleSound = function(){
     enabled = !enabled;
     try { localStorage.setItem('site_sound', enabled ? 'on' : 'off'); } catch(e){}
     initBtn();
-    if(enabled) blip(740, .06, .16);
+    if(enabled) softTone(440.00, 0.00, 0.025, 0.22);
   };
-  document.addEventListener('click', function(e){
-    if(!enabled || !e.isTrusted) return;
-    var t = e.target.closest && e.target.closest('button, .role-card, .deco-card, .acc-head, a, [onclick]');
-    if(t && t.id !== 'sound-btn') blip(660, .04, .1);
-  }, {passive:true});
   if(typeof window.openModal === 'function'){
     var _om = window.openModal;
-    window.openModal = function(){ chime(); return _om.apply(this, arguments); };
+    window.openModal = function(id){
+      if(id !== 'audio') softChime();
+      return _om.apply(this, arguments);
+    };
   }
+  // Klaviatura bilan role/extra kartalarni ochish
+  document.addEventListener('keydown', function(e){
+    if(e.key !== 'Enter' && e.key !== ' ') return;
+    var card = e.target && e.target.closest && e.target.closest('.role-card, .extra-card, .lc-guide-bar');
+    if(card){ e.preventDefault(); card.click(); }
+  });
 })();
 
 (function(){
@@ -1358,25 +1337,27 @@ var STAR = document.createElement('canvas'); STAR.width = STAR.height = 48;
 })();
 
 function fanfare(){
-  try{ if(localStorage.getItem('site_sound') !== 'on') return; }catch(e){}
+  try{ if(localStorage.getItem('site_sound') === 'off') return; }catch(e){}
   var C = window.AudioContext || window.webkitAudioContext;
   if(!C) return;
   try{
     var c = new C();
-    // G'alaba arpejio: do-mi-sol-do + yakuniy akkord
+    // G'alaba arpejio (yumshoqroq): do-mi-sol-do + yakuniy akkord
     [[523.25,0],[659.25,.12],[783.99,.24],[1046.5,.36]].forEach(function(n){
       var o=c.createOscillator(), g=c.createGain();
-      o.type='triangle'; o.frequency.value=n[0];
+      o.type='sine'; o.frequency.value=n[0];
       var t=c.currentTime+n[1];
-      g.gain.setValueAtTime(.16,t);
-      g.gain.exponentialRampToValueAtTime(.0001,t+.3);
-      o.connect(g); g.connect(c.destination); o.start(t); o.stop(t+.32);
+      g.gain.setValueAtTime(0.0001,t);
+      g.gain.linearRampToValueAtTime(.045,t+0.02);
+      g.gain.exponentialRampToValueAtTime(.0001,t+.34);
+      o.connect(g); g.connect(c.destination); o.start(t); o.stop(t+.36);
     });
     [523.25,659.25,783.99].forEach(function(f){
       var o=c.createOscillator(), g=c.createGain();
       o.type='sine'; o.frequency.value=f;
       var t=c.currentTime+.52;
-      g.gain.setValueAtTime(.1,t);
+      g.gain.setValueAtTime(0.0001,t);
+      g.gain.linearRampToValueAtTime(.03,t+0.03);
       g.gain.exponentialRampToValueAtTime(.0001,t+.9);
       o.connect(g); g.connect(c.destination); o.start(t); o.stop(t+.92);
     });
@@ -1622,12 +1603,6 @@ var T={
 function t(k){return T[k][lang()];}
 function tx(k){return 'data-t="'+k+'"';}
 
-function ticker(){
-  var items=[['📚','64 mavzu','64 тем'],['🎯','80 test savoli','80 тестовых вопросов'],['🤖','AI dori tekshirgich','ИИ-проверка препаратов'],['📜','WADA 2026 ro\'yxati','Список WADA 2026'],['🏅','O‘zlashtirildi tasdiqnomasi','Подтверждение освоения'],['🧪','18 WADA kategoriya','18 категорий WADA'],['🎮','Real ssenariy trening','Тренинг по сценариям'],['🎧','13 ta audio dars','13 аудиоуроков']];
-  var one=items.map(function(i){return '<span data-uz="'+i[0]+' '+i[1]+'" data-ru="'+i[0]+' '+i[2]+'">'+i[0]+' '+i[1]+'</span>';}).join('');
-  return '<div class="nx-ticker nx-ui" aria-hidden="true"><div class="nx-track">'+one+one+'</div></div>';
-}
-
 function build(){
   var hero=$('.hero');
 
@@ -1643,14 +1618,7 @@ function build(){
     $('#nx-cta2').onclick=openAI;
   }
 
-  /* 2. Ticker (harakatlanuvchi lenta) */
-  if(hero&&!$('.nx-ticker')){
-    var wrap=D.createElement('div');wrap.className='nx-ui';
-    wrap.innerHTML=ticker();
-    hero.parentNode.insertBefore(wrap,hero.nextSibling);
-  }
-
-  /* 3. AI bo'limi: qidiruv maydoni ichidagi kichik orb */
+  /* 2. AI bo'limi: qidiruv maydoni ichidagi kichik orb */
   var inp=$('#ai-drug-input');
   if(inp&&!$('.nx-ai-field')){
     var f=D.createElement('div');f.className='nx-ai-field';
@@ -1836,7 +1804,14 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
   const list  = document.getElementById('audioLessonList');
   if (!audio || !list) return;
   const $ = id => document.getElementById(id);
-  let current = 0, loadedSrc = '';
+  let current = 0, loadedSrc = '', termsFont = 12;
+  try {
+    const savedRate = parseFloat(localStorage.getItem('audio_rate') || '1');
+    if (savedRate >= 0.75 && savedRate <= 2 && $('audioRate')) {
+      $('audioRate').value = String(savedRate);
+      audio.playbackRate = savedRate;
+    }
+  } catch(e){}
 
   const fmt = s => {
     if (!Number.isFinite(s)) return '00:00';
@@ -1845,13 +1820,42 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
   };
   const isRu = () => window.CUR_LANG === 'ru';
   const trackTitle = x => (isRu() ? 'Аудиоурок ' : 'Audio dars ') + String(x.id).padStart(2,'0');
+  const TERMS = {
+    uz: [
+      'WADA — Jahon antidoping agentligi',
+      'ADRV — antidoping qoidabuzarligi',
+      'TUE — terapevtik foydalanish ruxsati',
+      'Doping-nazorat — namuna olish jarayoni',
+      'AAF — salbiy tahliliy natija',
+      'Whereabouts — sportchining joylashuv ma’lumoti',
+      'Prohibited List — taqiqlangan ro‘yxat',
+      'Strict Liability — qat’iy javobgarlik tamoyili'
+    ],
+    ru: [
+      'WADA — Всемирное антидопинговое агентство',
+      'ADRV — нарушение антидопинговых правил',
+      'ТИ (TUE) — терапевтическое использование',
+      'Допинг-контроль — процедура отбора проб',
+      'AAF — неблагоприятный результат анализа',
+      'Whereabouts — информация о местонахождении',
+      'Prohibited List — Запрещённый список WADA',
+      'Strict Liability — принцип строгой ответственности'
+    ]
+  };
 
+  function showErr(msg){
+    const err = $('audioError');
+    if (!err) return;
+    err.textContent = msg || '';
+    err.style.display = msg ? 'block' : 'none';
+  }
   function renderList() {
     list.innerHTML = '';
     lessons.forEach((x, i) => {
       const b = document.createElement('button');
       b.type = 'button';
       b.className = 'audio-item' + (i === current ? ' active' : '');
+      b.setAttribute('aria-current', i === current ? 'true' : 'false');
       b.innerHTML = '<span class="num">' + String(i+1).padStart(2,'0') + '</span><span class="info"><strong>' +
         trackTitle(x) + '</strong><small>' + fmt(x.duration) + ' · ' + (isRu() ? 'Аудиозанятие' : 'Audio mashg‘ulot') +
         '</small></span><span aria-hidden="true">▶</span>';
@@ -1860,28 +1864,49 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
     });
   }
   function updateList() {
-    Array.prototype.forEach.call(list.children, (b, i) => b.classList.toggle('active', i === current));
+    Array.prototype.forEach.call(list.children, (b, i) => {
+      b.classList.toggle('active', i === current);
+      b.setAttribute('aria-current', i === current ? 'true' : 'false');
+    });
   }
   function updateLabels() {
+    const ru = isRu();
     $('audioNowTitle').textContent = trackTitle(lessons[current]);
-    $('audioNowSub').textContent = isRu() ? 'Аудиозанятие по антидопингу' : 'Antidoping bo‘yicha audio mashg‘ulot';
-    if (audio.paused) $('audioPlay').textContent = isRu() ? '▶ Слушать' : '▶ Tinglash';
-    else $('audioPlay').textContent = isRu() ? 'Ⅱ Пауза' : 'Ⅱ Pauza';
-    $('audioStop').textContent = isRu() ? '■ Стоп' : '■ Stop';
+    $('audioNowSub').textContent = ru ? 'Аудиозанятие по антидопингу' : 'Antidoping bo‘yicha audio mashg‘ulot';
+    if (audio.paused) $('audioPlay').textContent = ru ? '▶ Слушать' : '▶ Tinglash';
+    else $('audioPlay').textContent = ru ? 'Ⅱ Пауза' : 'Ⅱ Pauza';
+    $('audioStop').textContent = ru ? '■ Стоп' : '■ Stop';
     const panel = $('audioTermsPanel');
     $('audioTextToggle').textContent = panel.hidden
-      ? (isRu() ? '＋ Показать ключевые термины' : '＋ Mavzuga oid atamalarni ko‘rsatish')
-      : (isRu() ? '− Скрыть термины' : '− Atamalarni yashirish');
+      ? (ru ? '＋ Показать ключевые термины' : '＋ Mavzuga oid atamalarni ko‘rsatish')
+      : (ru ? '− Скрыть термины' : '− Atamalarni yashirish');
+    if ($('audioTermsTitle')) $('audioTermsTitle').textContent = ru ? 'Основные антидопинговые термины' : 'Antidoping bo‘yicha asosiy atamalar';
+    const tc = $('audioTermsList');
+    if (tc) {
+      tc.innerHTML = TERMS[ru ? 'ru' : 'uz'].map(t => '<span class="audio-term">' + escapeHTML(t) + '</span>').join('');
+    }
+    const sel = $('audioRate');
+    if (sel && sel.options[1]) sel.options[1].textContent = ru ? '1x — обычный' : '1x — odatiy';
+  }
+  function applyTermsFont(sz) {
+    termsFont = Math.max(11, Math.min(20, sz));
+    const panel = $('audioTermsPanel');
+    if (!panel) return;
+    panel.querySelectorAll('.audio-term').forEach(el => { el.style.fontSize = termsFont + 'px'; });
+    const note = $('audioTermsNote');
+    if (note) note.style.fontSize = Math.max(11, termsFont - 1) + 'px';
   }
   function load(i, autoplay) {
     current = (i + lessons.length) % lessons.length;
     const targetSrc = 'audio/' + lessons[current].file;
+    showErr('');
     audio.pause();
     if (loadedSrc !== targetSrc) {
       audio.src = targetSrc;
       loadedSrc = targetSrc;
       if (autoplay) audio.load();
     }
+    audio.playbackRate = Number($('audioRate') ? $('audioRate').value : 1) || 1;
     $('audioSeek').value = 0;
     $('audioCurrent').textContent = '00:00';
     $('audioDuration').textContent = fmt(lessons[current].duration);
@@ -1891,20 +1916,30 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
   }
 
   $('audioPlay').addEventListener('click', () => {
+    showErr('');
     if (audio.paused) {
       const targetSrc = 'audio/' + lessons[current].file;
       if (loadedSrc !== targetSrc) { audio.src = targetSrc; loadedSrc = targetSrc; }
+      audio.playbackRate = Number($('audioRate') ? $('audioRate').value : 1) || 1;
       audio.play().catch(() => {});
     } else {
       audio.pause();
     }
   });
-  $('audioStop').addEventListener('click', () => { audio.pause(); audio.currentTime = 0; updateLabels(); });
+  $('audioStop').addEventListener('click', () => { audio.pause(); audio.currentTime = 0; $('audioSeek').value = 0; $('audioCurrent').textContent = '00:00'; updateLabels(); });
   $('audioBack').addEventListener('click', () => load(current - 1, true));
   $('audioNext').addEventListener('click', () => load(current + 1, true));
-  $('audioRate').addEventListener('change', e => audio.playbackRate = Number(e.target.value));
+  $('audioRate').addEventListener('change', e => {
+    const rate = Number(e.target.value) || 1;
+    audio.playbackRate = rate;
+    try { localStorage.setItem('audio_rate', String(rate)); } catch(err){}
+  });
   audio.addEventListener('play', updateLabels);
   audio.addEventListener('pause', updateLabels);
+  audio.addEventListener('error', () => {
+    showErr(isRu() ? '⚠️ Не удалось загрузить аудиофайл. Проверьте подключение и попробуйте снова.' : '⚠️ Audio faylni yuklashda xatolik. Internetni tekshirib qayta urinib ko‘ring.');
+    updateLabels();
+  });
   audio.addEventListener('timeupdate', () => {
     if (audio.duration) {
       $('audioSeek').value = Math.round(audio.currentTime / audio.duration * 1000);
@@ -1921,10 +1956,13 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
     const panel = $('audioTermsPanel'), show = panel.hidden;
     panel.hidden = !show;
     updateLabels();
+    applyTermsFont(termsFont);
     $('audioTextToggle').setAttribute('aria-expanded', String(show));
   });
+  if ($('audioTermsDown')) $('audioTermsDown').addEventListener('click', () => applyTermsFont(termsFont - 1));
+  if ($('audioTermsUp')) $('audioTermsUp').addEventListener('click', () => applyTermsFont(termsFont + 1));
 
-  window.refreshAudioLang = function(){ renderList(); updateLabels(); };
+  window.refreshAudioLang = function(){ renderList(); updateLabels(); applyTermsFont(termsFont); };
   renderList();
   $('audioDuration').textContent = fmt(lessons[0].duration);
   updateLabels();

@@ -7,7 +7,7 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline' https://mc.yandex.ru https://yastat.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self' https://antidoni-tg.abzalbejokker11.workers.dev https://api.telegram.org https://mc.yandex.ru https://yandex.ru https://yastat.net; frame-src 'self' blob: https://mc.yandex.ru; child-src 'self' blob: https://mc.yandex.ru; object-src 'none'; base-uri 'self'; form-action 'self';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline' https://mc.yandex.ru https://yastat.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self' https://antidoni-tg.abzalbejokker11.workers.dev https://api.telegram.org https://mc.yandex.ru https://yandex.ru https://yastat.net; frame-src 'self' blob: https://mc.yandex.ru; child-src 'self' blob: https://mc.yandex.ru; object-src 'none'; base-uri 'self'; form-action 'self';">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Doping.uz — Antidoping Kompetensiyasi | Ta'lim Portali</title>
 <meta name="description" content="Jismoniy tarbiya va sport bo‘yicha mutaxassislarni qayta tayyorlash va malakasini oshirish instituti (PhD tadqiqotchi Saydaliyev M.S.) tomonidan yaratilgan milliy antidoping ta’lim portali. 4 auditoriya, 64 mavzu, 80 test, 13 audio dars, AI dori tekshirgich va O‘zlashtirildi tasdiqnomasi.">
@@ -121,7 +121,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=20261112_v9">
+<link rel="stylesheet" href="css/styles.css?v=20261112_v10">
 </head>
 <body>
 
@@ -211,28 +211,28 @@
     <div class="section-title">O'z toifangizni tanlang</div>
     <div class="section-sub">Har bir modul shu toifa uchun maxsus ishlab chiqilgan. Har bir modulda 16 ta mavzu, amaliy checklist va 20 ta test savoli mavjud.</div>
     <div class="role-grid">
-      <div class="role-card rahbar" onclick="openModal('rahbar')">
+      <div class="role-card rahbar" onclick="openModal('rahbar')" role="button" tabindex="0">
         <span class="rc-icon"><img class="icon3d" src="assets/img/icon-rahbar.webp" width="84" height="84" loading="lazy" alt="Rahbar"></span>
         <h3>Rahbarlar</h3>
         <p>Antidoping siyosati, tashkiliy tuzilma, ovqatlanish nazorati, safar checklist, byudjet va hujjatlar.</p>
         <div class="rc-meta"><span class="rc-tag">📋 16 mavzu</span><span class="rc-tag">✅ Checklist</span><span class="rc-tag">📝 20 test</span></div>
         <span class="rc-arrow">→</span>
       </div>
-      <div class="role-card murabbiy" onclick="openModal('murabbiy')">
+      <div class="role-card murabbiy" onclick="openModal('murabbiy')" role="button" tabindex="0">
         <span class="rc-icon"><img class="icon3d" src="assets/img/icon-murabbiy.webp" width="84" height="84" loading="lazy" alt="Murabbiy"></span>
         <h3>Murabbiylar</h3>
         <p>Mashg'ulot rejalashtirish, ovqatlanish nazorati, sportchi salomatligi, TUE va shaxsiy javobgarlik.</p>
         <div class="rc-meta"><span class="rc-tag">🏅 16 mavzu</span><span class="rc-tag">✅ Checklist</span><span class="rc-tag">📝 20 test</span></div>
         <span class="rc-arrow">→</span>
       </div>
-      <div class="role-card metodist" onclick="openModal('metodist')">
+      <div class="role-card metodist" onclick="openModal('metodist')" role="button" tabindex="0">
         <span class="rc-icon"><img class="icon3d" src="assets/img/icon-metodist.webp" width="84" height="84" loading="lazy" alt="Metodist"></span>
         <h3>Metodistlar</h3>
         <p>WADA hujjatlari, ADAMS tizimi, SMS-tahlil, federatsiyalar koordinatsiyasi, TUE va hisobotlar.</p>
         <div class="rc-meta"><span class="rc-tag">📄 16 mavzu</span><span class="rc-tag">✅ Checklist</span><span class="rc-tag">📝 20 test</span></div>
         <span class="rc-arrow">→</span>
       </div>
-      <div class="role-card sportchi" onclick="openModal('sportchi')">
+      <div class="role-card sportchi" onclick="openModal('sportchi')" role="button" tabindex="0">
         <span class="rc-icon"><img class="icon3d" src="assets/img/icon-sportchi.webp" width="84" height="84" loading="lazy" alt="Sportchi"></span>
         <h3>Sportchilar</h3>
         <p>Toza sport, BAD xavfi, TUE, Whereabouts, shaxsiy javobgarlik va doping-kontrol protsedurasi.</p>
@@ -241,7 +241,7 @@
       </div>
     </div>
     <div class="extra-cards">
-      <div class="extra-card ec-film" onclick="openModal('films')">
+      <div class="extra-card ec-film" onclick="openModal('films')" role="button" tabindex="0">
         <span class="ec-icon">🎬</span>
         <h3>Hujjatli Filmlar</h3>
         <p>Oskar sovrindori va dunyo miqyosida e'tirof etilgan filmlar — pedagogik tahlil bilan.</p>
@@ -255,20 +255,27 @@
         <div class="ec-tags"><span class="ec-tag">🎙 13 ta audio</span><span class="ec-tag">⏩ 0.75x–2x</span><span class="ec-tag">📖 Atamalar</span></div>
         <span class="ec-arrow">→</span>
       </div>
-      <div class="extra-card ec-case" onclick="openModal('cases')">
+      <div class="extra-card ec-case" onclick="openModal('cases')" role="button" tabindex="0">
         <span class="ec-icon">🔍</span>
         <h3>Klinik Holatlar</h3>
         <p>Haqiqiy doping voqealari asosida o'rganish — xato va to'g'ri yo'l, WADA qoidalari.</p>
         <div class="ec-tags"><span class="ec-tag">📋 12 holat</span><span class="ec-tag">❌→✅ Tahlil</span><span class="ec-tag">📜 WADA qoida</span></div>
         <span class="ec-arrow">→</span>
       </div>
-      <div class="extra-card ec-gloss" onclick="openModal('glossary')">
+      <div class="extra-card ec-gloss" onclick="openModal('glossary')" role="button" tabindex="0">
         <span class="ec-icon">📖</span>
         <h3>Antidoping Lug'at</h3>
         <p>WADA atamalarining o'zbekcha izohli lug'ati — 35+ atama, qidiruv va alifbo filtri.</p>
         <div class="ec-tags"><span class="ec-tag">🔤 35+ atama</span><span class="ec-tag">🔍 Qidiruv</span><span class="ec-tag">📌 Harflar</span></div>
         <span class="ec-arrow">→</span>
       </div>
+    </div>
+    <div class="lc-guide-bar" onclick="openModal('learning-center')" role="button" tabindex="0">
+      <div>
+        <h4 data-uz="🎓 Kengaytirilgan antidoping o‘quv markazi (8 ta amaliy bo‘lim)" data-ru="🎓 Расширенный антидопинговый учебный центр (8 разделов)">🎓 Kengaytirilgan antidoping o‘quv markazi (8 ta amaliy bo‘lim)</h4>
+        <p data-uz="WADA Code 2021/2026, TUE tartibi, BAD xavfi, Doping-nazorat bosqichlari, Whereabouts/ADAMS va 4 ta vaziyatli tahlil" data-ru="Кодекс WADA, порядок ТИ (TUE), риск добавок, этапы допинг-контроля, ADAMS и разбор практических ситуаций">WADA Code 2021/2026, TUE tartibi, BAD xavfi, Doping-nazorat bosqichlari, Whereabouts/ADAMS va 4 ta vaziyatli tahlil</p>
+      </div>
+      <span class="lc-guide-cta" data-uz="Qo‘llanmani ochish →" data-ru="Открыть пособие →">Qo‘llanmani ochish →</span>
     </div>
   </div>
 </section>
@@ -360,7 +367,7 @@
   <div style="max-width:1320px;margin:0 auto;padding:0 24px">
     <div class="section-label">WADA Ma'lumotlar Bazasi</div>
     <div class="section-title">Taqiqlangan Moddalar Ro'yxati (2026)</div>
-    <div class="section-sub">Modda nomini yozing yoki kategoriya bo'yicha filtrlang. <strong>Eslatma:</strong> S1, S2, S4, S5, M1-M3 — har doim (musobaqa ichi va tashqarisida) taqiqlangan. S3, S6, S7, S8, S9 — faqat <strong>musobaqa davrida</strong> taqiqlangan (WADA 2026 Kodeksi).</div>
+    <div class="section-sub">Modda nomini yozing yoki kategoriya bo'yicha filtrlang. <strong>Versiya:</strong> WADA Prohibited List 2026 (01.01.2026 dan kuchga kirgan). S1, S2, S4, S5, M1-M3 — har doim; S3, S6, S7, S8, S9 — faqat <strong>musobaqa davrida</strong> taqiqlangan.</div>
     <div class="search-bar">
       <input type="text" id="wada-search" placeholder="Modda nomini qidiring..." oninput="filterWada()">
       <select id="wada-filter" onchange="filterWada()">
@@ -479,20 +486,20 @@
     <div class="faq-search"><input type="text" id="faq-search" placeholder="Savolni qidiring..." oninput="filterFaq()"></div>
     <div id="faq-list">
       <div class="faq-cat">Umumiy tushunchalar</div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Doping nima va nima uchun taqiqlanadi?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Doping — sportchining ishlash qobiliyatini sun'iy yo'l bilan oshirish maqsadida taqiqlangan modda yoki usuldan foydalanishi. WADA uch mezon bo'lsa taqiqlaydi: (1) ishlash qobiliyatini oshiradi, (2) salomatlikka zarar yetkazadi, (3) sportning ruhiga zid keladi — ulardan ikkitasi yetarli. WADA Kodeksi buни "Anti-Doping Rule Violation" (ADRV) deb belgilaydi.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Doping nima va nima uchun taqiqlanadi?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Doping — sportchining ishlash qobiliyatini sun'iy yo'l bilan oshirish maqsadida taqiqlangan modda yoki usuldan foydalanishi. WADA uch mezon bo'lsa taqiqlaydi: (1) ishlash qobiliyatini oshiradi, (2) salomatlikka zarar yetkazadi, (3) sportning ruhiga zid keladi — ulardan ikkitasi yetarli. WADA Kodeksi buni "Anti-Doping Rule Violation" (ADRV) deb belgilaydi.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>WADA nima va qanday tashkil etilgan?</span><span class="faq-arrow">▾</span></div><div class="faq-a">WADA (World Anti-Doping Agency) — Jahon Antidoping Agentligi. 1999-yil 10-noyabr Lausanne (Shveysariya) shartnomasi asosida tashkil etilgan. Bosh qarorgoh — Monreal (Kanada). IOC va hukumatlar tomonidan moliyalashtiriladigan. Vazifalari: Taqiqlangan ro'yxatni belgilash (yiliga), Kodeksni boshqarish, laboratoriyalarni akkreditatsiya qilish, ta'lim dasturlarini ishlab chiqish (ADEL), butun dunyo antidoping siyosatini muvofiqlashtirish.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>"Strict Liability" prinsipi nimani anglatadi?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Bu WADA Kodeksining 2.1-moddasi asosidagi prinsip: sportchi organizmidagi HAR QANDAY taqiqlangan modda uchun shaxsan javobgar. Modda qanday kirganidan qat'i nazar — bilmaslik, shifokor xatosi, ifloslangan oziq-ovqat, sabotaj — barchasi bahona bo'la olmaydi. Faqat "No Fault" yoki "No Significant Fault" isbot qilinsa jarayon qisqartirilishi mumkin, lekin bekor etilmaydi. Bu prinsip 1990-yillardan beri amalda va barcha xalqaro sport federatsiyalari tomonidan tan olinadi.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>ADRVning nechta turi bor?</span><span class="faq-arrow">▾</span></div><div class="faq-a">WADA Kodeksida 11 ta ADRV turi bor: (1) Taqiqlangan modda topilishi (2.1); (2) Taqiqlangan usuldan foydalanish (2.2); (3) Namuna berishdan bosh tortish (2.3); (4) Whereabouts failure (2.4); (5) Nazoratga to'sqinlik (2.5); (6) Taqiqlangan moddani saqlash (2.6); (7) Noqonuniy savdo/muomala (2.7); (8) Sportchiga berish yoki urinish (2.8); (9) Sherikchilik (2.9); (10) Taqiqlangan hamkorlik (2.10); (11) Xabar beruvchiga to'sqinlik yoki ta'qib qilish (2.11). Jazo muddati qoidabuzarlik turiga qarab 1 yildan umrbod taqiqqacha belgilanadi.</div></div>
 
       <div class="faq-cat">TUE va Dorilar</div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>TUE nima va qachon kerak bo'ladi?</span><span class="faq-arrow">▾</span></div><div class="faq-a">TUE (Therapeutic Use Exemption) — taqiqlangan moddani tibbiy ko'rsatmalar bo'yicha qonuniy qabul qilish ruxsatnomasi. Masalan: astma uchun salbutamol, diabet uchun insulin. 4 shart birdan bajarilishi kerak: (1) haqiqiy tibbiy holat mavjud, (2) boshqa ruxsat etilgan muqobil dori yo'q, (3) davolash kerakli darajadan ortiq foyda bermaydi, (4) modda avvaldan qabul qilinmagan. Ariza musobaqadan 30 kun oldin topshiriladi, 21 kun ichida TUEC qaror qiladi. Retroaktiv TUE — faqat favqulodda holatlarda, 7 kun ichida.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Energetik ichimlik xavfli emasmi?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Energetik ichimliklar sportchilar uchun JUDA XAVFLI. Sababi: (1) tarkibida yashirin stimulyatorlar bo'lishi mumkin — taurin, guarana, ginseng ekstrakti yuqori dozada; (2) tarkibidagi yuqori dozali kofein uyqu va yurak ritmini buzishi hamda qo'shimcha komponentlar xavf tug'dirishi mumkin; (3) tarkib nazorat qilinmagan — zavodda kontaminatsiya ehtimoli yuqori; (4) "Sport" yoki "Energy" yorlig'i xavfsizlikni kafolatlamaydi. Muqobil: oddiy suv, shakarсиз choy, tabiiy sharbatlar. Energetik ichimliklardan butunlay uzoq turish tavsiya etiladi.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Sovuqqa qarshi dori ichsam bo'ladimi?</span><span class="faq-arrow">▾</span></div><div class="faq-a">EHTIYOT BILAN — ko'pchilik sovuqqa qarshi dorilar tarkibida psevdoefedrin yoki efedrin bo'ladi — ikkalasi ham S6 stimulyator sifatida TAQIQLANGAN. Har doim: (1) tarkibini o'qing — faol moddalarni aniqlang; (2) har bir faol moddalي WADA Taqiqlangan Ro'yxatida tekshiring; (3) shifokordan so'rang — shu dori o'rniga ruxsat etilgan variant bormi? Paracetamol va ibuprofen — odatda ruxsat etilgan. "Naturalan" yoki "o'simlik asosidagi" deb yozilgan dorilar ham ehtiyot talab qiladi.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Energetik ichimlik xavfli emasmi?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Energetik ichimliklar sportchilar uchun JUDA XAVFLI. Sababi: (1) tarkibida yashirin stimulyatorlar bo'lishi mumkin — taurin, guarana, ginseng ekstrakti yuqori dozada; (2) tarkibidagi yuqori dozali kofein uyqu va yurak ritmini buzishi hamda qo'shimcha komponentlar xavf tug'dirishi mumkin; (3) tarkib nazorat qilinmagan — zavodda kontaminatsiya ehtimoli yuqori; (4) "Sport" yoki "Energy" yorlig'i xavfsizlikni kafolatlamaydi. Muqobil: oddiy suv, shakarsiz choy, tabiiy sharbatlar. Energetik ichimliklardan butunlay uzoq turish tavsiya etiladi.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Sovuqqa qarshi dori ichsam bo'ladimi?</span><span class="faq-arrow">▾</span></div><div class="faq-a">EHTIYOT BILAN — ko'pchilik sovuqqa qarshi dorilar tarkibida psevdoefedrin yoki efedrin bo'ladi — ikkalasi ham S6 stimulyator sifatida TAQIQLANGAN. Har doim: (1) tarkibini o'qing — faol moddalarni aniqlang; (2) har bir faol moddani WADA Taqiqlangan Ro'yxatida tekshiring; (3) shifokordan so'rang — shu dori o'rniga ruxsat etilgan variant bormi? Paracetamol va ibuprofen — odatda ruxsat etilgan. "Naturalan" yoki "o'simlik asosidagi" deb yozilgan dorilar ham ehtiyot talab qiladi.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Kofein qancha miqdorda xavfsiz?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Kofein taqiqlanmagan (WADA 2004-yildan beri siydikdagi chegara me'yorini bekor qilgan), faqat WADA Monitoring dasturida kuzatib boriladi. Amaliyotda: 400-500 mg/kun (~4 stakan qahva) gacha xavfsiz hisoblanadi, lekin individual farqlar katta — og'ir vaznli sportchilar tezroq metabolizatsiya qiladi. MUHIM: energetik ichimliklardagi kofein nazoratsiz bo'lib, ularda boshqa taqiqlangan moddalar ham bo'lishi mumkin. Kofe va choy — xavfsizroq.</div></div>
 
       <div class="faq-cat">Whereabouts va Test</div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Whereabouts nima va qanday ishlaydi?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Whereabouts — RTP (Registered Testing Pool) sportchisi tomonidan ADAMS tizimiga kiritiladigan kunlik aniq ma'lumot: 60 daqiqalik vaqt va aniq joy. DCO (Doping Control Officer) bu vaqt va joyda kutilmagan holda test o'tkazishi mumkin. Ma'lumotlar chorak (3 oyda bir) yangilanadi. Eslatmalar: 14 kun oldin qayta tekshiring, 48 soat oldin eslatma keladi. 12 oyda 3 ta "missed test" yoki "filing failure" = 2 yilgacha diskvalifikatsiya (Kodeks 2.4).</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>DCO kelganda qanday harakat qilish kerak?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Ketma-ketlik: (1) DCO ning rasmiy vakolatnoma va ID ni ko'ring; (2) Metodist yoki murabbiyni DARHOL telefon qiling; (3) Hech narsa iste'mol qilmang — bu shubha uyg'otadi; (4) 30 daqiqa ichida tayyorlanib boring; (5) Yopiq idishni o'zingiz tanlang; (6) A va B namunia alohida idishga bo'lib, muhrlang va imzolang; (7) DCO nusxasini oling, metodistga xabar bering. BOS TORTISH = 4 yilgacha (Kodeks 2.3 — eng og'ir ADRVlardan biri).</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>DCO kelganda qanday harakat qilish kerak?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Ketma-ketlik: (1) DCO ning rasmiy vakolatnoma va ID ni ko'ring; (2) Metodist yoki murabbiyni DARHOL telefon qiling; (3) Hech narsa iste'mol qilmang — bu shubha uyg'otadi; (4) 30 daqiqa ichida tayyorlanib boring; (5) Yopiq idishni o'zingiz tanlang; (6) A va B namuna alohida idishga bo'lib, muhrlang va imzolang; (7) DCO nusxasini oling, metodistga xabar bering. BOS TORTISH = 4 yilgacha (Kodeks 2.3 — eng og'ir ADRVlardan biri).</div></div>
 
       <div class="faq-cat">Ovqat va BAD</div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>BAD (biologik faol qo'shimcha) xavfli emasmi?</span><span class="faq-arrow">▾</span></div><div class="faq-a">JUDA XAVFLI. Sabablar: (1) tarkibi mustaqil tekshirilmaydi — "tabiiy" degani xavfsiz emas; (2) kontaminatsiya — bir zavodda turli mahsulot ishlab chiqarilsa, aralashma bo'ladi; (3) efedra, marixuana, osterina — tabiiy, lekin TAQIQLANGAN; (4) 2018 tadqiqot: sertifikatsiz BADlarning 12-25% da taqiqlangan modda izlari topilgan; (5) "Sport" yoki "Natural" yorlig'i kafolat emas. Muqobil: to'g'ri ovqatlanish — protein, uglevod, vitamin tabiiy manbalardan. Agar BAD kerak bo'lsa — faqat Informed Sport, NSF, Cologne List sertifikatlilari.</div></div>
@@ -660,7 +667,7 @@
       <div class="cl-group">7 kun oldin</div>
       <ul class="checklist">
         <li><span class="cl-icon">📦</span>Ovqat yuki tayyorlangan va sertifikatlangan</li>
-        <li><span class="cl-icon">📓</span>Monitoring jurnali boshlanган</li>
+        <li><span class="cl-icon">📓</span>Monitoring jurnali boshlangan</li>
         <li><span class="cl-icon">💊</span>Barcha dorilar ro'yxati tekshirilgan (faol moddalar bilan)</li>
         <li><span class="cl-icon">👥</span>Sportchi bilan individual suhbat o'tkazilgan</li>
         <li><span class="cl-icon">🔬</span>Nazorat testi o'tkazilgan</li>
@@ -733,7 +740,7 @@
     <div class="tab-panel active" id="murabbiy-mavzu">
       <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>4.1 · Murabbiyning antidoping roli va mas'uliyati</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>Murabbiy WADA Kodeks 21.2-modda bo'yicha sportchini ta'lim va yo'naltirish uchun javobgar.</li><li>"Support Personnel" sifatida qayd etilgan — ADAMS da ro'yxatda bo'lishi shart.</li><li>Sportchiga taqiqlangan modda tavsiya qilsa — 4 yildan umrbod taqiq (ADRV 2.8).</li><li>Sportchini doping qilishga undash yoki ko'mak — alohida jinoiy taqib mumkin.</li><li>O'z sertifikatini ADEL yoki UzNADO da har 2 yilda yangilash majburiy.</li></ul><div class="info-badge red">⚠️ Murabbiy taqiqlangan modda taklif qilsa — umrbod taqiq mumkin (ADRV 2.8)</div></div></div>
       <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>4.2 · Mashg'ulot rejalashtirish — doping muqobili</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>Davriylashtirish (periodizatsiya): to'g'ri yuk + tiklanish = tabiiy adaptatsiya.</li><li>Ortiqcha yuk — tiklanish 48-72 soat, uyqu 8-9 soat, kaloriya balansi.</li><li>Kuch rivojlantirish: progrssiv qarshilik (5-10% haftada), eksentrik fazaga e'tibor.</li><li>Chidamlilik: aerob asosni mustahkamlash (60-70% maksimal yurak urishi) — EPO muqobili.</li><li>Tezlik: CHIDAmlilik asosida qisqa sprint + to'liq tiklanish.</li><li>Psixologik: maqsad qo'yish, fikrlash tizimi, oqilona umid — "doping kerak" degan yolg'onni bartaraf etish.</li></ul></div></div>
-      <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>4.3 · Ovqatlanish nazorati va BAD masalasi</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>Murabbiy sportchining ozuqa rejasini nazorat qiladi — shifokor bilan birgalikda.</li><li>Protein ehtiyoji: 1.6-2.2 g/kg tana og'irligi — tabiiy manbalardaн (go'sht, baliq, tuxum, leguminlar).</li><li>Uglevodlar: intensiv mashg'ulot 6-10 g/kg, dam olish kuni 3-5 g/kg.</li><li>BAD ishlatish — faqat shifokor ruxsati va koordinator tasdiqi bilan, sertifikatlangan brendlar.</li><li>Energetik ichimliklar — sport zalida, mashg'ulotlarda, safarda QATTAN taqiqlanadi.</li><li>Gidratatsiya: 2-3 litr/kun; intensiv mashg'ulotda harakan davomida 150-250 ml har 15-20 daqiqada.</li></ul></div></div>
+      <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>4.3 · Ovqatlanish nazorati va BAD masalasi</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>Murabbiy sportchining ozuqa rejasini nazorat qiladi — shifokor bilan birgalikda.</li><li>Protein ehtiyoji: 1.6-2.2 g/kg tana og'irligi — tabiiy manbalardan (go'sht, baliq, tuxum, leguminlar).</li><li>Uglevodlar: intensiv mashg'ulot 6-10 g/kg, dam olish kuni 3-5 g/kg.</li><li>BAD ishlatish — faqat shifokor ruxsati va koordinator tasdiqi bilan, sertifikatlangan brendlar.</li><li>Energetik ichimliklar — sport zalida, mashg'ulotlarda, safarda QAT'IYAN taqiqlanadi.</li><li>Gidratatsiya: 2-3 litr/kun; intensiv mashg'ulotda harakat davomida 150-250 ml har 15-20 daqiqada.</li></ul></div></div>
       <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>4.4 · Sportchi salomatligi va tibbiy nazorat</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>Yillik tibbiy ko'rik: qon, siydik, EKG, antropometriya, biologik pasport ko'rsatkichlari.</li><li>Trauma: shifokor retseptsiz NSAID yoki og'riq qoldiruvchi bermaslik.</li><li>Kasallik: sportchini o'z qaroriga qoldirmang — har qanday dori murabbiy + shifokor + koordinator tasdiqi.</li><li>Bandlik holati: mashg'ulotda ADAMSga kirmagan sportchi = potentsial Whereabouts xatosi.</li><li>Psixologik holat: "dopingsiz yuta olmayman" sindromiga e'tibor — sport psixologi tavsiya.</li></ul></div></div>
       <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>4.5 · TUE jarayonida murabbiy roli</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>Murabbiy TUE arizasini to'ldiruvchi emas — lekin jarayonni tashkil etadi.</li><li>Tibbiy ehtiyoj aniqlansa: darhol shifokorga yo'llash + koordinatorni xabardor qilish.</li><li>TUE muddatini kuzatish — tugash sanasi yaqinlashsa 30 kun oldin yangilash arizasi.</li><li>Retroaktiv TUE — faqat favqulodda holat, 7 kun ichida. Murabbiy buni bilishi shart.</li><li>TUE yo'q holda taqiqlangan dori ichilsa — sportchi va murabbiy ikkalasi ham javobgar.</li></ul></div></div>
       <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>4.6 · Yoshlar bilan ishlashda antidoping</span><span class="acc-arrow">▾</span></div><div class="acc-body"><ul><li>14-18 yosh — eng ta'sirchan davr. Murabbiy eng muhim rol o'ynaydi.</li><li>Toza sport falsafasini mashg'ulot boshida har hafta eslatib turish.</li><li>Natijasiz qolsa ham doping taklif bo'lsa — darhol murabbiyga aytishini o'rgating.</li><li>ADEL platformasida yoshlar uchun maxsus "Clean Sport" modul bor — mashg'ulotdan keyin ko'rish.</li><li>Ota-onalar bilan hamkorlik: ular ham antidoping ta'lim olishi kerak.</li><li>Maqtov + tabiiy rivojlanish + sabr = yoshlarda to'g'ri psixologiya asosi.</li></ul></div></div>
@@ -1169,14 +1176,14 @@
 <div class="modal-overlay" id="modal-audio">
  <div class="modal-box audio-modal-box">
   <div class="modal-header">
-   <div class="modal-header-left"><div class="modal-header-icon">🎧</div><div><h2>Antidoping audio darslari</h2><p>13 ta audio mashg‘ulot · tinglash va mustaqil o‘rganish</p></div></div>
+   <div class="modal-header-left"><div class="modal-header-icon">🎧</div><div><h2 data-uz="Antidoping audio darslari" data-ru="Антидопинговые аудиоуроки">Antidoping audio darslari</h2><p data-uz="13 ta audio mashg‘ulot · tinglash va mustaqil o‘rganish" data-ru="13 аудиозанятий · прослушивание и обучение">13 ta audio mashg‘ulot · tinglash va mustaqil o‘rganish</p></div></div>
    <button class="modal-close" onclick="closeModal('audio')" aria-label="Yopish">✕</button>
   </div>
   <div class="audio-modal-body">
    <div class="audio-layout">
-    <div><div class="audio-list" id="audioLessonList"></div></div>
+    <div class="audio-list-col"><div class="audio-list" id="audioLessonList" aria-label="Audio darslar ro‘yxati"></div></div>
     <div class="audio-player-panel">
-     <h3 id="audioNowTitle">Audio dars 01</h3><p id="audioNowSub">Tinglash uchun darsni tanlang</p>
+     <h3 id="audioNowTitle">Audio dars 01</h3><p id="audioNowSub">Antidoping bo‘yicha audio mashg‘ulot</p>
      <audio id="antidopingAudio" preload="none"></audio>
      <input class="audio-progress" id="audioSeek" type="range" min="0" max="1000" value="0" aria-label="Audio vaqtini tanlash">
      <div class="audio-time"><span id="audioCurrent">00:00</span><span id="audioDuration">00:00</span></div>
@@ -1186,18 +1193,84 @@
       <button type="button" id="audioStop">■ Stop</button>
       <button type="button" id="audioNext" aria-label="Keyingi audio">⏭</button>
      </div>
-     <div class="audio-speed"><label for="audioRate">Tinglash tezligi</label><select id="audioRate"><option value="0.75">0.75x</option><option value="1" selected>1x — odatiy</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></div>
+     <div class="audio-speed"><label for="audioRate" data-uz="Tinglash tezligi" data-ru="Скорость воспроизведения">Tinglash tezligi</label><select id="audioRate"><option value="0.75">0.75x</option><option value="1" selected>1x — odatiy</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option><option value="1.75">1.75x</option><option value="2">2x</option></select></div>
+     <div class="audio-err" id="audioError" role="alert"></div>
      <button type="button" class="audio-toggle" id="audioTextToggle" aria-expanded="false">＋ Mavzuga oid atamalarni ko‘rsatish</button>
      <div class="audio-extra" id="audioTermsPanel" hidden>
-      <h4>Antidoping bo‘yicha asosiy atamalar</h4>
-      <div class="audio-terms">
-       <span class="audio-term">WADA — Jahon antidoping agentligi</span><span class="audio-term">ADRV — antidoping qoidabuzarligi</span><span class="audio-term">TUE — terapevtik foydalanish ruxsati</span><span class="audio-term">Doping-nazorat — namuna olish jarayoni</span><span class="audio-term">AAF — salbiy tahliliy natija</span><span class="audio-term">Whereabouts — sportchining joylashuv ma’lumoti</span><span class="audio-term">Prohibited List — taqiqlangan ro‘yxat</span><span class="audio-term">Strict Liability — qat’iy javobgarlik tamoyili</span>
+      <div class="audio-extra-head">
+       <h4 id="audioTermsTitle">Antidoping bo‘yicha asosiy atamalar</h4>
+       <div class="audio-font-btns" aria-label="Matn o‘lchami">
+        <button type="button" id="audioTermsDown" aria-label="Kichraytirish">A−</button>
+        <button type="button" id="audioTermsUp" aria-label="Kattalashtirish">A+</button>
+       </div>
       </div>
-      <p class="audio-note">Atamalar umumiy antidoping lug‘atidan tanlandi. Har bir audio uchun so‘zma-so‘z transkript mavjud emas; audio mazmuni taxminan yozib qo‘yilmadi.</p>
+      <div class="audio-terms" id="audioTermsList"></div>
+      <p class="audio-note" id="audioTermsNote" data-uz="Atamalar umumiy antidoping lug‘atidan tanlandi. Asl audio yozuvlar saqlangan holda tinglashga qulay darajaga keltirildi." data-ru="Термины подобраны из антидопингового глоссария. Оригинальные записи сохранены с улучшенной громкостью и чёткостью.">Atamalar umumiy antidoping lug‘atidan tanlandi. Asl audio yozuvlar saqlangan holda tinglashga qulay darajaga keltirildi.</p>
      </div>
-     <p class="audio-note">Audio yozuvlar asl mazmuni va ovozi saqlangan holda tinglashga qulayroq darajaga keltirildi. Ovoz sun’iy ravishda boshqa diktor ovoziga almashtirilmadi.</p>
     </div>
    </div>
+  </div>
+ </div>
+</div>
+
+<!-- EXPANDED CLEAN SPORT LEARNING CENTER -->
+<div class="modal-overlay" id="modal-learning-center">
+ <div class="modal-box v11-learning-modal">
+  <div class="modal-header">
+   <div class="modal-header-left"><div class="modal-header-icon">🎓</div><div><h2>Kengaytirilgan antidoping o‘quv markazi</h2><p>Sportchilar va murabbiylar uchun amaliy qo‘llanma (8 bo‘lim)</p></div></div>
+   <button class="modal-close" onclick="closeModal('learning-center')" aria-label="Yopish">✕</button>
+  </div>
+  <div class="modal-body v11-learning-body">
+   <div class="v11-source-banner"><strong>O‘quv materiali haqida:</strong> mazmun WADA World Anti-Doping Code, International Standard for Education, WADA 2026 taqiqlangan ro‘yxati va UNESCO konvensiyasiga tayangan holda tuzildi. Aniq qaror uchun amaldagi rasmiy hujjat va UzNADO ko‘rsatmasini tekshiring.</div>
+   <nav class="v11-topic-nav" aria-label="O‘quv mavzulari">
+    <a href="#v11-athlete">Sportchi</a><a href="#v11-coach">Murabbiy</a><a href="#v11-meds">Dori va TUE</a><a href="#v11-supp">Qo‘shimchalar</a><a href="#v11-testing">Doping-nazorat</a><a href="#v11-rights">Huquq va majburiyat</a><a href="#v11-whereabouts">Whereabouts</a><a href="#v11-cases">Vaziyatli mashqlar</a>
+   </nav>
+   <section class="v11-topic" id="v11-athlete"><h3>1. Sportchi uchun toza sport asoslari</h3>
+    <p>Toza sport — faqat taqiqlangan moddalarni ishlatmaslik emas. Bu sog‘liqni asrash, halol raqobat, sportdagi teng imkoniyat va shaxsiy mas’uliyatni anglatadi. Sportchi o‘z tanasiga kirayotgan dori, oziq-ovqat qo‘shimchasi va boshqa mahsulotlar haqida ongli qaror qabul qilishi kerak.</p>
+    <ul><li>Har qanday dori yoki qo‘shimchani qabul qilishdan oldin faol moddasini, dozasini va qo‘llash yo‘lini tekshiring.</li><li>Shifokorga sportchi ekaningizni va antidoping qoidalariga bo‘ysunishingizni ayting.</li><li>Mahsulot yorlig‘i yoki sotuvchining “doping-free” degan va’dasini mutlaq kafolat deb qabul qilmang.</li><li>Shubha tug‘ilganda murabbiy, sport shifokori va milliy antidoping tashkilotiga murojaat qiling.</li></ul>
+    <div class="v11-practice"><b>Amaliy odat:</b> har bir dori bo‘yicha nomi, faol moddasi, dozasi, qabul sanasi va uni tavsiya qilgan tibbiyot xodimini qayd etib boring.</div>
+   </section>
+   <section class="v11-topic" id="v11-coach"><h3>2. Murabbiy mas’uliyati va xavfsiz jamoa madaniyati</h3>
+    <p>Murabbiy sportchining kundalik qarorlariga kuchli ta’sir ko‘rsatadi. Shu sababli murabbiy taqiqlangan moddalarni tavsiya qilmasligi, noma’lum preparatlarni tarqatmasligi va sportchini tibbiy maslahat o‘rniga norasmiy tavsiyalarga yo‘naltirmasligi lozim.</p>
+    <ul><li>Mashg‘ulot va musobaqa oldidan antidoping bo‘yicha qisqa eslatmalar o‘tkazing.</li><li>Sportchi dori qabul qilishi kerak bo‘lsa, uni shifokor bilan maslahatlashishga yo‘naltiring.</li><li>Jamoada qo‘shimchalarni majburiy qabul qildirishga yo‘l qo‘ymang.</li><li>Sportchining savolini jazolamasdan tinglang; xavotirni maxfiy va hurmat bilan ko‘rib chiqing.</li><li>Yangi mavsumda taqiqlangan ro‘yxat va ichki tartiblar yangilanganini tekshiring.</li></ul>
+    <div class="v11-practice"><b>Murabbiy uchun nazorat savoli:</b> sportchi sizga noma’lum “tiklanish vositasi”ni ko‘rsatsa, uni ishlatishni buyurish o‘rniga tarkibini tekshirtirish va malakali tibbiy/antidoping maslahatini olishni tashkil qiling.</div>
+   </section>
+   <section class="v11-topic" id="v11-meds"><h3>3. Dori vositalari, faol modda va TUE</h3>
+    <p>Dori vositasining savdo nomi turli mamlakatlarda farq qilishi mumkin. Shuning uchun tekshiruvda faqat brend nomiga emas, faol modda, doza, yuborish yo‘li va musobaqa davriga e’tibor bering. Taqiqlangan modda tibbiy zarurat bilan kerak bo‘lsa, Therapeutic Use Exemption (TUE) — terapevtik foydalanish uchun ruxsat tartibi qo‘llanishi mumkin.</p>
+    <ul><li>TUE avtomatik berilmaydi: tibbiy hujjatlar va tegishli mezonlar asosida vakolatli tashkilot baholaydi.</li><li>Imkon bo‘lsa, davolash boshlanishidan oldin TUE jarayonini aniqlang; favqulodda holatlar uchun alohida tartiblar bo‘lishi mumkin.</li><li>Shifokor ko‘rsatmasini o‘zboshimchalik bilan o‘zgartirmang yoki zarur davolanishni to‘xtatmang.</li><li>Retsept, tashxis, tekshiruv natijalari va davolash tarixini saqlang.</li></ul>
+    <div class="v11-warning"><b>Muhim:</b> ushbu portal dori vositasiga ruxsat beradi yoki TUE tasdiqlaydi degani emas. Yakuniy tekshiruvni amaldagi WADA ro‘yxati va tegishli antidoping tashkiloti orqali bajaring.</div>
+   </section>
+   <section class="v11-topic" id="v11-supp"><h3>4. Oziq-ovqat qo‘shimchalari va kontaminatsiya xavfi</h3>
+    <p>Sport qo‘shimchalari tarkibida yorliqda ko‘rsatilmagan yoki ishlab chiqarish jarayonida aralashib qolgan moddalar bo‘lishi mumkin. Mustaqil laboratoriya sertifikati xavfni kamaytirishi mumkin, biroq sportchi uchun mutlaq xavfsizlik kafolati emas. Mahsulotni tanlashdan oldin haqiqiy ehtiyoj, ovqatlanish rejasi va tibbiy maslahatni baholang.</p>
+    <ul><li>“100% safe”, “WADA approved” yoki “doping-free” kabi marketing iboralariga ehtiyot bo‘ling.</li><li>Partiya (batch) raqami, ishlab chiqaruvchi, tarkib va sertifikatning haqiqiyligini tekshiring.</li><li>Qadoq, chek, partiya raqami va mahsulot fotosuratini saqlang.</li><li>Keraksiz ko‘p komponentli aralashmalar va noma’lum internet mahsulotlaridan saqlaning.</li><li>Sportchi mahsulotni ishlatmaslik qarorini ham xotirjam qabul qila olishi kerak.</li></ul>
+   </section>
+   <section class="v11-topic" id="v11-testing"><h3>5. Doping-nazorat jarayoni</h3>
+    <p>Doping-nazorat musobaqa vaqtida ham, musobaqadan tashqari davrda ham o‘tkazilishi mumkin. Sportchi xabardor qilinganda, odatda doping-nazorat xodimi ko‘rsatmalariga amal qilishi, huquq va majburiyatlarini tushunishi hamda jarayon davomida rasmiy hujjatlarni diqqat bilan tekshirishi kerak.</p>
+    <ol><li><b>Xabardor qilish:</b> sportchiga test topshirish talabi bildiriladi va shaxsini tasdiqlash tartibi bajariladi.</li><li><b>Namuna topshirish:</b> siydik yoki qon namunasi tegishli tartibda olinadi; sportchi jarayonni kuzatish va tushuntirish so‘rash huquqiga ega.</li><li><b>Hujjatlashtirish:</b> dori va qo‘shimchalar haqidagi ma’lumotlar so‘ralishi mumkin; ularni aniq ko‘rsating.</li><li><b>Namuna xavfsizligi:</b> idishlar, muhrlar va kodlarni tekshiring; e’tiroz yoki izoh bo‘lsa, rasmiy qaydga kiritishni so‘rang.</li><li><b>Yakun:</b> hujjat nusxasini saqlang va keyingi aloqa bo‘yicha ko‘rsatmalarni bajaring.</li></ol>
+   </section>
+   <section class="v11-topic" id="v11-rights"><h3>6. Sportchining huquqlari va majburiyatlari</h3>
+    <p>Sportchi tegishli qoidalar doirasida jarayon haqida ma’lumot olish, vakil yoki tarjimon yordamini so‘rash (qoidalarda ruxsat etilgan hollarda), jarayon bo‘yicha izoh bildirish va hujjat nusxasini olish huquqlariga ega. Shu bilan birga, test topshirish, namuna jarayonida ko‘rsatmalarga rioya qilish va ma’lumotlarni to‘g‘ri taqdim etish majburiyatlari mavjud.</p>
+    <ul><li>Rasmiy xabarnomani e’tiborsiz qoldirmang.</li><li>Test jarayonini asossiz kechiktirmang yoki rad etmang.</li><li>Hujjatlarni imzolashdan oldin o‘qing; tushunmagan joyingizni so‘rang.</li><li>Natijalar boshqaruvi bo‘yicha rasmiy xabarlarni kuzating va belgilangan muddatlarga rioya qiling.</li></ul>
+   </section>
+   <section class="v11-topic" id="v11-whereabouts"><h3>7. Whereabouts va ADAMS</h3>
+    <p>Whereabouts talablari faqat tegishli ro‘yxatga kiritilgan sportchilarga qo‘llanadi. Bunday sportchilar belgilangan muddatlarda manzil, mashg‘ulot va boshqa talab qilingan ma’lumotlarni taqdim etishi hamda o‘zgarishlarni o‘z vaqtida yangilashi kerak.</p>
+    <ul><li>ADAMS yoki tegishli rasmiy tizimdagi ma’lumotlarni muddatida yangilang.</li><li>Safar, mashg‘ulot jadvali va manzil o‘zgarishini tegishli tartibda kiriting.</li><li>Ma’lumot yuborilganini tasdiqlovchi yozuvni saqlang.</li><li>Talablar sizga tatbiq etilishini va amaldagi vaqt oralig‘ini tashkilotingizdan aniqlang.</li></ul>
+   </section>
+   <section class="v11-topic" id="v11-cases"><h3>8. Vaziyatli mashqlar: bilimni amalda qo‘llash</h3>
+    <div class="v11-case"><b>Vaziyat A — shamollash:</b> sportchi dorixonadan shamollashga qarshi dori olmoqchi. <b>To‘g‘ri yondashuv:</b> faol modda va qo‘llash yo‘lini aniqlash, amaldagi ro‘yxatni tekshirish, shifokor va antidoping mutaxassisi bilan maslahatlashish.</div>
+    <div class="v11-case"><b>Vaziyat B — “tez tiklanish” qo‘shimchasi:</b> murabbiy noma’lum kukunni tavsiya qildi. <b>To‘g‘ri yondashuv:</b> mahsulotni darhol qabul qilmaslik, tarkib va partiya ma’lumotlarini tekshirish, xavfni hujjatlashtirish va malakali maslahat olish.</div>
+    <div class="v11-case"><b>Vaziyat C — doping-nazorat xabarnomasi:</b> sportchi mashg‘ulotga kechikayotganini aytib testni keyinga qoldirmoqchi. <b>To‘g‘ri yondashuv:</b> xodim ko‘rsatmalariga amal qilish, ruxsat etilgan kechiktirish sabablarini xodim bilan rasmiy tartibda kelishish va jarayonni asossiz cho‘zmaslik.</div>
+    <div class="v11-case"><b>Vaziyat D — TUE zarurati:</b> sportchiga taqiqlangan bo‘lishi mumkin bo‘lgan dori tibbiy jihatdan kerak. <b>To‘g‘ri yondashuv:</b> davolanishni o‘zboshimchalik bilan to‘xtatmaslik, tibbiy hujjatlarni yig‘ish va vakolatli TUE organiga tegishli tartibda murojaat qilish.</div>
+   </section>
+   <section class="v11-topic"><h3>Rasmiy manbalar va yangilanishlar</h3>
+    <ul class="v11-links">
+     <li><a href="https://www.wada-ama.org/en/prohibited-list" target="_blank" rel="noopener noreferrer">WADA — Prohibited List</a></li>
+     <li><a href="https://www.wada-ama.org/en/athletes-support-personnel/education" target="_blank" rel="noopener noreferrer">WADA — Education</a></li>
+     <li><a href="https://learning.wada-ama.org/" target="_blank" rel="noopener noreferrer">WADA ADEL — ta’lim platformasi</a></li>
+     <li><a href="https://www.unesco.org/en/legal-affairs/international-convention-against-doping-sport" target="_blank" rel="noopener noreferrer">UNESCO — Xalqaro konvensiya</a></li>
+    </ul>
+    <p class="v11-disclaimer">Ta’limiy material. Bu huquqiy maslahat, tibbiy tashxis yoki dori vositasiga ruxsat emas. Taqiqlangan ro‘yxat har yili yangilanadi; amaldagi rasmiy hujjat ustuvor hisoblanadi.</p>
+   </section>
   </div>
  </div>
 </div>
@@ -1223,9 +1296,8 @@
 
 
 <button id="scrollTop" title="Yuqoriga" aria-label="Yuqoriga" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</button>
-<script src="js/data.js?v=20261112_v9" defer></script>
-<script src="js/search.js?v=20261112_v9" defer></script>
-<script src="js/app.js?v=20261112_v9" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" async></script>
+<script src="js/data.js?v=20261112_v10" defer></script>
+<script src="js/search.js?v=20261112_v10" defer></script>
+<script src="js/app.js?v=20261112_v10" defer></script>
 </body>
 </html>
