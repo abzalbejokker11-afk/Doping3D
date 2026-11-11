@@ -688,28 +688,6 @@ html:not(.nx) .nx-ui{display:none!important}
 .nx-fab:hover .nx-tip,.nx-fab:focus-visible .nx-tip{opacity:1;transform:translateY(-50%)}
 .nx-fab:hover .nx-orb{transform:scale(1.1)}.nx-fab .nx-orb{transition:transform .25s}
 
-/* Glass navigatsiya (chetda) */
-.nx-dock{position:fixed;z-index:180;display:flex;gap:6px;padding:8px;border-radius:24px;background:rgba(255,255,255,.62);backdrop-filter:var(--nx-blur);-webkit-backdrop-filter:var(--nx-blur);border:1px solid rgba(255,255,255,.85);box-shadow:0 18px 44px -12px rgba(30,90,200,.45),0 0 0 1px rgba(37,99,235,.10)}
-.nx-di{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:0;background:transparent;cursor:pointer;color:#35557f;border-radius:16px;font-family:inherit;transition:.22s}
-.nx-di .ico{font-size:19px;line-height:1;display:grid;place-items:center}
-.nx-di .lb{font-size:9.5px;font-weight:700;letter-spacing:.2px}
-.nx-di:hover{background:rgba(14,165,233,.14);color:#0369a1}
-.nx-di.on{background:linear-gradient(135deg,#0ea5e9,#6366f1);color:#fff;box-shadow:0 10px 24px -8px rgba(99,102,241,.8)}
-@media(min-width:1540px){
-  .nx-dock{left:10px;top:50%;transform:translateY(-50%);flex-direction:column}
-  .nx-di{width:46px;height:46px}
-  .nx-di .lb{position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%) translateX(-6px);opacity:0;pointer-events:none;white-space:nowrap;font-size:12px;color:#0b2a55;padding:7px 12px;border-radius:12px;background:rgba(255,255,255,.96);border:1px solid var(--nx-line);box-shadow:0 12px 30px -10px rgba(30,90,200,.5);transition:.2s}
-  .nx-di:hover .lb{opacity:1;transform:translateY(-50%)}
-}
-@media(max-width:1539px){
-  .nx-dock{left:50%;bottom:12px;transform:translateX(-50%);max-width:calc(100vw - 16px);overflow-x:auto;scrollbar-width:none}
-  .nx-dock::-webkit-scrollbar{display:none}
-  .nx-di{min-width:50px;height:50px;padding:4px 6px}
-  html.nx body{padding-bottom:92px}
-  .nx-fab{right:8px;bottom:136px;padding:6px}
-  html.nx #scrollTop{right:14px!important;bottom:80px!important;z-index:188!important}
-}
-
 /* O'ng chet: glass mini-dashboard */
 .nx-dashw{position:fixed;z-index:170;right:10px;top:68%;display:none}
 @media(min-width:1440px){.nx-dashw{display:block}}
@@ -748,8 +726,7 @@ html.nx-js.nx .nx-rv.nx-in{opacity:1;transform:none}
   html.nx #checker-ai>div:first-child{flex-direction:column}
   html.nx #ai-btn{padding:15px!important}
   html.nx #ai-drug-input{font-size:14px!important}
-  .nx-di[data-t="top"]{display:none}
-  .nx-di{min-width:44px;padding:4px}
+  .nx-fab{right:8px;bottom:76px;padding:6px}
   html.nx .section-title{font-size:26px}
 }
 @media(prefers-reduced-motion:reduce){
@@ -1052,8 +1029,8 @@ html.nx.dark .role-section,html.nx.dark #roles,html.nx.dark #faq-sec,html.nx.dar
 html.nx.dark .toza-stat,html.nx.dark .toza-card,html.nx.dark #faq-sec > div > div[onclick]{background:rgba(15,27,56,.92)!important;border-color:rgba(56,189,248,.28)!important;color:#e2e8f0!important}
 html.nx.dark .faq-a{color:#cbd5e1!important}
 html.nx.dark .role-card p,html.nx.dark .extra-card p,html.nx.dark .section-sub,html.nx.dark .faq-a{color:#cbd5e1!important}
-html.nx.dark .nx-dock,html.nx.dark .nx-dw-tab,html.nx.dark .nx-dw-body{background:rgba(11,24,52,.9);border-color:rgba(56,189,248,.3)}
-html.nx.dark .nx-di,html.nx.dark .nx-dw-row,html.nx.dark .nx-dw-hint{color:#cbd5e1}
+html.nx.dark .nx-dw-tab,html.nx.dark .nx-dw-body{background:rgba(11,24,52,.9);border-color:rgba(56,189,248,.3)}
+html.nx.dark .nx-dw-row,html.nx.dark .nx-dw-hint{color:#cbd5e1}
 html.nx.dark .nx-dw-head,html.nx.dark .nx-dw-row b,html.nx.dark .nx-dw-ring span{color:#f8fafc}
 html.nx.dark .nx-dw-ring span{background:#0b1734}
 html.nx.dark body>section:not(.hero) [style*="background:#fff"]:not(#scenario-cards *):not(#ai-result *),

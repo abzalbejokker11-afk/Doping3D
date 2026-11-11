@@ -1615,8 +1615,6 @@ var T={
   c1:{uz:'📚 64 mavzu',ru:'📚 64 тем'},c2:{uz:'📝 80 test savol',ru:'📝 80 тестов'},
   c3:{uz:'🏅 O‘zlashtirildi (75%+)',ru:'🏅 Освоено (75%+)'},c4:{uz:'🌐 UZ · RU',ru:'🌐 UZ · RU'},
   fab:{uz:'Dorini AI bilan tekshir',ru:'Проверить препарат с ИИ'},
-  dTop:{uz:'Bosh',ru:'Главная'},dRoles:{uz:'Darslar',ru:'Уроки'},dAI:{uz:'AI dori',ru:'ИИ'},dTr:{uz:'Trening',ru:'Тренинг'},
-  dWada:{uz:'WADA',ru:'WADA'},dFaq:{uz:'FAQ',ru:'FAQ'},dDash:{uz:'Panel',ru:'Панель'},
   dwHead:{uz:'📊 Mening progressim',ru:'📊 Мой прогресс'},dwMod:{uz:'Modullar',ru:'Модули'},dwCert:{uz:'O‘zlashtirildi',ru:'Освоено'},
   dwHint:{uz:'Hali test topshirilmagan. Birinchi darsni boshlang va natijangizni bu yerda kuzating!',ru:'Тестов пока нет. Начните первый урок и следите за результатом здесь!'},
   dwBtn:{uz:'Darsni boshlash →',ru:'Начать урок →'},dwFull:{uz:'To\'liq dashboard →',ru:'Полный дашборд →'},
@@ -1667,19 +1665,7 @@ function build(){
     fab.onclick=openAI;D.body.appendChild(fab);
   }
 
-  /* 5. Glass navigatsiya (chap chet / pastki chet) */
-  if(!$('.nx-dock')){
-    var items=[['top','🏠','dTop'],['roles','📚','dRoles'],['checker-sec','AI','dAI'],['scenario-sec','🎯','dTr'],['wada-sec','🧪','dWada'],['faq-sec','❓','dFaq'],['dashboard-sec','📊','dDash']];
-    var dock=D.createElement('div');dock.className='nx-dock nx-ui';dock.setAttribute('role','navigation');dock.setAttribute('aria-label','Navigatsiya');
-    dock.innerHTML=items.map(function(i){
-      var ico=i[1]==='AI'?orb(24,'sm'):i[1];
-      return '<button type="button" class="nx-di" data-t="'+i[0]+'" aria-label="'+i[2]+'"><span class="ico">'+ico+'</span><span class="lb" '+tx(i[2])+'></span></button>';
-    }).join('');
-    D.body.appendChild(dock);
-    $$('.nx-di',dock).forEach(function(b){b.onclick=function(){var id=b.getAttribute('data-t');if(id==='checker-sec')openAI();else go(id);};});
-  }
-
-  /* 6. O'ng chet: glass mini-dashboard */
+  /* 5. O'ng chet: glass mini-dashboard */
   if(!$('#nx-dashw')){
     var w=D.createElement('aside');w.className='nx-dashw nx-ui';w.id='nx-dashw';
     w.innerHTML='<button type="button" class="nx-dw-tab" aria-label="Dashboard">📊</button>'+
@@ -1723,7 +1709,7 @@ function decorateNav(){
 function applyLang(){
   $$('[data-t]').forEach(function(e){
     var k=e.getAttribute('data-t');
-    if(T[k]&&!e.classList.contains('nx-di'))e.textContent=t(k);
+    if(T[k])e.textContent=t(k);
   });
   $$('[data-uz]').forEach(function(e){e.textContent=e.getAttribute('data-'+lang());});
   decorateNav();
@@ -1748,15 +1734,6 @@ function updateDash(){
   $('#nx-dw-c').textContent=s.cert;
   var hint=$('#nx-dw-hint');hint.style.display=s.done===0?'block':'none';
   $('#nx-dw-btn').textContent=s.done===0?t('dwBtn'):t('dwFull');
-}
-
-/* Scroll-spy */
-function spy(){
-  var ids=['roles','checker-sec','scenario-sec','wada-sec','faq-sec'],cur='top',y=window.innerHeight*0.4;
-  if(window.scrollY>240){
-    ids.forEach(function(id){var e=D.getElementById(id);if(e&&e.getBoundingClientRect().top<=y)cur=id;});
-  }
-  $$('.nx-di').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-t')===cur);});
 }
 
 /* Hero raqamlari: sanash animatsiyasi */
@@ -1826,9 +1803,7 @@ function hookLang(){
 
 function init(){
   try{
-    build();hookLang();applyLang();countUp();reveal();spy();a11y();
-    var tick=false;
-    window.addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){tick=false;spy();});},{passive:true});
+    build();hookLang();applyLang();countUp();reveal();a11y();
     window.addEventListener('storage',updateDash);
     window.addEventListener('focus',updateDash);
     setInterval(updateDash,3000);
