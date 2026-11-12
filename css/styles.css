@@ -631,8 +631,7 @@ html.nx .mobile-nav{top:88px;left:12px;right:12px;border-radius:20px;background:
 
 /* ── Hero (rasm ustiga yorqin ko'k qatlam) ── */
 html.nx .hero{isolation:isolate;border-radius:0 0 34px 34px;margin-top:-84px;padding-top:96px;padding-bottom:26px;overflow:hidden}
-html.nx .hero::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(90deg,rgba(6,22,48,.76) 0%,rgba(8,28,58,.56) 38%,rgba(8,28,58,.16) 51%,rgba(8,28,58,0) 60%,rgba(8,28,58,0) 100%)}
+html.nx .hero::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:none}
 html.nx .hero::after{display:none}
 html.nx .hero-badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.55);box-shadow:0 8px 24px -8px rgba(14,165,233,.7)}
 html.nx .author-box{display:inline-flex;align-items:center;gap:10px;background:rgba(10,32,68,.56);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.55);border-radius:18px;padding:8px 16px;margin-bottom:10px;box-shadow:0 8px 24px -8px rgba(7,28,60,.65);color:#fff}
@@ -998,7 +997,7 @@ html.nx body::after{opacity:.3;background-size:64px 64px}
 html.nx header{top:8px;margin:8px 18px 0;border-radius:16px;background:rgba(255,255,255,.94)!important;border:1px solid rgba(23,75,125,.12)!important;box-shadow:0 8px 28px rgba(16,42,67,.09)}
 html.nx .logo-icon{animation:none;box-shadow:0 4px 12px rgba(23,105,170,.2)}
 html.nx .hero{border-radius:0 0 24px 24px;overflow:hidden;padding-bottom:26px}
-html.nx .hero::before{background:linear-gradient(90deg,rgba(6,22,48,.76) 0%,rgba(8,28,58,.56) 38%,rgba(8,28,58,.16) 51%,rgba(8,28,58,0) 60%,rgba(8,28,58,0) 100%)}
+html.nx .hero::before{background:none}
 html.nx .hero h1{text-shadow:0 3px 16px rgba(4,16,38,.72);letter-spacing:-.7px;color:#fff}
 html.nx .section-title{letter-spacing:-.35px}
 html.nx body>section:not(.hero):not(#checker-sec):not(.links-section){border-top-color:rgba(23,75,125,.08)!important}
@@ -1020,7 +1019,7 @@ html.nx .mobile-nav a{min-height:42px}
 @media(max-width:900px){
   html.nx header{margin:7px 9px 0;border-radius:14px}
   html.nx .hero{margin-top:-78px;padding-top:94px;padding-bottom:24px;border-radius:0 0 18px 18px;background-position:62% center}
-  html.nx .hero::before{background:linear-gradient(90deg,rgba(6,22,48,.62) 0%,rgba(8,28,58,.36) 68%,rgba(8,28,58,.14) 100%)}
+  html.nx .hero::before{background:none}
   html.nx .hero h1{font-size:clamp(26px,7vw,40px);line-height:1.12}
   html.nx .section-title{font-size:clamp(24px,6vw,34px)}
   html.nx .header-wrap{padding:0 10px}
