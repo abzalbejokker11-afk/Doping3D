@@ -1622,13 +1622,14 @@ function build(){
   var hero=$('.hero');
 
   /* 1. Hero: CTA + ishonch belgilari */
-  var stats=$('.hero-stats');
-  if(stats&&!$('.nx-cta')){
+  var slot=$('.hero-cta-slot'), stats=$('.hero-stats');
+  if((slot||stats)&&!$('.nx-cta')){
     var cta=D.createElement('div');cta.className='nx-ui';
     cta.innerHTML='<div class="nx-cta"><button type="button" class="nx-btn nx-btn-main" id="nx-cta1" '+tx('cta1')+'></button>'+
       '<button type="button" class="nx-btn nx-btn-ghost" id="nx-cta2" '+tx('cta2')+'></button></div>'+
       '<div class="nx-chips"><span '+tx('c1')+'></span><span '+tx('c2')+'></span><span '+tx('c3')+'></span><span '+tx('c4')+'></span></div>';
-    stats.parentNode.insertBefore(cta,stats);
+    if(slot) slot.appendChild(cta);
+    else stats.parentNode.insertBefore(cta,stats);
     $('#nx-cta1').onclick=function(){go('roles');};
     $('#nx-cta2').onclick=openAI;
   }
