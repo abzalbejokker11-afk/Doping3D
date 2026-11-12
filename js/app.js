@@ -819,6 +819,8 @@ function updateDashboard(){
 
   if(!hasDone){
     dashMod.innerHTML=`<div style="text-align:center;padding:24px;color:var(--muted)"><div style="font-size:32px;margin-bottom:8px">📋</div><p style="font-size:13px">${isRu?'Тесты ещё не пройдены':'Hali test topshirilmagan'}</p></div>`;
+    if(dashCert) dashCert.innerHTML=`<p style="font-size:13px;color:var(--muted);text-align:center;padding:12px">${isRu?'При 75%+ выдаётся документ «Освоено»':'75%+ da O‘zlashtirildi tasdiqnomasi beriladi'}</p>`;
+    if(dashLb) dashLb.innerHTML=`<p style="font-size:12px;color:#8faac8;text-align:center">${isRu?'Результатов пока нет':'Natijalar yo\x27q'}</p>`;
     return;
   }
   dashMod.innerHTML=data.map(d=>{
@@ -1080,6 +1082,18 @@ window.exportResultsCSV = function(){
   a.download = 'antidoping_natijalar.csv';
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(function(){ URL.revokeObjectURL(url); }, 2000);
+};
+
+window.clearMyResults = function(){
+  var isRu = window.CUR_LANG === 'ru';
+  var msg = isRu ? 'Удалить все сохранённые результаты тестов с этого устройства?' : "Qurilmada saqlangan barcha test natijalarini o'chirishni tasdiqlaysizmi?";
+  if(!confirm(msg)) return;
+  try{
+    localStorage.removeItem('antidoping_results');
+    ['rahbar','murabbiy','metodist','sportchi'].forEach(function(r){ localStorage.removeItem('quiz_'+r); });
+  }catch(e){}
+  if(typeof updateDashboard==='function') updateDashboard();
+  window.dispatchEvent(new Event('storage'));
 };
 
 /* ── TASDIQNOMAGA OFLAYN QR-KOD (https://t.me/antidopi) ── */

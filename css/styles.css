@@ -362,6 +362,7 @@ footer a:hover{color:#fff}
 @media(max-width:1024px){.role-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){.hero-deco{display:none}.info-grid{grid-template-columns:1fr}.toza-grid{grid-template-columns:1fr}.toza-full{grid-column:span 1}.toza-stat-row{grid-template-columns:1fr 1fr}.toza-principles{grid-template-columns:1fr 1fr}.extra-cards{grid-template-columns:1fr}.film-top{grid-template-columns:1fr}.film-poster{width:100%;height:160px}.case-step{border-right:none;border-bottom:1px solid var(--border)}
 .cs-conclusion{width:100%}
+}
 @media(max-width:640px){
 .header-wrap{height:56px;padding:0 14px}
 .header-wrap nav{display:none}
@@ -429,10 +430,9 @@ footer a:hover{color:#fff}
 .links-section{padding:28px 14px}
 .links-grid{grid-template-columns:1fr 1fr;gap:8px}
 .link-card{padding:12px}
+#dashboard-sec > div > div[style*="grid-template-columns"]{grid-template-columns:1fr!important}
 #scrollTop{bottom:14px;right:14px;width:36px;height:36px;font-size:15px}
 }
-}
-@media(max-width:640px){.role-grid{grid-template-columns:1fr}.header-wrap nav{display:none}.modal-body{padding:16px 14px 24px}.modal-header{padding:16px 14px 12px}.hero{padding:36px 14px 30px}.toza-stat-row{grid-template-columns:1fr 1fr}.toza-principles{grid-template-columns:1fr}.checker-input-wrap{flex-direction:column}}
 /* ─── RO'YXATGA OLISH FORMASI ─── */
 .reg-form{background:#fff;border-radius:12px;padding:4px 0 16px}
 .reg-input{width:100%;padding:13px 16px;border:2px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;outline:none;transition:.2s;color:var(--text)}
@@ -741,9 +741,14 @@ html:not(.nx) .nx-ui{display:none!important}
 /* Modal oynalar (darslar yorug') */
 html.nx .modal-overlay{background:rgba(11,42,85,.5);backdrop-filter:blur(12px) saturate(140%)}
 html.nx .modal-header{background:linear-gradient(120deg,#0b3b8f,#2563eb 55%,#06b6d4);box-shadow:0 10px 30px -10px rgba(14,165,233,.6)}
-html.nx #dash-modal{background:rgba(11,42,85,.5)!important;backdrop-filter:blur(12px) saturate(140%)!important}
-html.nx #dash-modal-inner{background:rgba(255,255,255,.92)!important;border:1.5px solid rgba(14,165,233,.5)!important;box-shadow:0 0 70px -14px rgba(99,102,241,.55),0 30px 80px -20px rgba(7,30,90,.6)!important}
-html.nx #dash-modal-inner section{background:transparent!important;border:0!important}
+html.nx #dash-modal,html.nx #toza-modal{background:rgba(11,42,85,.5)!important;backdrop-filter:blur(12px) saturate(140%)!important}
+html.nx #dash-modal-inner{background:rgba(255,255,255,.94)!important;border:1.5px solid rgba(14,165,233,.5)!important;box-shadow:0 0 70px -14px rgba(99,102,241,.55),0 30px 80px -20px rgba(7,30,90,.6)!important}
+html.nx #toza-modal-inner{background:linear-gradient(160deg,#f0fdf4 0%,#e0f2fe 50%,#f0fdfa 100%)!important;border:1.5px solid rgba(20,184,166,.45)!important;box-shadow:0 0 70px -14px rgba(20,184,166,.45),0 30px 80px -20px rgba(7,30,90,.6)!important}
+html.nx #dash-modal-inner section,html.nx #toza-modal-inner section{background:transparent!important;border:0!important}
+.dash-actions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;align-items:center}
+.dash-clear-btn{background:#fff1f2;color:#be123c;border:1.5px solid #fda4af;border-radius:10px;padding:8px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
+.dash-clear-btn:hover{background:#ffe4e6}
+.dash-privacy-note{font-size:11px;color:var(--muted);margin-bottom:10px;line-height:1.5}
 
 /* ── Animatsiya kirish (reveal) ── */
 html.nx-js.nx .nx-rv{opacity:0;transform:translateY(24px) scale(.98);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
@@ -1057,8 +1062,13 @@ html.nx.dark .stat-item:nth-child(6n+1) .num{color:#38bdf8}html.nx.dark .stat-it
 html.nx.dark .stat-item:nth-child(6n+3) .num{color:#f472b6}html.nx.dark .stat-item:nth-child(6n+4) .num{color:#fbbf24}
 html.nx.dark .stat-item:nth-child(6n+5) .num{color:#c4b5fd}html.nx.dark .stat-item:nth-child(6n+6) .num{color:#fb923c}
 html.nx.dark .deco-card p,html.nx.dark .stat-item .lbl{color:#e2e8f0!important}
-html.nx.dark .role-section,html.nx.dark #roles,html.nx.dark #faq-sec,html.nx.dark .toza-band{background:transparent!important}
-html.nx.dark .toza-stat,html.nx.dark .toza-card,html.nx.dark #faq-sec > div > div[onclick]{background:rgba(15,27,56,.92)!important;border-color:rgba(56,189,248,.28)!important;color:#e2e8f0!important}
+html.nx.dark .role-section,html.nx.dark #roles,html.nx.dark #faq-sec,html.nx.dark .toza-section{background:transparent!important}
+html.nx.dark #dash-modal-inner,html.nx.dark #toza-modal-inner{background:linear-gradient(160deg,#08152e,#0f1b38)!important;border-color:rgba(56,189,248,.35)!important;color:#e2e8f0!important}
+html.nx.dark #dashboard-sec [style*="background:#fff"],html.nx.dark .toza-princ,html.nx.dark .toza-stat,html.nx.dark .toza-card,html.nx.dark #faq-sec > div > div[onclick]{background:rgba(15,27,56,.92)!important;border-color:rgba(56,189,248,.28)!important;color:#e2e8f0!important}
+html.nx.dark .toza-princ h5,html.nx.dark .tl-item h5,html.nx.dark .toza-card ul li strong{color:#f8fafc!important}
+html.nx.dark .toza-princ p,html.nx.dark .toza-card ul li,html.nx.dark .tl-item p,html.nx.dark .toza-stat .ts-lbl{color:#cbd5e1!important}
+html.nx.dark .tl-dot{background:#0f1b38;border-color:#2dd4bf}
+html.nx.dark .dash-clear-btn{background:rgba(244,63,94,.16);color:#fecdd3;border-color:rgba(244,63,94,.38)}
 html.nx.dark .faq-a{color:#cbd5e1!important}
 html.nx.dark .role-card p,html.nx.dark .extra-card p,html.nx.dark .section-sub,html.nx.dark .faq-a{color:#cbd5e1!important}
 html.nx.dark .nx-dw-tab,html.nx.dark .nx-dw-body{background:rgba(11,24,52,.9);border-color:rgba(56,189,248,.3)}
@@ -1068,13 +1078,33 @@ html.nx.dark .nx-dw-ring span{background:#0b1734}
 html.nx.dark body>section:not(.hero) [style*="background:#fff"]:not(#scenario-cards *):not(#ai-result *),
 html.nx.dark .wada-table-wrap,html.nx.dark .faq-item,html.nx.dark .link-card,html.nx.dark .checker-box{background:rgba(15,27,56,.92)!important;border-color:rgba(56,189,248,.25)!important;color:#e2e8f0}
 html.nx.dark .wada-table td,html.nx.dark .wada-table th{border-color:rgba(148,163,184,.18);color:#e2e8f0}
-html.nx.dark .wada-table tr:hover td{background:rgba(56,189,248,.09)}
+html.nx.dark .wada-table tr:nth-child(even) td{background:rgba(19,35,71,.55)}
+html.nx.dark .wada-table tr:hover td{background:rgba(56,189,248,.12)}
 html.nx.dark input,html.nx.dark select{background:#0b1734!important;color:#f1f5f9!important;border-color:rgba(56,189,248,.35)!important}
-html.nx.dark .modal-box{background:#0f1b38;color:#e2e8f0}
-html.nx.dark .acc-item,html.nx.dark .gloss-item,html.nx.dark .film-item,html.nx.dark .case-item,html.nx.dark .tg-step-box{background:#132347;border-color:rgba(56,189,248,.24)}
-html.nx.dark .acc-body,html.nx.dark .gi-def,html.nx.dark .case-step li,html.nx.dark .checklist li{color:#cbd5e1}
+html.nx.dark .modal-box,html.nx.dark .modal-body{background:#0b1734;color:#e2e8f0}
+html.nx.dark .modal-tabs{background:#0f1b38;border-color:rgba(56,189,248,.24)}
+html.nx.dark .tab-btn{color:#94a3b8}
+html.nx.dark .tab-btn:hover,html.nx.dark .tab-btn.active{background:rgba(56,189,248,.16);color:#7dd3fc;border-bottom-color:#38bdf8}
+html.nx.dark .acc-item,html.nx.dark .gloss-item,html.nx.dark .film-item,html.nx.dark .case-item,html.nx.dark .tg-step-box,html.nx.dark .info-card{background:#132347;border-color:rgba(56,189,248,.24)}
+html.nx.dark .acc-head{background:#132347;color:#f8fafc}
+html.nx.dark .acc-head:hover{background:#182d59}
+html.nx.dark .acc-body{background:#0f1b38}
+html.nx.dark .acc-body p,html.nx.dark .acc-body ul li,html.nx.dark .gi-def,html.nx.dark .case-step p,html.nx.dark .cs-conclusion p,html.nx.dark .checklist li,html.nx.dark .fi-desc,html.nx.dark .fi-analysis p,html.nx.dark .info-card p{color:#cbd5e1}
+html.nx.dark .info-card h5,html.nx.dark .case-top h4,html.nx.dark .film-item h4{color:#f8fafc}
+html.nx.dark .fi-analysis,html.nx.dark .cs-conclusion{background:rgba(56,189,248,.09);border-color:rgba(56,189,248,.3)}
+html.nx.dark .fi-analysis h6,html.nx.dark .cs-conclusion h6{color:#7dd3fc}
+html.nx.dark .cl-group{background:rgba(56,189,248,.14);color:#7dd3fc}
+html.nx.dark .mel-neutral,html.nx.dark .fl-search,html.nx.dark .quiz-btn-reset{background:#132347;color:#e2e8f0;border-color:rgba(56,189,248,.3)}
+html.nx.dark .gloss-alpha button{background:#132347;color:#e2e8f0;border-color:rgba(56,189,248,.28)}
+html.nx.dark .gloss-alpha button.active,html.nx.dark .gloss-alpha button:hover{background:#0d9488;color:#fff;border-color:#0d9488}
+html.nx.dark .quiz-wrap{background:rgba(15,27,56,.92);border-color:rgba(56,189,248,.25)}
+html.nx.dark .reg-form{background:transparent}
+html.nx.dark .reg-input{background:#0b1734;color:#f1f5f9;border-color:rgba(56,189,248,.35)}
 html.nx.dark .q-item{background:#132347;border-color:rgba(56,189,248,.25)}
 html.nx.dark .q-opt{background:#0b1734;color:#e2e8f0;border-color:rgba(148,163,184,.3)}
+html.nx.dark .q-opt.selected{background:rgba(56,189,248,.2);border-color:#38bdf8;color:#f8fafc}
+html.nx.dark .q-opt.correct{background:rgba(22,163,74,.25);border-color:#4ade80;color:#bbf7d0}
+html.nx.dark .q-opt.wrong{background:rgba(244,63,94,.22);border-color:#fb7185;color:#fecdd3}
 html.nx.dark .audio-item,html.nx.dark .audio-player-panel{background:#132347;border-color:rgba(56,189,248,.26);color:#f1f5f9}
 html.nx.dark .audio-player-panel h3,html.nx.dark .audio-extra h4{color:#f8fafc}
 html.nx.dark .audio-player-panel p,html.nx.dark .audio-time,html.nx.dark .audio-speed,html.nx.dark .audio-note,html.nx.dark .audio-item small{color:#94a3b8}
