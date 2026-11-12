@@ -452,6 +452,7 @@ const RU_DICT = {
 "Oskar sovrindori va e’tirof etilgan filmlar — pedagogik tahlil":"Оскароносные и признанные фильмы — педагогический анализ",
 "Klinik Holatlar (Case Studies)":"Клинические случаи (Case Studies)","Haqiqiy doping voqealari asosida — xato va töğri yöl":"На основе реальных допинг-случаев — ошибки и верный путь",
 "Antidoping Luğati":"Антидопинговый словарь","WADA atamalarining özbekça izohli luğati — 35+ atama":"Толковый словарь терминов WADA — 35+ терминов"
+,"🧪 WADA":"🧪 WADA","🏅 Toza Sport":"🏅 Чистый спорт","❓ FAQ":"❓ FAQ"
 
 ,"🎓 PhD Ilmiy Tadqiqot Loyihasi · doping.uz · sportedu.uz":"🎓 Научно-исследовательский проект PhD · doping.uz · sportedu.uz"
 ,"Muallif · Jismoniy tarbiya va sport böyiça mutaxassislarni qayta tayyorlaş va malakasini oşiriş instituti · PhD tadqiqotçi":"Автор · Институт переподготовки и повышения квалификации специалистов по ФКиС · PhD-исследователь"
