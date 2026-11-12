@@ -86,17 +86,18 @@ function renderWada(d){
   const t=document.getElementById('wada-body');
   if(!t)return;
   if(!d.length){
-    t.innerHTML='<tr><td colspan="5" style="text-align:center;padding:36px;color:var(--muted)">🔍 '+(window.CUR_LANG==='ru'?'Не найдено — попробуйте другой запрос':'Topilmadi — boshqa qidiruv so\x27zini sinab ko\x27ring')+'</td></tr>';
+    t.innerHTML='<tr><td colspan="5" style="text-align:center;padding:36px;color:var(--muted)">🔍 '+(window.CUR_LANG==='ru'?'Не найдено — попробуйте другой запрос':'Topilmadi — boşqa qidiruv so\x27zini sinab ko\x27ring')+'</td></tr>';
     return;
   }
   t.innerHTML=d.map(i=>`<tr><td><span class="${i.cat[0]==='S'?'badge-s':'badge-m'}">${escapeHTML(i.cat)}</span></td><td><strong>${escapeHTML(i.name)}</strong></td><td style="font-size:11px">${escapeHTML(i.ex)}</td><td style="font-size:11px">${escapeHTML(i.eff)}</td><td><span class="${i.risk==='Oliy'?'badge-s':'badge-m'}">${escapeHTML(i.risk)}</span></td></tr>`).join('');
 }
+function _normUz(s){return String(s||'').toLowerCase().replace(/[öóō]/g,'o').replace(/[ğǵḡ]/g,'g').replace(/ş/g,'sh').replace(/ç/g,'ch').replace(/[ʻʼ’‘`´']/g,'');}
 function filterWada(){
-  const q=(document.getElementById('wada-search').value||'').toLowerCase().trim();
+  const q=_normUz((document.getElementById('wada-search').value||'').trim());
   const f=document.getElementById('wada-filter').value;
   let r=wadaData;
   if(f!=='all')r=r.filter(i=>i.cat===f);
-  if(q)r=r.filter(i=>i.name.toLowerCase().includes(q)||i.ex.toLowerCase().includes(q));
+  if(q)r=r.filter(i=>_normUz(i.name).includes(q)||_normUz(i.ex).includes(q));
   renderWada(r);
 }
 renderWada(wadaData);
@@ -114,9 +115,9 @@ function filterGlossLetter(l,btn){
   document.getElementById('gloss-search').value='';
 }
 function filterGloss(){
-  const q=(document.getElementById('gloss-search').value||'').toLowerCase().trim();
+  const q=_normUz((document.getElementById('gloss-search').value||'').trim());
   document.querySelectorAll('.gloss-alpha button').forEach(b=>b.classList.remove('active'));
-  renderGloss(q?glossData.filter(g=>g.term.toLowerCase().includes(q)||g.en.toLowerCase().includes(q)||g.def.toLowerCase().includes(q)):glossData);
+  renderGloss(q?glossData.filter(g=>_normUz(g.term).includes(q)||_normUz(g.en).includes(q)||_normUz(g.def).includes(q)):glossData);
 }
 function renderGloss(data){
   const gl=document.getElementById('gloss-list');
@@ -164,7 +165,7 @@ const roleNames = {
   rahbar:  '🧑‍💼 Rahbar',
   murabbiy:'🏋️ Murabbiy',
   metodist:'📋 Metodist',
-  sportchi:'🏃 Sportchi'
+  sportchi:'🏃 Sportçi'
 };
 
 const userInfo    = {rahbar:{},murabbiy:{},metodist:{},sportchi:{}};
@@ -216,14 +217,14 @@ async function sendRegNotify(role) {
     year:'numeric', hour:'2-digit', minute:'2-digit'
   });
   const text =
-`📋 <b>YANGI ISHTIROKCHI RO'YXATDAN O'TDI</b>
+`📋 <b>YANGI IŞTIROKÇI RÖYXATDAN ÖTDI</b>
 ━━━━━━━━━━━━━━━━━━━━
 👤 <b>Ism:</b> ${escapeHTML(info.ism)}
-🏢 <b>Tashkilot:</b> ${escapeHTML(info.tashkilot)}
+🏢 <b>Taşkilot:</b> ${escapeHTML(info.tashkilot)}
 📂 <b>Toifa:</b> ${roleNames[role]}
 🕐 <b>Vaqt:</b> ${sana}
 ━━━━━━━━━━━━━━━━━━━━
-⏳ Test boshlandi...`;
+⏳ Test boşlandi...`;
 
   await tgSend(ADMIN_ID, text);
 }
@@ -334,7 +335,7 @@ function resetQuiz(role) {
 async function tgSend(chatId, text) {
   const mode = tgMode();
   if (mode === 'none') {
-    console.warn('⚠️ Telegram sozlanmagan — sayt.html dagi BOT_TOKEN yoki TG_PROXY_URL ni to\'ldiring');
+    console.warn('⚠️ Telegram sozlanmagan — sayt.html dagi BOT_TOKEN yoki TG_PROXY_URL ni töldiring');
     return null;
   }
   try {
@@ -365,7 +366,7 @@ async function tgSend(chatId, text) {
 async function tgSendPhoto(chatId, canvas, caption) {
   const mode = tgMode();
   if (mode === 'none') {
-    console.warn('⚠️ Telegram sozlanmagan — sayt.html dagi BOT_TOKEN yoki TG_PROXY_URL ni to\'ldiring');
+    console.warn('⚠️ Telegram sozlanmagan — sayt.html dagi BOT_TOKEN yoki TG_PROXY_URL ni töldiring');
     return null;
   }
   try {
@@ -406,18 +407,18 @@ async function sendResultToAdmin(role, score, pct, passed) {
   const bars   = '█'.repeat(Math.round(pct/10)) + '░'.repeat(10-Math.round(pct/10));
   const isRu = (window.CUR_LANG === 'ru');
   const status = passed
-    ? (isRu ? '✅ СДАНО — ОСВОЕНО' : '✅ O\'TDI — O‘ZLASHTIRILDI')
+    ? (isRu ? '✅ СДАНО — ОСВОЕНО' : '✅ ÖTDI — ÖZLAŞTIRILDI')
     : pct>=60 ? (isRu ? '⚠️ НЕ ДОСТАТОЧНО' : '⚠️ YETARLI EMAS')
-    : (isRu ? '❌ НЕ СДАНО' : '❌ O\'TMADI');
+    : (isRu ? '❌ НЕ СДАНО' : '❌ ÖTMADI');
 
   const text =
 `🎓 <b>TEST NATIJASI</b>
 ━━━━━━━━━━━━━━━━━━━━
 👤 <b>Ism:</b> ${escapeHTML(info.ism)}
-🏢 <b>Tashkilot:</b> ${escapeHTML(info.tashkilot)}
+🏢 <b>Taşkilot:</b> ${escapeHTML(info.tashkilot)}
 📂 <b>Toifa:</b> ${roleNames[role]}
 ━━━━━━━━━━━━━━━━━━━━
-📊 <b>Natija:</b> ${score}/20 to'g'ri
+📊 <b>Natija:</b> ${score}/20 töğri
 📈 <b>Foiz:</b> ${pct}%
 ${bars}
 🏅 <b>Status:</b> ${status}
@@ -448,7 +449,7 @@ function showCertificate(role, score, pct) {
   const info    = userInfo[role];
   if (!info || !_validName(info.ism || '')) {
     const _cd = document.getElementById(role+'-cert');
-    if (_cd) _cd.innerHTML = '<div style="font-size:13px;font-weight:700;color:#991b1b;padding:12px 14px;background:#fee2e2;border-radius:10px">⚠️ Ism-familiya kiritilmagan yoki noto\'g\'ri — o‘zlashtirish tasdiqnomasi berilmadi. «Qayta boshlash» tugmasini bosib, ismingizni to\'g\'ri yozing.</div>';
+    if (_cd) _cd.innerHTML = '<div style="font-size:13px;font-weight:700;color:#991b1b;padding:12px 14px;background:#fee2e2;border-radius:10px">⚠️ Ism-familiya kiritilmagan yoki notöğri — özlaştiriş tasdiqnomasi berilmadi. «Qayta boşlaş» tugmasini bosib, ismingizni töğri yozing.</div>';
     return;
   }
   const isRu    = (window.CUR_LANG === 'ru');
@@ -513,10 +514,10 @@ async function sendCertToChannel(role) {
 
   const isRu = (window.CUR_LANG === 'ru');
   const roleNamesRu = { rahbar: '🧑‍💼 Руководитель', murabbiy: '🏋️ Тренер', metodist: '📋 Методист', sportchi: '🏃 Спортсмен' };
-  const captionTitle = isRu ? '🏆 <b>ANTIDOPING KURSI — ОСВОЕН</b>' : '🏆 <b>ANTIDOPING FANINI O‘ZLASHTIRDI</b>';
+  const captionTitle = isRu ? '🏆 <b>ANTIDOPING KURSI — ОСВОЕН</b>' : '🏆 <b>ANTIDOPING FANINI ÖZLAŞTIRDI</b>';
   const roleDisplay = isRu ? (roleNamesRu[role] || roleNames[role]) : roleNames[role];
-  const scoreLabel = isRu ? 'правильных' : 'to\'g\'ri';
-  const statusLabel = isRu ? '✅ Успешно освоено' : '✅ Muvaffaqiyatli o‘zlashtirildi';
+  const scoreLabel = isRu ? 'правильных' : 'töğri';
+  const statusLabel = isRu ? '✅ Успешно освоено' : '✅ Muvaffaqiyatli özlaştirildi';
 
   const resLabel = isRu ? 'Результат' : 'Natija';
   const caption =
@@ -540,7 +541,7 @@ async function sendCertToChannel(role) {
       r1 = await tgSendPhoto(CERT_CHANNEL, canvas, caption);
     }
     // Adminga nusxa (sozlangan bo'lsa) — asosiy yuborishni kutdirmaydi
-    tgSendPhoto(ADMIN_ID, canvas, `🏆 <b>Yangi o‘zlashtirish tasdiqnomasi!</b>\n👤 ${escapeHTML(info.ism)}\n📂 ${roleNames[role]}\n📊 ${meta.pct}%`);
+    tgSendPhoto(ADMIN_ID, canvas, `🏆 <b>Yangi özlaştiriş tasdiqnomasi!</b>\n👤 ${escapeHTML(info.ism)}\n📂 ${roleNames[role]}\n📊 ${meta.pct}%`);
 
     const ok = r1 && r1.ok;
     if (!ok) console.warn('TG kanal xatosi:', r1); // aniq sababni konsolda ko'rish uchun
@@ -622,7 +623,7 @@ function loadCertTemplate(){
   _certTemplatePromise = new Promise((resolve) => {
     const img = new Image();
     img.onload = () => { _certTemplateImg = img; resolve(img); };
-    img.onerror = () => { console.warn('Sertifikat shabloni yuklanmadi'); resolve(null); };
+    img.onerror = () => { console.warn('Sertifikat şabloni yuklanmadi'); resolve(null); };
     img.src = CERT_TEMPLATE_SRC;
   });
   // Poppins shrifti tayyor bo'lishini ham kutamiz (mavjud bo'lsa)
@@ -655,7 +656,7 @@ function drawCert(role, ism, tashkilot, roleName, score, pct, certId, sana) {
     const roleNamesRu = { rahbar: 'Руководитель', murabbiy: 'Тренер', metodist: 'Методист', sportchi: 'Спортсмен' };
 
     // ── 1. SARLAVHA: O'ZLASHTIRILDI (RU: ОСВОЕНО) ──
-    const titleText = isRu ? "ОСВОЕНО" : "O\u2018ZLASHTIRILDI";
+    const titleText = isRu ? "ОСВОЕНО" : "ÖZLAŞTIRILDI";
     drawCertField(ctx, img, CERT_TITLE_BOX, titleText, {
       font: 'Poppins', weight: 800, color: CERT_NAVY, align:'center',
       maxSizeRatio: 0.85, minSize: 60, bg: '#fbfbfd'
@@ -664,7 +665,7 @@ function drawCert(role, ism, tashkilot, roleName, score, pct, certId, sana) {
     // ── 2. TASDIQ MATNI: Mazkur hujjat... (RU: Настоящий документ...) ──
     const mazkurText = isRu
       ? "Настоящий документ подтверждает успешное освоение курса:"
-      : "Mazkur hujjat antidoping ta\u2018lim kursini muvaffaqiyatli o\u2018zlashtirganligini tasdiqlaydi:";
+      : "Mazkur hujjat antidoping ta’lim kursini muvaffaqiyatli özlaştirganligini tasdiqlaydi:";
     drawCertField(ctx, img, CERT_MAZKUR_BOX, mazkurText, {
       font: 'Poppins', weight: 500, color: CERT_GRAY, align:'center',
       maxSizeRatio: 0.72, minSize: 14, bg: '#fdfaff'
@@ -686,7 +687,7 @@ function drawCert(role, ism, tashkilot, roleName, score, pct, certId, sana) {
     // ── TEST TURI (rol) ──
     const roleText = isRu
       ? 'Квалификационный тест: ' + (roleNamesRu[role] || roleName.replace(/^\S+\s/,''))
-      : roleName.replace(/^\S+\s/,'')+' bo\u2019yicha malaka testi';
+      : roleName.replace(/^\S+\s/,'')+' böyiça malaka testi';
 
     drawCertField(ctx, img, CERT_ROLE_BOX, roleText, {
       font: 'Poppins', weight: 600, color: CERT_GRAY, align:'left',
@@ -696,7 +697,7 @@ function drawCert(role, ism, tashkilot, roleName, score, pct, certId, sana) {
     // ── NATIJA (ball / foiz) ──
     const scoreText = isRu
       ? score+'/20 правильных ответов  \u2014  '+pct+'%'
-      : score+'/20 to\u2018g\u2018ri javob  \u2014  '+pct+'%';
+      : score+'/20 töğri javob  \u2014  '+pct+'%';
 
     drawCertField(ctx, img, CERT_SCORE_BOX, scoreText, {
       font: 'Poppins', weight: 700, color: CERT_TEAL, align:'left',
@@ -783,7 +784,7 @@ function hexPath(ctx,cx,cy,r){
 
 
 function downloadCert(role, ism) {
-  ism = (userInfo[role] && userInfo[role].ism) || ism || 'ozlashtirildi';
+  ism = (userInfo[role] && userInfo[role].ism) || ism || 'ozlaştirildi';
   const canvas = document.getElementById(role+'-canvas');
   if (!canvas) return;
   const isRu = (window.CUR_LANG === 'ru');
@@ -806,7 +807,7 @@ function updateDashboard(){
   const isRu = window.CUR_LANG === 'ru';
   const names=isRu
     ? {rahbar:'Руководители',murabbiy:'Тренеры',metodist:'Методисты',sportchi:'Спортсмены'}
-    : {rahbar:'Rahbarlar',murabbiy:'Murabbiylar',metodist:'Metodistlar',sportchi:'Sportchilar'};
+    : {rahbar:'Rahbarlar',murabbiy:'Murabbiylar',metodist:'Metodistlar',sportchi:'Sportçilar'};
   const data=roles.map(r=>{
     const saved=safeJSONParse(localStorage.getItem('quiz_'+r), null);
     return{role:r,icon:icons[r],name:names[r],saved};
@@ -818,9 +819,9 @@ function updateDashboard(){
   if(!dashMod)return;
 
   if(!hasDone){
-    dashMod.innerHTML=`<div style="text-align:center;padding:24px;color:var(--muted)"><div style="font-size:32px;margin-bottom:8px">📋</div><p style="font-size:13px">${isRu?'Тесты ещё не пройдены':'Hali test topshirilmagan'}</p></div>`;
-    if(dashCert) dashCert.innerHTML=`<p style="font-size:13px;color:var(--muted);text-align:center;padding:12px">${isRu?'При 75%+ выдаётся документ «Освоено»':'75%+ da O‘zlashtirildi tasdiqnomasi beriladi'}</p>`;
-    if(dashLb) dashLb.innerHTML=`<p style="font-size:12px;color:#8faac8;text-align:center">${isRu?'Результатов пока нет':'Natijalar yo\x27q'}</p>`;
+    dashMod.innerHTML=`<div style="text-align:center;padding:24px;color:var(--muted)"><div style="font-size:32px;margin-bottom:8px">📋</div><p style="font-size:13px">${isRu?'Тесты ещё не пройдены':'Hali test topşirilmagan'}</p></div>`;
+    if(dashCert) dashCert.innerHTML=`<p style="font-size:13px;color:var(--muted);text-align:center;padding:12px">${isRu?'При 75%+ выдаётся документ «Освоено»':'75%+ da Özlaştirildi tasdiqnomasi beriladi'}</p>`;
+    if(dashLb) dashLb.innerHTML=`<p style="font-size:12px;color:#8faac8;text-align:center">${isRu?'Результатов пока нет':'Natijalar yöq'}</p>`;
     return;
   }
   dashMod.innerHTML=data.map(d=>{
@@ -847,16 +848,16 @@ function updateDashboard(){
       <div><div style="font-size:13px;font-weight:800;color:var(--navy)">${d.name}</div>
       <div style="font-size:11px;color:var(--green)">${d.saved.score}/20 — ${d.saved.pct}% · ${escapeHTML(d.saved.ism||'')}</div></div>
       <span style="margin-left:auto;font-size:18px">🏆</span>
-    </div>`).join(''):`<p style="font-size:13px;color:var(--muted);text-align:center;padding:12px">${isRu?'При 75%+ выдаётся документ «Освоено»':'75%+ da O‘zlashtirildi tasdiqnomasi beriladi'}</p>`;
+    </div>`).join(''):`<p style="font-size:13px;color:var(--muted);text-align:center;padding:12px">${isRu?'При 75%+ выдаётся документ «Освоено»':'75%+ da Özlaştirildi tasdiqnomasi beriladi'}</p>`;
 
   const all=roles.flatMap(r=>{const s=safeJSONParse(localStorage.getItem('quiz_'+r), null);return s?[{...s,role:r,icon:icons[r]}]:[]});
   all.sort((a,b)=>b.pct-a.pct);
   dashLb.innerHTML=all.length?all.slice(0,5).map((s,i)=>`
     <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.1)">
       <span style="font-size:14px">${['🥇','🥈','🥉','4️⃣','5️⃣'][i]}</span>
-      <span style="font-size:12px;color:#e2e8f0;flex:1">${escapeHTML(s.ism||(isRu?'Неизвестно':'Noma\x27lum'))} ${s.icon}</span>
+      <span style="font-size:12px;color:#e2e8f0;flex:1">${escapeHTML(s.ism||(isRu?'Неизвестно':'Noma’lum'))} ${s.icon}</span>
       <span style="font-size:12px;font-weight:800;color:${s.pct>=75?'#86efac':'#fbbf24'}">${s.pct}%</span>
-    </div>`).join(''):`<p style="font-size:12px;color:#8faac8;text-align:center">${isRu?'Результатов пока нет':'Natijalar yo\x27q'}</p>`;
+    </div>`).join(''):`<p style="font-size:12px;color:#8faac8;text-align:center">${isRu?'Результатов пока нет':'Natijalar yöq'}</p>`;
 }
 setTimeout(updateDashboard, 500);
 
@@ -916,11 +917,11 @@ renderScenarios();
 
 async function sendRemind(type){
   const tgid=document.getElementById('rem-tgid').value.trim();
-  const ism=_cleanName(document.getElementById('rem-ism').value, 60)||'Sportchi';
+  const ism=_cleanName(document.getElementById('rem-ism').value, 60)||'Sportçi';
   const res=document.getElementById('remind-result');
   if(!tgid||!/^\d{5,12}$/.test(tgid)){
     res.style.display='block';
-    res.innerHTML=`<div style="padding:12px;background:#fee2e2;border-radius:10px;font-size:13px;color:#991b1b">❌ Telegram ID to'g'ri kiriting (faqat raqamlar, 5-12 ta)</div>`;
+    res.innerHTML=`<div style="padding:12px;background:#fee2e2;border-radius:10px;font-size:13px;color:#991b1b">❌ Telegram ID töğri kiriting (faqat raqamlar, 5-12 ta)</div>`;
     return;
   }
   const msg=remindMessages[type];
@@ -932,7 +933,7 @@ async function sendRemind(type){
     res.innerHTML=`<div style="padding:12px;background:#dcfce7;border-radius:10px;font-size:13px;color:#15803d;font-weight:700">${msg.emoji} Eslatma muvaffaqiyatli yuborildi!</div>`;
     await tgSend(ADMIN_ID,`🔔 <b>Eslatma yuborildi</b>\n👤 ${escapeHTML(ism)}\n📱 ID: ${tgid}\n📂 Tur: ${msg.title}`);
   }else{
-    res.innerHTML=`<div style="padding:12px;background:#fee2e2;border-radius:10px;font-size:13px;color:#991b1b">❌ Yuborishda xato. Avval @uzdopingcom_bot ga /start yuboring!</div>`;
+    res.innerHTML=`<div style="padding:12px;background:#fee2e2;border-radius:10px;font-size:13px;color:#991b1b">❌ Yuborişda xato. Avval @uzdopingcom_bot ga /start yuboring!</div>`;
   }
 }
 
@@ -1061,8 +1062,8 @@ if(window.CUR_LANG==='ru') setLang('ru');
 window.exportResultsCSV = function(){
   var data = safeJSONParse(localStorage.getItem('antidoping_results'), {});
   var roles = Object.keys(data);
-  if(!roles.length){ alert("Hozircha natija yo'q — avval test topshiring."); return; }
-  var names = {rahbar:'Rahbar',murabbiy:'Murabbiy',metodist:'Metodist',sportchi:'Sportchi'};
+  if(!roles.length){ alert("Hozirça natija yöq — avval test topşiring."); return; }
+  var names = {rahbar:'Rahbar',murabbiy:'Murabbiy',metodist:'Metodist',sportchi:'Sportçi'};
   var rows = [['Rol','Ism','Ball','Jami','Foiz','Sana']];
   roles.forEach(function(r){
     var d = data[r]||{};
@@ -1076,7 +1077,7 @@ window.exportResultsCSV = function(){
       return '"'+s.replace(/"/g,'""')+'"';
     }).join(';');
   }).join('\r\n');
-  var url = URL.createObjectURL(new Blob([csv], {type:'text/csv;charset=utf-8'}));
+  var url = URL.createObjectURL(new Blob([csv], {type:'text/csv;çarset=utf-8'}));
   var a = document.createElement('a');
   a.href = url;
   a.download = 'antidoping_natijalar.csv';
@@ -1086,7 +1087,7 @@ window.exportResultsCSV = function(){
 
 window.clearMyResults = function(){
   var isRu = window.CUR_LANG === 'ru';
-  var msg = isRu ? 'Удалить все сохранённые результаты тестов с этого устройства?' : "Qurilmada saqlangan barcha test natijalarini o'chirishni tasdiqlaysizmi?";
+  var msg = isRu ? 'Удалить все сохранённые результаты тестов с этого устройства?' : "Qurilmada saqlangan barça test natijalarini öçirişni tasdiqlaysizmi?";
   if(!confirm(msg)) return;
   try{
     localStorage.removeItem('antidoping_results');
@@ -1216,7 +1217,7 @@ if(grid) grid.classList.add('flip-wrap');
 var chipWrap = band.querySelector('div[style*="flex-wrap"]');
 var chips = chipWrap ? Array.prototype.slice.call(chipWrap.children) : [];
 chips.forEach(function(c, i){
-  c.classList.add('popchip');
+  c.classList.add('popçip');
   c.style.transitionDelay = (700 + i * 65) + 'ms';
 });
 
@@ -1473,7 +1474,7 @@ function buildOverlay(){
   inner.style.cssText = 'max-width:1150px;margin:0 auto;position:relative;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45)';
   var x = document.createElement('button');
   x.textContent = '✕';
-  x.title = 'Yopish';
+  x.title = 'Yopiş';
   x.style.cssText = 'position:absolute;top:14px;right:14px;z-index:5;width:38px;height:38px;border-radius:50%;border:none;background:rgba(10,31,61,.85);color:#fff;font-size:16px;font-weight:800;cursor:pointer';
   x.onclick = closeTozaModal;
   inner.appendChild(x);
@@ -1534,7 +1535,7 @@ function buildOverlay(){
   inner.style.cssText = 'max-width:1150px;margin:0 auto;position:relative;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);background:linear-gradient(160deg,#f0f6ff,#eafaf6)';
   var x = document.createElement('button');
   x.textContent = '✕';
-  x.title = 'Yopish';
+  x.title = 'Yopiş';
   x.style.cssText = 'position:absolute;top:14px;right:14px;z-index:5;width:38px;height:38px;border-radius:50%;border:none;background:rgba(10,31,61,.85);color:#fff;font-size:16px;font-weight:800;cursor:pointer';
   x.onclick = closeDashModal;
   inner.appendChild(x);
@@ -1605,14 +1606,14 @@ function orb(sz,cls){
 }
 
 var T={
-  cta1:{uz:'🚀 Darsni hoziroq boshlash',ru:'🚀 Начать урок сейчас'},
-  cta2:{uz:'🔍 AI bilan dori tekshirish',ru:'🔍 Проверить препарат с ИИ'},
+  cta1:{uz:'🚀 Darsni hoziroq boşlaş',ru:'🚀 Начать урок сейчас'},
+  cta2:{uz:'🔍 AI bilan dori tekşiriş',ru:'🔍 Проверить препарат с ИИ'},
   c1:{uz:'📚 64 mavzu',ru:'📚 64 тем'},c2:{uz:'📝 80 test savol',ru:'📝 80 тестов'},
-  c3:{uz:'🏅 O‘zlashtirildi (75%+)',ru:'🏅 Освоено (75%+)'},c4:{uz:'🌐 UZ · RU',ru:'🌐 UZ · RU'},
-  fab:{uz:'Dorini AI bilan tekshir',ru:'Проверить препарат с ИИ'},
-  dwHead:{uz:'📊 Mening progressim',ru:'📊 Мой прогресс'},dwMod:{uz:'Modullar',ru:'Модули'},dwCert:{uz:'O‘zlashtirildi',ru:'Освоено'},
-  dwHint:{uz:'Hali test topshirilmagan. Birinchi darsni boshlang va natijangizni bu yerda kuzating!',ru:'Тестов пока нет. Начните первый урок и следите за результатом здесь!'},
-  dwBtn:{uz:'Darsni boshlash →',ru:'Начать урок →'},dwFull:{uz:'To\'liq dashboard →',ru:'Полный дашборд →'},
+  c3:{uz:'🏅 Özlaştirildi (75%+)',ru:'🏅 Освоено (75%+)'},c4:{uz:'🌐 UZ · RU',ru:'🌐 UZ · RU'},
+  fab:{uz:'Dorini AI bilan tekşir',ru:'Проверить препарат с ИИ'},
+  dwHead:{uz:'📊 Mening progressim',ru:'📊 Мой прогресс'},dwMod:{uz:'Modullar',ru:'Модули'},dwCert:{uz:'Özlaştirildi',ru:'Освоено'},
+  dwHint:{uz:'Hali test topşirilmagan. Birinçi darsni boşlang va natijangizni bu yerda kuzating!',ru:'Тестов пока нет. Начните первый урок и следите за результатом здесь!'},
+  dwBtn:{uz:'Darsni boşlaş →',ru:'Начать урок →'},dwFull:{uz:'Töliq dashboard →',ru:'Полный дашборд →'},
 };
 function t(k){return T[k][lang()];}
 function tx(k){return 'data-t="'+k+'"';}
@@ -1678,7 +1679,7 @@ function build(){
 
 /* Navdagi AI havolasini orb bilan bezash */
 function decorateNav(){
-  var a=$('header nav a[onclick*="checker-sec"]');
+  var a=$('header nav a[onclick*="çecker-sec"]');
   if(!a)return;
   if(!$('.nx-orb',a)){
     a.innerHTML='<span class="nx-emo">🤖 </span>'+orb(20,'sm')+'<span class="nx-nav-lbl" data-uz="AI Dori" data-ru="ИИ Лекарства">AI Dori</span>';
@@ -1800,25 +1801,25 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
 (function(){
   'use strict';
   const lessons = [
-    {"id":1,"file":"antidoping_audio_01.mp3","duration":178.207347},
-    {"id":2,"file":"antidoping_audio_02.mp3","duration":209.998367},
-    {"id":3,"file":"antidoping_audio_03.mp3","duration":191.947755},
-    {"id":4,"file":"antidoping_audio_04.mp3","duration":184.555102},
-    {"id":5,"file":"antidoping_audio_05.mp3","duration":154.618776},
-    {"id":6,"file":"antidoping_audio_06.mp3","duration":142.28898},
-    {"id":7,"file":"antidoping_audio_07.mp3","duration":166.426122},
-    {"id":8,"file":"antidoping_audio_08.mp3","duration":222.61551},
-    {"id":9,"file":"antidoping_audio_09.mp3","duration":168.907755},
-    {"id":10,"file":"antidoping_audio_10.mp3","duration":129.227755},
-    {"id":11,"file":"antidoping_audio_11.mp3","duration":163.395918},
-    {"id":12,"file":"antidoping_audio_12.mp3","duration":181.890612},
-    {"id":13,"file":"antidoping_audio_13.mp3","duration":224.626939}
+    {"id":1,"file":"antidoping_audio_01.mp3","duration":178.207347,"title_uz":"Antidoping tizimi va biotexnologiya xavflari","title_ru":"Антидопинговая система и биотехнологические риски","sub_uz":"Doping nazorati va biologik pasport tizimi","sub_ru":"Допинг-контроль и система биологического паспорта"},
+    {"id":2,"file":"antidoping_audio_02.mp3","duration":209.998367,"title_uz":"Toza sport madaniyati va sanksiyalar tizimi","title_ru":"Культура чистого спорта и система санкций","sub_uz":"Antidoping nazorati sportçilarning soğliğini himoya qiladi","sub_ru":"Антидопинговый контроль защищает здоровье спортсменов"},
+    {"id":3,"file":"antidoping_audio_03.mp3","duration":191.947755,"title_uz":"WADA tizimi, test nazorati va Biologik pasport","title_ru":"Система WADA, тестирование и Биологический паспорт","sub_uz":"Musobaqadan taşqari testlar va WADA platformasi","sub_ru":"Внесоревновательное тестирование и платформа WADA"},
+    {"id":4,"file":"antidoping_audio_04.mp3","duration":184.555102,"title_uz":"Terapevtik istisnolar (TUE) va sportçi salomatligi","title_ru":"Терапевтические исключения (ТИ) и здоровье спортсмена","sub_uz":"Terapevtik istisnolar sportda halollikni va soğliqni ta’minlaydi","sub_ru":"Терапевтические исключения обеспечивают честность и здоровье"},
+    {"id":5,"file":"antidoping_audio_05.mp3","duration":154.618776,"title_uz":"Biologik faol qöşimçalar (BAD) va kontaminatsiya","title_ru":"Биологически активные добавки и контаминация","sub_uz":"Sanoat kontaminatsiyasi va soxta yorliqlar xavfi","sub_ru":"Риск промышленной контаминации и скрытых ингредиентов"},
+    {"id":6,"file":"antidoping_audio_06.mp3","duration":142.28898,"title_uz":"Psixologik bosim, xato qaror va diskvalifikatsiya","title_ru":"Психологическое давление, ошибки и дисквалификация","sub_uz":"Professional sportda psixologik bosim va antidoping qoidalari","sub_ru":"Психологическое давление в спорте и антидопинговые правила"},
+    {"id":7,"file":"antidoping_audio_07.mp3","duration":166.426122,"title_uz":"Yakka kuraşlarda vazn taşlaş va diuretiklar","title_ru":"Сгонка веса в единоборствах и риск диуретиков","sub_uz":"Vazn ölçaş, suvsizlantiriş va diuretiklar xavfi","sub_ru":"Взвешивание, обезвоживание и опасность диуретиков"},
+    {"id":8,"file":"antidoping_audio_08.mp3","duration":222.61551,"title_uz":"Şamollaş dorilari: psevdoefedrin va stimulyatorlar","title_ru":"Препараты от простуды: псевдоэфедрин и стимуляторы","sub_uz":"Psevdoefedrin sportçining doping xavfini oşiradi","sub_ru":"Псевдоэфедрин повышает риск допингового нарушения"},
+    {"id":9,"file":"antidoping_audio_09.mp3","duration":168.907755,"title_uz":"Taqiqlangan hamkorlik (Kodeks 2.10) va jamoa mas’uliyati","title_ru":"Запрещённое сотрудничество (Кодекс 2.10) и роль окружения","sub_uz":"Antidoping kodeksi sportçilarning hamkorligini qat’iy nazorat qiladi","sub_ru":"Кодекс строго контролирует сотрудничество в команде"},
+    {"id":10,"file":"antidoping_audio_10.mp3","duration":129.227755,"title_uz":"Niqoblovçi vositalar: WADA S5 diuretiklar sinfi","title_ru":"Маскирующие агенты: класс диуретиков WADA S5","sub_uz":"Diuretik preparatlarning mexanizmi va S5 taqiqlari","sub_ru":"Механизм действия диуретиков и запреты класса S5"},
+    {"id":11,"file":"antidoping_audio_11.mp3","duration":163.395918,"title_uz":"Qasdli dopingning yuridik tabiati va javobgarlik","title_ru":"Умышленный допинг и неотвратимость ответственности","sub_uz":"Qasdli doping holatlari va sanksiyalarni tahlil qiliş","sub_ru":"Юридическая природа умышленного допинга и санкции"},
+    {"id":12,"file":"antidoping_audio_12.mp3","duration":181.890612,"title_uz":"Gripp kukunlari va farmakologik savodxonlik","title_ru":"Порошки от гриппа и фармакологическая грамотность","sub_uz":"Psevdoefedrin va efedrin sportçilarga qanday xavf tuğdiradi","sub_ru":"Какую угрозу несут псевдоэфедрин и эфедрин спортсмену"},
+    {"id":13,"file":"antidoping_audio_13.mp3","duration":224.626939,"title_uz":"Sport ozuqalari, BADlar va yaşirin moddalar","title_ru":"Спортивное питание, БАДы и скрытые субстанции","sub_uz":"Biologik faol moddalar va sport ozuqalari nazorati","sub_ru":"Контроль спортивного питания и скрытых добавок"}
   ];
   const audio = document.getElementById('antidopingAudio');
   const list  = document.getElementById('audioLessonList');
   if (!audio || !list) return;
   const $ = id => document.getElementById(id);
-  let current = 0, loadedSrc = '', termsFont = 12;
+  let current = 0, loadedSrc = '', scriptFont = 14.5, transcriptsLoaded = false, transcriptsPromise = null;
   try {
     const savedRate = parseFloat(localStorage.getItem('audio_rate') || '1');
     if (savedRate >= 0.75 && savedRate <= 2 && $('audioRate')) {
@@ -1828,40 +1829,69 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
   } catch(e){}
 
   const fmt = s => {
+    if (typeof s === 'string' && /^\d+:\d+$/.test(s)) return s;
     if (!Number.isFinite(s)) return '00:00';
     s = Math.max(0, Math.floor(s));
     return String(Math.floor(s/60)).padStart(2,'0') + ':' + String(s%60).padStart(2,'0');
   };
   const isRu = () => window.CUR_LANG === 'ru';
-  const trackTitle = x => (isRu() ? 'Аудиоурок ' : 'Audio dars ') + String(x.id).padStart(2,'0');
-  const TERMS = {
-    uz: [
-      'WADA — Jahon antidoping agentligi',
-      'ADRV — antidoping qoidabuzarligi',
-      'TUE — terapevtik foydalanish ruxsati',
-      'Doping-nazorat — namuna olish jarayoni',
-      'AAF — salbiy tahliliy natija',
-      'Whereabouts — sportchining joylashuv ma’lumoti',
-      'Prohibited List — taqiqlangan ro‘yxat',
-      'Strict Liability — qat’iy javobgarlik tamoyili'
-    ],
-    ru: [
-      'WADA — Всемирное антидопинговое агентство',
-      'ADRV — нарушение антидопинговых правил',
-      'ТИ (TUE) — терапевтическое использование',
-      'Допинг-контроль — процедура отбора проб',
-      'AAF — неблагоприятный результат анализа',
-      'Whereabouts — информация о местонахождении',
-      'Prohibited List — Запрещённый список WADA',
-      'Strict Liability — принцип строгой ответственности'
-    ]
-  };
+  const trackTitle = x => isRu() ? x.title_ru : x.title_uz;
+  const trackSub = x => isRu() ? x.sub_ru : x.sub_uz;
+
+  function ensureTranscripts() {
+    if (transcriptsLoaded) return Promise.resolve();
+    if (transcriptsPromise) return transcriptsPromise;
+    transcriptsPromise = fetch('audio/transcripts.json?v=20261112_v14')
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (data && Array.isArray(data.lessons)) {
+          data.lessons.forEach(item => {
+            const idx = lessons.findIndex(x => x.id === Number(item.id));
+            if (idx >= 0) {
+              lessons[idx].title_uz = item.title_uz || lessons[idx].title_uz;
+              lessons[idx].title_ru = item.title_ru || lessons[idx].title_ru;
+              lessons[idx].sub_uz = item.sub_uz || lessons[idx].sub_uz;
+              lessons[idx].sub_ru = item.sub_ru || lessons[idx].sub_ru;
+              lessons[idx].text_uz = item.text_uz || '';
+              lessons[idx].text_ru = item.text_ru || '';
+              lessons[idx].docx = item.docx || lessons[idx].docx;
+            }
+          });
+          transcriptsLoaded = true;
+          renderList();
+          updateLabels();
+        }
+      })
+      .catch(() => {});
+    return transcriptsPromise;
+  }
 
   function showErr(msg){
     const err = $('audioError');
     if (!err) return;
     err.textContent = msg || '';
     err.style.display = msg ? 'block' : 'none';
+  }
+  function renderScript() {
+    const box = $('audioScriptText');
+    if (!box) return;
+    const x = lessons[current];
+    const ru = isRu();
+    const rawText = ru ? (x.text_ru || '') : (x.text_uz || '');
+    box.innerHTML = '';
+    if (!rawText) {
+      const p = document.createElement('p');
+      p.textContent = ru ? 'Загрузка полного текста аудиоурока...' : 'Audio darsning töliq matni yuklanmoqda...';
+      box.appendChild(p);
+      ensureTranscripts();
+      return;
+    }
+    rawText.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean).forEach(par => {
+      const p = document.createElement('p');
+      p.textContent = par;
+      box.appendChild(p);
+    });
+    box.scrollTop = 0;
   }
   function renderList() {
     list.innerHTML = '';
@@ -1871,7 +1901,7 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
       b.className = 'audio-item' + (i === current ? ' active' : '');
       b.setAttribute('aria-current', i === current ? 'true' : 'false');
       b.innerHTML = '<span class="num">' + String(i+1).padStart(2,'0') + '</span><span class="info"><strong>' +
-        trackTitle(x) + '</strong><small>' + fmt(x.duration) + ' · ' + (isRu() ? 'Аудиозанятие' : 'Audio mashg‘ulot') +
+        escapeHTML(trackTitle(x)) + '</strong><small>' + fmt(x.duration) + ' · ' + (isRu() ? 'Аудиоурок' : 'Audio dars') +
         '</small></span><span aria-hidden="true">▶</span>';
       b.addEventListener('click', () => load(i, true));
       list.appendChild(b);
@@ -1884,31 +1914,31 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
     });
   }
   function updateLabels() {
-    const ru = isRu();
-    $('audioNowTitle').textContent = trackTitle(lessons[current]);
-    $('audioNowSub').textContent = ru ? 'Аудиозанятие по антидопингу' : 'Antidoping bo‘yicha audio mashg‘ulot';
-    if (audio.paused) $('audioPlay').textContent = ru ? '▶ Слушать' : '▶ Tinglash';
+    const ru = isRu(), x = lessons[current];
+    $('audioNowTitle').textContent = String(x.id).padStart(2,'0') + '. ' + trackTitle(x);
+    $('audioNowSub').textContent = trackSub(x);
+    if (audio.paused) $('audioPlay').textContent = ru ? '▶ Слушать' : '▶ Tinglaş';
     else $('audioPlay').textContent = ru ? 'Ⅱ Пауза' : 'Ⅱ Pauza';
     $('audioStop').textContent = ru ? '■ Стоп' : '■ Stop';
-    const panel = $('audioTermsPanel');
-    $('audioTextToggle').textContent = panel.hidden
-      ? (ru ? '＋ Показать ключевые термины' : '＋ Mavzuga oid atamalarni ko‘rsatish')
-      : (ru ? '− Скрыть термины' : '− Atamalarni yashirish');
-    if ($('audioTermsTitle')) $('audioTermsTitle').textContent = ru ? 'Основные антидопинговые термины' : 'Antidoping bo‘yicha asosiy atamalar';
-    const tc = $('audioTermsList');
-    if (tc) {
-      tc.innerHTML = TERMS[ru ? 'ru' : 'uz'].map(t => '<span class="audio-term">' + escapeHTML(t) + '</span>').join('');
+    if ($('audioScriptTitle')) $('audioScriptTitle').textContent = ru ? 'Полный текст урока (для чтения)' : 'Darsning töliq matni (öqiş uçun)';
+    const dlOne = $('audioDlOne');
+    if (dlOne) {
+      const fileNum = String(x.id).padStart(2, '0');
+      dlOne.href = x.docx || ('audio/words/audio_dars_' + fileNum + '.docx');
+      dlOne.textContent = ru ? ('📄 Скачать урок ' + fileNum + ' (Word)') : ('📄 ' + fileNum + '-darsni yuklaş (Word)');
+    }
+    const dlAll = $('audioDlAll');
+    if (dlAll) {
+      dlAll.textContent = ru ? '📚 Все 13 уроков (Word)' : '📚 Barça 13 dars (Word)';
     }
     const sel = $('audioRate');
     if (sel && sel.options[1]) sel.options[1].textContent = ru ? '1x — обычный' : '1x — odatiy';
+    renderScript();
   }
-  function applyTermsFont(sz) {
-    termsFont = Math.max(11, Math.min(20, sz));
-    const panel = $('audioTermsPanel');
-    if (!panel) return;
-    panel.querySelectorAll('.audio-term').forEach(el => { el.style.fontSize = termsFont + 'px'; });
-    const note = $('audioTermsNote');
-    if (note) note.style.fontSize = Math.max(11, termsFont - 1) + 'px';
+  function applyScriptFont(sz) {
+    scriptFont = Math.max(12, Math.min(22, sz));
+    const box = $('audioScriptText');
+    if (box) box.style.fontSize = scriptFont + 'px';
   }
   function load(i, autoplay) {
     current = (i + lessons.length) % lessons.length;
@@ -1931,6 +1961,7 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
 
   $('audioPlay').addEventListener('click', () => {
     showErr('');
+    ensureTranscripts();
     if (audio.paused) {
       const targetSrc = 'audio/' + lessons[current].file;
       if (loadedSrc !== targetSrc) { audio.src = targetSrc; loadedSrc = targetSrc; }
@@ -1951,7 +1982,7 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
   audio.addEventListener('play', updateLabels);
   audio.addEventListener('pause', updateLabels);
   audio.addEventListener('error', () => {
-    showErr(isRu() ? '⚠️ Не удалось загрузить аудиофайл. Проверьте подключение и попробуйте снова.' : '⚠️ Audio faylni yuklashda xatolik. Internetni tekshirib qayta urinib ko‘ring.');
+    showErr(isRu() ? '⚠️ Не удалось загрузить аудиофайл. Проверьте подключение и попробуйте снова.' : '⚠️ Audio faylni yuklaşda xatolik. Internetni tekşirib qayta urinib köring.');
     updateLabels();
   });
   audio.addEventListener('timeupdate', () => {
@@ -1963,21 +1994,17 @@ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',init);else ini
   audio.addEventListener('loadedmetadata', () => { if (audio.duration) $('audioDuration').textContent = fmt(audio.duration); });
   audio.addEventListener('ended', () => {
     if (current < lessons.length - 1) load(current + 1, true);
-    else $('audioPlay').textContent = isRu() ? '▶ Слушать снова' : '▶ Qayta tinglash';
+    else $('audioPlay').textContent = isRu() ? '▶ Слушать снова' : '▶ Qayta tinglaş';
   });
   $('audioSeek').addEventListener('input', e => { if (audio.duration) audio.currentTime = Number(e.target.value) / 1000 * audio.duration; });
-  $('audioTextToggle').addEventListener('click', () => {
-    const panel = $('audioTermsPanel'), show = panel.hidden;
-    panel.hidden = !show;
-    updateLabels();
-    applyTermsFont(termsFont);
-    $('audioTextToggle').setAttribute('aria-expanded', String(show));
-  });
-  if ($('audioTermsDown')) $('audioTermsDown').addEventListener('click', () => applyTermsFont(termsFont - 1));
-  if ($('audioTermsUp')) $('audioTermsUp').addEventListener('click', () => applyTermsFont(termsFont + 1));
+  if ($('audioScriptDown')) $('audioScriptDown').addEventListener('click', () => applyScriptFont(scriptFont - 1));
+  if ($('audioScriptUp')) $('audioScriptUp').addEventListener('click', () => applyScriptFont(scriptFont + 1));
 
-  window.refreshAudioLang = function(){ renderList(); updateLabels(); applyTermsFont(termsFont); };
+  window.refreshAudioLang = function(){ renderList(); updateLabels(); applyScriptFont(scriptFont); };
+  window.loadAudioTranscripts = ensureTranscripts;
   renderList();
   $('audioDuration').textContent = fmt(lessons[0].duration);
   updateLabels();
+  applyScriptFont(scriptFont);
+  ensureTranscripts();
 })();

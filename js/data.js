@@ -1,196 +1,196 @@
 // Doping.uz — Antidoping Ta'lim Portali Data & i18n Dictionaries
 
 const wadaData=[
-{cat:"S1",name:"Testosteron va anabolik steroidlar",ex:"Testosteron, Nandrolon, Stanozolol, Metandienon, Boldenon, Trenbolon, Oksandrolon, Turinabol",eff:"Oqsil sintezi oshirish, mushak o'sishi, kuch va bardoshlilik",risk:"Oliy"},
-{cat:"S1",name:"SARM (Selektiv androgen reseptor modulyatori)",ex:"Ostarine (MK-2866), Ligandrol (LGD-4033), Andarine (S-4), Cardarine (GW501516)",eff:"Anabolik — BAD tarkibida yashirin holda topiladi",risk:"Oliy"},
-{cat:"S1",name:"Klenbuterol",ex:"Klenbuterol HCl — go'sht orqali kirishi mumkin!",eff:"Anabolik + yog' yoqish. Mahalliy sertifikatsiz go'sht xavfi katta",risk:"Oliy"},
-{cat:"S2",name:"Eritropoetin (EPO) va qon gormonlari",ex:"EPO, Darbepoetin alfa, CERA, Hematid",eff:"Qon kislorod tashish qobiliyatini oshirish — chidamlilik uchun",risk:"Oliy"},
-{cat:"S2",name:"O'sish gormoni va insulinsimon omillar",ex:"Somatropin (hGH), IGF-1, MGF, Mecasermin",eff:"Mushak o'sishi, tiklanish tezlashtirish, yog' kuyish",risk:"Oliy"},
-{cat:"S2",name:"Insulin va insulin mimetics",ex:"Insulin (barcha turlari) — faqat diabetiklarda TUE bilan",eff:"Oqsil sintezi oshirish, glikogen to'ldirish — xavfli",risk:"Oliy"},
-{cat:"S3",name:"Beta-2 agonistlar (yuqori doza)",ex:"Salbutamol (>1600 mkg/kun), Salmeterol (>200 mkg/kun), Formoterol (>54 mkg/kun)",eff:"Bronxlarni kengaytiradi — inhaler TUE bilan ruxsat etilishi mumkin",risk:"O'rta"},
-{cat:"S4",name:"Gormon antagonistlari va modulyatorlar",ex:"Tamoksifen, Klomifen, Anastrozol, Letrozol, Fulvestrant",eff:"Estrogen kamaytiradi — testosteron effektini oshirish uchun ishlatiladi (maskirovka)",risk:"Oliy"},
-{cat:"S5",name:"Diuretiklar va maskirovka vositalari",ex:"Furosemid, Gidroxlorotiazid, Spironolakton, Triamteren, Probenetsid, Epitestosteron",eff:"Siydik miqdorini oshirish — taqiqlangan moddalarni suyultirish uchun ishlatiladi",risk:"Oliy"},
-{cat:"S6",name:"Amfetamin va derivatlari",ex:"Amfetamin, Dekstroamfetamin, Metilfenidat, DMAA, Dimetilbutilamin",eff:"CNS stimulyatsiya, charchoqni kamaytirish, agressivlik oshirish",risk:"Oliy"},
-{cat:"S6",name:"Efedrin va psevdoefedrin",ex:"Efedrin (>10 mkg/ml), Psevdoefedrin (>150 mkg/ml) — sovuq va gripp dorilarda!",eff:"Stimulyator. Sovuqqa qarshi dorilarda yashirin holda bo'ladi — EHTIYOT",risk:"Oliy"},
-{cat:"Monitoring",name:"Kofein (monitoring dasturi)",ex:"Kofe, choy, kakao — WADA Monitoring dasturida kuzatiladi (taqiqlanmagan, siydik chegarasi 2004-yilda bekor qilingan)",eff:"CNS stimulyatsiya — me'yorida ruxsat etilgan; energetik ichimliklarda yashirin moddalar xavfi bor",risk:"Past"},
-{cat:"S7",name:"Narkotik analgetiklar",ex:"Morfin, Metadon, Oksikodon, Hidromorfon, Buprenorfin, Kodein (yuqori dozada)",eff:"Og'riqni bartaraf etish, ruhiy holat o'zgartirish",risk:"Oliy"},
-{cat:"S8",name:"Kannabinoidlar",ex:"THC, Marixuana (Cannabis), Gashish, Sintetik kannabinoidlar — CBD ruxsat etilgan (THCsiz)",eff:"Psixoaktiv, og'riq qoldirish — siydikda 150 ng/ml dan yuqori taqiqlangan",risk:"Oliy"},
-{cat:"S9",name:"Glyukokortikoidlar (sistemli)",ex:"Deksametazon (oral/IV/IM), Prednizolon (oral), Metilprednizolon (IV) — intra-artikulyar ruxsat!",eff:"Yallig'lanishni bartaraf etish — sistemli yo'l taqiqlangan, lokal ruxsat",risk:"O'rta"},
-{cat:"M1",name:"Qon va oksigen manipulyatsiyasi",ex:"Avtogemotransfuziya (o'z qoni), allogenik qon quyish, sun'iy O2 tashuvchilar (HBOC)",eff:"Qon kislorod sig'imini sun'iy oshirish — EPO muqobili",risk:"Oliy"},
-{cat:"M2",name:"Kimyoviy va fizikaviy manipulyatsiya",ex:"Modda qo'shish, namuna almashtirish, kateter, diuretik yordamida suyultirish, donorlik",eff:"Test natijasini soxtalashtirish",risk:"Oliy"},
-{cat:"M3",name:"Gen va hujayralar dopingi",ex:"EPO geni, IGF-1 geni, miostatin blokeri, CRISPR asosida manipulyatsiya",eff:"Genetik darajada qobiliyatni o'zgartirish — hali to'liq aniqlanmaydi",risk:"Oliy"}
+{cat:"S1",name:"Testosteron va anabolik steroidlar",ex:"Testosteron, Nandrolon, Stanozolol, Metandienon, Boldenon, Trenbolon, Oksandrolon, Turinabol",eff:"Oqsil sintezi oşiriş, muşak ösişi, kuç va bardoşlilik",risk:"Oliy"},
+{cat:"S1",name:"SARM (Selektiv androgen reseptor modulyatori)",ex:"Ostarine (MK-2866), Ligandrol (LGD-4033), Andarine (S-4), Cardarine (GW501516)",eff:"Anabolik — BAD tarkibida yaşirin holda topiladi",risk:"Oliy"},
+{cat:"S1",name:"Klenbuterol",ex:"Klenbuterol HCl — göşt orqali kirişi mumkin!",eff:"Anabolik + yoğ yoqiş. Mahalliy sertifikatsiz göşt xavfi katta",risk:"Oliy"},
+{cat:"S2",name:"Eritropoetin (EPO) va qon gormonlari",ex:"EPO, Darbepoetin alfa, CERA, Hematid",eff:"Qon kislorod taşiş qobiliyatini oşiriş — çidamlilik uçun",risk:"Oliy"},
+{cat:"S2",name:"Ösiş gormoni va insulinsimon omillar",ex:"Somatropin (hGH), IGF-1, MGF, Mecasermin",eff:"Muşak ösişi, tiklaniş tezlaştiriş, yoğ kuyiş",risk:"Oliy"},
+{cat:"S2",name:"Insulin va insulin mimetics",ex:"Insulin (barça turlari) — faqat diabetiklarda TUE bilan",eff:"Oqsil sintezi oşiriş, glikogen töldiriş — xavfli",risk:"Oliy"},
+{cat:"S3",name:"Beta-2 agonistlar (yuqori doza)",ex:"Salbutamol (>1600 mkg/kun), Salmeterol (>200 mkg/kun), Formoterol (>54 mkg/kun)",eff:"Bronxlarni kengaytiradi — inhaler TUE bilan ruxsat etilişi mumkin",risk:"Örta"},
+{cat:"S4",name:"Gormon antagonistlari va modulyatorlar",ex:"Tamoksifen, Klomifen, Anastrozol, Letrozol, Fulvestrant",eff:"Estrogen kamaytiradi — testosteron effektini oşiriş uçun işlatiladi (maskirovka)",risk:"Oliy"},
+{cat:"S5",name:"Diuretiklar va maskirovka vositalari",ex:"Furosemid, Gidroxlorotiazid, Spironolakton, Triamteren, Probenetsid, Epitestosteron",eff:"Siydik miqdorini oşiriş — taqiqlangan moddalarni suyultiriş uçun işlatiladi",risk:"Oliy"},
+{cat:"S6",name:"Amfetamin va derivatlari",ex:"Amfetamin, Dekstroamfetamin, Metilfenidat, DMAA, Dimetilbutilamin",eff:"CNS stimulyatsiya, çarçoqni kamaytiriş, agressivlik oşiriş",risk:"Oliy"},
+{cat:"S6",name:"Efedrin va psevdoefedrin",ex:"Efedrin (>10 mkg/ml), Psevdoefedrin (>150 mkg/ml) — sovuq va gripp dorilarda!",eff:"Stimulyator. Sovuqqa qarşi dorilarda yaşirin holda böladi — EHTIYOT",risk:"Oliy"},
+{cat:"Monitoring",name:"Kofein (monitoring dasturi)",ex:"Kofe, çoy, kakao — WADA Monitoring dasturida kuzatiladi (taqiqlanmagan, siydik çegarasi 2004-yilda bekor qilingan)",eff:"CNS stimulyatsiya — me’yorida ruxsat etilgan; energetik içimliklarda yaşirin moddalar xavfi bor",risk:"Past"},
+{cat:"S7",name:"Narkotik analgetiklar",ex:"Morfin, Metadon, Oksikodon, Hidromorfon, Buprenorfin, Kodein (yuqori dozada)",eff:"Oğriqni bartaraf etiş, ruhiy holat özgartiriş",risk:"Oliy"},
+{cat:"S8",name:"Kannabinoidlar",ex:"THC, Marixuana (Cannabis), Gashish, Sintetik kannabinoidlar — CBD ruxsat etilgan (THCsiz)",eff:"Psixoaktiv, oğriq qoldiriş — siydikda 150 ng/ml dan yuqori taqiqlangan",risk:"Oliy"},
+{cat:"S9",name:"Glyukokortikoidlar (sistemli)",ex:"Deksametazon (oral/IV/IM), Prednizolon (oral), Metilprednizolon (IV) — intra-artikulyar ruxsat!",eff:"Yalliğlanişni bartaraf etiş — sistemli yöl taqiqlangan, lokal ruxsat",risk:"Örta"},
+{cat:"M1",name:"Qon va oksigen manipulyatsiyasi",ex:"Avtogemotransfuziya (öz qoni), allogenik qon quyiş, sun’iy O2 taşuvçilar (HBOC)",eff:"Qon kislorod siğimini sun’iy oşiriş — EPO muqobili",risk:"Oliy"},
+{cat:"M2",name:"Kimyoviy va fizikaviy manipulyatsiya",ex:"Modda qöşiş, namuna almaştiriş, kateter, diuretik yordamida suyultiriş, donorlik",eff:"Test natijasini soxtalaştiriş",risk:"Oliy"},
+{cat:"M3",name:"Gen va hujayralar dopingi",ex:"EPO geni, IGF-1 geni, miostatin blokeri, CRISPR asosida manipulyatsiya",eff:"Genetik darajada qobiliyatni özgartiriş — hali töliq aniqlanmaydi",risk:"Oliy"}
 ];
 
 
 const drugDB = [
   // S1: Anaboliklar
-  {name:"Testosteron", alias:["testosterone","androgel","omnadren","sustanon","тестостерон","сустанон"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik steroid", tue:"Yo'q", risk:"Oliy (4 yil diskvalifikatsiya)", note:"Erkaklar jinsiy gormoni. Mushak massasi va kuchni sun'iy oshirish uchun qo'llaniladi. WADA tomonidan 100% taqiqlangan. TUE berilmaydi.", alt:"Tabiiy oqsil balansi, to'g'ri tiklanish va uyqu (22:00-06:00)."},
-  {name:"Nandrolon", alias:["nandrolone","deca","deca-durabolin","retabolil","ретаболил","нандролон"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik steroid", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Klassik anabolik steroid. Organizmda metabolitlari (19-norandrosteron) 18 oygacha aniqlanadi. Qat'iyan taqiqlangan.", alt:"Tabiiy Kreatin monogidrat (WADA ruxsat etgan)."},
-  {name:"Stanozolol", alias:["stanozolol","winstrol","stromba","stanazolol","станозолол","винстрол"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik steroid", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Kuchli anabolik modda. Jigarga o'ta toksik ta'sir qiladi, bo'g'imlarni quritadi va jarohat xavfini oshiradi. Taqiqlangan.", alt:"Oqsil izolyati, kollagen va xondroitin/glyukozamin."},
-  {name:"Metandienon", alias:["methandienone","dianabol","metan","метандростенолон","дианабол","метан"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik steroid", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Mashhur 'metan' tabletkalari. Jigar fermentlarini keskin oshiradi, jigar adenomasiga sabab bo'ladi. Mutlaq taqiqlangan.", alt:"Tabiiy aminokislotalar (EAA), sifatli ovqatlanish."},
-  {name:"Oksandrolon", alias:["oxandrolone","anavar","oxandrin","оксандролон","анавар"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik steroid", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Oral anabolik steroid. Gormonal fonni izdan chiqaradi, bepushtlikka sabab bo'ladi. Har doim taqiqlangan.", alt:"Zardob oqsili (Whey), vitamin-mineral komplekslar."},
-  {name:"Klenbuterol", alias:["clenbuterol","clen","klen","кленбутерол","клен"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik moddalar", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Anabolik va kuchli yog' yoqish ta'siriga ega. Yurak gipertrofiyasi va infarkt xavfini keskin oshiradi. Go'sht orqali tushishi mumkin (ehtiyot bo'ling!).", alt:"Kardio mashg'ulotlar, to'g'ri kaloriya defitsiti, L-karnitin."},
-  {name:"Ostarin (SARM)", alias:["ostarine","mk-2866","enobosarm","sarm","остарин","сарм"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 SARM moddalari", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Selektiv androgen reseptor modulyatori. BAD va sport qo'shimchalarida yashirin tarzda eng ko'p uchraydi. Sertifikatsiz BAD ichmang!", alt:"Informed-Sport yoki NSF sertifikatiga ega toza protein va kreatin."},
+  {name:"Testosteron", alias:["testosterone","androgel","omnadren","sustanon","тестостерон","сустанон"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik steroid", tue:"Yöq", risk:"Oliy (4 yil diskvalifikatsiya)", note:"Erkaklar jinsiy gormoni. Muşak massasi va kuçni sun’iy oşiriş uçun qöllaniladi. WADA tomonidan 100% taqiqlangan. TUE berilmaydi.", alt:"Tabiiy oqsil balansi, töğri tiklaniş va uyqu (22:00-06:00)."},
+  {name:"Nandrolon", alias:["nandrolone","deca","deca-durabolin","retabolil","ретаболил","нандролон"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik steroid", tue:"Yöq", risk:"Oliy (4 yil)", note:"Klassik anabolik steroid. Organizmda metabolitlari (19-norandrosteron) 18 oygaça aniqlanadi. Qat’iyan taqiqlangan.", alt:"Tabiiy Kreatin monogidrat (WADA ruxsat etgan)."},
+  {name:"Stanozolol", alias:["stanozolol","winstrol","stromba","stanazolol","станозолол","винстрол"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik steroid", tue:"Yöq", risk:"Oliy (4 yil)", note:"Kuçli anabolik modda. Jigarga öta toksik ta’sir qiladi, böğimlarni quritadi va jarohat xavfini oşiradi. Taqiqlangan.", alt:"Oqsil izolyati, kollagen va xondroitin/glyukozamin."},
+  {name:"Metandienon", alias:["methandienone","dianabol","metan","метандростенолон","дианабол","метан"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik steroid", tue:"Yöq", risk:"Oliy (4 yil)", note:"Maşhur 'metan' tabletkalari. Jigar fermentlarini keskin oşiradi, jigar adenomasiga sabab böladi. Mutlaq taqiqlangan.", alt:"Tabiiy aminokislotalar (EAA), sifatli ovqatlaniş."},
+  {name:"Oksandrolon", alias:["oxandrolone","anavar","oxandrin","оксандролон","анавар"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik steroid", tue:"Yöq", risk:"Oliy (4 yil)", note:"Oral anabolik steroid. Gormonal fonni izdan çiqaradi, bepuştlikka sabab böladi. Har doim taqiqlangan.", alt:"Zardob oqsili (Whey), vitamin-mineral komplekslar."},
+  {name:"Klenbuterol", alias:["clenbuterol","clen","klen","кленбутерол","клен"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 Anabolik moddalar", tue:"Yöq", risk:"Oliy (4 yil)", note:"Anabolik va kuçli yoğ yoqiş ta’siriga ega. Yurak gipertrofiyasi va infarkt xavfini keskin oşiradi. Göşt orqali tuşişi mumkin (ehtiyot böling!).", alt:"Kardio maşğulotlar, töğri kaloriya defitsiti, L-karnitin."},
+  {name:"Ostarin (SARM)", alias:["ostarine","mk-2866","enobosarm","sarm","остарин","сарм"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S1 SARM moddalari", tue:"Yöq", risk:"Oliy (4 yil)", note:"Selektiv androgen reseptor modulyatori. BAD va sport qöşimçalarida yaşirin tarzda eng köp uçraydi. Sertifikatsiz BAD içmang!", alt:"Informed-Sport yoki NSF sertifikatiga ega toza protein va kreatin."},
 // S2: Peptidlar va EPO
-  {name:"Eritropoetin (EPO)", alias:["epo","erythropoietin","eritropoetin","eprex","эпо","эритропоэтин"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S2 Peptid gormonlar", tue:"Yo'q", risk:"Oliy (4 yildan umrbod)", note:"Qon kislorod tashish hajmini oshiradi. Qonni o'ta quyuqlashtiradi, tromboz, insult va to'satdan o'limga olib keladi. Qat'iyan man etilgan.", alt:"Baland tog' mashg'ulotlari (gipoksiya effekti), B12 vitamini, Ferritin nazorati."},
-  {name:"Somatropin (hGH)", alias:["somatropin","hgh","growth hormone","jintropin","соматропин","гормон роста"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S2 O'sish omillari", tue:"Faqat og'ir gipofiz patologiyasida TUE", risk:"Oliy (4 yil)", note:"Inson o'sish gormoni. Akromegaliya, suyaklar deformatsiyasi, ichki a'zolar kattalashishi va diabet keltirib chiqaradi. Taqiqlangan.", alt:"Chuqur uyqu fazasi (somatotrop gormon tabiiy ajralishi), arginin va ornitin."},
-  {name:"Insulin", alias:["insulin","insulina","aktrapid","humalog","инсулин"], status:"TUE kerak (faqat diabetiklar)", cls:"dr-tue", cat:"S2 Peptidlar", tue:"HA — 1 yoki 2-tur diabet uchun TUE shart", risk:"Diabetiksiz sportchiga Oliy (4 yil)", note:"Diabeti bo'lmagan sportchi qabul qilishi — o'ta xavfli gipoglikemik koma va o'limga sabab bo'ladi. Sportda qat'iy taqiqlangan.", alt:"Uglevodlar va oqsillarning tabiiy glikemik balansi."},
+  {name:"Eritropoetin (EPO)", alias:["epo","erythropoietin","eritropoetin","eprex","эпо","эритропоэтин"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S2 Peptid gormonlar", tue:"Yöq", risk:"Oliy (4 yildan umrbod)", note:"Qon kislorod taşiş hajmini oşiradi. Qonni öta quyuqlaştiradi, tromboz, insult va tösatdan ölimga olib keladi. Qat’iyan man etilgan.", alt:"Baland toğ maşğulotlari (gipoksiya effekti), B12 vitamini, Ferritin nazorati."},
+  {name:"Somatropin (hGH)", alias:["somatropin","hgh","growth hormone","jintropin","соматропин","гормон роста"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S2 Ösiş omillari", tue:"Faqat oğir gipofiz patologiyasida TUE", risk:"Oliy (4 yil)", note:"Inson ösiş gormoni. Akromegaliya, suyaklar deformatsiyasi, içki a’zolar kattalaşişi va diabet keltirib çiqaradi. Taqiqlangan.", alt:"Çuqur uyqu fazasi (somatotrop gormon tabiiy ajralişi), arginin va ornitin."},
+  {name:"Insulin", alias:["insulin","insulina","aktrapid","humalog","инсулин"], status:"TUE kerak (faqat diabetiklar)", cls:"dr-tue", cat:"S2 Peptidlar", tue:"HA — 1 yoki 2-tur diabet uçun TUE şart", risk:"Diabetiksiz sportçiga Oliy (4 yil)", note:"Diabeti bölmagan sportçi qabul qilişi — öta xavfli gipoglikemik koma va ölimga sabab böladi. Sportda qat’iy taqiqlangan.", alt:"Uglevodlar va oqsillarning tabiiy glikemik balansi."},
 // S4: Gormon va metabolik modulyatorlar
-  {name:"Meldoniy (Mildronat)", alias:["meldoniy","meldonium","mildronat","mildronate","милдронат","мельдоний","мельдония","meldoni"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S4 Gormon va metabolizm modulyatori", tue:"Yo'q (Sportda ruxsat berilmaydi)", risk:"Oliy (2-4 yil)", note:"2016-yildan buyon WADA Prohibited List (S4.4) da. Karnitin biosintezini bloklaydi. Organizmda bir necha oylab saqlanadi. TUE deyarli berilmaydi.", alt:"L-Karnitin (ruxsat etilgan), Koenzim Q10, Magne B6, Asparkam."},
-  {name:"Trimetazidin", alias:["trimetazidine","preductal","preduktal","триметазидин","предуктал"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S4 Metabolik modulyator", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Yurak energetikasini o'zgartiruvchi modda (Kamila Valieva ishi). WADA S4 ro'yxatida har doim taqiqlangan.", alt:"Riboksin (Inozin - ruxsat etilgan), kaliy va magniy preparatlari."},
-  {name:"Klomifen", alias:["clomiphene","clomid","klomed","кломифен","кломид"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S4 Anti-estrogen", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Steroid kursidan keyin gormonlarni tiklash uchun ishlatiladi. WADA tomonidan maskirovka vositasi sifatida taqiqlangan.", alt:"Ruxsat etilgan tabiiy vitamin D3, rux (sink)."},
-  {name:"Tamoksifen", alias:["tamoxifen","nolvadex","novaldex","тамоксифен","нольвадекс"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S4 Anti-estrogen", tue:"Faqat onkologiyada TUE", risk:"Oliy (4 yil)", note:"Estrogen blokatori. Erkaklarda ginekomastiyani oldini olishda noqonuniy ishlatiladi. Taqiqlangan.", alt:"Jigar va gormonlar tabiiy detoksikatsiyasi."},
+  {name:"Meldoniy (Mildronat)", alias:["meldoniy","meldonium","mildronat","mildronate","милдронат","мельдоний","мельдония","meldoni"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S4 Gormon va metabolizm modulyatori", tue:"Yöq (Sportda ruxsat berilmaydi)", risk:"Oliy (2-4 yil)", note:"2016-yildan buyon WADA Prohibited List (S4.4) da. Karnitin biosintezini bloklaydi. Organizmda bir neça oylab saqlanadi. TUE deyarli berilmaydi.", alt:"L-Karnitin (ruxsat etilgan), Koenzim Q10, Magne B6, Asparkam."},
+  {name:"Trimetazidin", alias:["trimetazidine","preductal","preduktal","триметазидин","предуктал"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S4 Metabolik modulyator", tue:"Yöq", risk:"Oliy (4 yil)", note:"Yurak energetikasini özgartiruvçi modda (Kamila Valieva işi). WADA S4 röyxatida har doim taqiqlangan.", alt:"Riboksin (Inozin - ruxsat etilgan), kaliy va magniy preparatlari."},
+  {name:"Klomifen", alias:["clomiphene","clomid","klomed","кломифен","кломид"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S4 Anti-estrogen", tue:"Yöq", risk:"Oliy (4 yil)", note:"Steroid kursidan keyin gormonlarni tiklaş uçun işlatiladi. WADA tomonidan maskirovka vositasi sifatida taqiqlangan.", alt:"Ruxsat etilgan tabiiy vitamin D3, rux (sink)."},
+  {name:"Tamoksifen", alias:["tamoxifen","nolvadex","novaldex","тамоксифен","нольвадекс"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S4 Anti-estrogen", tue:"Faqat onkologiyada TUE", risk:"Oliy (4 yil)", note:"Estrogen blokatori. Erkaklarda ginekomastiyani oldini olişda noqonuniy işlatiladi. Taqiqlangan.", alt:"Jigar va gormonlar tabiiy detoksikatsiyasi."},
 // S5: Diuretiklar (Furosemid)
-  {name:"Furosemid", alias:["furosemid","furosemit","lasix","lazix","фуросемид","фуросемит","лазикс","lasiks","furasemid","furosimid"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S5 Diuretik (Siydik haydovchi)", tue:"Yo'q (Sportda TUE berilmaydi)", risk:"Oliy (4 yilgacha diskvalifikatsiya)", note:"Kuchli halqali diuretik. Vaznni tez haydash va siydikdan boshqa dopinglarni yuvib tashlash (maskirovka) uchun ishlatiladi. WADA qoidasi bo'yicha har doim taqiqlangan!", alt:"Na'matak damlamasi, tarvuz, brusnika, suv va tuz balansini tabiiy boshqarish."},
-  {name:"Torasemid", alias:["torasemide","diuver","trigrim","торасемид","диувер"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S5 Diuretik", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Furosemiddan kuchliroq diuretik. Taqiqlangan maskirovka vositasi.", alt:"Tabiiy suyuqlik balansi."},
-  {name:"Spironolakton", alias:["spironolactone","veroshpiron","спиронолактон","верошпирон"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S5 Diuretik", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Kaliy tejovchi diuretik bo'lsa-da, S5 toifasida mutlaq taqiqlangan.", alt:"Magne B6, qora smorodina damlamasi."},
-  {name:"Gidroxlorotiazid", alias:["hydrochlorothiazide","hypothiazid","гипотиазид","гидрохлортиазид"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S5 Diuretik", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Kombinatsiyalangan qon bosimi dorilari tarkibida ko'p uchraydi! Ehtiyot bo'ling.", alt:"Shifokor nazoratida ruxsat etilgan kardiologik dorilar."},
+  {name:"Furosemid", alias:["furosemid","furosemit","lasix","lazix","фуросемид","фуросемит","лазикс","lasiks","furasemid","furosimid"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S5 Diuretik (Siydik haydovçi)", tue:"Yöq (Sportda TUE berilmaydi)", risk:"Oliy (4 yilgaça diskvalifikatsiya)", note:"Kuçli halqali diuretik. Vaznni tez haydaş va siydikdan boşqa dopinglarni yuvib taşlaş (maskirovka) uçun işlatiladi. WADA qoidasi böyiça har doim taqiqlangan!", alt:"Na’matak damlamasi, tarvuz, brusnika, suv va tuz balansini tabiiy boşqariş."},
+  {name:"Torasemid", alias:["torasemide","diuver","trigrim","торасемид","диувер"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S5 Diuretik", tue:"Yöq", risk:"Oliy (4 yil)", note:"Furosemiddan kuçliroq diuretik. Taqiqlangan maskirovka vositasi.", alt:"Tabiiy suyuqlik balansi."},
+  {name:"Spironolakton", alias:["spironolactone","veroshpiron","спиронолактон","верошпирон"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S5 Diuretik", tue:"Yöq", risk:"Oliy (4 yil)", note:"Kaliy tejovçi diuretik bölsa-da, S5 toifasida mutlaq taqiqlangan.", alt:"Magne B6, qora smorodina damlamasi."},
+  {name:"Gidroxlorotiazid", alias:["hydrochlorothiazide","hypothiazid","гипотиазид","гидрохлортиазид"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S5 Diuretik", tue:"Yöq", risk:"Oliy (4 yil)", note:"Kombinatsiyalangan qon bosimi dorilari tarkibida köp uçraydi! Ehtiyot böling.", alt:"Şifokor nazoratida ruxsat etilgan kardiologik dorilar."},
 // S6: Stimulyatorlar
-  {name:"Kokain", alias:["cocaine","coke","кокаин"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S6 Narkotik stimulyator", tue:"Yo'q", risk:"Oliy + jinoiy javobgarlik", note:"Markaziy asab tizimini falajlovchi kuchli giyohvandlik moddasi. WADA tomonidan qat'iy taqiqlangan.", alt:"Faqat sog'lom sport rejimi."},
-  {name:"Amfetamin", alias:["amphetamine","speed","амфетамин"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S6 Kuchli stimulyator", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Charchoq hissini sun'iy o'ldiradi. Yurak xurujiga olib keladi. Taqiqlangan.", alt:"Kreatin, tabiiy B guruhi vitaminlari."},
-  {name:"Sibutramin", alias:["sibutramine","reduksin","сибутрамин","редуксин"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S6 Stimulyator", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Ozdiruvchi kapsulalar va 'choy'lar tarkibida yashirin tarzda eng ko'p topiladigan xavfli modda!", alt:"Tabiiy to'g'ri ovqatlanish ratsioni."},
-  {name:"DMAA (Geranamin)", alias:["dmaa","geranamine","metilgeksanamin","геранамин"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S6 Stimulyator", tue:"Yo'q", risk:"Oliy (4 yil)", note:"Predtren (Pre-workout) qo'shimchalarida ko'p uchraydi. Qon bosimini xavfli darajaga ko'taradi.", alt:"Sitrat magniy, kofein (me'yorda), izotonik."},
-  {name:"Psevdoefedrin", alias:["pseudoephedrine","sudafed","taylol hot","grippxot","псевдоэфедрин","тайлол хот","гриппхот"], status:"Musobaqada taqiqlangan (>150 mkg/ml)", cls:"dr-caution", cat:"S6 Stimulyator", tue:"Yo'q", risk:"Yuqori", note:"Sovuqqa qarshi 'choy' va tabletkalarda bo'ladi. Musobaqadan 24 soat oldin to'xtatish shart!", alt:"Paratsetamol, C vitamini, limonli iliq suv."},
-  {name:"Kofein", alias:["caffeine","coffein","kofein","кофеин","coffee","qahva","кофе"], status:"Monitoring dasturida (Ruxsat etilgan)", cls:"dr-monitoring", cat:"WADA Monitoring dasturi", tue:"Yo'q", risk:"Past (me'yorida xavfsiz)", note:"Kofein WADA Taqiqlangan ro'yxatida emas (2004-yildan beri siydikdagi chegara me'yori bekor qilingan), faqat Monitoring dasturida kuzatiladi. Oddiy qahva va choy xavfsiz; energetik ichimliklar esa yashirin stimulyator xavfi tufayli tavsiya etilmaydi.", alt:"Yashil choy, tabiiy donli qahva."},
+  {name:"Kokain", alias:["cocaine","coke","кокаин"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S6 Narkotik stimulyator", tue:"Yöq", risk:"Oliy + jinoiy javobgarlik", note:"Markaziy asab tizimini falajlovçi kuçli giyohvandlik moddasi. WADA tomonidan qat’iy taqiqlangan.", alt:"Faqat soğlom sport rejimi."},
+  {name:"Amfetamin", alias:["amphetamine","speed","амфетамин"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S6 Kuçli stimulyator", tue:"Yöq", risk:"Oliy (4 yil)", note:"Çarçoq hissini sun’iy öldiradi. Yurak xurujiga olib keladi. Taqiqlangan.", alt:"Kreatin, tabiiy B guruhi vitaminlari."},
+  {name:"Sibutramin", alias:["sibutramine","reduksin","сибутрамин","редуксин"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S6 Stimulyator", tue:"Yöq", risk:"Oliy (4 yil)", note:"Ozdiruvçi kapsulalar va 'çoy’lar tarkibida yaşirin tarzda eng köp topiladigan xavfli modda!", alt:"Tabiiy töğri ovqatlaniş ratsioni."},
+  {name:"DMAA (Geranamin)", alias:["dmaa","geranamine","metilgeksanamin","геранамин"], status:"Har doim taqiqlangan", cls:"dr-prohibited", cat:"S6 Stimulyator", tue:"Yöq", risk:"Oliy (4 yil)", note:"Predtren (Pre-workout) qöşimçalarida köp uçraydi. Qon bosimini xavfli darajaga kötaradi.", alt:"Sitrat magniy, kofein (me’yorda), izotonik."},
+  {name:"Psevdoefedrin", alias:["pseudoephedrine","sudafed","taylol hot","grippxot","псевдоэфедрин","тайлол хот","гриппхот"], status:"Musobaqada taqiqlangan (>150 mkg/ml)", cls:"dr-caution", cat:"S6 Stimulyator", tue:"Yöq", risk:"Yuqori", note:"Sovuqqa qarşi 'çoy' va tabletkalarda böladi. Musobaqadan 24 soat oldin töxtatiş şart!", alt:"Paratsetamol, C vitamini, limonli iliq suv."},
+  {name:"Kofein", alias:["caffeine","coffein","kofein","кофеин","coffee","qahva","кофе"], status:"Monitoring dasturida (Ruxsat etilgan)", cls:"dr-monitoring", cat:"WADA Monitoring dasturi", tue:"Yöq", risk:"Past (me’yorida xavfsiz)", note:"Kofein WADA Taqiqlangan röyxatida emas (2004-yildan beri siydikdagi çegara me’yori bekor qilingan), faqat Monitoring dasturida kuzatiladi. Oddiy qahva va çoy xavfsiz; energetik içimliklar esa yaşirin stimulyator xavfi tufayli tavsiya etilmaydi.", alt:"Yaşil çoy, tabiiy donli qahva."},
 // S3: Beta-2 Agonistlar
-  {name:"Salbutamol", alias:["salbutamol","ventolin","sultanol","сальбутамол","вентолин"], status:"Ingalyatsiya dozasi bo'yicha ruxsat", cls:"dr-tue", cat:"S3 Beta-2 Agonist", tue:"≤1600 mkg/24 soat bo'lsa TUE shart emas; oshsa TUE lozim", risk:"O'rta", note:"Astmada inhaler orqali kuniga maksimal 1600 mkg gacha ruxsat etilgan. Inyeksiya yoki tabletka shakli esa BUTUNLAY TAQIQLANGAN!", alt:"Inhalatsiya bo'yicha shifokor dozasi."},
+  {name:"Salbutamol", alias:["salbutamol","ventolin","sultanol","сальбутамол","вентолин"], status:"Ingalyatsiya dozasi böyiça ruxsat", cls:"dr-tue", cat:"S3 Beta-2 Agonist", tue:"≤1600 mkg/24 soat bölsa TUE şart emas; oşsa TUE lozim", risk:"Örta", note:"Astmada inhaler orqali kuniga maksimal 1600 mkg gaça ruxsat etilgan. Inyeksiya yoki tabletka şakli esa BUTUNLAY TAQIQLANGAN!", alt:"Inhalatsiya böyiça şifokor dozasi."},
 // S7: Narkotiklar
-  {name:"Tramadol", alias:["tramadol","tramal","трамадол","трамал"], status:"2024-yildan MUSOBAQADA TAQIQLANGAN", cls:"dr-prohibited", cat:"S7 Narkotik analgetik", tue:"Tibbiy zaruratda TUE shart", risk:"Yuqori (2-4 yil)", note:"2024-yil 1-yanvardan kuchli og'riq qoldiruvchi Tramadol musobaqa davrida qat'iy taqiqlandi!", alt:"Paratsetamol, Ibuprofen, Ketorolak (lokal)."},
+  {name:"Tramadol", alias:["tramadol","tramal","трамадол","трамал"], status:"2024-yildan MUSOBAQADA TAQIQLANGAN", cls:"dr-prohibited", cat:"S7 Narkotik analgetik", tue:"Tibbiy zaruratda TUE şart", risk:"Yuqori (2-4 yil)", note:"2024-yil 1-yanvardan kuçli oğriq qoldiruvçi Tramadol musobaqa davrida qat’iy taqiqlandi!", alt:"Paratsetamol, Ibuprofen, Ketorolak (lokal)."},
 // S9: Glyukokortikoidlar
-  {name:"Deksametazon", alias:["dexamethasone","deksametazon","dexazon","дексаметазон","дексазон","deksamitazon"], status:"Musobaqada inyeksiya/oral TAQIQLANGAN", cls:"dr-prohibited", cat:"S9 Glyukokortikoid", tue:"Tibbiy ko'rsatmada TUE shart", risk:"Yuqori", note:"Oral (tabletka) va IV/IM inyeksiya musobaqa davrida taqiqlangan. Lekin bo'g'in ichiga lokal yuborish va malhamlar ruxsat etiladi.", alt:"NSAID (Ibuprofen, Diklofenak)."},
+  {name:"Deksametazon", alias:["dexamethasone","deksametazon","dexazon","дексаметазон","дексазон","deksamitazon"], status:"Musobaqada inyeksiya/oral TAQIQLANGAN", cls:"dr-prohibited", cat:"S9 Glyukokortikoid", tue:"Tibbiy körsatmada TUE şart", risk:"Yuqori", note:"Oral (tabletka) va IV/IM inyeksiya musobaqa davrida taqiqlangan. Lekin böğin içiga lokal yuboriş va malhamlar ruxsat etiladi.", alt:"NSAID (Ibuprofen, Diklofenak)."},
 // Ruxsat etilganlar
-  {name:"Paratsetamol", alias:["paracetamol","acetaminophen","tylenol","panadol","efferalgan","парацетамол","панадол","paratsetamol","parasetamol"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"Analgetik-antipiretik", tue:"Yo'q", risk:"Xavfsiz (Kuniga max 3-4g)", note:"Isitma va og'riqda sportchilar uchun eng xavfsiz dori. Musobaqa davrida ham ruxsat etilgan.", alt:"Ibuprofen."},
-  {name:"Ibuprofen", alias:["ibuprofen","nurofen","ibufen","advil","ибупрофен","нурофен"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"NSAID (Yallig'lanishga qarshi)", tue:"Yo'q", risk:"Xavfsiz", note:"Bo'g'im va mushak og'riqlarida ruxsat etilgan. Oshqozonni asrash uchun ovqatdan so'ng ichiladi.", alt:"Paratsetamol."},
-  {name:"Aspirin", alias:["aspirin","acetylsalicylic","atsitilsalitsil","аспирин"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"NSAID / Antiagregant", tue:"Yo'q", risk:"Xavfsiz", note:"Musobaqa va mashg'ulot davrida to'liq ruxsat etilgan.", alt:"Paratsetamol."},
-  {name:"Kreatin Monogidrat", alias:["creatine","creapure","kreatin","креатин"], status:"✅ RUXSAT ETILGAN (100% Halol)", cls:"dr-allowed", cat:"Sport qo'shimchasi", tue:"Yo'q", risk:"Xavfsiz", note:"Eng ko'p ilmiy isbotlangan sport qo'shimchasi. Portlovchi kuch va ATF tiklanishini ta'minlaydi. Informed-Sport sertifikatli brendlarni tanlang.", alt:"Go'sht, baliq."},
-  {name:"Zardob Oqsili (Whey Protein)", alias:["protein","whey","izolyat","протеин","изолят"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"Sport ozuqasi", tue:"Yo'q", risk:"Xavfsiz (Sertifikat bilan)", note:"Mushaklarni tiklash uchun oqsil. Faqat tekshirilgan xalqaro sertifikatli brendlar (Optimum Nutrition, MyProtein va h.k.) tavsiya etiladi.", alt:"Tuxum, mol go'shti, tvorog."},
-  {name:"L-Karnitin", alias:["l-carnitine","carnitine","karnitin","карнитин","элькарнитин"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"Metabolik vosita", tue:"Yo'q", risk:"Xavfsiz", note:"Meldoniy o'rniga eng toza, qonuniy va xavfsiz tabiiy energiya manbai!", alt:"Mol go'shti, sut mahsulotlari."},
-  {name:"Omega-3", alias:["omega-3","fish oil","baliq yogi","омега-3","рыбий жир"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"Foydali yog' kislotalari", tue:"Yo'q", risk:"Xavfsiz", note:"Yurak, qon tomirlar va bo'g'imlar uchun to'liq ruxsat etilgan.", alt:"Yog'li baliq, zig'ir yog'i."}
+  {name:"Paratsetamol", alias:["paracetamol","acetaminophen","tylenol","panadol","efferalgan","парацетамол","панадол","paratsetamol","parasetamol"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"Analgetik-antipiretik", tue:"Yöq", risk:"Xavfsiz (Kuniga max 3-4g)", note:"Isitma va oğriqda sportçilar uçun eng xavfsiz dori. Musobaqa davrida ham ruxsat etilgan.", alt:"Ibuprofen."},
+  {name:"Ibuprofen", alias:["ibuprofen","nurofen","ibufen","advil","ибупрофен","нурофен"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"NSAID (Yalliğlanişga qarşi)", tue:"Yöq", risk:"Xavfsiz", note:"Böğim va muşak oğriqlarida ruxsat etilgan. Oşqozonni asraş uçun ovqatdan söng içiladi.", alt:"Paratsetamol."},
+  {name:"Aspirin", alias:["aspirin","acetylsalicylic","atsitilsalitsil","аспирин"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"NSAID / Antiagregant", tue:"Yöq", risk:"Xavfsiz", note:"Musobaqa va maşğulot davrida töliq ruxsat etilgan.", alt:"Paratsetamol."},
+  {name:"Kreatin Monogidrat", alias:["creatine","creapure","kreatin","креатин"], status:"✅ RUXSAT ETILGAN (100% Halol)", cls:"dr-allowed", cat:"Sport qöşimçasi", tue:"Yöq", risk:"Xavfsiz", note:"Eng köp ilmiy isbotlangan sport qöşimçasi. Portlovçi kuç va ATF tiklanişini ta’minlaydi. Informed-Sport sertifikatli brendlarni tanlang.", alt:"Göşt, baliq."},
+  {name:"Zardob Oqsili (Whey Protein)", alias:["protein","whey","izolyat","протеин","изолят"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"Sport ozuqasi", tue:"Yöq", risk:"Xavfsiz (Sertifikat bilan)", note:"Muşaklarni tiklaş uçun oqsil. Faqat tekşirilgan xalqaro sertifikatli brendlar (Optimum Nutrition, MyProtein va h.k.) tavsiya etiladi.", alt:"Tuxum, mol göşti, tvorog."},
+  {name:"L-Karnitin", alias:["l-carnitine","carnitine","karnitin","карнитин","элькарнитин"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"Metabolik vosita", tue:"Yöq", risk:"Xavfsiz", note:"Meldoniy örniga eng toza, qonuniy va xavfsiz tabiiy energiya manbai!", alt:"Mol göşti, sut mahsulotlari."},
+  {name:"Omega-3", alias:["omega-3","fiş oil","baliq yogi","омега-3","рыбий жир"], status:"✅ RUXSAT ETILGAN", cls:"dr-allowed", cat:"Foydali yoğ kislotalari", tue:"Yöq", risk:"Xavfsiz", note:"Yurak, qon tomirlar va böğimlar uçun töliq ruxsat etilgan.", alt:"Yoğli baliq, ziğir yoği."}
 ];
 
 
 const glossData=[
-{term:"AAF",en:"Adverse Analytical Finding",def:"Doping-kontrol namunasida taqiqlangan modda yoki uning metaboliti aniqlanishi. ADRV boshlash uchun asos. Sportchi 10 kun ichida B-namuna so'rash huquqiga ega."},
-{term:"ABP",en:"Athlete Biological Passport",def:"Sportchi qon ko'rsatkichlarini vaqt o'tishi bilan kuzatish orqali EPO va qon dopingini bilvosita aniqlash tizimi. Moddaning o'zi izlanmaydi — biologik o'zgarishlar kuzatiladi."},
-{term:"ADAMS",en:"Anti-Doping Admin & Management System",def:"WADA tomonidan yaratilgan global onlayn boshqaruv tizimi. Whereabouts kiritish, test natijalari, TUE arizalari, sportchi profili va sertifikatlar boshqariladi."},
-{term:"ADEL",en:"Anti-Doping Education & Learning",def:"WADA ning bepul onlayn ta'lim platformasi. 20+ til, 50+ kurs. RTP sportchilari uchun asosiy kurs majburiy. adel.wada-ama.org"},
-{term:"ADRV",en:"Anti-Doping Rule Violation",def:"Antidoping qoidasini buzish. WADA Kodeksida 11 turi bor: taqiqlangan modda (2.1), usul (2.2), namuna berishdan bosh tortish (2.3), Whereabouts buzilishi (2.4), nazoratga to'sqinlik (2.5), taqiqlangan modda saqlash (2.6), noqonuniy muomala (2.7), berish yoki urinish (2.8), sherikchilik (2.9), taqiqlangan shaxs bilan hamkorlik (2.10), xabar beruvchiga bosim/ta'qib (2.11)."},
-{term:"ATF",en:"Atypical Finding",def:"Shubhali modda — laboratoriya tomonidan to'liq tasdiqlanmagan, lekin tekshiruv davom etadigan natija. 10 kun ichida yakuniy qaror. AAF ga aylanishi yoki yo'q qilinishi mumkin."},
-{term:"CAS",en:"Court of Arbitration for Sport",def:"Sport nizomlarini ko'rib chiqadigan xalqaro arbitraj sudi. Lausanneda (Shveysariya). TUE rad, jazo muddati, oqlanish bo'yicha apellyatsiya instansiyasi."},
-{term:"DCO",en:"Doping Control Officer",def:"Doping-kontrolni o'tkazadigan rasmiy shaxs. Vakolatnoma va ID ko'rsatadi, sportchini tushuntiradi, namuna oladi, hujjatlashtiradi. DCO ga qarshi turish = ADRV 2.3."},
-{term:"EPO",en:"Erythropoietin",def:"Qon qizil jismchalarini ishlab chiqarishni oshiradigan gormon. Doping sifatida ishlatilsa — kislorod tashishni oshiradi. Tromboz, insult, to'satdan o'lim xavfi. S2 kategoriya."},
-{term:"Filing Failure",en:"Filing Failure",def:"Whereabouts ma'lumotlarini chorak oxirigacha to'liq kiritmaslik. 12 oyda 3 ta (missed test bilan birgalikda) = 2 yilgacha diskvalifikatsiya."},
-{term:"hGH",en:"Human Growth Hormone",def:"Inson o'sish gormoni. Mushak o'sishi, tiklanish tezlashtirish, yog' kuyishda ishlatiladi. S2 kategoriya — butunlay taqiqlangan."},
-{term:"ISE",en:"International Standard for Education",def:"Antidoping ta'lim uchun WADA xalqaro standarti (2021 yangilanma — ISE 3.0). 5 komponent: maqsad guruhlar, mazmun, format, baholash, sertifikatlash."},
-{term:"ISTI",en:"International Standard for Testing",def:"Doping-nazorat rejalashtirish va amalga oshirish uchun xalqaro standart. Kim, qachon, qayerda va qanday test o'tkazishni belgilaydi."},
-{term:"ISL",en:"International Standard for Laboratories",def:"WADA akkreditatsiya laboratoriyalari uchun standart. Sifat boshqaruvi, metodologiya, konfidensialllik. Hozirda ~34 akkreditatsiyalangan laboratoriya."},
-{term:"Missed Test",en:"Missed Test",def:"DCO ko'rsatilgan joyda sportchi bo'lmasligi. 14 kun ichida dalil bilan javob berish kerak. 12 oyda 3 ta = 2 yil."},
-{term:"No Fault",en:"No Fault or Negligence",def:"Sportchi uchun to'liq oqlanish — faqat sabotaj yoki uchinchi shaxs hiylasi isbotlanganda. Juda kamdan-kam qo'llaniladi."},
-{term:"No Significant Fault",en:"No Significant Fault",def:"ADRVda jazo kamaytirish uchun dalil. Sportchi o'zini to'g'ri tutgan, lekin tashqi omil sababli qoidabuzarlik yuzaga kelgan — masalan, sertifikatlangan mahsulot kontaminatsiyasi."},
-{term:"Play True",en:"Play True",def:"WADA toza sport kampaniyasi. Har yili aprel oyida WADA e'lon qiladigan kunda — Play True Day (#PlayTrue). Doping oldini olish, halollik va hurmatni targ'ib qiluvchi global harakat."},
-{term:"Prohibited List",en:"Prohibited List",def:"WADA tomonidan har yil 1-yanvar yangilanadigan taqiqlangan moddalar va usullar ro'yxati. S1-S9 (moddalar), M1-M3 (usullar), P (maxsus sport) kategoriyalarga bo'linadi."},
-{term:"RTP",en:"Registered Testing Pool",def:"Whereabouts kiritishi majburiy bo'lgan sportchilar ro'yxati. WADA, xalqaro federatsiyalar va milliy antidoping agentliklari tomonidan tuziladi. O'zbekistonda ~200+ sportchi."},
-{term:"Safe Harbor",en:"Safe Harbor (Whistleblower)",def:"WADA whistleblower himoya siyosati — ma'lumot beruvchiga noma'lumlik, huquqiy va moliyaviy himoya. Anonim murojaat: intel@wada-ama.org"},
-{term:"SARM",en:"Selective Androgen Receptor Modulator",def:"Anabolik ta'sir ko'rsatuvchi, lekin klassik steroid emas bo'lgan modda guruhi. BAD tarkibida yashirin holda topiladi. S1 — butunlay taqiqlangan."},
-{term:"Strict Liability",en:"Strict Liability",def:"WADA Kodeksining asosiy prinsipi: sportchi organizmidagi har qanday taqiqlangan modda uchun shaxsan javobgar. 'Bilmadim', 'shifokor berdi', 'sabotaj bo'ldi' — oqlanish uchun yetarli emas."},
-{term:"TDP",en:"Test Distribution Plan",def:"Doping nazorat rejasi — kim, qachon, qayerda test o'tkazilishi belgilanadi. WADA, IF va milliy agentliklar tomonidan yillik tasdiqlanadi."},
-{term:"TUE",en:"Therapeutic Use Exemption",def:"Taqiqlangan moddani tibbiy ko'rsatma bo'yicha qonuniy qabul qilish ruxsatnomasi. Astma (salbutamol), diabet (insulin) uchun. Musobaqadan 30 kun oldin ariza, 21 kun ichida qaror."},
-{term:"TUEC",en:"TUE Committee",def:"TUE arizalarini ko'rib chiqadigan, 3 nafar mustaqil shifokordan iborat qo'mita. Tasdiqlash, rad etish yoki qo'shimcha ma'lumot so'rash huquqi bor."},
-{term:"USADA",en:"US Anti-Doping Agency",def:"AQSh Milliy Antidoping Agentligi. Lance Armstrong ni 2012-yilda umrbod diskvalifitsiya qilgan va 7 Tour de France g'alasini bekor qildirgan agentlik."},
-{term:"WADA",en:"World Anti-Doping Agency",def:"Jahon Antidoping Agentligi. 1999-yil tashkil etilgan. Bosh qarorgoh — Monreal (Kanada). Kodeks, Prohibited List, standartlar, ADEL, laboratoriya akkreditatsiyasi — barchasi WADA tomonidan."},
-{term:"Whereabouts",en:"Whereabouts Information",def:"RTP sportchisi tomonidan ADAMS ga kiritiladigan kunlik 60 daqiqalik aniq vaqt va joy. DCO shu vaqtda kutilmagan test o'tkazishi mumkin."},
-{term:"Whereabouts Failure",en:"Whereabouts Failure",def:"Missed test yoki filing failure. 12 oyda 3 ta = ADRV 2.4 = 2 yilgacha diskvalifikatsiya. ADAMSni kundalik tekshirish — eng oson himoya."},
-{term:"UzNADO",en:"Uzbekistan National Anti-Doping Organization",def:"O'zbekiston Milliy Antidoping Tashkiloti. 2005-yil tashkil etilgan. Rasmiy ta'lim platformasi: talim-uznada.uz. Yilik 25,000+ test o'tkazadi."},
+{term:"AAF",en:"Adverse Analytical Finding",def:"Doping-kontrol namunasida taqiqlangan modda yoki uning metaboliti aniqlanişi. ADRV boşlaş uçun asos. Sportçi 10 kun içida B-namuna söraş huquqiga ega."},
+{term:"ABP",en:"Athlete Biological Passport",def:"Sportçi qon körsatkiçlarini vaqt ötişi bilan kuzatiş orqali EPO va qon dopingini bilvosita aniqlaş tizimi. Moddaning özi izlanmaydi — biologik özgarişlar kuzatiladi."},
+{term:"ADAMS",en:"Anti-Doping Admin & Management System",def:"WADA tomonidan yaratilgan global onlayn boşqaruv tizimi. Whereabouts kiritiş, test natijalari, TUE arizalari, sportçi profili va sertifikatlar boşqariladi."},
+{term:"ADEL",en:"Anti-Doping Education & Learning",def:"WADA ning bepul onlayn ta’lim platformasi. 20+ til, 50+ kurs. RTP sportçilari uçun asosiy kurs majburiy. adel.wada-ama.org"},
+{term:"ADRV",en:"Anti-Doping Rule Violation",def:"Antidoping qoidasini buziş. WADA Kodeksida 11 turi bor: taqiqlangan modda (2.1), usul (2.2), namuna berişdan boş tortiş (2.3), Whereabouts buzilişi (2.4), nazoratga tösqinlik (2.5), taqiqlangan modda saqlaş (2.6), noqonuniy muomala (2.7), beriş yoki uriniş (2.8), şerikçilik (2.9), taqiqlangan şaxs bilan hamkorlik (2.10), xabar beruvçiga bosim/ta’qib (2.11)."},
+{term:"ATF",en:"Atypical Finding",def:"Şubhali modda — laboratoriya tomonidan töliq tasdiqlanmagan, lekin tekşiruv davom etadigan natija. 10 kun içida yakuniy qaror. AAF ga aylanişi yoki yöq qilinişi mumkin."},
+{term:"CAS",en:"Court of Arbitration for Sport",def:"Sport nizomlarini körib çiqadigan xalqaro arbitraj sudi. Lausanneda (Şveysariya). TUE rad, jazo muddati, oqlaniş böyiça apellyatsiya instansiyasi."},
+{term:"DCO",en:"Doping Control Officer",def:"Doping-kontrolni ötkazadigan rasmiy şaxs. Vakolatnoma va ID körsatadi, sportçini tuşuntiradi, namuna oladi, hujjatlaştiradi. DCO ga qarşi turiş = ADRV 2.3."},
+{term:"EPO",en:"Erythropoietin",def:"Qon qizil jismçalarini işlab çiqarişni oşiradigan gormon. Doping sifatida işlatilsa — kislorod taşişni oşiradi. Tromboz, insult, tösatdan ölim xavfi. S2 kategoriya."},
+{term:"Filing Failure",en:"Filing Failure",def:"Whereabouts ma’lumotlarini çorak oxirigaça töliq kiritmaslik. 12 oyda 3 ta (missed test bilan birgalikda) = 2 yilgaça diskvalifikatsiya."},
+{term:"hGH",en:"Human Growth Hormone",def:"Inson ösiş gormoni. Muşak ösişi, tiklaniş tezlaştiriş, yoğ kuyişda işlatiladi. S2 kategoriya — butunlay taqiqlangan."},
+{term:"ISE",en:"International Standard for Education",def:"Antidoping ta’lim uçun WADA xalqaro standarti (2021 yangilanma — ISE 3.0). 5 komponent: maqsad guruhlar, mazmun, format, baholaş, sertifikatlaş."},
+{term:"ISTI",en:"International Standard for Testing",def:"Doping-nazorat rejalaştiriş va amalga oşiriş uçun xalqaro standart. Kim, qaçon, qayerda va qanday test ötkazişni belgilaydi."},
+{term:"ISL",en:"International Standard for Laboratories",def:"WADA akkreditatsiya laboratoriyalari uçun standart. Sifat boşqaruvi, metodologiya, konfidensialllik. Hozirda ~34 akkreditatsiyalangan laboratoriya."},
+{term:"Missed Test",en:"Missed Test",def:"DCO körsatilgan joyda sportçi bölmasligi. 14 kun içida dalil bilan javob beriş kerak. 12 oyda 3 ta = 2 yil."},
+{term:"No Fault",en:"No Fault or Negligence",def:"Sportçi uçun töliq oqlaniş — faqat sabotaj yoki uçinçi şaxs hiylasi isbotlanganda. Juda kamdan-kam qöllaniladi."},
+{term:"No Significant Fault",en:"No Significant Fault",def:"ADRVda jazo kamaytiriş uçun dalil. Sportçi özini töğri tutgan, lekin taşqi omil sababli qoidabuzarlik yuzaga kelgan — masalan, sertifikatlangan mahsulot kontaminatsiyasi."},
+{term:"Play True",en:"Play True",def:"WADA toza sport kampaniyasi. Har yili aprel oyida WADA e’lon qiladigan kunda — Play True Day (#PlayTrue). Doping oldini oliş, halollik va hurmatni tarğib qiluvçi global harakat."},
+{term:"Prohibited List",en:"Prohibited List",def:"WADA tomonidan har yil 1-yanvar yangilanadigan taqiqlangan moddalar va usullar röyxati. S1-S9 (moddalar), M1-M3 (usullar), P (maxsus sport) kategoriyalarga bölinadi."},
+{term:"RTP",en:"Registered Testing Pool",def:"Whereabouts kiritişi majburiy bölgan sportçilar röyxati. WADA, xalqaro federatsiyalar va milliy antidoping agentliklari tomonidan tuziladi. Özbekistonda ~200+ sportçi."},
+{term:"Safe Harbor",en:"Safe Harbor (Whistleblower)",def:"WADA whistleblower himoya siyosati — ma’lumot beruvçiga noma’lumlik, huquqiy va moliyaviy himoya. Anonim murojaat: intel@wada-ama.org"},
+{term:"SARM",en:"Selective Androgen Receptor Modulator",def:"Anabolik ta’sir körsatuvçi, lekin klassik steroid emas bölgan modda guruhi. BAD tarkibida yaşirin holda topiladi. S1 — butunlay taqiqlangan."},
+{term:"Strict Liability",en:"Strict Liability",def:"WADA Kodeksining asosiy prinsipi: sportçi organizmidagi har qanday taqiqlangan modda uçun şaxsan javobgar. 'Bilmadim', 'şifokor berdi', 'sabotaj böldi' — oqlaniş uçun yetarli emas."},
+{term:"TDP",en:"Test Distribution Plan",def:"Doping nazorat rejasi — kim, qaçon, qayerda test ötkazilişi belgilanadi. WADA, IF va milliy agentliklar tomonidan yillik tasdiqlanadi."},
+{term:"TUE",en:"Therapeutic Use Exemption",def:"Taqiqlangan moddani tibbiy körsatma böyiça qonuniy qabul qiliş ruxsatnomasi. Astma (salbutamol), diabet (insulin) uçun. Musobaqadan 30 kun oldin ariza, 21 kun içida qaror."},
+{term:"TUEC",en:"TUE Committee",def:"TUE arizalarini körib çiqadigan, 3 nafar mustaqil şifokordan iborat qömita. Tasdiqlaş, rad etiş yoki qöşimça ma’lumot söraş huquqi bor."},
+{term:"USADA",en:"US Anti-Doping Agency",def:"AQŞ Milliy Antidoping Agentligi. Lance Armstrong ni 2012-yilda umrbod diskvalifitsiya qilgan va 7 Tour de France ğalasini bekor qildirgan agentlik."},
+{term:"WADA",en:"World Anti-Doping Agency",def:"Jahon Antidoping Agentligi. 1999-yil taşkil etilgan. Boş qarorgoh — Monreal (Kanada). Kodeks, Prohibited List, standartlar, ADEL, laboratoriya akkreditatsiyasi — barçasi WADA tomonidan."},
+{term:"Whereabouts",en:"Whereabouts Information",def:"RTP sportçisi tomonidan ADAMS ga kiritiladigan kunlik 60 daqiqalik aniq vaqt va joy. DCO şu vaqtda kutilmagan test ötkazişi mumkin."},
+{term:"Whereabouts Failure",en:"Whereabouts Failure",def:"Missed test yoki filing failure. 12 oyda 3 ta = ADRV 2.4 = 2 yilgaça diskvalifikatsiya. ADAMSni kundalik tekşiriş — eng oson himoya."},
+{term:"UzNADO",en:"Uzbekistan National Anti-Doping Organization",def:"Özbekiston Milliy Antidoping Taşkiloti. 2005-yil taşkil etilgan. Rasmiy ta’lim platformasi: talim-uznada.uz. Yilik 25,000+ test ötkazadi."},
 ];
 
 const quizData = {
 rahbar:[
-{q:"WADA Kodeks bo'yicha tashkilot antidoping faoliyati uchun kim javobgar?",opts:["Faqat koordinator","Faqat shifokor","Rahbar va koordinator birgalikda","Faqat sportchi"],a:2},
-{q:"Antidoping siyosati qaysi hujjatlar asosida tuziladi?",opts:["Faqat WADA Kodeks","Faqat O'zbekiston qonuni","WADA Kodeks + O'zRQ 2019 'Antidopingga qarshi' qonun","Faqat milliy standartlar"],a:2},
-{q:"Antidoping byudjeti tashkilot umumiy byudjetining necha foizi bo'lishi tavsiya etiladi?",opts:["1-3%","5-7%","10-15%","25-30%"],a:2},
-{q:"Sertifikatsiz BADlarda taqiqlangan modda izlari qancha nisbatda topilgan?",opts:["1-2%","5-10%","12-25%","50% dan ortiq"],a:2},
-{q:"Oshpaz sertifikati qanday bo'limlarda bo'lishi shart?",opts:["Faqat pazandachilik","Pazandachilik + gigiena","Pazandachilik + antidoping + sanitariya-gigiena","Faqat antidoping"],a:2},
-{q:"Klenbuterol qayerdan tushishi mumkin?",opts:["Faqat dori orqali","Faqat BAD orqali","Sertifikatsiz go'sht orqali","Faqat inyeksiya orqali"],a:2},
-{q:"DCO kelganda birinchi navbatda nima qilinadi?",opts:["Sportchini yashirish","DCO ning vakolatnomasini tekshirish","Sug'urta idorasiga qo'ng'iroq qilish","Test berishni rad etish"],a:1},
-{q:"Antidoping hujjatlari arxivda qancha yil saqlanadi?",opts:["1 yil","2 yil","3 yil","5 yil"],a:3},
-{q:"Safarda ovqat ta'minoti bo'yicha asosiy qoida qaysi?",opts:["Mahalliy bozordan xarid qilish mumkin","Restoranlarda ovqatlanish eng xavfsiz","O'z ovqat yukini olib borish va sertifikatlangan manbalar","Qoida yo'q, har qanday joy mumkin"],a:2},
-{q:"Energetik ichimliklar sport tashkilotlarida qanday qabul qilinadi?",opts:["Kofein miqdori kam bo'lsa ruxsat","Faqat musobaqada taqiqlangan","Butunlay taqiqlangan","Shifokor ruxsati bilan ruxsat"],a:2},
-{q:"Kofein WADA 2026 Ro'yxatida qaysi maqomda turadi?",opts:["Har doim taqiqlangan (S1)","Faqat musobaqada taqiqlangan (S6)","Ruxsat etilgan — WADA Monitoring dasturida kuzatiladi","Faqat TUE bilan ruxsat etiladi"],a:2},
-{q:"Antidoping koordinatori qancha vaqtda malakasini yangilashi kerak?",opts:["5 yilda bir","3 yilda bir","2 yilda bir","Yangilash shart emas"],a:2},
-{q:"Mahalliy bozordan go'sht olish musobaqada nima sababli xavfli?",opts:["Narxi qimmat","Klenbuterol bor bo'lishi mumkin","Shunday qabul qilingan","Hech qanday xavf yo'q"],a:1},
-{q:"'No Significant Fault' da jazo qanday o'zgaradi?",opts:["To'liq oqlanish","Jazo 2 baravar oshadi","Jazo kamaytirilishi mumkin, lekin yo'q qilinmaydi","Jazo o'zgarmaydi"],a:2},
-{q:"WADA Kodeks 20.3-modda nimani belgilaydi?",opts:["Sportchi mas'uliyati","Tashkilot/federatsiya rahbari mas'uliyati","TUE protsedurasi","Whereabouts qoidalari"],a:1},
-{q:"Yangi xodim qancha vaqt ichida antidoping kursi olishi kerak?",opts:["6 oy ichida","Istalgan vaqtda","30 kun ichida","1 yil ichida"],a:2},
-{q:"Tashkilot doping holati uchun to'laydigan xarajat profilaktikaga nisbatan qancha bo'lishi mumkin?",opts:["Bir xil","2 barobar","5 barobar","10-50 barobar"],a:3},
-{q:"Favqulodda harakat rejasi qancha ssenariy uchun tayyorlanishi kerak?",opts:["1 ta (faqat AAF uchun)","2 ta (AAF va TUE rad)","3 ta (DCO kelishi, AAF, TUE rad)","5 ta"],a:2},
-{q:"TUE muddati tugashiga qachon yangilash arizasi berilishi kerak?",opts:["7 kun oldin","30 kun oldin","60 kun oldin","3 oy oldin"],a:1},
-{q:"Doping holati ro'y bersa tashkilotga qanday oqibat bo'lishi mumkin?",opts:["Faqat sportchi jazolanadi","Jarima va obro' yo'qotish","10K-100K USD jarima + obro' yo'qotish + sponsor bekor","Hech qanday oqibat yo'q"],a:2}
+{q:"WADA Kodeks böyiça taşkilot antidoping faoliyati uçun kim javobgar?",opts:["Faqat koordinator","Faqat şifokor","Rahbar va koordinator birgalikda","Faqat sportçi"],a:2},
+{q:"Antidoping siyosati qaysi hujjatlar asosida tuziladi?",opts:["Faqat WADA Kodeks","Faqat Özbekiston qonuni","WADA Kodeks + ÖzRQ 2019 'Antidopingga qarşi' qonun","Faqat milliy standartlar"],a:2},
+{q:"Antidoping byudjeti taşkilot umumiy byudjetining neça foizi bölişi tavsiya etiladi?",opts:["1-3%","5-7%","10-15%","25-30%"],a:2},
+{q:"Sertifikatsiz BADlarda taqiqlangan modda izlari qança nisbatda topilgan?",opts:["1-2%","5-10%","12-25%","50% dan ortiq"],a:2},
+{q:"Oşpaz sertifikati qanday bölimlarda bölişi şart?",opts:["Faqat pazandaçilik","Pazandaçilik + gigiena","Pazandaçilik + antidoping + sanitariya-gigiena","Faqat antidoping"],a:2},
+{q:"Klenbuterol qayerdan tuşişi mumkin?",opts:["Faqat dori orqali","Faqat BAD orqali","Sertifikatsiz göşt orqali","Faqat inyeksiya orqali"],a:2},
+{q:"DCO kelganda birinçi navbatda nima qilinadi?",opts:["Sportçini yaşiriş","DCO ning vakolatnomasini tekşiriş","Suğurta idorasiga qönğiroq qiliş","Test berişni rad etiş"],a:1},
+{q:"Antidoping hujjatlari arxivda qança yil saqlanadi?",opts:["1 yil","2 yil","3 yil","5 yil"],a:3},
+{q:"Safarda ovqat ta’minoti böyiça asosiy qoida qaysi?",opts:["Mahalliy bozordan xarid qiliş mumkin","Restoranlarda ovqatlaniş eng xavfsiz","Öz ovqat yukini olib boriş va sertifikatlangan manbalar","Qoida yöq, har qanday joy mumkin"],a:2},
+{q:"Energetik içimliklar sport taşkilotlarida qanday qabul qilinadi?",opts:["Kofein miqdori kam bölsa ruxsat","Faqat musobaqada taqiqlangan","Butunlay taqiqlangan","Şifokor ruxsati bilan ruxsat"],a:2},
+{q:"Kofein WADA 2026 Röyxatida qaysi maqomda turadi?",opts:["Har doim taqiqlangan (S1)","Faqat musobaqada taqiqlangan (S6)","Ruxsat etilgan — WADA Monitoring dasturida kuzatiladi","Faqat TUE bilan ruxsat etiladi"],a:2},
+{q:"Antidoping koordinatori qança vaqtda malakasini yangilaşi kerak?",opts:["5 yilda bir","3 yilda bir","2 yilda bir","Yangilaş şart emas"],a:2},
+{q:"Mahalliy bozordan göşt oliş musobaqada nima sababli xavfli?",opts:["Narxi qimmat","Klenbuterol bor bölişi mumkin","Şunday qabul qilingan","Heç qanday xavf yöq"],a:1},
+{q:"'No Significant Fault' da jazo qanday özgaradi?",opts:["Töliq oqlaniş","Jazo 2 baravar oşadi","Jazo kamaytirilişi mumkin, lekin yöq qilinmaydi","Jazo özgarmaydi"],a:2},
+{q:"WADA Kodeks 20.3-modda nimani belgilaydi?",opts:["Sportçi mas’uliyati","Taşkilot/federatsiya rahbari mas’uliyati","TUE protsedurasi","Whereabouts qoidalari"],a:1},
+{q:"Yangi xodim qança vaqt içida antidoping kursi olişi kerak?",opts:["6 oy içida","Istalgan vaqtda","30 kun içida","1 yil içida"],a:2},
+{q:"Taşkilot doping holati uçun tölaydigan xarajat profilaktikaga nisbatan qança bölişi mumkin?",opts:["Bir xil","2 barobar","5 barobar","10-50 barobar"],a:3},
+{q:"Favqulodda harakat rejasi qança ssenariy uçun tayyorlanişi kerak?",opts:["1 ta (faqat AAF uçun)","2 ta (AAF va TUE rad)","3 ta (DCO kelişi, AAF, TUE rad)","5 ta"],a:2},
+{q:"TUE muddati tugaşiga qaçon yangilaş arizasi berilişi kerak?",opts:["7 kun oldin","30 kun oldin","60 kun oldin","3 oy oldin"],a:1},
+{q:"Doping holati röy bersa taşkilotga qanday oqibat bölişi mumkin?",opts:["Faqat sportçi jazolanadi","Jarima va obrö yöqotiş","10K-100K USD jarima + obrö yöqotiş + sponsor bekor","Heç qanday oqibat yöq"],a:2}
 ],
 murabbiy:[
-{q:"WADA Kodeks 21.2-modda murabbiyga nima vazifani yuklaydi?",opts:["Faqat mashg'ulot rejasi","Sportchini antidoping ta'lim va yo'naltirish","Faqat plyus natijaga erishish","Hech qanday antidoping vazifa yo'q"],a:1},
-{q:"Murabbiy sportchiga taqiqlangan modda tavsiya qilsa qanday jazo kutadi?",opts:["Ogohlantiriladi","1 yil chetlashtirish","4 yildan umrbod taqiq (ADRV 2.8)","Hech qanday jazo yo'q"],a:2},
-{q:"ADAMS tizimida murabbiy qanday ro'yxatda bo'lishi kerak?",opts:["Ro'yxat shart emas","'Support Personnel' sifatida","'Athlete' sifatida","'Official' sifatida"],a:1},
-{q:"Murabbiy sertifikatini qancha vaqtda yangilash kerak?",opts:["Har yili","2 yilda bir","5 yilda bir","Yangilash shart emas"],a:1},
-{q:"Sportchi uchun protein kunlik ehtiyoji qancha?",opts:["0.5-0.8 g/kg","1.0-1.2 g/kg","1.6-2.2 g/kg","3.0-4.0 g/kg"],a:2},
-{q:"Intensiv mashg'ulot kunida uglevod ehtiyoji qancha?",opts:["1-2 g/kg","3-4 g/kg","6-10 g/kg","15-20 g/kg"],a:2},
-{q:"Yoshlar bilan ishlashda antidoping mavzusini qachon ko'tarish kerak?",opts:["Faqat musobaqa oldida","Har hafta mashg'ulot boshida eslatish","Faqat bitta maxsus dars o'tish","Ular so'ragandagina"],a:1},
-{q:"DCO kelganda murabbiyning birinchi vazifasi nima?",opts:["DCO bilan munozara qilish","Sportchiga xabar berish va yonida bo'lish, koordinatorni chaqirish","Sportchini test berishdan saqlash","Test kechiktirishni so'rash"],a:1},
-{q:"Sertifikatlangan BAD tanlashda qaysi muhrdorlar ishonchli?",opts:["Istalgan 'natural' yozuvli","Faqat Rossiya brendlari","Informed Sport, NSF, Cologne List","Dorixonadan sotib olingan har qanday"],a:2},
-{q:"Retroaktiv TUE qachon va qancha vaqt ichida topshirilishi kerak?",opts:["Faqat rejalashtirilgan holatda","Favqulodda holat, 30 kun ichida","Favqulodda holat, 7 kun ichida","Musobaqa tugaganidan keyin 1 oy"],a:2},
-{q:"'Periodizatsiya' tushunchasi nimani anglatadi?",opts:["Faqat haftasiga yuk rejasi","Davriy yuk va tiklanish bilan tabiiy adaptatsiya","Doping yordamida yuk oshirish","Faqat bayram davrida dam olish"],a:1},
-{q:"DCO kelganda murabbiy sportchiga nima demasligi kerak?",opts:["Koordinatorni chaqiring","Vakolatnomani tekshiring","Test bermang yoki kechiktiring","Xotirjam bo'ling"],a:2},
-{q:"Energetik ichimliklar mashg'ulot davomida nima uchun xavfli?",opts:["Tarkibi ko'p qimmat","Yashirin stimulyator va kontaminatsiya xavfi","Faqat kaloriyasi ko'p","Hech qanday xavf yo'q"],a:1},
-{q:"Mahalliy restoranda ovqatlanish musobaqada nima sababli taqiqlangan?",opts:["Narxi qimmat","Sifati yaxshi emas","Kontaminatsiya va klenbuterol xavfi","Faqat marosimlarda mumkin"],a:2},
-{q:"'Biologik pasport' (ABP) nima maqsadda ishlatiladi?",opts:["Sportchi tarixini saqlash","EPO va qon dopingini bilvosita aniqlash","Ovqatlanish hisobini yuritish","Whereabouts kuzatish"],a:1},
-{q:"Murabbiy antidoping sertifikatini qaysi platformalarda olishi mumkin?",opts:["Faqat sportedu.uz da","Faqat WADA saytida","ADEL yoki UzNADO platformasi","Faqat xususiy kurslarda"],a:2},
-{q:"Musobaqa kuni murabbiy sportchiga qanday ichimlik tavsiya qilishi kerak?",opts:["Istalgan suv va ichimlik","Energetik va izoton ichimliklar","Faqat sertifikatlangan mineral suv","Qahva va choy"],a:2},
-{q:"Murabbiy DCO ning vakolatnomasini ko'rishda nima qaraydi?",opts:["Faqat ismini","Rasmiy ID va vakolatnoma hujjatini","Faqat sanani","Hech narsani tekshirmaydi"],a:1},
-{q:"Doping taklif qiluvchi noma'lum shaxs bilan murojaat bo'lsa murabbiy nima qiladi?",opts:["Quloq soladi va ko'rib chiqadi","Koordinator va UzNADO ga darhol xabar beradi","O'zi qaror qiladi","Sportchiga aytadi va unuttiradi"],a:1},
-{q:"WADA qaysi yil tashkil etilgan?",opts:["1995","1999","2003","2008"],a:1}
+{q:"WADA Kodeks 21.2-modda murabbiyga nima vazifani yuklaydi?",opts:["Faqat maşğulot rejasi","Sportçini antidoping ta’lim va yönaltiriş","Faqat plyus natijaga erişiş","Heç qanday antidoping vazifa yöq"],a:1},
+{q:"Murabbiy sportçiga taqiqlangan modda tavsiya qilsa qanday jazo kutadi?",opts:["Ogohlantiriladi","1 yil çetlaştiriş","4 yildan umrbod taqiq (ADRV 2.8)","Heç qanday jazo yöq"],a:2},
+{q:"ADAMS tizimida murabbiy qanday röyxatda bölişi kerak?",opts:["Röyxat şart emas","'Support Personnel' sifatida","'Athlete' sifatida","'Official' sifatida"],a:1},
+{q:"Murabbiy sertifikatini qança vaqtda yangilaş kerak?",opts:["Har yili","2 yilda bir","5 yilda bir","Yangilaş şart emas"],a:1},
+{q:"Sportçi uçun protein kunlik ehtiyoji qança?",opts:["0.5-0.8 g/kg","1.0-1.2 g/kg","1.6-2.2 g/kg","3.0-4.0 g/kg"],a:2},
+{q:"Intensiv maşğulot kunida uglevod ehtiyoji qança?",opts:["1-2 g/kg","3-4 g/kg","6-10 g/kg","15-20 g/kg"],a:2},
+{q:"Yoşlar bilan işlaşda antidoping mavzusini qaçon kötariş kerak?",opts:["Faqat musobaqa oldida","Har hafta maşğulot boşida eslatiş","Faqat bitta maxsus dars ötiş","Ular söragandagina"],a:1},
+{q:"DCO kelganda murabbiyning birinçi vazifasi nima?",opts:["DCO bilan munozara qiliş","Sportçiga xabar beriş va yonida böliş, koordinatorni çaqiriş","Sportçini test berişdan saqlaş","Test keçiktirişni söraş"],a:1},
+{q:"Sertifikatlangan BAD tanlaşda qaysi muhrdorlar işonçli?",opts:["Istalgan 'natural' yozuvli","Faqat Rossiya brendlari","Informed Sport, NSF, Cologne List","Dorixonadan sotib olingan har qanday"],a:2},
+{q:"Retroaktiv TUE qaçon va qança vaqt içida topşirilişi kerak?",opts:["Faqat rejalaştirilgan holatda","Favqulodda holat, 30 kun içida","Favqulodda holat, 7 kun içida","Musobaqa tugaganidan keyin 1 oy"],a:2},
+{q:"'Periodizatsiya' tuşunçasi nimani anglatadi?",opts:["Faqat haftasiga yuk rejasi","Davriy yuk va tiklaniş bilan tabiiy adaptatsiya","Doping yordamida yuk oşiriş","Faqat bayram davrida dam oliş"],a:1},
+{q:"DCO kelganda murabbiy sportçiga nima demasligi kerak?",opts:["Koordinatorni çaqiring","Vakolatnomani tekşiring","Test bermang yoki keçiktiring","Xotirjam böling"],a:2},
+{q:"Energetik içimliklar maşğulot davomida nima uçun xavfli?",opts:["Tarkibi köp qimmat","Yaşirin stimulyator va kontaminatsiya xavfi","Faqat kaloriyasi köp","Heç qanday xavf yöq"],a:1},
+{q:"Mahalliy restoranda ovqatlaniş musobaqada nima sababli taqiqlangan?",opts:["Narxi qimmat","Sifati yaxşi emas","Kontaminatsiya va klenbuterol xavfi","Faqat marosimlarda mumkin"],a:2},
+{q:"'Biologik pasport' (ABP) nima maqsadda işlatiladi?",opts:["Sportçi tarixini saqlaş","EPO va qon dopingini bilvosita aniqlaş","Ovqatlaniş hisobini yuritiş","Whereabouts kuzatiş"],a:1},
+{q:"Murabbiy antidoping sertifikatini qaysi platformalarda olişi mumkin?",opts:["Faqat sportedu.uz da","Faqat WADA saytida","ADEL yoki UzNADO platformasi","Faqat xususiy kurslarda"],a:2},
+{q:"Musobaqa kuni murabbiy sportçiga qanday içimlik tavsiya qilişi kerak?",opts:["Istalgan suv va içimlik","Energetik va izoton içimliklar","Faqat sertifikatlangan mineral suv","Qahva va çoy"],a:2},
+{q:"Murabbiy DCO ning vakolatnomasini körişda nima qaraydi?",opts:["Faqat ismini","Rasmiy ID va vakolatnoma hujjatini","Faqat sanani","Heç narsani tekşirmaydi"],a:1},
+{q:"Doping taklif qiluvçi noma’lum şaxs bilan murojaat bölsa murabbiy nima qiladi?",opts:["Quloq soladi va körib çiqadi","Koordinator va UzNADO ga darhol xabar beradi","Özi qaror qiladi","Sportçiga aytadi va unuttiradi"],a:1},
+{q:"WADA qaysi yil taşkil etilgan?",opts:["1995","1999","2003","2008"],a:1}
 ],
 metodist:[
-{q:"WADA Taqiqlangan Ro'yxati qachon yangilanadi?",opts:["Har chorakda","Har 6 oyda","Har yil 1-yanvar","Har 2 yilda"],a:2},
-{q:"Metodist yangi Taqiqlangan Ro'yxatni olingandan keyin qancha vaqtda barcha xodimlarga tarqatishi kerak?",opts:["1 oy ichida","15 kun ichida","1 hafta ichida","24 soat ichida"],a:1},
-{q:"WADA Kodeksida nechta asosiy bob bor?",opts:["10","15","20","25"],a:3},
-{q:"ADAMS tizimida qaysi ma'lumotlar boshqariladi?",opts:["Faqat test natijalari","Whereabouts, test, TUE va sportchi profili","Faqat TUE arizalari","Faqat moliyaviy hisobotlar"],a:1},
-{q:"TUE arizasini TUEC qancha vaqt ichida ko'rib chiqadi?",opts:["3 kun","7 kun","21 kun","60 kun"],a:2},
-{q:"Retroaktiv TUE favqulodda holatda qancha vaqt ichida topshirilishi kerak?",opts:["24 soat","7 kun","30 kun","3 oy"],a:1},
-{q:"AAF (Adverse Analytical Finding) xabari kelganda metodist qancha vaqt ichida B-namuna so'rashi mumkin?",opts:["3 kun","10 kun","30 kun","60 kun"],a:1},
-{q:"Whereabouts ma'lumotlari chorak qachon yangilanishi kerak?",opts:["Chorak o'rtasida","Chorak boshida","Chorak oxirigacha","Istalgan vaqtda"],a:2},
-{q:"3 ta missed test 12 oy ichida qanday qoidabuzarlik hisoblanadi?",opts:["ADRV 2.1","ADRV 2.3","ADRV 2.4","ADRV 2.8"],a:2},
-{q:"UzNADO ga hisobot qancha vaqtda bir marta topshiriladi?",opts:["Hafta ichida","Oyda bir marta","Chorakda bir marta","Yilda bir marta"],a:2},
-{q:"ISE 3.0 standarti nimani tartibga soladi?",opts:["Test rejalashtirish","Laboratoriya akkreditatsiyasi","Antidoping ta'lim standarti","TUE protsedurasi"],a:2},
-{q:"WADA ISL standarti nimaga oid?",opts:["Test rejalashtirish","Laboratoriya akkreditatsiyasi","Ta'lim standartlari","Whereabouts tizimi"],a:1},
-{q:"TUE rad etilsa metodist qancha vaqt ichida apellyatsiya qilishi mumkin?",opts:["7 kun","14 kun","21 kun","60 kun"],a:2},
-{q:"Antidoping modulini muvaffaqiyatli o'zlashtirish uchun minimal necha foiz to'g'ri javob talab etiladi?",opts:["60%","70%","75%","90%"],a:2},
-{q:"ADKT-25 nima?",opts:["Antidoping dori ro'yxati","Antidoping bilim testi (25 savol)","ADAMS tizim kodi","Taqiqlangan ro'yxat kodi"],a:1},
-{q:"DMS-12 nima?",opts:["Dori klassifikatsiya tizimi","Dinamik motivatsiya shkalasi (12 savol)","WADA standart kodi","Test protokoli"],a:1},
-{q:"ADAMS da 'RTP' abbreviaturasi nimani anglatadi?",opts:["Test natijalari platformasi","Ro'yxatga olingan testlanadigan guruh (Registered Testing Pool)","WADA protokol tizimi","Taqiqlangan ro'yxat platformasi"],a:1},
-{q:"Metodist o'z malakasini qaysi platformalarda oshirishi mumkin?",opts:["Faqat sportedu.uz","Faqat WADA saytida","ADEL yoki talim-uznada.uz","Faqat xususiy kurslarda"],a:2},
-{q:"Sport tashkilotida antidoping arxiv qancha yil saqlanishi shart?",opts:["1 yil","2 yil","3 yil","5 yil"],a:3},
-{q:"WADA Kodeks 2.4-modda nimani tartibga soladi?",opts:["Taqiqlangan modda (AAF)","Bosh tortish (Refusal)","Whereabouts failure","Gen doping"],a:2}
+{q:"WADA Taqiqlangan Röyxati qaçon yangilanadi?",opts:["Har çorakda","Har 6 oyda","Har yil 1-yanvar","Har 2 yilda"],a:2},
+{q:"Metodist yangi Taqiqlangan Röyxatni olingandan keyin qança vaqtda barça xodimlarga tarqatişi kerak?",opts:["1 oy içida","15 kun içida","1 hafta içida","24 soat içida"],a:1},
+{q:"WADA Kodeksida neçta asosiy bob bor?",opts:["10","15","20","25"],a:3},
+{q:"ADAMS tizimida qaysi ma’lumotlar boşqariladi?",opts:["Faqat test natijalari","Whereabouts, test, TUE va sportçi profili","Faqat TUE arizalari","Faqat moliyaviy hisobotlar"],a:1},
+{q:"TUE arizasini TUEC qança vaqt içida körib çiqadi?",opts:["3 kun","7 kun","21 kun","60 kun"],a:2},
+{q:"Retroaktiv TUE favqulodda holatda qança vaqt içida topşirilişi kerak?",opts:["24 soat","7 kun","30 kun","3 oy"],a:1},
+{q:"AAF (Adverse Analytical Finding) xabari kelganda metodist qança vaqt içida B-namuna söraşi mumkin?",opts:["3 kun","10 kun","30 kun","60 kun"],a:1},
+{q:"Whereabouts ma’lumotlari çorak qaçon yangilanişi kerak?",opts:["Çorak örtasida","Çorak boşida","Çorak oxirigaça","Istalgan vaqtda"],a:2},
+{q:"3 ta missed test 12 oy içida qanday qoidabuzarlik hisoblanadi?",opts:["ADRV 2.1","ADRV 2.3","ADRV 2.4","ADRV 2.8"],a:2},
+{q:"UzNADO ga hisobot qança vaqtda bir marta topşiriladi?",opts:["Hafta içida","Oyda bir marta","Çorakda bir marta","Yilda bir marta"],a:2},
+{q:"ISE 3.0 standarti nimani tartibga soladi?",opts:["Test rejalaştiriş","Laboratoriya akkreditatsiyasi","Antidoping ta’lim standarti","TUE protsedurasi"],a:2},
+{q:"WADA ISL standarti nimaga oid?",opts:["Test rejalaştiriş","Laboratoriya akkreditatsiyasi","Ta’lim standartlari","Whereabouts tizimi"],a:1},
+{q:"TUE rad etilsa metodist qança vaqt içida apellyatsiya qilişi mumkin?",opts:["7 kun","14 kun","21 kun","60 kun"],a:2},
+{q:"Antidoping modulini muvaffaqiyatli özlaştiriş uçun minimal neça foiz töğri javob talab etiladi?",opts:["60%","70%","75%","90%"],a:2},
+{q:"ADKT-25 nima?",opts:["Antidoping dori röyxati","Antidoping bilim testi (25 savol)","ADAMS tizim kodi","Taqiqlangan röyxat kodi"],a:1},
+{q:"DMS-12 nima?",opts:["Dori klassifikatsiya tizimi","Dinamik motivatsiya şkalasi (12 savol)","WADA standart kodi","Test protokoli"],a:1},
+{q:"ADAMS da 'RTP' abbreviaturasi nimani anglatadi?",opts:["Test natijalari platformasi","Röyxatga olingan testlanadigan guruh (Registered Testing Pool)","WADA protokol tizimi","Taqiqlangan röyxat platformasi"],a:1},
+{q:"Metodist öz malakasini qaysi platformalarda oşirişi mumkin?",opts:["Faqat sportedu.uz","Faqat WADA saytida","ADEL yoki talim-uznada.uz","Faqat xususiy kurslarda"],a:2},
+{q:"Sport taşkilotida antidoping arxiv qança yil saqlanişi şart?",opts:["1 yil","2 yil","3 yil","5 yil"],a:3},
+{q:"WADA Kodeks 2.4-modda nimani tartibga soladi?",opts:["Taqiqlangan modda (AAF)","Boş tortiş (Refusal)","Whereabouts failure","Gen doping"],a:2}
 ],
 sportchi:[
-{q:"'Strict Liability' prinsipi sportchi uchun nimani anglatadi?",opts:["Faqat qasddan qabul qilish uchun javobgar","Faqat musobaqada qabul qilish uchun javobgar","Organizmidagi har qanday taqiqlangan modda uchun shaxsan javobgar","Shifokor ko'rsatmasi bo'lsa javob bermas"],a:2},
-{q:"Whereabouts qoidasiga ko'ra RTP sportchisi ADAMS ga kunlik qancha ma'lumot kiritadi?",opts:["24 soatlik jadval","60 daqiqalik vaqt va aniq joy","Faqat mashg'ulot joyi","Faqat yashash manzili"],a:1},
-{q:"12 oy ichida nechta missed test ADRV hisoblanadi?",opts:["1 ta","2 ta","3 ta","5 ta"],a:2},
-{q:"TUE arizasini musobaqadan qancha vaqt oldin topshirish kerak?",opts:["7 kun oldin","14 kun oldin","30 kun oldin","60 kun oldin"],a:2},
-{q:"DCO kelganda sportchi birinchi navbatda nima qilishi kerak?",opts:["Bosh tortish","DCO ning vakolatnomasini va ID sini tekshirish","Yugurish","O'ylab ko'raman deyish"],a:1},
-{q:"Namuna berishdan bosh tortish qanday oqibatga olib keladi?",opts:["Ogohlantiriladi","6 oy","2 yil","4 yilgacha diskvalifikatsiya (ADRV 2.3)"],a:3},
-{q:"BAD (biologik qo'shimcha) ishlatmaslik tavsiya etiladi chunki:",opts:["Narxi qimmat","Tarkibi nazorat qilinmagan, kontaminatsiya xavfi bor","Shifokor ruxsatini olish qiyin","Hamma BAD taqiqlangan"],a:1},
-{q:"WADA sertifikatlangan BAD marka ro'yxatiga qaysi kiradi?",opts:["Rossiya brendlari","Informed Sport, NSF, Cologne List","'Natural' yozuvli har qanday","Dorixona brendlari"],a:1},
-{q:"Taqiqlangan ro'yxatda yo'q dori qaysi holatlarda xavfli bo'lishi mumkin?",opts:["Hech qachon xavfli emas","Sertifikatsiz BAD tarkibida yashirin taqiqlangan modda bo'lsa","Faqat ko'p miqdorda qabul qilinganda","Shifokor ruxsatisiz ichilganda"],a:1},
-{q:"Kofein WADA da qanday statusda?",opts:["Butunlay taqiqlangan","Musobaqada taqiqlangan (S6)","Ruxsat etilgan — Monitoring dasturida (siydik chegarasi bekor qilingan)","Faqat TUE bilan ruxsat etiladi"],a:2},
-{q:"Energetik ichimliklar sportchilarga nima uchun taqiqlangan?",opts:["Faqat qand miqdori ko'p","Tarkibida yashirin stimulyatorlar va kontaminatsiya xavfi bor","Narxi qimmat","Kuchli ta'mi bor"],a:1},
-{q:"Go'sht orqali qaysi taqiqlangan modda kirishi mumkin?",opts:["Testosteron","Klenbuterol","EPO","Amfetamin"],a:1},
-{q:"Taqiqlangan ro'yxatda modda bor-yo'qligini tekshirish uchun qaysi saytga kirish kerak?",opts:["google.com","talim-uznada.uz","wada-ama.org/en/prohibited-list","sportedu.uz"],a:2},
-{q:"Shifokor retsepti bo'lsa dori qabul qilish xavfsizmi?",opts:["Ha, retsept bo'lsa har doim xavfsiz","Yo'q — faol moddani Taqiqlangan ro'yxatda tekshirish shart","Ha, agar mahalliy shifokor yozsa","Faqat musobaqadan tashqarida ruxsat"],a:1},
-{q:"ADEL platformasida sportchi nima olishi mumkin?",opts:["Faqat ma'lumot","Bepul online ta'lim va sertifikat","Faqat pul evaziga kurs","Test natijalari"],a:1},
-{q:"Deksametazon qaysi shaklda qabul qilish ruxsat etilgan?",opts:["Oral (tabletkalar)","IV (tomir orqali)","Intra-artikulyar (bo'g'in ichiga inyeksiya)","Barcha shaklda ruxsat"],a:2},
-{q:"TUE yo'q holda taqiqlangan modda qabul qilsangiz nima bo'ladi?",opts:["Birinchi galda ogohlantirilasiz","AAF yoki ADRV hisoblanadi","Faqat musobaqada tekshiriladi","Hech narsa bo'lmaydi"],a:1},
-{q:"'Play True Day' qachon nishonlanadi?",opts:["Har yili yanvar oyida","Har yili aprel oyida (WADA e'lon qilgan kunda)","Har yili may oyida","Har yili oktyabr oyida"],a:1},
-{q:"CBD (kannabidiol) yog'i ishlatish xavfsizmi?",opts:["Ha, butunlay xavfsiz","Yo'q, WADA da taqiqlangan","THCsiz sifatli CBD ruxsat, lekin ko'pchilik mahsulotda THC izlari bor","Faqat musobaqadan tashqarida ruxsat"],a:2},
-{q:"3 ta Whereabouts failure qanday oqibat beradi?",opts:["Ogohlantirilasiz","6 oy diskvalifikatsiya","2 yilgacha diskvalifikatsiya","10 yilgacha diskvalifikatsiya"],a:2}
+{q:"'Strict Liability' prinsipi sportçi uçun nimani anglatadi?",opts:["Faqat qasddan qabul qiliş uçun javobgar","Faqat musobaqada qabul qiliş uçun javobgar","Organizmidagi har qanday taqiqlangan modda uçun şaxsan javobgar","Şifokor körsatmasi bölsa javob bermas"],a:2},
+{q:"Whereabouts qoidasiga köra RTP sportçisi ADAMS ga kunlik qança ma’lumot kiritadi?",opts:["24 soatlik jadval","60 daqiqalik vaqt va aniq joy","Faqat maşğulot joyi","Faqat yaşaş manzili"],a:1},
+{q:"12 oy içida neçta missed test ADRV hisoblanadi?",opts:["1 ta","2 ta","3 ta","5 ta"],a:2},
+{q:"TUE arizasini musobaqadan qança vaqt oldin topşiriş kerak?",opts:["7 kun oldin","14 kun oldin","30 kun oldin","60 kun oldin"],a:2},
+{q:"DCO kelganda sportçi birinçi navbatda nima qilişi kerak?",opts:["Boş tortiş","DCO ning vakolatnomasini va ID sini tekşiriş","Yuguriş","Öylab köraman deyiş"],a:1},
+{q:"Namuna berişdan boş tortiş qanday oqibatga olib keladi?",opts:["Ogohlantiriladi","6 oy","2 yil","4 yilgaça diskvalifikatsiya (ADRV 2.3)"],a:3},
+{q:"BAD (biologik qöşimça) işlatmaslik tavsiya etiladi çunki:",opts:["Narxi qimmat","Tarkibi nazorat qilinmagan, kontaminatsiya xavfi bor","Şifokor ruxsatini oliş qiyin","Hamma BAD taqiqlangan"],a:1},
+{q:"WADA sertifikatlangan BAD marka röyxatiga qaysi kiradi?",opts:["Rossiya brendlari","Informed Sport, NSF, Cologne List","'Natural' yozuvli har qanday","Dorixona brendlari"],a:1},
+{q:"Taqiqlangan röyxatda yöq dori qaysi holatlarda xavfli bölişi mumkin?",opts:["Heç qaçon xavfli emas","Sertifikatsiz BAD tarkibida yaşirin taqiqlangan modda bölsa","Faqat köp miqdorda qabul qilinganda","Şifokor ruxsatisiz içilganda"],a:1},
+{q:"Kofein WADA da qanday statusda?",opts:["Butunlay taqiqlangan","Musobaqada taqiqlangan (S6)","Ruxsat etilgan — Monitoring dasturida (siydik çegarasi bekor qilingan)","Faqat TUE bilan ruxsat etiladi"],a:2},
+{q:"Energetik içimliklar sportçilarga nima uçun taqiqlangan?",opts:["Faqat qand miqdori köp","Tarkibida yaşirin stimulyatorlar va kontaminatsiya xavfi bor","Narxi qimmat","Kuçli ta’mi bor"],a:1},
+{q:"Göşt orqali qaysi taqiqlangan modda kirişi mumkin?",opts:["Testosteron","Klenbuterol","EPO","Amfetamin"],a:1},
+{q:"Taqiqlangan röyxatda modda bor-yöqligini tekşiriş uçun qaysi saytga kiriş kerak?",opts:["google.com","talim-uznada.uz","wada-ama.org/en/prohibited-list","sportedu.uz"],a:2},
+{q:"Şifokor retsepti bölsa dori qabul qiliş xavfsizmi?",opts:["Ha, retsept bölsa har doim xavfsiz","Yöq — faol moddani Taqiqlangan röyxatda tekşiriş şart","Ha, agar mahalliy şifokor yozsa","Faqat musobaqadan taşqarida ruxsat"],a:1},
+{q:"ADEL platformasida sportçi nima olişi mumkin?",opts:["Faqat ma’lumot","Bepul online ta’lim va sertifikat","Faqat pul evaziga kurs","Test natijalari"],a:1},
+{q:"Deksametazon qaysi şaklda qabul qiliş ruxsat etilgan?",opts:["Oral (tabletkalar)","IV (tomir orqali)","Intra-artikulyar (böğin içiga inyeksiya)","Barça şaklda ruxsat"],a:2},
+{q:"TUE yöq holda taqiqlangan modda qabul qilsangiz nima böladi?",opts:["Birinçi galda ogohlantirilasiz","AAF yoki ADRV hisoblanadi","Faqat musobaqada tekşiriladi","Heç narsa bölmaydi"],a:1},
+{q:"'Play True Day' qaçon nişonlanadi?",opts:["Har yili yanvar oyida","Har yili aprel oyida (WADA e’lon qilgan kunda)","Har yili may oyida","Har yili oktyabr oyida"],a:1},
+{q:"CBD (kannabidiol) yoği işlatiş xavfsizmi?",opts:["Ha, butunlay xavfsiz","Yöq, WADA da taqiqlangan","THCsiz sifatli CBD ruxsat, lekin köpçilik mahsulotda THC izlari bor","Faqat musobaqadan taşqarida ruxsat"],a:2},
+{q:"3 ta Whereabouts failure qanday oqibat beradi?",opts:["Ogohlantirilasiz","6 oy diskvalifikatsiya","2 yilgaça diskvalifikatsiya","10 yilgaça diskvalifikatsiya"],a:2}
 ]};
 
 
@@ -199,39 +199,39 @@ const scenarios=[
     id:'dco',
     icon:'👮',
     title:'DCO keldi!',
-    desc:'Musobaqadan keyin doping nazorat xodimi sizni to\'xtatdi.',
+    desc:'Musobaqadan keyin doping nazorat xodimi sizni töxtatdi.',
     color:'#dc2626',
     bg:'#fef2f2',
     choices:[
-      {text:'Vakolatnomasini ko\'rib, metodistni chaqiraman',correct:true,result:'✅ To\'G\'RI! DCO ning ID va vakolatnomasini tekshirish — birinchi qadam. Metodist kelganda tinch turib namuna berasiz. Bu protsedura Kodeks 2.3 bo\'yicha to\'g\'ri.'},
-      {text:'Hozir dam olishim kerak, ertaga kelsin',correct:false,result:'❌ XATO! Bosh tortish = ADRV 2.3 = 4 yilgacha diskvalifikatsiya. "Dam olaman" — qonuniy sabab emas.'},
-      {text:'Bosh tortaman va ketib qolaman',correct:false,result:'❌ JUDA XAVFLI! Bu Kodeks 2.3 bo\'yicha eng og\'ir qoidabuzarlik — 4 yilgacha ban. DCO bilan hech qachon munozara qilmang.'}
+      {text:'Vakolatnomasini körib, metodistni çaqiraman',correct:true,result:'✅ TöĞRI! DCO ning ID va vakolatnomasini tekşiriş — birinçi qadam. Metodist kelganda tinç turib namuna berasiz. Bu protsedura Kodeks 2.3 böyiça töğri.'},
+      {text:'Hozir dam olişim kerak, ertaga kelsin',correct:false,result:'❌ XATO! Boş tortiş = ADRV 2.3 = 4 yilgaça diskvalifikatsiya. "Dam olaman" — qonuniy sabab emas.'},
+      {text:'Boş tortaman va ketib qolaman',correct:false,result:'❌ JUDA XAVFLI! Bu Kodeks 2.3 böyiça eng oğir qoidabuzarlik — 4 yilgaça ban. DCO bilan heç qaçon munozara qilmang.'}
     ]
   },
   {
     id:'bad',
     icon:'💊',
-    title:'Do\'st BAD taklif qildi',
-    desc:'Musobaqa oldida do\'stingiz "100% tabiiy, xavfsiz" protein qo\'shimchasini taklif qildi.',
+    title:'Döst BAD taklif qildi',
+    desc:'Musobaqa oldida döstingiz "100% tabiiy, xavfsiz" protein qöşimçasini taklif qildi.',
     color:'#d97706',
     bg:'#fffbeb',
     choices:[
-      {text:'Rahmat, lekin sertifikatini ko\'rsatsin, keyin koordinatorga so\'rayman',correct:true,result:'✅ TO\'G\'RI! Har qanday qo\'shimchani olishdan oldin: Informed Sport/NSF sertifikati + koordinator tasdiqi. "Tabiiy" so\'zi kafolat emas.'},
-      {text:'"Tabiiy" deydi, ichib ko\'raman',correct:false,result:'❌ XATO! Sertifikatsiz BADlarning 12-25% da taqiqlangan modda izlari topilgan. "Tabiiy" yozuvi hech narsani kafolatlamaydi.'},
-      {text:'Musobaqadan keyin ichaman',correct:false,result:'⚠️ NOTO\'G\'RI! Taqiqlangan moddalar musobaqadan tashqarida ham taqiqlangan (M1, S1, S2 va boshqalar). Musobaqadan keyingisi ham xavfli.'}
+      {text:'Rahmat, lekin sertifikatini körsatsin, keyin koordinatorga sörayman',correct:true,result:'✅ TÖĞRI! Har qanday qöşimçani olişdan oldin: Informed Sport/NSF sertifikati + koordinator tasdiqi. "Tabiiy" sözi kafolat emas.'},
+      {text:'"Tabiiy" deydi, içib köraman',correct:false,result:'❌ XATO! Sertifikatsiz BADlarning 12-25% da taqiqlangan modda izlari topilgan. "Tabiiy" yozuvi heç narsani kafolatlamaydi.'},
+      {text:'Musobaqadan keyin içaman',correct:false,result:'⚠️ NOTÖĞRI! Taqiqlangan moddalar musobaqadan taşqarida ham taqiqlangan (M1, S1, S2 va boşqalar). Musobaqadan keyingisi ham xavfli.'}
     ]
   },
   {
     id:'gripp',
     icon:'🤧',
-    title:'Musobaqa oldida kasal bo\'ldingiz',
-    desc:'Musobaqadan 2 kun oldin gripp belgilari. Shifokor siz bilmagan dori yozdi.',
+    title:'Musobaqa oldida kasal böldingiz',
+    desc:'Musobaqadan 2 kun oldin gripp belgilari. Şifokor siz bilmagan dori yozdi.',
     color:'#2563eb',
     bg:'#eff6ff',
     choices:[
-      {text:'Dorining faol moddasini WADA ro\'yxatida tekshiraman, keyin ichaman',correct:true,result:'✅ TO\'G\'RI! Har qanday dorida: (1) faol moddalarni aniqlash, (2) WADA Prohibited List da tekshirish, (3) taqiqlangan bo\'lsa — muqobil so\'rash yoki TUE. Retsept — himoya emas!'},
-      {text:'Shifokor yozdi, ishonchli, ichaman',correct:false,result:'❌ XATO! Ko\'p sovuq dorilarda psevdoefedrin bor — bu S6 stimulyator. "Shifokor yozdi" — WADA uchun bahona emas. Strict Liability amal qiladi.'},
-      {text:'Hech narsa ichmay musobaqaga boraman',correct:true,result:'✅ YAXSHI! Agar xavfsiz dori topa olmasangiz — kasallik bilan musobaqaga borish xavfli bo\'lsa ham, dozasiz ketish xavfsizroq. Koordinator bilan maslahatlashing.'}
+      {text:'Dorining faol moddasini WADA röyxatida tekşiraman, keyin içaman',correct:true,result:'✅ TÖĞRI! Har qanday dorida: (1) faol moddalarni aniqlaş, (2) WADA Prohibited List da tekşiriş, (3) taqiqlangan bölsa — muqobil söraş yoki TUE. Retsept — himoya emas!'},
+      {text:'Şifokor yozdi, işonçli, içaman',correct:false,result:'❌ XATO! Köp sovuq dorilarda psevdoefedrin bor — bu S6 stimulyator. "Şifokor yozdi" — WADA uçun bahona emas. Strict Liability amal qiladi.'},
+      {text:'Heç narsa içmay musobaqaga boraman',correct:true,result:'✅ YAXŞI! Agar xavfsiz dori topa olmasangiz — kasallik bilan musobaqaga boriş xavfli bölsa ham, dozasiz ketiş xavfsizroq. Koordinator bilan maslahatlaşing.'}
     ]
   }
 ];
@@ -245,13 +245,13 @@ const remindMessages={
 ━━━━━━━━━━━━━━━━━━━━
 Assalomu alaykum, {ism}! 
 
-⏰ <b>Bugun ADAMS ni yangilash vaqti!</b>
+⏰ <b>Bugun ADAMS ni yangilaş vaqti!</b>
 
-📋 Nima qilish kerak:
+📋 Nima qiliş kerak:
 1. ADAMS ga kiring: adams.wada-ama.org
 2. Ertalab soat 06:00—07:00 → joyingizni kiriting
-3. Chorak (3 oylik) ma'lumotni tekshiring
-4. Joy o'zgarsa — DARHOL yangilang
+3. Çorak (3 oylik) ma’lumotni tekşiring
+4. Joy özgarsa — DARHOL yangilang
 
 ⚠️ Eslatma: 12 oyda 3 ta missed test = 2 yil!
 
@@ -264,34 +264,34 @@ Assalomu alaykum, {ism}!
 ━━━━━━━━━━━━━━━━━━━━
 Assalomu alaykum, {ism}!
 
-⚠️ <b>TUE muddatingiz yaqinlashmoqda!</b>
+⚠️ <b>TUE muddatingiz yaqinlaşmoqda!</b>
 
-📋 Nima qilish kerak:
-1. ADAMS da TUE holatini tekshiring
-2. Muddati tugashiga 30+ kun qolganida yangilash arizasini bering
-3. Shifokordan yangi tibbiy hujjatlar oling
-4. TUEC javobini 21 kun ichida kuting
+📋 Nima qiliş kerak:
+1. ADAMS da TUE holatini tekşiring
+2. Muddati tugaşiga 30+ kun qolganida yangilaş arizasini bering
+3. Şifokordan yangi tibbiy hujjatlar oling
+4. TUEC javobini 21 kun içida kuting
 
-⚠️ TUE siz taqiqlangan dori ichish = AAF!
+⚠️ TUE siz taqiqlangan dori içiş = AAF!
 
 📞 UzNADO: talim-uznada.uz`
   },
   seminar:{
     emoji:'🎓',
     title:'SEMINAR ESLATMASI',
-    text:`🎓 <b>TA'LIM SEMINARI ESLATMASI</b>
+    text:`🎓 <b>TA’LIM SEMINARI ESLATMASI</b>
 ━━━━━━━━━━━━━━━━━━━━
 Assalomu alaykum, {ism}!
 
-📅 <b>Yaqinlashayotgan ta'lim tadbirlari:</b>
+📅 <b>Yaqinlaşayotgan ta’lim tadbirlari:</b>
 
 ✅ ADEL platformasida yangi kurslar: adel.wada-ama.org
-✅ UzNADO ta'lim: talim-uznada.uz
+✅ UzNADO ta’lim: talim-uznada.uz
 ✅ Institut yangiliklari: sportedu.uz
 
-💡 Yillik malaka yangilanish — majburiy!
+💡 Yillik malaka yangilaniş — majburiy!
 
-🌐 Antidoping Ta'lim Portali | doping.uz`
+🌐 Antidoping Ta’lim Portali | doping.uz`
   },
   test:{
     emoji:'📝',
@@ -300,17 +300,17 @@ Assalomu alaykum, {ism}!
 ━━━━━━━━━━━━━━━━━━━━
 Assalomu alaykum, {ism}!
 
-🔔 <b>Antidoping bilim testini yangilash vaqti keldi!</b>
+🔔 <b>Antidoping bilim testini yangilaş vaqti keldi!</b>
 
-📋 Nima qilish kerak:
+📋 Nima qiliş kerak:
 1. https://doping.uz portaliga kiring
-2. O'z toifangizni tanlang (rahbar/murabbiy/metodist/sportchi)
+2. Öz toifangizni tanlang (rahbar/murabbiy/metodist/sportçi)
 3. 20 savollik testni toping
-4. 75%+ → O‘zlashtirildi tasdiqnomasi + Telegramga yuboriladi
+4. 75%+ → Özlaştirildi tasdiqnomasi + Telegramga yuboriladi
 
-⚠️ Yangilanmagan bilim — xatolar keltirib chiqaradi!
+⚠️ Yangilanmagan bilim — xatolar keltirib çiqaradi!
 
-🌐 Antidoping Ta'lim Portali | doping.uz`
+🌐 Antidoping Ta’lim Portali | doping.uz`
   }
 };
 
@@ -320,37 +320,37 @@ try { window.CUR_LANG = localStorage.getItem('site_lang') || 'uz'; } catch(e) { 
 const STR = {
 uz:{
   savol:'Savol',
-  res_pass:'✅ Tabriklaymiz! Test muvaffaqiyatli o‘zlashtirildi! Quyida tasdiqlovchi hujjatni yuklab oling.',
-  res_mid:"👍 Yaxshi natija, lekin 75% kerak. Mavzularni takrorlab, qayta urinib ko'ring.",
-  res_low:"📚 Ko'proq o'qib, qayta sinab ko'ring.",
-  unanswered:"{n} ta savolga javob bermagansiz. Baribir natijani ko'rmoqchimisiz?",
-  err_name:'❗ Ism va Familiya kiritish majburiy!',
-  cert_ready:'🏆 75% dan yuqori — Fan muvaffaqiyatli o‘zlashtirildi! Hujjatni yuklab oling.',
+  res_pass:'✅ Tabriklaymiz! Test muvaffaqiyatli özlaştirildi! Quyida tasdiqlovçi hujjatni yuklab oling.',
+  res_mid:"👍 Yaxşi natija, lekin 75% kerak. Mavzularni takrorlab, qayta urinib köring.",
+  res_low:"📚 Köproq öqib, qayta sinab köring.",
+  unanswered:"{n} ta savolga javob bermagansiz. Baribir natijani körmoqçimisiz?",
+  err_name:'❗ Ism va Familiya kiritiş majburiy!',
+  cert_ready:'🏆 75% dan yuqori — Fan muvaffaqiyatli özlaştirildi! Hujjatni yuklab oling.',
   cert_field_date:"Berilgan sana:",
   cert_field_id:"Qayd ID:",
-  cert_dl:'⬇️ PNG yuklab olish',
+  cert_dl:'⬇️ PNG yuklab oliş',
   cert_sending:'⏳ @antidopi kanaliga yuborilmoqda...',
-  cert_ch_btn:'📢 Kanalga yuborish',
+  cert_ch_btn:'📢 Kanalga yuboriş',
   cert_ch_sending:'⏳ Yuborilmoqda...',
   cert_ch_done:'✅ Kanalga yuborildi',
-  cert_ch_retry:'🔄 Qayta yuborish',
+  cert_ch_retry:'🔄 Qayta yuboriş',
   cert_ch_ok:'✅ @antidopi kanaliga yuborildi!',
-  cert_ch_fail:"⚠️ Yuborilmadi — bot @antidopi kanalida admin bo'lishi kerak",
+  cert_ch_fail:"⚠️ Yuborilmadi — bot @antidopi kanalida admin bölişi kerak",
   cert_ch_nocfg:'⚠️ Telegram sozlanmagan (BOT_TOKEN yoki Worker URL kerak)',
   cert_ch_net:"⚠️ Internet xatosi — tasdiqnomani yuklab oling",
-  tg_e_chat:"⚠️ Kanal topilmadi — kanal username'i noto'g'ri yoki kanal maxfiy (public bo'lishi kerak)",
-  tg_e_rights:'⚠️ Botga kanalda "Post messages" (xabar yuborish) huquqi berilmagan',
-  tg_e_kicked:"⚠️ Bot kanalga qo'shilmagan yoki chiqarib yuborilgan",
-  tg_e_token:"⚠️ Bot token noto'g'ri — @BotFather dan qayta tekshiring",
+  tg_e_chat:"⚠️ Kanal topilmadi — kanal username’i notöğri yoki kanal maxfiy (public bölişi kerak)",
+  tg_e_rights:'⚠️ Botga kanalda "Post messages" (xabar yuboriş) huquqi berilmagan',
+  tg_e_kicked:"⚠️ Bot kanalga qöşilmagan yoki çiqarib yuborilgan",
+  tg_e_token:"⚠️ Bot token notöğri — @BotFather dan qayta tekşiring",
   tg_e_other:'⚠️ Telegram xatosi',
-  tg_e_cors:"⚠️ Brauzer so'rovni to'sdi — Adblock/kengaytmalarni o'chirib, boshqa brauzerda sinab ko'ring",
-  tg_e_blocked:"⚠️ api.telegram.org ochilmayapti — provayder bloklagan bo'lishi mumkin. VPN yoqib sinab ko'ring yoki Cloudflare Worker usulini ishlating (SOZLASH-YORIQNOMA.md)",
-  tg_e_wcode:"⚠️ Worker ochilyapti, lekin ichida kerakli kod YO'Q — Cloudflare'da workeringizni oching → Edit code → cloudflare-worker.js dagi kodni to'liq joylashtiring → Deploy",
-  tg_e_wpost:"⚠️ Worker ishlayapti, lekin yuborish amalga oshmadi — sahifani yangilab (Ctrl+F5) qayta urining",
-  tg_e_wblocked:"⚠️ Worker manziliga ulanib bo'lmadi — internetni tekshiring yoki provayder workers.dev ni bloklagan (VPN bilan sinang)",
-  retry:'🔄 Qayta sinash',
-  not_taken:'Topshirilmagan',
-  cert_got:'✅ O‘zlashtirildi'
+  tg_e_cors:"⚠️ Brauzer sörovni tösdi — Adblock/kengaytmalarni öçirib, boşqa brauzerda sinab köring",
+  tg_e_blocked:"⚠️ api.telegram.org oçilmayapti — provayder bloklagan bölişi mumkin. VPN yoqib sinab köring yoki Cloudflare Worker usulini işlating (SOZLAŞ-YORIQNOMA.md)",
+  tg_e_wcode:"⚠️ Worker oçilyapti, lekin içida kerakli kod YÖQ — Cloudflare’da workeringizni oçing → Edit code → cloudflare-worker.js dagi kodni töliq joylaştiring → Deploy",
+  tg_e_wpost:"⚠️ Worker işlayapti, lekin yuboriş amalga oşmadi — sahifani yangilab (Ctrl+F5) qayta urining",
+  tg_e_wblocked:"⚠️ Worker manziliga ulanib bölmadi — internetni tekşiring yoki provayder workers.dev ni bloklagan (VPN bilan sinang)",
+  retry:'🔄 Qayta sinaş',
+  not_taken:'Topşirilmagan',
+  cert_got:'✅ Özlaştirildi'
 },
 ru:{
   savol:'Вопрос',
@@ -392,82 +392,82 @@ function tr(k){ return (STR[window.CUR_LANG]&&STR[window.CUR_LANG][k]) || STR.uz
 
 const RU_DICT = {
 "ANTIDOPING KOMPETENSIYASI":"АНТИДОПИНГОВАЯ КОМПЕТЕНТНОСТЬ",
-"PhD Ta'lim Portali · 2026":"Образовательный портал PhD · 2026",
+"PhD Ta’lim Portali · 2026":"Образовательный портал PhD · 2026",
 "Modullar":"Модули","🤖 AI Dori":"🤖 ИИ Лекарства","📊 Dashboard":"📊 Дашборд","🎯 Trening":"🎯 Тренинг","Toza Sport":"Чистый спорт",
 "📚 Modullar":"📚 Модули","🔍 Dorilar":"🔍 Лекарства","🎯 Toza Sport":"🎯 Чистый спорт","🔗 Resurslar":"🔗 Ресурсы",
 "🎓 PhD Ilmiy Tadqiqot Loyihasi · sportedu.uz":"🎓 Научно-исследовательский проект PhD · sportedu.uz",
-"Tuzuvchi · PhD tadqiqotchisi · sportedu.uz":"Автор · исследователь PhD · sportedu.uz",
-"Sport tizimidagi rahbarlar, murabbiylar, metodistlar va sportchilar uchun WADA hamda UzNADO xalqaro standartlariga asoslangan ilmiy-metodologik ta'lim tizimi.":"Научно-методическая система обучения для руководителей, тренеров, методистов и спортсменов, основанная на международных стандартах WADA и UzNADO.",
-"Auditoriya":"Аудитории","Mavzu":"Тем","Test savol":"Тест-вопросов","WADA kategoriya":"Категорий WADA","Dorilar bazasi":"База лекарств","Lug'at atama":"Терминов",
-"Rahbarlar":"Руководители","Murabbiylar":"Тренеры","Metodistlar":"Методисты","Sportchilar":"Спортсмены",
-"O'quv Modullar":"Учебные модули","O'z toifangizni tanlang":"Выберите свою категорию",
-"Har bir modul shu toifa uchun maxsus ishlab chiqilgan. Har bir modulda 16 ta mavzu, amaliy checklist va 20 ta test savoli mavjud.":"Каждый модуль разработан специально для своей категории. В каждом модуле 16 тем, практический чек-лист и 20 тестовых вопросов.",
-"Antidoping siyosati, tashkiliy tuzilma, ovqatlanish nazorati, safar checklist, byudjet va hujjatlar.":"Антидопинговая политика, оргструктура, контроль питания, чек-лист поездок, бюджет и документы.",
-"Mashg'ulot rejalashtirish, ovqatlanish nazorati, sportchi salomatligi, TUE va shaxsiy javobgarlik.":"Планирование тренировок, контроль питания, здоровье спортсмена, TUE и личная ответственность.",
+"Tuzuvçi · PhD tadqiqotçisi · sportedu.uz":"Автор · исследователь PhD · sportedu.uz",
+"Sport tizimidagi rahbarlar, murabbiylar, metodistlar va sportçilar uçun WADA hamda UzNADO xalqaro standartlariga asoslangan ilmiy-metodologik ta’lim tizimi.":"Научно-методическая система обучения для руководителей, тренеров, методистов и спортсменов, основанная на международных стандартах WADA и UzNADO.",
+"Auditoriya":"Аудитории","Mavzu":"Тем","Test savol":"Тест-вопросов","WADA kategoriya":"Категорий WADA","Dorilar bazasi":"База лекарств","Luğat atama":"Терминов",
+"Rahbarlar":"Руководители","Murabbiylar":"Тренеры","Metodistlar":"Методисты","Sportçilar":"Спортсмены",
+"Öquv Modullar":"Учебные модули","Öz toifangizni tanlang":"Выберите свою категорию",
+"Har bir modul şu toifa uçun maxsus işlab çiqilgan. Har bir modulda 16 ta mavzu, amaliy checklist va 20 ta test savoli mavjud.":"Каждый модуль разработан специально для своей категории. В каждом модуле 16 тем, практический чек-лист и 20 тестовых вопросов.",
+"Antidoping siyosati, taşkiliy tuzilma, ovqatlaniş nazorati, safar checklist, byudjet va hujjatlar.":"Антидопинговая политика, оргструктура, контроль питания, чек-лист поездок, бюджет и документы.",
+"Maşğulot rejalaştiriş, ovqatlaniş nazorati, sportçi salomatligi, TUE va şaxsiy javobgarlik.":"Планирование тренировок, контроль питания, здоровье спортсмена, TUE и личная ответственность.",
 "WADA hujjatlari, ADAMS tizimi, SMS-tahlil, federatsiyalar koordinatsiyasi, TUE va hisobotlar.":"Документы WADA, система ADAMS, SMS-анализ, координация федераций, TUE и отчёты.",
-"Toza sport, BAD xavfi, TUE, Whereabouts, shaxsiy javobgarlik va doping-kontrol protsedurasi.":"Чистый спорт, риски БАД, TUE, Whereabouts, личная ответственность и процедура допинг-контроля.",
+"Toza sport, BAD xavfi, TUE, Whereabouts, şaxsiy javobgarlik va doping-kontrol protsedurasi.":"Чистый спорт, риски БАД, TUE, Whereabouts, личная ответственность и процедура допинг-контроля.",
 "📋 16 mavzu":"📋 16 тем","🏅 16 mavzu":"🏅 16 тем","📄 16 mavzu":"📄 16 тем","✅ Checklist":"✅ Чек-лист","📝 20 test":"📝 20 тестов","✅ Kunlik reja":"✅ Дневной план",
-"Hujjatli Filmlar":"Документальные фильмы","Oskar sovrindori va dunyo miqyosida e'tirof etilgan filmlar — pedagogik tahlil bilan.":"Оскароносные и всемирно признанные фильмы — с педагогическим анализом.",
-"Klinik Holatlar":"Клинические случаи","Haqiqiy doping voqealari asosida o'rganish — xato va to'g'ri yo'l, WADA qoidalari.":"Обучение на реальных допинг-случаях — ошибки и верный путь, правила WADA.",
-"Antidoping Lug'at":"Антидопинговый словарь","WADA atamalarining o'zbekcha izohli lug'ati — 35+ atama, qidiruv va alifbo filtri.":"Толковый словарь терминов WADA — 35+ терминов, поиск и алфавитный фильтр.",
+"Hujjatli Filmlar":"Документальные фильмы","Oskar sovrindori va dunyo miqyosida e’tirof etilgan filmlar — pedagogik tahlil bilan.":"Оскароносные и всемирно признанные фильмы — с педагогическим анализом.",
+"Klinik Holatlar":"Клинические случаи","Haqiqiy doping voqealari asosida örganiş — xato va töğri yöl, WADA qoidalari.":"Обучение на реальных допинг-случаях — ошибки и верный путь, правила WADA.",
+"Antidoping Luğat":"Антидопинговый словарь","WADA atamalarining özbekça izohli luğati — 35+ atama, qidiruv va alifbo filtri.":"Толковый словарь терминов WADA — 35+ терминов, поиск и алфавитный фильтр.",
 "🎥 5 film":"🎥 5 фильмов","🏆 Оскар":"🏆 Оскар","📖 Tahlil":"📖 Анализ","📋 12 holat":"📋 12 случаев","❌→✅ Tahlil":"❌→✅ Анализ","📜 WADA qoida":"📜 Правила WADA","🔤 35+ atama":"🔤 35+ терминов","🔍 Qidiruv":"🔍 Поиск","📌 Harflar":"📌 Алфавит",
-"WADA Ma'lumotlar Bazasi":"База данных WADA","Taqiqlangan Moddalar Ro'yxati (2026)":"Список запрещённых веществ (2026)",
-"Barcha kategoriyalar":"Все категории","Modda nomi":"Название вещества","Misollar":"Примеры","Ta'siri":"Действие","Xavf darajasi":"Уровень риска",
-"O'zbekistonda birinchi":"Впервые в Узбекистане","AI Dori Tekshirgich":"ИИ-проверка лекарств",
-"Istalgan dori, qo'shimcha yoki mahsulot nomini yozing — AI Dori Tekshirgich WADA 2026 qoidalari asosida javob beradi":"Введите название любого лекарства, добавки или продукта — ИИ-проверка ответит по правилам WADA 2026",
-"🤖 AI Tekshirgich":"🤖 ИИ-проверка","📋 Tezkor Qidiruv":"📋 Быстрый поиск","🤖 AI Tekshir":"🤖 Проверить","🔍 Qidirish":"🔍 Поиск",
-"Topilmadi — AI Tekshirgichdan foydalaning":"Не найдено — воспользуйтесь ИИ-проверкой",
-"Mening Progress Dashboard":"Мой дашборд прогресса","Test natijalarim, o‘zlashtirish tasdiqnomalari, reyting":"Мои результаты, подтверждения освоения, рейтинг",
-"📊 Shaxsiy Natijalar":"📊 Личные результаты","Test topshirgan bo'lsangiz — natijalaringiz shu yerda saqlanadi":"Если вы сдавали тест — результаты сохраняются здесь",
-"📈 Modul Natijalari":"📈 Результаты модулей","🏆 O‘zlashtirilgan modullar":"🏆 Освоенные модули","🏅 Top Natijalar":"🏅 Лучшие результаты",
-"Hali hech qanday test topshirilmagan.":"Пока ни один тест не сдан.","Yuqoridagi modullardan birini tanlang.":"Выберите один из модулей выше.",
-"75% dan yuqori natijada O‘zlashtirildi tasdiqnomasi beriladi":"Подтверждение освоения выдаётся при результате выше 75%",
-"Test topshiring va reytingda ko'rining!":"Сдайте тест и попадите в рейтинг!",
+"WADA Ma’lumotlar Bazasi":"База данных WADA","Taqiqlangan Moddalar Röyxati (2026)":"Список запрещённых веществ (2026)",
+"Barça kategoriyalar":"Все категории","Modda nomi":"Название вещества","Misollar":"Примеры","Ta’siri":"Действие","Xavf darajasi":"Уровень риска",
+"Özbekistonda birinçi":"Впервые в Узбекистане","AI Dori Tekşirgiç":"ИИ-проверка лекарств",
+"Istalgan dori, qöşimça yoki mahsulot nomini yozing — AI Dori Tekşirgiç WADA 2026 qoidalari asosida javob beradi":"Введите название любого лекарства, добавки или продукта — ИИ-проверка ответит по правилам WADA 2026",
+"🤖 AI Tekşirgiç":"🤖 ИИ-проверка","📋 Tezkor Qidiruv":"📋 Быстрый поиск","🤖 AI Tekşir":"🤖 Проверить","🔍 Qidiriş":"🔍 Поиск",
+"Topilmadi — AI Tekşirgiçdan foydalaning":"Не найдено — воспользуйтесь ИИ-проверкой",
+"Mening Progress Dashboard":"Мой дашборд прогресса","Test natijalarim, özlaştiriş tasdiqnomalari, reyting":"Мои результаты, подтверждения освоения, рейтинг",
+"📊 Şaxsiy Natijalar":"📊 Личные результаты","Test topşirgan bölsangiz — natijalaringiz şu yerda saqlanadi":"Если вы сдавали тест — результаты сохраняются здесь",
+"📈 Modul Natijalari":"📈 Результаты модулей","🏆 Özlaştirilgan modullar":"🏆 Освоенные модули","🏅 Top Natijalar":"🏅 Лучшие результаты",
+"Hali heç qanday test topşirilmagan.":"Пока ни один тест не сдан.","Yuqoridagi modullardan birini tanlang.":"Выберите один из модулей выше.",
+"75% dan yuqori natijada Özlaştirildi tasdiqnomasi beriladi":"Подтверждение освоения выдаётся при результате выше 75%",
+"Test topşiring va reytingda körining!":"Сдайте тест и попадите в рейтинг!",
 "🎯 Interaktiv Trening":"🎯 Интерактивный тренинг","Real Hayot Ssenarilari":"Сценарии из реальной жизни",
-"Haqiqiy vaziyatda nima qilardingiz? Tanlang va oqibatini ko'ring":"Что бы вы сделали в реальной ситуации? Выберите и увидите последствия",
-"🎯 Toza Sport Targ'iboti":"🎯 Пропаганда чистого спорта","Dopingga Qarshi Kurashish va O'qitish":"Борьба с допингом и обучение",
-"Xalqaro tajribalar, o'qitish metodikasi, targ'ibot va amaliy dasturlar":"Международный опыт, методика обучения, пропаганда и практические программы",
-"Dunyo antidoping agentliklari":"Антидопинговых агентств мира","Yillik testlar (O'zbekiston)":"Тестов в год (Узбекистан)","Play True kuni":"День Play True","2024 toza natija foizi":"Чистых результатов (2024)",
-"Halollik":"Честность","Sun'iy yordamsiz, raqibga hurmat.":"Без искусственной помощи, уважение к сопернику.",
+"Haqiqiy vaziyatda nima qilardingiz? Tanlang va oqibatini köring":"Что бы вы сделали в реальной ситуации? Выберите и увидите последствия",
+"🎯 Toza Sport Tarğiboti":"🎯 Пропаганда чистого спорта","Dopingga Qarşi Kuraşiş va Öqitiş":"Борьба с допингом и обучение",
+"Xalqaro tajribalar, öqitiş metodikasi, tarğibot va amaliy dasturlar":"Международный опыт, методика обучения, пропаганда и практические программы",
+"Dunyo antidoping agentliklari":"Антидопинговых агентств мира","Yillik testlar (Özbekiston)":"Тестов в год (Узбекистан)","Play True kuni":"День Play True","2024 toza natija foizi":"Чистых результатов (2024)",
+"Halollik":"Честность","Sun’iy yordamsiz, raqibga hurmat.":"Без искусственной помощи, уважение к сопернику.",
 "Salomatlik":"Здоровье","Tanangiz — asosiy kapital. Doping uni buzadi.":"Ваше тело — главный капитал. Допинг его разрушает.",
-"Javobgarlik":"Ответственность","Strict Liability — organizmingizda topilgan har qanday modda uchun shaxsan javobgarsiz.":"Strict Liability — вы лично отвечаете за любое вещество, найденное в организме.",
-"❓ Ko'p Beriladigan Savollar":"❓ Часто задаваемые вопросы","Antidoping bo'yicha FAQ":"FAQ по антидопингу",
-"14 ta savol-javob — bosib oching":"14 вопросов и ответов — нажмите, чтобы открыть",
-"Rasmiy Resurslar":"Официальные ресурсы","WADA, UzNADO, Institut va boshqa rasmiy platformalar":"WADA, UzNADO, институт и другие официальные платформы",
-"© 2026 · Antidoping Kompetensiyasi Ta'lim Portali · PhD Ilmiy Tadqiqot · sportedu.uz":"© 2026 · Образовательный портал антидопинговой компетентности · Научное исследование PhD · sportedu.uz",
+"Javobgarlik":"Ответственность","Strict Liability — organizmingizda topilgan har qanday modda uçun şaxsan javobgarsiz.":"Strict Liability — вы лично отвечаете за любое вещество, найденное в организме.",
+"❓ Köp Beriladigan Savollar":"❓ Часто задаваемые вопросы","Antidoping böyiça FAQ":"FAQ по антидопингу",
+"14 ta savol-javob — bosib oçing":"14 вопросов и ответов — нажмите, чтобы открыть",
+"Rasmiy Resurslar":"Официальные ресурсы","WADA, UzNADO, Institut va boşqa rasmiy platformalar":"WADA, UzNADO, институт и другие официальные платформы",
+"© 2026 · Antidoping Kompetensiyasi Ta’lim Portali · PhD Ilmiy Tadqiqot · sportedu.uz":"© 2026 · Образовательный портал антидопинговой компетентности · Научное исследование PhD · sportedu.uz",
 "📝 Rahbarlar testi — 20 savol":"📝 Тест для руководителей — 20 вопросов",
 "📝 Murabbiylar testi — 20 savol":"📝 Тест для тренеров — 20 вопросов",
 "📝 Metodistlar testi — 20 savol":"📝 Тест для методистов — 20 вопросов",
-"📝 Sportchilar testi — 20 savol":"📝 Тест для спортсменов — 20 вопросов",
-"@antidopi kanaliga obuna bo'ling":"Подпишитесь на канал @antidopi",
-"Test natijangiz va O‘zlashtirildi tasdiqnomangiz shu kanalga yuboriladi.":"Результат теста и подтверждение освоения отправляются в этот канал.",
-"📢 Kanalga o'tish →":"📢 Перейти в канал →",
-"Ma'lumotlaringizni kiriting":"Введите ваши данные",
-"🚀 Testni boshlash":"🚀 Начать тест","✅ Natijani ko'rish":"✅ Показать результат","🔄 Qayta boshlash":"🔄 Начать заново",
-"Rahbarlar uchun modul":"Модуль для руководителей","Tashkil etish, nazorat, byudjet, siyosat":"Организация, контроль, бюджет, политика",
-"Murabbiylar uchun modul":"Модуль для тренеров","Mashg'ulot, ovqat, salomatlik, javobgarlik":"Тренировки, питание, здоровье, ответственность",
-"Metodistlar uchun modul":"Модуль для методистов","WADA hujjatlari, ADAMS, SMS, federatsiyalar":"Документы WADA, ADAMS, SMS, федерации",
-"Sportchilar uchun modul":"Модуль для спортсменов","Toza sport, BAD, TUE, javobgarlik, doping-kontrol":"Чистый спорт, БАД, TUE, ответственность, допинг-контроль",
+"📝 Sportçilar testi — 20 savol":"📝 Тест для спортсменов — 20 вопросов",
+"@antidopi kanaliga obuna böling":"Подпишитесь на канал @antidopi",
+"Test natijangiz va Özlaştirildi tasdiqnomangiz şu kanalga yuboriladi.":"Результат теста и подтверждение освоения отправляются в этот канал.",
+"📢 Kanalga ötiş →":"📢 Перейти в канал →",
+"Ma’lumotlaringizni kiriting":"Введите ваши данные",
+"🚀 Testni boşlaş":"🚀 Начать тест","✅ Natijani köriş":"✅ Показать результат","🔄 Qayta boşlaş":"🔄 Начать заново",
+"Rahbarlar uçun modul":"Модуль для руководителей","Taşkil etiş, nazorat, byudjet, siyosat":"Организация, контроль, бюджет, политика",
+"Murabbiylar uçun modul":"Модуль для тренеров","Maşğulot, ovqat, salomatlik, javobgarlik":"Тренировки, питание, здоровье, ответственность",
+"Metodistlar uçun modul":"Модуль для методистов","WADA hujjatlari, ADAMS, SMS, federatsiyalar":"Документы WADA, ADAMS, SMS, федерации",
+"Sportçilar uçun modul":"Модуль для спортсменов","Toza sport, BAD, TUE, javobgarlik, doping-kontrol":"Чистый спорт, БАД, TUE, ответственность, допинг-контроль",
 "📚 Mavzular":"📚 Темы","✅ Oylik checklist":"✅ Месячный чек-лист","📝 Test (20)":"📝 Тест (20)",
-"Oskar sovrindori va e'tirof etilgan filmlar — pedagogik tahlil":"Оскароносные и признанные фильмы — педагогический анализ",
-"Klinik Holatlar (Case Studies)":"Клинические случаи (Case Studies)","Haqiqiy doping voqealari asosida — xato va to'g'ri yo'l":"На основе реальных допинг-случаев — ошибки и верный путь",
-"Antidoping Lug'ati":"Антидопинговый словарь","WADA atamalarining o'zbekcha izohli lug'ati — 35+ atama":"Толковый словарь терминов WADA — 35+ терминов"
+"Oskar sovrindori va e’tirof etilgan filmlar — pedagogik tahlil":"Оскароносные и признанные фильмы — педагогический анализ",
+"Klinik Holatlar (Case Studies)":"Клинические случаи (Case Studies)","Haqiqiy doping voqealari asosida — xato va töğri yöl":"На основе реальных допинг-случаев — ошибки и верный путь",
+"Antidoping Luğati":"Антидопинговый словарь","WADA atamalarining özbekça izohli luğati — 35+ atama":"Толковый словарь терминов WADA — 35+ терминов"
 
 ,"🎓 PhD Ilmiy Tadqiqot Loyihasi · doping.uz · sportedu.uz":"🎓 Научно-исследовательский проект PhD · doping.uz · sportedu.uz"
-,"Muallif · Jismoniy tarbiya va sport bo‘yicha mutaxassislarni qayta tayyorlash va malakasini oshirish instituti · PhD tadqiqotchi":"Автор · Институт переподготовки и повышения квалификации специалистов по ФКиС · PhD-исследователь"
-,"Saydaliyev Muhammad Sodiq Mo‘minjon o‘g‘li":"Сайдалиев Мухаммад Содик Муминжон угли"
-,"Jismoniy tarbiya va sport bo‘yicha mutaxassislarni qayta tayyorlash va malakasini oshirish instituti (PhD tadqiqotchi Saydaliyev M.S.) tomonidan sportchilar, murabbiylar va mutaxassislarning malakasini oshirish hamda bilmasdan dopingga tushib qolishning oldini olish maqsadida yaratilgan milliy antidoping ta’lim portali.":"Национальный антидопинговый образовательный портал, созданный Институтом переподготовки и повышения квалификации специалистов по физической культуре и спорту (PhD-исследователь Сайдалиев М.С.) для повышения квалификации и профилактики непреднамеренного допинга."
+,"Muallif · Jismoniy tarbiya va sport böyiça mutaxassislarni qayta tayyorlaş va malakasini oşiriş instituti · PhD tadqiqotçi":"Автор · Институт переподготовки и повышения квалификации специалистов по ФКиС · PhD-исследователь"
+,"Saydaliyev Muhammad Sodiq Möminjon öğli":"Сайдалиев Мухаммад Содик Муминжон угли"
+,"Jismoniy tarbiya va sport böyiça mutaxassislarni qayta tayyorlaş va malakasini oşiriş instituti (PhD tadqiqotçi Saydaliyev M.S.) tomonidan sportçilar, murabbiylar va mutaxassislarning malakasini oşiriş hamda bilmasdan dopingga tuşib qolişning oldini oliş maqsadida yaratilgan milliy antidoping ta’lim portali.":"Национальный антидопинговый образовательный портал, созданный Институтом переподготовки и повышения квалификации специалистов по физической культуре и спорту (PhD-исследователь Сайдалиев М.С.) для повышения квалификации и профилактики непреднамеренного допинга."
 ,"Antidoping audio darslari":"Антидопинговые аудиоуроки"
-,"Sportchilar va tinglovchilar uchun 13 ta audio mashg‘ulot. Tinglang, tezlikni sozlang va muhim atamalarni o‘rganing.":"13 аудиозанятий для спортсменов и специалистов. Слушайте, настраивайте скорость и изучайте ключевые термины."
+,"Sportçilar va tinglovçilar uçun 13 ta audio dars. Tinglang, töliq matnini öqing va Word shaklida yuklab oling.":"13 аудиоуроков для спортсменов и слушателей. Слушайте, читайте полный текст и скачивайте в Word."
 ,"🎙 13 ta audio":"🎙 13 аудио"
-,"📖 Atamalar":"📖 Термины"
-,"13 ta audio mashg‘ulot · tinglash va mustaqil o‘rganish":"13 аудиозанятий · прослушивание и самообучение"
-,"Tinglash uchun darsni tanlang":"Выберите урок для прослушивания"
-,"Tinglash tezligi":"Скорость воспроизведения"
-,"Natijalarni yuklab olish (CSV)":"Скачать результаты (CSV)"
-,"📥 Natijalarni yuklab olish (CSV)":"📥 Скачать результаты (CSV)"
-,"© 2026 · Doping.uz — Antidoping Ta'lim Portali · Muallif: Saydaliyev Muhammad Sodiq Mo‘minjon o‘g‘li (Malaka oshirish instituti, PhD tadqiqotchi)":"© 2026 · Doping.uz — Антидопинговый портал · Автор: Сайдалиев М.С. (Институт повышения квалификации, PhD-исследователь)"
-,"Sportchilar va murabbiylar malakasini oshirish, dopingga tushib qolishining oldini olish bo'yicha milliy ta'lim tizimi":"Национальная система обучения спортсменов и тренеров по профилактике допинга"
+,"📄 Word matn":"📄 Текст Word"
+,"13 ta audio maşğulot · tinglaş va mustaqil örganiş":"13 аудиозанятий · прослушивание и самообучение"
+,"Tinglaş uçun darsni tanlang":"Выберите урок для прослушивания"
+,"Tinglaş tezligi":"Скорость воспроизведения"
+,"Natijalarni yuklab oliş (CSV)":"Скачать результаты (CSV)"
+,"📥 Natijalarni yuklab oliş (CSV)":"📥 Скачать результаты (CSV)"
+,"© 2026 · Doping.uz — Antidoping Ta’lim Portali · Muallif: Saydaliyev Muhammad Sodiq Möminjon öğli (Malaka oşiriş instituti, PhD tadqiqotçi)":"© 2026 · Doping.uz — Антидопинговый портал · Автор: Сайдалиев М.С. (Институт повышения квалификации, PhD-исследователь)"
+,"Sportçilar va murabbiylar malakasini oşiriş, dopingga tuşib qolişining oldini oliş böyiça milliy ta’lim tizimi":"Национальная система обучения спортсменов и тренеров по профилактике допинга"
 
 };
 
@@ -477,7 +477,7 @@ const HTML_SWAP_LIST = [
 ["#rahbar-reg div[style*='border-radius:8px']","✅ Если наберёте более 75%, ваше подтверждение освоения (O‘zlashtirildi) будет автоматически отправлено в канал <b>@antidopi</b>."],
 ["#murabbiy-reg div[style*='border-radius:8px']","✅ Если наберёте более 75%, ваше подтверждение освоения (O‘zlashtirildi) будет автоматически отправлено в канал <b>@antidopi</b>."],
 ["#metodist-reg div[style*='border-radius:8px']","✅ Если наберёте более 75%, ваше подтверждение освоения (O‘zlashtirildi) будет автоматически отправлено в канал <b>@antidopi</b>."],
-["#sportchi-reg div[style*='border-radius:8px']","✅ Если наберёте более 75%, ваше подтверждение освоения (O‘zlashtirildi) будет автоматически отправлено в канал <b>@antidopi</b>."]
+["#sportchi-reg div[style*='border-radius:8px']","✅ Если наберёте более 75%, ваше подтверждение освоения (Özlaştirildi) будет автоматически отправлено в канал <b>@antidopi</b>."]
 ];
 
 

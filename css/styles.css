@@ -486,7 +486,7 @@ section:not(.hero) {
 .ec-audio h3,.ec-audio p{color:#ffffffde}
 .ec-audio .ec-tag{background:rgba(255,255,255,.09);color:#a7f3d0}
 .ec-audio .ec-arrow{color:#a7f3d0}
-.audio-modal-box{width:min(1040px,96vw)!important;max-height:93vh;display:flex;flex-direction:column}
+.audio-modal-box{width:min(1040px,96vw)!important;max-height:92vh;margin:auto!important;border-radius:20px!important;display:flex;flex-direction:column}
 .audio-modal-body{overflow:auto;padding:18px 22px 24px}
 .audio-layout{display:grid;grid-template-columns:minmax(250px,.78fr) minmax(0,1.4fr);gap:18px;align-items:start}
 .audio-list{display:grid;gap:9px;max-height:60vh;overflow-y:auto;padding-right:4px}
@@ -506,6 +506,15 @@ section:not(.hero) {
 .audio-extra{margin-top:13px;border-top:1px solid #dbe5ef;padding-top:12px}
 .audio-extra-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
 .audio-extra h4{font-size:13px;color:#17324d;margin:0}
+.audio-script-body{max-height:34vh;overflow-y:auto;background:#fff;border:1px solid #dbe5ef;border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.72;color:#1e293b;margin-bottom:10px}
+.audio-script-body p{margin:0 0 10px;color:#1e293b;text-align:justify}
+.audio-script-body p:last-child{margin-bottom:0}
+.audio-dl-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.audio-dl-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 13px;border-radius:10px;border:1px solid #cbd5e1;background:#fff;color:#17324d;font-size:12.5px;font-weight:700;text-decoration:none;transition:.16s}
+.audio-dl-btn:hover{border-color:#0f766e;color:#0f766e}
+.audio-dl-btn.primary{background:#0f766e;color:#fff;border-color:#0f766e}
+.audio-dl-btn.primary:hover{background:#0d9488;color:#fff}
+@media(max-width:720px){.audio-modal-box{width:100vw!important;max-height:100dvh;height:100dvh;margin:0!important;border-radius:0!important}.audio-script-body{max-height:38vh}}
 .audio-font-btns{display:flex;gap:5px}
 .audio-font-btns button{padding:4px 9px;font-size:12px;border-radius:8px}
 .audio-terms{display:flex;flex-wrap:wrap;gap:7px}
@@ -1117,6 +1126,10 @@ html.nx.dark .audio-player-panel p,html.nx.dark .audio-time,html.nx.dark .audio-
 html.nx.dark .audio-controls button,html.nx.dark .audio-toggle,html.nx.dark .audio-font-btns button{background:#0b1734;color:#e2e8f0;border-color:rgba(56,189,248,.3)}
 html.nx.dark .audio-controls .primary{background:#0d9488;color:#fff;border-color:#0d9488}
 html.nx.dark .audio-term{background:rgba(14,165,233,.16);color:#7dd3fc;border-color:rgba(56,189,248,.32)}
+html.nx.dark .audio-script-body{background:#0b1734;border-color:rgba(56,189,248,.28);color:#e2e8f0}
+html.nx.dark .audio-script-body p{color:#cbd5e1}
+html.nx.dark .audio-dl-btn{background:#0b1734;color:#e2e8f0;border-color:rgba(56,189,248,.3)}
+html.nx.dark .audio-dl-btn.primary{background:#0d9488;color:#fff;border-color:#0d9488}
 html.nx.dark .audio-err{background:rgba(244,63,94,.2);color:#fecdd3}
 html.nx.dark .audio-item:hover,html.nx.dark .audio-item.active{background:rgba(20,184,166,.22)}
 html.nx.dark .lc-guide-bar{background:linear-gradient(120deg,rgba(14,165,233,.18),rgba(99,102,241,.2));border-color:rgba(56,189,248,.35)}
