@@ -614,6 +614,10 @@ html.nx .hero::before{content:'';position:absolute;inset:0;z-index:1;pointer-eve
   background:linear-gradient(115deg,rgba(14,165,233,.66),rgba(37,99,235,.54) 52%,rgba(124,58,237,.46))}
 html.nx .hero::after{width:520px;height:520px;right:-140px;bottom:-160px;background:radial-gradient(circle,rgba(253,224,71,.28),transparent 65%);border-radius:50%;z-index:1}
 html.nx .hero-badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.55);box-shadow:0 8px 24px -8px rgba(14,165,233,.7)}
+html.nx .author-box{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.55);border-radius:18px;padding:9px 18px;margin-bottom:16px;box-shadow:0 8px 24px -8px rgba(14,165,233,.7);color:#fff}
+html.nx .author-ico{font-size:20px;flex-shrink:0}
+html.nx .author-name{font-size:13.5px;font-weight:800;color:#fff;line-height:1.25;text-shadow:0 1px 6px rgba(7,30,90,.35)}
+html.nx .author-sub{font-size:11.5px;color:rgba(255,255,255,.92);margin-top:2px;line-height:1.35}
 html.nx .hero h1,html.nx .hero h1{font-family:'Space Grotesk','Inter',sans-serif;font-size:clamp(28px,4.6vw,56px);letter-spacing:-1.4px;line-height:1.06;color:#fff;text-shadow:0 4px 28px rgba(7,30,90,.55)}
 html.nx .hero h1 em,html.nx .hero h2 em{color:#fde047;text-shadow:0 4px 24px rgba(7,30,90,.5)}
 html.nx .hero p{color:#eef6ff;font-size:15px}
@@ -1011,7 +1015,9 @@ html.nx .mobile-nav a{min-height:42px}
   html.nx .hamburger{padding:4px;flex-shrink:0}
   html.nx .hamburger span{width:19px}
   html.nx .hero{padding:82px 14px 20px}
-  html.nx .hero .author-box{padding:6px 10px!important;margin-bottom:8px!important}
+  html.nx .hero .author-box{padding:8px 12px!important;margin-bottom:10px!important}
+  html.nx .author-name{font-size:12px}
+  html.nx .author-sub{font-size:10px}
   html.nx .hero p{font-size:12.8px;line-height:1.45;margin-bottom:10px}
   html.nx .hero h1{font-size:clamp(22px,6.3vw,32px)!important;margin-top:8px!important}
   html.nx .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
@@ -1052,7 +1058,7 @@ html.nx.dark header nav a[onclick*="checker-sec"]{color:#e0e7ff!important;backgr
 html.nx.dark #theme-btn,html.nx.dark #sound-btn{border-color:rgba(148,163,184,.35)!important;color:#f1f5f9;background:rgba(15,27,56,.85)!important}
 html.nx.dark .mobile-nav{background:#0b1734;border-color:rgba(56,189,248,.28)}
 html.nx.dark .mobile-nav a{color:#e2e8f0;border-color:rgba(148,163,184,.18)}
-html.nx.dark .author-box{background:rgba(15,27,56,.88)!important;border-color:rgba(56,189,248,.3)!important}
+html.nx.dark .author-box{background:rgba(15,27,56,.45)!important;border-color:rgba(56,189,248,.42)!important;color:#fff}
 html.nx.dark .role-card,html.nx.dark .extra-card{background:linear-gradient(160deg,rgba(15,27,56,.95),rgba(11,34,68,.9))!important;border-color:rgba(56,189,248,.26)!important}
 html.nx.dark .role-card h3,html.nx.dark .extra-card h3,html.nx.dark .toza-card h4,html.nx.dark .faq-q{color:#f8fafc!important}
 html.nx.dark .section-title{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;-webkit-text-fill-color:#f8fafc!important;color:#f8fafc!important}
