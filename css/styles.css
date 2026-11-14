@@ -62,13 +62,13 @@ nav a.active{background:var(--blue-light);color:var(--blue);font-weight:700}
 /* HERO */
 /* HERO BANNER (RASM FONDA, YOZUVLAR TEPADA) */
 .hero{background:transparent!important;padding:16px 24px 10px!important;margin-top:0!important;border-bottom:none!important;min-height:0!important;position:relative;overflow:visible}
-.hero-bg-banner{max-width:1320px;margin:0 auto 12px;border-radius:24px;overflow:hidden;position:relative;background-image:url('../assets/img/hero-banner.jpg?v=20261112_v22');background-size:cover;background-position:center right;border:1px solid rgba(37,99,235,.22);box-shadow:0 16px 44px -14px rgba(15,45,95,.22);min-height:440px;display:flex;align-items:center;padding:26px 32px;transition:box-shadow .3s}
-.hero-bg-banner:hover{box-shadow:0 22px 52px -16px rgba(15,45,95,.28)}
-.hero-glass-box{max-width:530px;background:rgba(255,255,255,0.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.95);border-radius:20px;padding:22px 24px;box-shadow:0 16px 40px -10px rgba(15,45,95,.22);display:flex;flex-direction:column;gap:10px}
-.hero-glass-box h1{font-family:'Space Grotesk','Inter',sans-serif!important;font-size:clamp(23px,2.6vw,34px)!important;font-weight:900!important;color:#0b2244!important;margin:0!important;line-height:1.15!important;letter-spacing:-0.5px!important;text-shadow:none!important}
-.hero-glass-box h1 em{color:#1d4ed8!important;font-style:normal;text-shadow:none!important}
-.hero-glass-box .hero-lead-text{font-size:13.5px!important;color:#475569!important;margin:0!important;line-height:1.55!important;text-shadow:none!important}
-.hero-glass-box .author-box{background:rgba(37,99,235,.08)!important;border:1px solid rgba(37,99,235,.22)!important;border-radius:12px;padding:6px 12px;color:#0b2244!important;margin:0;max-width:fit-content}
+.hero-bg-banner{max-width:1320px;margin:0 auto 14px;border-radius:24px;overflow:hidden;position:relative;background-color:#ffffff;background-image:linear-gradient(90deg,#ffffff 0%,#edf6fd 42%,rgba(237,246,253,0) 65%),url('../assets/img/hero-banner.jpg?v=20261114_v24');background-repeat:no-repeat;background-position:right center;background-size:auto 100%;border:1px solid rgba(37,99,235,.18);box-shadow:0 16px 44px -14px rgba(15,45,95,.18);min-height:390px;display:flex;align-items:center;padding:32px 38px;transition:box-shadow .3s}
+.hero-bg-banner:hover{box-shadow:0 22px 52px -16px rgba(15,45,95,.24)}
+.hero-glass-box{max-width:490px;background:transparent;border:none;box-shadow:none;padding:0;display:flex;flex-direction:column;gap:12px;z-index:2}
+.hero-glass-box h1{font-family:'Space Grotesk','Inter',sans-serif!important;font-size:clamp(25px,2.8vw,38px)!important;font-weight:900!important;color:#0b2244!important;margin:0!important;line-height:1.15!important;letter-spacing:-0.5px!important}
+.hero-glass-box h1 em{color:#1d4ed8!important;font-style:normal}
+.hero-glass-box .hero-lead-text{font-size:14px!important;color:#475569!important;margin:0!important;line-height:1.55!important}
+.hero-glass-box .author-box{background:rgba(37,99,235,.07)!important;border:1px solid rgba(37,99,235,.22)!important;border-radius:12px;padding:6px 14px;display:inline-flex;align-items:center;gap:10px;margin:0;max-width:fit-content;color:#0b2244!important}
 .hero-glass-box .author-name{color:#0b2244!important;font-size:12.5px!important;font-weight:800}
 .hero-glass-box .author-sub{color:#475569!important;font-size:10.5px!important}
 .hero-glass-box .nx-cta{display:flex;flex-wrap:wrap;gap:10px;margin:2px 0 0}
@@ -1023,9 +1023,9 @@ html.nx .mobile-nav a{min-height:42px}
 @media(max-width:900px){
   html.nx header{margin:7px 9px 0;border-radius:14px}
   html.nx .hero{margin-top:0!important;padding:12px 14px 8px!important}
-  .hero-bg-banner{padding:20px;min-height:380px;background-position:75% center}
-  .hero-glass-box{max-width:480px;padding:18px 20px}
-  .hero-glass-box h1{font-size:clamp(21px,4.8vw,28px)!important}
+  .hero-bg-banner{padding:22px 24px!important;min-height:380px!important;background-size:cover!important;background-position:70% center!important}
+  .hero-glass-box{max-width:470px!important;background:rgba(255,255,255,0.92)!important;backdrop-filter:blur(14px)!important;-webkit-backdrop-filter:blur(14px)!important;padding:18px 20px!important;border-radius:18px!important;box-shadow:0 12px 30px -10px rgba(15,45,95,.18)!important;border:1px solid rgba(255,255,255,0.95)!important}
+  .hero-glass-box h1{font-size:clamp(22px,4.8vw,30px)!important}
   .hero-glass-box .hero-lead-text{font-size:13px}
   .hero-stats{grid-template-columns:repeat(3,1fr)!important;gap:8px;padding:10px}
   .stat-item{border-right:none!important;border-bottom:1px solid #e2ecfb;padding:6px 4px}
@@ -1049,8 +1049,8 @@ html.nx .mobile-nav a{min-height:42px}
   html.nx .hamburger{padding:5px;min-width:34px;min-height:34px;align-items:center;justify-content:center;flex-shrink:0}
   html.nx .hamburger span{width:19px}
   html.nx .hero{padding:8px 10px 6px!important}
-  .hero-bg-banner{padding:12px;border-radius:18px;min-height:auto;background-position:80% center}
-  .hero-glass-box{padding:16px 14px;border-radius:16px;background:rgba(255,255,255,0.96)}
+  .hero-bg-banner{padding:12px!important;border-radius:18px!important;min-height:auto!important;background-position:80% center!important;background-size:cover!important}
+  .hero-glass-box{max-width:100%!important;padding:16px 14px!important;border-radius:16px!important;background:rgba(255,255,255,0.95)!important;backdrop-filter:blur(14px)!important;-webkit-backdrop-filter:blur(14px)!important;border:1px solid rgba(255,255,255,0.95)!important;box-shadow:0 12px 30px -10px rgba(15,45,95,.18)!important}
   .hero-glass-box h1{font-size:21px!important}
   .hero-glass-box .hero-lead-text{font-size:12.5px}
   .hero-glass-box .author-box{padding:6px 10px!important}
@@ -1087,8 +1087,9 @@ html.nx.dark header nav a[onclick*="checker-sec"]{color:#e0e7ff!important;backgr
 html.nx.dark #theme-btn,html.nx.dark #sound-btn{border-color:rgba(148,163,184,.35)!important;color:#f1f5f9;background:rgba(15,27,56,.85)!important}
 html.nx.dark .mobile-nav{background:#0b1734;border-color:rgba(56,189,248,.28)}
 html.nx.dark .mobile-nav a{color:#e2e8f0;border-color:rgba(148,163,184,.18)}
-html.nx.dark .hero-bg-banner{border-color:rgba(56,189,248,.3)!important;box-shadow:0 16px 44px -14px rgba(0,0,0,.6)!important}
-html.nx.dark .hero-glass-box{background:rgba(11,24,52,0.88)!important;border-color:rgba(56,189,248,.35)!important;box-shadow:0 16px 40px -10px rgba(0,0,0,.65)!important}
+html.nx.dark .hero-bg-banner{background-color:#0b1834!important;background-image:linear-gradient(90deg,#0b1834 0%,rgba(11,24,52,0.96) 40%,rgba(11,24,52,0.3) 70%),url('../assets/img/hero-banner.jpg?v=20261114_v24')!important;border-color:rgba(56,189,248,.3)!important;box-shadow:0 16px 44px -14px rgba(0,0,0,.6)!important}
+html.nx.dark .hero-glass-box{background:transparent!important;border:none!important;box-shadow:none!important}
+@media(max-width:900px){html.nx.dark .hero-glass-box{background:rgba(11,24,52,0.92)!important;border:1px solid rgba(56,189,248,.35)!important;box-shadow:0 16px 40px -10px rgba(0,0,0,.65)!important}}
 html.nx.dark .hero-glass-box h1,html.nx.dark .hero h1{color:#f8fafc!important}
 html.nx.dark .hero-glass-box h1 em,html.nx.dark .hero h1 em{color:#38bdf8!important}
 html.nx.dark .hero-glass-box .hero-lead-text{color:#cbd5e1!important}
