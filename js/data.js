@@ -233,6 +233,84 @@ const scenarios=[
       {text:'Şifokor yozdi, işonçli, içaman',correct:false,result:'❌ XATO! Köp sovuq dorilarda psevdoefedrin bor — bu S6 stimulyator. "Şifokor yozdi" — WADA uçun bahona emas. Strict Liability amal qiladi.'},
       {text:'Heç narsa içmay musobaqaga boraman',correct:true,result:'✅ YAXŞI! Agar xavfsiz dori topa olmasangiz — kasallik bilan musobaqaga boriş xavfli bölsa ham, dozasiz ketiş xavfsizroq. Koordinator bilan maslahatlaşing.'}
     ]
+  },
+  {
+    id:'whereabouts',
+    icon:'📍',
+    title:'Whereabouts: Manzil özgardi!',
+    desc:'Yangi mehmonxonaga köçdingiz, lekin ADAMS tizimida eski uy manzili turibdi.',
+    color:'#7c3aed',
+    bg:'#f5f3ff',
+    choices:[
+      {text:'Darhol ADAMS ilovasida manzilni yangilayman va koordinatorga xabar beraman',correct:true,result:'✅ TÖĞRI! Whereabouts ma’lumotini o‘z vaqtida yangilash shart. Joylashuv xatosi test o‘tkazib yuborilishiga (Missed Test) olib keladi.'},
+      {text:'Bir martaga heç narsa qilmaydi, keyingi safar töğrilayman',correct:false,result:'❌ XATO! 12 oy ichida 3 ta Whereabouts failure (Kodeks 2.4) = 2 yilgacha diskvalifikatsiya! E’tiborsiz bo‘lmang.'},
+      {text:'Tekşiruvçi kelmasligi uçun telefonimni öçirib qöyaman',correct:false,result:'❌ JUDA XAVFLI! Telefonni o‘chirish nazoratdan qasddan bo‘yin tovlash deb baholanib, og‘ir sanksiyaga sabab bo‘ladi.'}
+    ]
+  },
+  {
+    id:'murabbiy',
+    icon:'🤫',
+    title:'Murabbiy "nomsiz dori" berdi',
+    desc:'Murabbiy qadoqsiz oq tabletka berdi: "Mushaklarni tez tiklaydi, hamma içadi, iç!".',
+    color:'#b91c1c',
+    bg:'#fef2f2',
+    choices:[
+      {text:'Xuşmuomala rad etaman, şifokor tekşirmagunça içmayman',correct:true,result:'✅ TÖĞRI! Strict Liability (Kodeks 2.1) bo‘yicha organizmingizdagi moddaga shaxsan o‘zingiz javobgarsiz. Murabbiy buyrug‘i bahona bo‘lmaydi.'},
+      {text:'Murabbiyim tajribali, unga işonib içaman',correct:false,result:'❌ XATO! Doping aniqlansa, diskvalifikatsiya avvalo sportchining o‘ziga beriladi. Nomsiz tabletka — tuzoq!'},
+      {text:'Kamroq ta’sir qilsin deb yarmini içaman',correct:false,result:'❌ XATO! Mikrogramm darajadagi taqiqlangan modda ham laboratoriyada aniqlanadi va sanksiya qo‘llanadi.'}
+    ]
+  },
+  {
+    id:'kapelnitsa',
+    icon:'💉',
+    title:'Çarçoqdan keyin kapelnitsa (IV)',
+    desc:'Klinikada oddiy vitaminli fizioz eritma (250 ml) tomchilatib quyishni taklif qilişdi.',
+    color:'#059669',
+    bg:'#ecfdf5',
+    choices:[
+      {text:'Boş tortaman: 12 soatda 100 ml dan ortiq vena içiga quyish — M2 taqiqlangan usul',correct:true,result:'✅ TÖĞRI! WADA M2.2 bo‘yicha kasalxona statsionaridan tashqari 12 soatda 100 ml dan ortiq IV infuziya (eritma taqiqlanmagan bo‘lsa ham) taqiqlangan usuldir!'},
+      {text:'Tarkibida faqat vitamin va tuz bölsa, bemalol quydiraman',correct:false,result:'❌ XATO! Modda toza bo‘lsa ham, usulning o‘zi (infuziya hajmi >100 ml) qoidabuzarlik hisoblanadi (M2.2).'},
+      {text:'Faqat musobaqa kuni emas, maşğulot davrida quydiraman',correct:false,result:'⚠️ NOTÖĞRI! M2 taqiqlangan usullar musobaqa davrida ham, musobaqadan tashqari davrda ham qat’iyan taqiqlangan!'}
+    ]
+  },
+  {
+    id:'malham',
+    icon:'🩹',
+    title:'Yaraga surtiladigan malham',
+    desc:'Jarohatga terini tez bitkazuvchi malham (masalan Trofodermin) surtmoqçisiz.',
+    color:'#db2777',
+    bg:'#fdf2f8',
+    choices:[
+      {text:'Tarkibini öqiyman: agar Klostebol (steroid) bölsa, rad etaman',correct:true,result:'✅ TÖĞRI! Trofodermin kabi malhamlarda Klostebol (S1 anabolik) mavjud. U teri orqali so‘rilib, ijobiy tahlil beradi (Jannik Sinner va Therese Johaug keysi).'},
+      {text:'Bu faqat teriga surtiladi, siydikda çiqmaydi deb surtaman',correct:false,result:'❌ XATO! Teri orqali so‘rilgan steroidlar siydik va qon tahlilida pikogramm darajasida ham aniqlanadi.'},
+      {text:'Surtib, 5 daqiqadan keyin yuvib taşlayman',correct:false,result:'❌ XATO! Modda teriga darhol singib qonga o‘tadi, yuvish yordam bermaydi.'}
+    ]
+  },
+  {
+    id:'analog',
+    icon:'🌍',
+    title:'Xorijda doringiz tugab qoldi',
+    desc:'Çet el dorixonaçisi: "Bu xuddi öşa dori, faqat nomi boşqa" deb analog taklif qildi.',
+    color:'#0284c7',
+    bg:'#f0f9ff',
+    choices:[
+      {text:'Faol moddasini (INN) va WADA maqomini Global DRO orqali tekşiraman',correct:true,result:'✅ TÖĞRI! Turli mamlakatlarda bir xil savdo nomi ostida boshqa faol moddalar bo‘lishi mumkin. Faqat INN (xalqaro modda nomi) tekshirilishi kerak.'},
+      {text:'Dorixonaçi mutaxassis, uning tavsiyasiga işonaman',correct:false,result:'❌ XATO! Oddiy farmatsevt sport antidoping ro‘yxati (Prohibited List) talablarini bilmaydi.'},
+      {text:'Qadoqdagi rasm va şakli öxşaş bölsa içaman',correct:false,result:'❌ XATO! Tashqi dizayn dori tarkibini kafolatlamaydi.'}
+    ]
+  },
+  {
+    id:'qochish',
+    icon:'🏃',
+    title:'Döst "qoçib qolaylik" dedi',
+    desc:'Keçqurun jamoadoşingiz: "Ertaga tekşiruv kelişi mumkin, qoçib ketaylik" dedi.',
+    color:'#475569',
+    bg:'#f8fafc',
+    choices:[
+      {text:'Rad etaman va xonamda qolaman: toza sportçi tekşiruvdan qoçmaydi',correct:true,result:'✅ TÖĞRI! Qochish yoki yashirinish (Kodeks 2.3) avtomatik ravishda 4 yillik diskvalifikatsiyaga tenglashtiriladi.'},
+      {text:'Döstim bilan birga bir kunga boşqa joyga ketaman',correct:false,result:'❌ FOJIALI XATO! Testdan qochish qasddan qilingan qoidabuzarlik deb baholanadi.'},
+      {text:'Döstimga ham qoçişga yordam beraman',correct:false,result:'❌ JUDA XAVFLI! Boshqalarga yordam berish sheriklik (Kodeks 2.9 Complicity) bo‘lib, sizga ham og‘ir jazo beriladi.'}
+    ]
   }
 ];
 
@@ -518,6 +596,42 @@ window.scenariosRu=[
     {text:'Проверю действующее вещество в списке WADA, потом приму',correct:true,result:'✅ ВЕРНО! Для любого лекарства: (1) определить действующие вещества, (2) проверить в Prohibited List WADA, (3) если запрещено — просить замену или TUE. Рецепт — не защита!'},
     {text:'Врач выписал — надёжно, приму',correct:false,result:'❌ ОШИБКА! Во многих лекарствах от простуды есть псевдоэфедрин — стимулятор S6. «Врач выписал» — не оправдание для WADA. Действует Strict Liability.'},
     {text:'Ничего не приму и поеду на соревнование',correct:true,result:'✅ ХОРОШО! Если не нашли безопасное лекарство — ехать без препаратов безопаснее. Посоветуйтесь с координатором.'}
+   ]},
+  {id:'whereabouts',icon:'📍',title:'Whereabouts: адрес изменился!',desc:'Переехали в другой отель, но в ADAMS остался старый адрес.',color:'#7c3aed',bg:'#f5f3ff',
+   choices:[
+    {text:'Срочно обновлю адрес в ADAMS и сообщу координатору',correct:true,result:'✅ ВЕРНО! Своевременное обновление данных Whereabouts обязательно. Ошибка адреса ведёт к пропуску теста (Missed Test).'},
+    {text:'Один раз ничего страшного, потом исправлю',correct:false,result:'❌ ОШИБКА! 3 нарушения Whereabouts за 12 месяцев (ст. 2.4 Кодекса) = дисквалификация до 2 лет!'},
+    {text:'Выключу телефон, чтобы проверяющий не дозвонился',correct:false,result:'❌ ОЧЕНЬ ОПАСНО! Выключение телефона расценивается как умышленное уклонение от допинг-контроля.'}
+   ]},
+  {id:'murabbiy',icon:'🤫',title:'Тренер дал белую таблетку',desc:'Тренер протянул таблетку без упаковки: «Быстро снимет усталость, все пьют, пей!».',color:'#b91c1c',bg:'#fef2f2',
+   choices:[
+    {text:'Вежливо откажусь, пока не проверит врач',correct:true,result:'✅ ВЕРНО! По принципу Strict Liability (ст. 2.1) только спортсмен несёт ответственность за всё, что найдено в его организме. Приказ тренера — не оправдание.'},
+    {text:'Тренер опытный, доверюсь и выпью',correct:false,result:'❌ ОШИБКА! В случае положительной пробы бан получит в первую очередь спортсмен. Безымянная таблетка — смертельная ловушка!'},
+    {text:'Выпью половинку, чтобы доза была меньше',correct:false,result:'❌ ОШИБКА! Даже микрограммы запрещённого вещества обнаруживаются в лаборатории.'}
+   ]},
+  {id:'kapelnitsa',icon:'💉',title:'Капельница от усталости (IV)',desc:'В клинике предложили прокапать физраствор с витаминами (250 мл).',color:'#059669',bg:'#ecfdf5',
+   choices:[
+    {text:'Откажусь: в/в инфузии более 100 мл за 12 часов — запрещённый метод M2',correct:true,result:'✅ ВЕРНО! По ст. M2.2 WADA внутривенные инфузии более 100 мл за 12 часов вне стационара запрещены, даже если сам раствор разрешён!'},
+    {text:'Если там только витамины и соль — соглашусь',correct:false,result:'❌ ОШИБКА! Даже если вещество разрешено, сам метод (объём инфузии > 100 мл) является нарушением (M2.2).'},
+    {text:'Капать вне соревнований можно, поэтому соглашусь',correct:false,result:'⚠️ НЕВЕРНО! Запрещённые методы M2 запрещены как в соревновательный, так и во внесоревновательный период!'}
+   ]},
+  {id:'malham',icon:'🩹',title:'Мазь для заживления ран',desc:'Хотите нанести заживляющую мазь (например, Трофодермин) на ссадину.',color:'#db2777',bg:'#fdf2f8',
+   choices:[
+    {text:'Изучу состав: если есть клостебол (стероид) — откажусь',correct:true,result:'✅ ВЕРНО! В таких мазях содержится клостебол (S1 анаболик). Он всасывается через кожу и даёт положительный тест (кейсы Янника Синнера и Терезы Йохауг).'},
+    {text:'Это мазь для кожи, в мочу не попадёт — намажу',correct:false,result:'❌ ОШИБКА! Стероиды через кожу попадают в кровь и мочу, определяясь в пикограммах.'},
+    {text:'Намажу и смою через 5 минут',correct:false,result:'❌ ОШИБКА! Вещество впитывается моментально, смывание не поможет.'}
+   ]},
+  {id:'analog',icon:'🌍',title:'За рубежом закончилось лекарство',desc:'Фармацевт предложил аналог: «Это то же самое, просто название другое».',color:'#0284c7',bg:'#f0f9ff',
+   choices:[
+    {text:'Проверю МНН (активное вещество) в Global DRO перед покупкой',correct:true,result:'✅ ВЕРНО! В разных странах под схожими торговыми названиями могут быть разные вещества. Проверять нужно только МНН.'},
+    {text:'Фармацевт — специалист, доверюсь ему',correct:false,result:'❌ ОШИБКА! Обычный фармацевт не знает антидопинговых требований WADA.'},
+    {text:'Если упаковка и цвет похожи — куплю',correct:false,result:'❌ ОШИБКА! Внешнее сходство не гарантирует безопасность состава.'}
+   ]},
+  {id:'qochish',icon:'🏃',title:'Предложение сбежать от контроля',desc:'Вечером сокомандник зовёт: «Завтра контроль, давай уедем из отеля!».',color:'#475569',bg:'#f8fafc',
+   choices:[
+    {text:'Откажусь и останусь: чистый спортсмен не бежит от теста',correct:true,result:'✅ ВЕРНО! Уклонение или побег от контроля (ст. 2.3 Кодекса) приравнивается к 4 годам дисквалификации.'},
+    {text:'Уеду с ним на один день за город',correct:false,result:'❌ РОКОВАЯ ОШИБКА! Побег расценивается как умышленное грубое нарушение.'},
+    {text:'Помогу другу незаметно скрыться',correct:false,result:'❌ ОЧЕНЬ ОПАСНО! Пособничество (ст. 2.9 Соучастие) наказывается столь же сурово.'}
    ]}
 ];
 
