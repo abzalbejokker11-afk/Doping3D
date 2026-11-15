@@ -861,14 +861,65 @@ function updateDashboard(){
 }
 setTimeout(updateDashboard, 500);
 
+let scenarioExpanded = false;
+
 function activeScenarios(){
   return (window.CUR_LANG==='ru' && window.scenariosRu) ? scenariosRu : scenarios;
 }
+
+function updateScenarioToggleBtn(){
+  const btnText=document.getElementById('scenario-toggle-text');
+  const btnIcon=document.getElementById('scenario-toggle-icon');
+  if(!btnText)return;
+  const isRu=(window.CUR_LANG==='ru');
+  const total=activeScenarios().length;
+  if(scenarioExpanded){
+    btnText.textContent = isRu ? 'Свернуть (показать 3) ▴' : 'Yopiş (3 taga qaytiş) ▴';
+    if(btnIcon)btnIcon.style.transform='rotate(180deg)';
+  } else {
+    btnText.textContent = isRu ? `Все сценарии (${total}) ▾` : `Barça ssenariylar (${total} ta) ▾`;
+    if(btnIcon)btnIcon.style.transform='rotate(0deg)';
+  }
+}
+
+function toggleScenarios(){
+  scenarioExpanded = !scenarioExpanded;
+  const cards = document.querySelectorAll('.scenario-card-item');
+  cards.forEach(card => {
+    const idx = parseInt(card.getAttribute('data-index') || '0', 10);
+    if(idx >= 3){
+      if(scenarioExpanded){
+        card.style.display = 'block';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(24px)';
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, (idx - 3) * 60);
+      } else {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(24px)';
+        setTimeout(() => {
+          card.style.display = 'none';
+        }, 280);
+      }
+    }
+  });
+  updateScenarioToggleBtn();
+  if(!scenarioExpanded){
+    const sec = document.getElementById('scenario-sec');
+    if(sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
 function renderScenarios(){
   const cont=document.getElementById('scenario-cards');
   if(!cont)return;
-  cont.innerHTML=activeScenarios().map((sc,si)=>`
-    <div style="background:${sc.bg};border:2px solid ${sc.color}22;border-radius:20px;padding:24px;position:relative;overflow:hidden" id="sc-${sc.id}">
+  const allSc = activeScenarios();
+  cont.innerHTML=allSc.map((sc,si)=>{
+    const isHidden = (!scenarioExpanded && si >= 3);
+    return `
+    <div style="background:${sc.bg};border:2px solid ${sc.color}22;border-radius:20px;padding:24px;position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.4,0,.2,1), opacity .35s cubic-bezier(.4,0,.2,1);${isHidden ? 'display:none;' : 'display:block;'}" class="scenario-card-item" id="sc-${sc.id}" data-index="${si}">
       <div style="position:absolute;top:0;left:0;right:0;height:3px;background:${sc.color}"></div>
       <div style="font-size:32px;margin-bottom:10px">${sc.icon}</div>
       <h4 style="font-size:16px;font-weight:800;color:var(--navy);margin-bottom:6px">${sc.title}</h4>
@@ -884,7 +935,9 @@ function renderScenarios(){
           </button>`).join('')}
       </div>
       <div id="sc-result-${sc.id}" style="display:none;margin-top:14px;padding:12px 16px;border-radius:10px;font-size:13px;line-height:1.6"></div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
+  updateScenarioToggleBtn();
 }
 
 function pickScenario(id,ci){

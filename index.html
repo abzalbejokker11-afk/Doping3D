@@ -438,9 +438,19 @@
 <!-- INTERAKTIV SSENARIY TRENING -->
 <section id="scenario-sec" style="background:#fff;padding:52px 0;border-top:2px solid var(--border)">
   <div style="max-width:1320px;margin:0 auto;padding:0 24px">
-    <div class="section-label">🎯 Interaktiv Trening</div>
-    <div class="section-title">Real Hayot Ssenarilari</div>
-    <div class="section-sub">Haqiqiy vaziyatda nima qilardingiz? Tanlang va oqibatini köring</div>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:24px">
+      <div>
+        <div class="section-label" style="margin-bottom:4px">🎯 Interaktiv Trening</div>
+        <div class="section-title" style="margin-bottom:6px">Real Hayot Ssenarilari</div>
+        <div class="section-sub" style="margin-bottom:0">Haqiqiy vaziyatda nima qilardingiz? Tanlang va oqibatini köring</div>
+      </div>
+      <div>
+        <button id="scenario-toggle-btn" onclick="toggleScenarios()" style="display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:14px;border:2px solid #2563eb;background:linear-gradient(135deg,#eff6ff,#dbeafe);color:#1d4ed8;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .3s cubic-bezier(.4,0,.2,1);box-shadow:0 4px 14px rgba(37,99,235,.12)" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(37,99,235,.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 14px rgba(37,99,235,.12)'">
+          <span id="scenario-toggle-text">Barcha ssenariylar (9 ta)</span>
+          <span id="scenario-toggle-icon" style="display:inline-block;transition:transform .3s ease;font-size:16px">▾</span>
+        </button>
+      </div>
+    </div>
 
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px" id="scenario-cards">
       <!-- Ssenarilar JS da yuklanadi -->
@@ -1282,8 +1292,8 @@
 
 
 <button id="scrollTop" title="Yuqoriga" aria-label="Yuqoriga" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</button>
-<script src="js/data.js?v=20261115_v25" defer></script>
-<script src="js/search.js?v=20261115_v25" defer></script>
-<script src="js/app.js?v=20261115_v25" defer></script>
+<script src="js/data.js?v=20261115_v26" defer></script>
+<script src="js/search.js?v=20261115_v26" defer></script>
+<script src="js/app.js?v=20261115_v26" defer></script>
 </body>
 </html>
