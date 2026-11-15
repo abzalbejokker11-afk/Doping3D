@@ -445,6 +445,48 @@ function tgErrText(r) {
 
 const certMeta = {}; // har bir rol uchun sertifikat ma'lumotlari (qayta yuborish uchun)
 
+
+function _certDate(isRu) {
+  /* Chrome'da uz-UZ oy nomlari buzilmasligi uchun Toshkent vaqti bilan toza oy nomlari */
+  const parts = new Intl.DateTimeFormat('en-GB', {timeZone:'Asia/Tashkent', day:'numeric', month:'numeric', year:'numeric'}).formatToParts(new Date());
+  const g = t => +parts.find(p => p.type === t).value;
+  const uz = ['yanvar','fevral','mart','aprel','may','iyun','iyul','avgust','sentabr','oktabr','noyabr','dekabr'];
+  const ru = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+  return isRu ? g('day') + ' ' + ru[g('month') - 1] + ' ' + g('year') : g('day') + '-' + uz[g('month') - 1] + ', ' + g('year');
+}
+
+window.CERT_TEMPLATE_CLEAN = true;
+window.CERT_QR_OVERLAY = true;
+window.CERT_VERIFY_URL = 'https://t.me/antidopi';
+
+// Imzo ostidagi ism: Ustoz Muhammad Sodiq
+window.drawCertSignature = function(ctx){
+  ctx.save();
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'alphabetic';
+  ctx.fillStyle = '#282736';
+  ctx.font = '500 15px Poppins, Arial, sans-serif';
+  ctx.fillText('Saydaliyev Muhammad Sodiq', 723, 1301);
+  ctx.restore();
+};
+
+window.drawCertQR = function(ctx){
+  var fx = 1790, fy = 982, fw = 152, fh = 154;
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(fx, fy, fw, fh);
+  var cell = 5, size = QR_N * cell;
+  var x0 = fx + Math.round((fw - size) / 2), y0 = fy + Math.round((fh - size) / 2);
+  ctx.fillStyle = '#0a1f3d';
+  for(var r = 0; r < QR_N; r++){
+    var rowInt = parseInt(QR_ROWS[r], 16);
+    for(var c = 0; c < QR_N; c++){
+      if((rowInt >> (QR_N - 1 - c)) & 1){
+        ctx.fillRect(x0 + c * cell, y0 + r * cell, cell, cell);
+      }
+    }
+  }
+};
+
 function showCertificate(role, score, pct) {
   const info    = userInfo[role];
   if (!info || !_validName(info.ism || '')) {
@@ -454,7 +496,7 @@ function showCertificate(role, score, pct) {
   }
   const isRu    = (window.CUR_LANG === 'ru');
   const certId  = 'AD-' + Date.now().toString(36).toUpperCase();
-  const sana    = new Date().toLocaleDateString(isRu ? 'ru-RU' : 'uz-UZ', {day:'2-digit', month:'long', year:'numeric'});
+  const sana    = _certDate(isRu);
   const certDiv = document.getElementById(role+'-cert');
   certMeta[role] = { score, pct, certId, sana };
 
@@ -709,6 +751,8 @@ function drawCert(role, ism, tashkilot, roleName, score, pct, certId, sana) {
 
     // ── SERTIFIKAT ID ──
     drawCertLabelValue(ctx, img, CERT_ID_BOX, tr('cert_field_id'), certId);
+    if (typeof window.drawCertSignature === 'function') window.drawCertSignature(ctx);
+    if (window.CERT_QR_OVERLAY && typeof window.drawCertQR === 'function') window.drawCertQR(ctx);
     if (window.CERT_QR_OVERLAY && typeof window.drawCertQR === 'function') window.drawCertQR(ctx);
   };
 
@@ -722,8 +766,10 @@ function drawCertField(ctx, img, box, text, opt) {
   // Fonni tozalash: shu maydon atrofidagi neytral (deyarli oq) fon rangi bilan tekis qoplaymiz.
   // Shablonning bu qismlari deyarli bir xil och rangda bo'lgani uchun (oq/och lavanda),
   // tekis to'ldirish original dizaynni buzmaydi va qo'shni matnlarga tegmaydi.
-  ctx.fillStyle = opt.bg || CERT_ROW_BG;
-  ctx.fillRect(left-6, top-6, w+12, h+12);
+  if (!window.CERT_TEMPLATE_CLEAN) {
+    ctx.fillStyle = opt.bg || CERT_ROW_BG;
+    ctx.fillRect(left-6, top-6, w+12, h+12);
+  }
 
   let size = Math.round(h*opt.maxSizeRatio);
   const minSize = opt.minSize;
@@ -744,14 +790,21 @@ function drawCertField(ctx, img, box, text, opt) {
 function drawCertLabelValue(ctx, img, box, label, value) {
   const [left, top, right, bottom] = box;
   const w = right-left, h = bottom-top;
-  ctx.fillStyle = CERT_ROW_BG;
-  ctx.fillRect(left-6, top-6, w+12, h+12);
+  if (!window.CERT_TEMPLATE_CLEAN) {
+    ctx.fillStyle = CERT_ROW_BG;
+    ctx.fillRect(left-6, top-6, w+12, h+12);
+  }
   ctx.textAlign = 'left';
   ctx.fillStyle = CERT_NAVY;
   ctx.font = `700 ${Math.round(h*0.34)}px Poppins, Arial, sans-serif`;
   ctx.fillText(label, left, top + h*0.32);
   ctx.fillStyle = CERT_GRAY;
-  ctx.font = `400 ${Math.round(h*0.34)}px Poppins, Arial, sans-serif`;
+  let _vs = Math.round(h*0.34);
+  ctx.font = `400 ${_vs}px Poppins, Arial, sans-serif`;
+  while (_vs > 14 && ctx.measureText(String(value)).width > w) {
+    _vs--;
+    ctx.font = `400 ${_vs}px Poppins, Arial, sans-serif`;
+  }
   ctx.fillText(value, left, top + h*0.82);
 }
 
