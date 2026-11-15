@@ -311,6 +311,45 @@ const scenarios=[
       {text:'Döstim bilan birga bir kunga boşqa joyga ketaman',correct:false,result:'❌ FOJIALI XATO! Testdan qochish qasddan qilingan qoidabuzarlik deb baholanadi.'},
       {text:'Döstimga ham qoçişga yordam beraman',correct:false,result:'❌ JUDA XAVFLI! Boshqalarga yordam berish sheriklik (Kodeks 2.9 Complicity) bo‘lib, sizga ham og‘ir jazo beriladi.'}
     ]
+  },
+  {
+    id:'tue',
+    icon:'🫁',
+    title:'Nafas qisişi va TUE (istisno)',
+    desc:'Maşğulotda og‘ir nafas qisişi (astma). Şifokor ingalyator (salbutamol) berdi, lekin TUE rasmiylaştirilmagan.',
+    color:'#0891b2',
+    bg:'#ecfeff',
+    choices:[
+      {text:'Şoşilinç yordamni olaman, lekin barcha tibbiy hujjatlarni olib, darhol Retroaktiv TUE arizasini topşiraman',correct:true,result:'✅ TÖĞRI! Hayot va salomatlik birinchi o‘rinda. Shoshilinch vaziyatlarda WADA ISTUE standarti bo‘yicha orqaga qaytuvchi (Retroaktiv) TUE olishga qonuniy haqlisiz.'},
+      {text:'TUE ruxsatnomam yöq deb dori qabul qilmayman, nafas siqilishiga chidab turaman',correct:false,result:'❌ XATO! Hayotingizni xavf ostiga qo‘ymang! Sport qoidalari inson hayotidan ustun emas. Shoshilinch tibbiy yordam darhol olinishi shart.'},
+      {text:'Ingalyatordan foydalanaman va buni doping-kontrol kelganda aytmay yaşiraman',correct:false,result:'❌ JUDA XAVFLI! Yashirish — qasddan qoidabuzarlik. Doping protokoliga barcha qabul qilingan dori vositalarini kiritish majburiydir.'}
+    ]
+  },
+  {
+    id:'gosht',
+    icon:'🥩',
+    title:'Xorijda göşt iste’moli (Klenbuterol)',
+    desc:'Lotin Amerikasi yoki Osiyoda yiğindasiz. Köçadagi kafeda mazali qovurilgan mol göşti taklif qilişdi.',
+    color:'#ea580c',
+    bg:'#fff7ed',
+    choices:[
+      {text:'Köçadagi göştni yemayman, faqat terma jamoa oşpazi yoki sertifikatlangan mehmonxona ovqatini tanlayman',correct:true,result:'✅ TÖĞRI! Ayrim mamlakatlarda chorvachilikda noqonuniy klenbuterol ishlatiladi va go‘sht orqali sportchi bilmagan holda dopingga tushishi mumkin.'},
+      {text:'Göşt oddiy oziq-ovqat, doping bölmaydi deb bemalol yeyman',correct:false,result:'❌ XATO! Tarixda yuzlab xalqaro darajadagi sportchilar klenbuterol bilan ifloslangan go‘sht sababli musbat test topshirgan.'},
+      {text:'Faqat qovurilganini yeyman, olovda moddalar yöqoladi deb öylayman',correct:false,result:'❌ XATO! Termik ishlov (qovurish yoki qaynatish) klenbuterol molekulasini yo‘qotmaydi, u to‘qimalarda saqlanadi.'}
+    ]
+  },
+  {
+    id:'xabarnoma',
+    icon:'📩',
+    title:'Laboratoriyadan "Musbat natija" xati',
+    desc:'Rasmiy xabarnoma keldi: "A" namunangizda taqiqlangan modda topilgan. Siz uni qasddan içmagansiz!',
+    color:'#991b1b',
+    bg:'#fef2f2',
+    choices:[
+      {text:'Belgilangan muddatda (10 kun) "B" namunasini ochtirishni talab qilaman va advokat bilan barcha dalillarni yiğaman',correct:true,result:'✅ TÖĞRI! Bu sportchining fundamental huquqi. Muddat ichida B-namunani ochtirish, dori/ovqat cheklari va mustaqil tahlillarni to‘plash kerak.'},
+      {text:'Xatga javob bermayman, özlari xatoni tuşunib yopib yuboradi deb kutaman',correct:false,result:'❌ FOJIALI XATO! Xabarnomaga o‘z vaqtida javob bermaslik aybni tan olishga tenglashtiriladi va maksimal (4 yil) sanksiya belgilanadi.'},
+      {text:'Ijtimoiy tarmoqqa çiqib laboratoriya va taşkilotni tuhmatda ayblab video qöyaman',correct:false,result:'❌ EMOTSIONAL XATO! Ommaviy haqoratlar huquqiy himoyani yo‘qqa chiqaradi va konfidentsiallik qoidalarini buzadi.'}
+    ]
   }
 ];
 
@@ -632,6 +671,24 @@ window.scenariosRu=[
     {text:'Откажусь и останусь: чистый спортсмен не бежит от теста',correct:true,result:'✅ ВЕРНО! Уклонение или побег от контроля (ст. 2.3 Кодекса) приравнивается к 4 годам дисквалификации.'},
     {text:'Уеду с ним на один день за город',correct:false,result:'❌ РОКОВАЯ ОШИБКА! Побег расценивается как умышленное грубое нарушение.'},
     {text:'Помогу другу незаметно скрыться',correct:false,result:'❌ ОЧЕНЬ ОПАСНО! Пособничество (ст. 2.9 Соучастие) наказывается столь же сурово.'}
+   ]},
+  {id:'tue',icon:'🫁',title:'Приступ астмы и TUE (исключение)',desc:'На тренировке сильный приступ удушья. Врач дал ингалятор (сальбутамол), но TUE ещё не оформлен.',color:'#0891b2',bg:'#ecfeff',
+   choices:[
+    {text:'Приму помощь, соберу все выписки и немедленно подам на ретроактивный TUE',correct:true,result:'✅ ВЕРНО! Жизнь и здоровье на первом месте. По Международному стандарту WADA ISTUE в экстренных ситуациях гарантировано право на ретроактивный (обратный) TUE.'},
+    {text:'Откажусь от лекарства из-за отсутствия TUE и буду терпеть удушье',correct:false,result:'❌ ОШИБКА! Ни в коем случае не рискуйте жизнью! Спортивные правила не стоят выше жизни человека. Скорая помощь оказывается немедленно.'},
+    {text:'Воспользуюсь ингалятором, а на допинг-контроле скрою этот факт',correct:false,result:'❌ ОЧЕНЬ ОПАСНО! Сокрытие факта приёма — прямое нарушение. В протокол допинг-контроля обязательно вносятся все принятые препараты.'}
+   ]},
+  {id:'gosht',icon:'🥩',title:'Мясо за рубежом (кленбутерол)',desc:'На сборах в Латинской Америке или Азии. В уличном кафе предлагают блюдо из говядины.',color:'#ea580c',bg:'#fff7ed',
+   choices:[
+    {text:'Не буду есть подозрительное мясо, выберу проверенное питание в отеле или от повара команды',correct:true,result:'✅ ВЕРНО! В ряде стран в животноводстве нелегально применяют кленбутерол, и через мясо спортсмен может неумышленно получить положительную допинг-пробу.'},
+    {text:'Мясо — это просто еда, допинга там быть не может, съем',correct:false,result:'❌ ОШИБКА! В истории спорта сотни атлетов становились жертвами загрязнённого кленбутеролом мяса.'},
+    {text:'Съем только хорошо прожаренное — огонь уничтожит допинг',correct:false,result:'❌ ОШИБКА! Термическая обработка не разрушает молекулу кленбутерола, она сохраняется в тканях.'}
+   ]},
+  {id:'xabarnoma',icon:'📩',title:'Уведомление о положительной пробе',desc:'Пришло официальное письмо: в пробе «А» обнаружен запрещённый метаболит. Вы уверены, что не принимали его умышленно!',color:'#991b1b',bg:'#fef2f2',
+   choices:[
+    {text:'В срок (10 дней) потребую вскрытия пробы «Б» и с адвокатом соберу все доказательства',correct:true,result:'✅ ВЕРНО! Это фундаментальное право спортсмена. Нужно уложиться в сроки, потребовать анализ пробы «Б» и собрать чеки, упаковки и медицинские записи.'},
+    {text:'Не буду отвечать, пусть сами поймут ошибку и закроют дело',correct:false,result:'❌ РОКОВАЯ ОШИБКА! Игнорирование письма приравнивается к признанию вины и влечёт максимальную дисквалификацию (4 года).'},
+    {text:'Опубликую видео в соцсетях с обвинениями лаборатории во лжи',correct:false,result:'❌ ЭМОЦИОНАЛЬНАЯ ОШИБКА! Публичные скандалы разрушают юридическую защиту и нарушают правила конфиденциальности.'}
    ]}
 ];
 
