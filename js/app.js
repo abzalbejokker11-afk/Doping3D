@@ -657,7 +657,7 @@ const CERT_ROLE_BOX  = [995, 818, 1600, 864];   // "... bo'yicha malaka testi"
 const CERT_SCORE_BOX = [995, 870, 1600, 924];   // "N/20 to'g'ri javob — X%"
 const CERT_DATE_BOX  = [900, 1020, 1075, 1090]; // Berilgan sana
 const CERT_ID_BOX    = [1350, 1015, 1650, 1090];// Qayd ID
-const CERT_TEMPLATE_SRC = 'assets/img/ozlashtirildi-template.jpg';
+const CERT_TEMPLATE_SRC = 'assets/img/ozlashtirildi-template.jpg?v=20261115_v35';
 
 let _certTemplateImg = null, _certTemplatePromise = null;
 function loadCertTemplate(){
